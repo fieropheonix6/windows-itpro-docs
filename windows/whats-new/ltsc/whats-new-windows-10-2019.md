@@ -6,9 +6,9 @@ description: New and updated IT Pro content about new features in Windows 10 Ent
 ms.service: windows-client
 author: mestew
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: reference
 ms.subservice: itpro-fundamentals
-ms.date: 12/18/2023
+ms.date: 07/09/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/" target="_blank">Windows 10 Enterprise LTSC 2019</a>
 ---
@@ -158,9 +158,9 @@ Improvements have been added to Windows Information Protection and BitLocker.
 
 Windows Information Protection is now designed to work with Microsoft Office and Azure Information Protection.
 
-Microsoft Intune helps you create and deploy your Windows Information Protection (WIP) policy, including letting you choose your allowed apps, your WIP-protection level, and how to find enterprise data on the network. For more info, see [Create a Windows Information Protection (WIP) policy using Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure) and [Associate and deploy your Windows Information Protection (WIP) and VPN policies by using Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-vpn-and-wip-policy-using-intune-azure).
+Microsoft Intune helps you create and deploy your Windows Information Protection (WIP) policy, including letting you choose your allowed apps, your WIP-protection level, and how to find enterprise data on the network. For more info, see [Create a Windows Information Protection (WIP) policy using Microsoft Intune](/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure) and [Associate and deploy your Windows Information Protection (WIP) and VPN policies by using Microsoft Intune](/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-vpn-and-wip-policy-using-intune-azure).
 
-You can also now collect your audit event logs by using the Reporting configuration service provider (CSP) or the Windows Event Forwarding (for Windows desktop domain-joined devices). For more information, see [How to collect Windows Information Protection (WIP) audit event logs](/windows/security/information-protection/windows-information-protection/collect-wip-audit-event-logs).
+You can also now collect your audit event logs by using the Reporting configuration service provider (CSP) or the Windows Event Forwarding (for Windows desktop domain-joined devices). For more information, see [How to collect Windows Information Protection (WIP) audit event logs](/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/collect-wip-audit-event-logs).
 
 This release enables support for WIP with Files on Demand, allows file encryption while the file is open in another app, and improves performance. For more information, see [OneDrive files on-demand for the enterprise](https://techcommunity.microsoft.com/t5/microsoft-onedrive-blog/onedrive-files-on-demand-for-the-enterprise/ba-p/117234).
 
@@ -484,10 +484,10 @@ Previous versions of the Microsoft Application Virtualization Sequencer (App-V S
 
 For more information, see the following articles:
 
-- [Automatically provision your sequencing environment using Microsoft Application Virtualization Sequencer (App-V Sequencer)](/windows/application-management/app-v/appv-auto-provision-a-vm)
-- [Automatically sequence multiple apps at the same time using Microsoft Application Virtualization Sequencer (App-V Sequencer)](/windows/application-management/app-v/appv-auto-batch-sequencing)
-- [Automatically update multiple apps at the same time using Microsoft Application Virtualization Sequencer (App-V Sequencer)](/windows/application-management/app-v/appv-auto-batch-updating)
-- [Automatically cleanup unpublished packages on the App-V client](/windows/application-management/app-v/appv-auto-clean-unpublished-packages)
+- [Automatically provision your sequencing environment using Microsoft Application Virtualization Sequencer (App-V Sequencer)](/microsoft-desktop-optimization-pack/app-v/appv-auto-provision-a-vm)
+- [Automatically sequence multiple apps at the same time using Microsoft Application Virtualization Sequencer (App-V Sequencer)](/microsoft-desktop-optimization-pack/app-v/appv-auto-batch-sequencing)
+- [Automatically update multiple apps at the same time using Microsoft Application Virtualization Sequencer (App-V Sequencer)](/microsoft-desktop-optimization-pack/app-v/appv-auto-batch-updating)
+- [Automatically cleanup unpublished packages on the App-V client](/microsoft-desktop-optimization-pack/app-v/appv-auto-clean-unpublished-packages)
 
 ### Windows diagnostic data
 

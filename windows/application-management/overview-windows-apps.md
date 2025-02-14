@@ -4,7 +4,7 @@ description: Learn about the different types of apps that run on Windows. For ex
 author: aczechowski
 ms.author: aaroncz
 manager: aaroncz
-ms.date: 08/28/2023
+ms.date: 09/03/2024
 ms.topic: overview
 ms.service: windows-client
 ms.subservice: itpro-apps
@@ -31,7 +31,7 @@ For more information on deploying Microsoft 365 apps, see the [Deployment guide 
 
 ### Power Apps
 
-These apps are custom, low-code apps to connect to business data, modernize processes, and solve unique challenges. Power Apps are available online and on-premises, can run in a web browser, and on mobile devices. They can be created by business analysts and professional developers. 
+These apps are custom, low-code apps to connect to business data, modernize processes, and solve unique challenges. Power Apps are available online and on-premises, can run in a web browser, and on mobile devices. They can be created by business analysts and professional developers.
 
 For more information, see [What is Power Apps?](/power-apps/powerapps-overview).
 
@@ -126,9 +126,7 @@ For more information, see:
 When you use the Microsoft Store app, Windows users can download apps from the public store. They can also download apps provided by your organization, which is called the *private store*. If your organization creates its own apps, you can use [Windows Package Manager](/windows/package-manager) to add apps to the private store.
 
 > [!NOTE]
-> Retirement of the Microsoft Store for Business and Microsoft Store for Education has been postponed. We will update this notice when a new retirement date is announced. Customers may continue to use the current capabilities for free apps until that time. There will be no support for Microsoft Store for Business and Education for Windows 11.
->
-> For more information, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/bc-p/3771217). This blog post describes the new Microsoft Store experience for both Windows 11 and Windows 10. To learn about other options for getting and managing apps, see [Add Microsoft Store apps to Microsoft Intune](/mem/intune/apps/store-apps-microsoft).
+> The Microsoft Store for Business and Microsoft Store for Education are retired. For more information, see [Microsoft Store for Business and Education retiring March 31, 2023](/lifecycle/announcements/microsoft-store-for-business-education-retiring). There will be no support for Microsoft Store for Business and Education for Windows 11.
 
 To help manage the Microsoft Store on your devices, you can use policies:
 
@@ -182,7 +180,7 @@ App-V allows Win32 apps to be used as virtual apps.
 
 On an on-premises server, you install and configure the App-V server components, and then install your Win32 apps. On Windows Enterprise client devices, you use the App-V client components to run the virtualized apps. They allow users to open the virtual apps using the icons and file names they're familiar with. Users use the apps as if they're installed locally.
 
-The benefit is to deliver virtual apps in real time, and as-needed. For more information, see [Application Virtualization (App-V) for Windows overview](./app-v/appv-for-windows.md).
+The benefit is to deliver virtual apps in real time, and as-needed. For more information, see [Application Virtualization (App-V) for Windows overview](/microsoft-desktop-optimization-pack/app-v/appv-for-windows).
 
 ## Manage apps
 

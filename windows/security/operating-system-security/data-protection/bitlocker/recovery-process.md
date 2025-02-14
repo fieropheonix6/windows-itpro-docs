@@ -2,7 +2,7 @@
 title: BitLocker recovery process
 description: Learn how to obtain BitLocker recovery information for Microsoft Entra joined, Microsoft Entra hybrid joined, and Active Directory joined devices, and how to restore access to a locked drive.
 ms.topic: how-to
-ms.date: 10/30/2023
+ms.date: 02/11/2025
 ---
 
 # BitLocker recovery process
@@ -26,12 +26,22 @@ A recovery key can't be stored in any of the following locations:
 - The root directory of a nonremovable drive
 - An encrypted volume
 
+> [!WARNING]
+> A recovery key is sensitive information that allows users to unlock an encrypted drive and perform administrative tasks on the drive. For enhanced security, it's recommended to enable self-service in trusted environments only, or rely on helpdesk recovery.
+
+### Self-recovery with recovery password
+
+If you have access to the recovery key, enter the 48-digits in the preboot recovery screen.
+
+- If you are having issues entering the recovery password in the preboot recovery screen, or you can no longer boot your device, you can connect the drive to another device as a secondary drive. For more information about the unlock process, see [Unlock a drive](operations-guide.md#unlock-a-drive)
+- If unlocking with recovery password doesn't work you can use the [BitLocker Repair tool](#bitlocker-repair-tool) to regain access yo your drive
+
 ### Self-recovery in Microsoft Entra ID
 
 If BitLocker recovery keys are stored in Microsoft Entra ID, users can access them using the following URL: https://myaccount.microsoft.com. From the **Devices** tab, users can select a Windows device that they own, and select the option **View BitLocker Keys**.
 
 > [!NOTE]
-> By default, users can retrieve their BitLocker reecovery keys from Microsoft Entra ID. This behavior can be modified with the option **Restrict users from recovering the BitLocker key(s) for their owned devices**. For more information, see [Restrict member users' default permissions][ENTRA-1].
+> By default, users can retrieve their BitLocker recovery keys from Microsoft Entra ID. This behavior can be modified with the option **Restrict users from recovering the BitLocker key(s) for their owned devices**. For more information, see [Restrict member users' default permissions][ENTRA-1].
 
 ### Self-recovery with USB flash drive
 
@@ -64,6 +74,9 @@ The following list can be used as a template for creating a recovery process for
 
 There are a few Microsoft Entra ID roles that allow a delegated administrator to read BitLocker recovery passwords from the devices in the tenant. While it's common for organizations to use the existing Microsoft Entra ID *[Cloud Device Administrator][ENTRA-2]* or *[Helpdesk Administrator][ENTRA-3]* built-in roles, you can also [create a custom role][ENTRA-5], delegating access to BitLocker keys using the `microsoft.directory/bitlockerKeys/key/read` permission. Roles can be delegated to access BitLocker recovery passwords for devices in specific Administrative Units.
 
+> [!NOTE]
+> When devices that utilize [Windows Autopilot](/mem/autopilot/windows-autopilot) are reused to join to Entra, **and there is a new device owner**, that new device owner must contact an administrator to acquire the BitLocker recovery key for that device. Custom role or administrative unit scoped administrators will continue to have access to BitLocker recovery keys for those devices that have undergone device ownership changes, unless the new device owner belongs to a custom role or adminstrative unit scope. In such an instance, the user will need to contact other scoped administrator for the recovery keys. For more information, see the article [Find the primary user of an Intune device](/mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user).
+
 The [Microsoft Entra admin center][ENTRA] allows administrators to retrieve BitLocker recovery passwords. To learn more about the process, see [View or copy BitLocker keys][ENTRA-4]. Another option to access BitLocker recovery passwords is to use the Microsoft Graph API, which might be useful for integrated or scripted solutions. For more information about this option, see [Get bitlockerRecoveryKey][GRAPH-1].
 
 In the following example, we use Microsoft Graph PowerShell cmdlet [`Get-MgInformationProtectionBitlockerRecoveryKey`][PS-1] to build a PowerShell function that retrieves recovery passwords from Microsoft Entra ID:
@@ -83,7 +96,7 @@ function Get-EntraBitLockerKeys{
         foreach ($keyId in $keyIds) {
           $recoveryKey = (Get-MgInformationProtectionBitlockerRecoveryKey -BitlockerRecoveryKeyId $keyId -Select "key").key
           Write-Host -ForegroundColor White " Key id: $keyid"
-          Write-Host -ForegroundColor Cyan " BitLocker recovery key: $recoveryKey" 
+          Write-Host -ForegroundColor Cyan " BitLocker recovery key: $recoveryKey"
         }
         } else {
         Write-Host -ForegroundColor Red "No BitLocker recovery keys found for device $DeviceName"
@@ -169,6 +182,9 @@ When a volume is unlocked using a recovery password:
 - the encryption key is released and is ready for on-the-fly encryption/decryption when data is written/read to and from the volume
 
 After the volume is unlocked, BitLocker behaves the same way, regardless of how the access was granted.
+
+> [!NOTE]
+> If you move an OS volume with a TPM protector to a different device and unlock it using a recovery protector, BitLocker will bind to the new TPM. Returning the volume to the original device will prompt for the recovery protector due to the TPM mismatch. Once unlocked using recovery protector again, the volume will re-bind to the original device.
 
 If a device experiences multiple recovery password events, an administrator should perform post-recovery analysis to determine the root cause of the recovery. Then, refresh the BitLocker platform validation to prevent entering a recovery password each time that the device starts up.
 

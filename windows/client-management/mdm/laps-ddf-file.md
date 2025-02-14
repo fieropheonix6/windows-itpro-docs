@@ -1,7 +1,8 @@
 ---
 title: LAPS DDF file
 description: View the XML file containing the device description framework (DDF) for the LAPS configuration service provider.
-ms.date: 04/10/2024
+ms.date: 02/13/2025
+ms.topic: generated-reference
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -40,7 +41,7 @@ The following XML file contains the device description framework (DDF) for the L
       <MSFT:Applicability>
         <MSFT:OsBuildVersion>10.0.25145, 10.0.22621.1480, 10.0.22000.1754, 10.0.20348.1663, 10.0.19041.2784, 10.0.17763.4244</MSFT:OsBuildVersion>
         <MSFT:CspVersion>1.0</MSFT:CspVersion>
-        <MSFT:EditionAllowList>0x4;0x1B;0x30;0x31;0x48;0x54;0x62;0x63;0x64;0x65;0x79;0x7A;0x7D;0x7E;0x81;0x82;0x88;0x8A;0x8B;0xA1;0xA2;0xA4;0xA5;0xAB;0xAC;0xAF;0xBC;0xBF;0xCA;0xCB;0xCD;0xCF;0xD2;</MSFT:EditionAllowList>
+        <MSFT:EditionAllowList>0x4;0x1B;0x30;0x31;0x48;0x54;0x62;0x63;0x64;0x65;0x79;0x7A;0x7D;0x7E;0x81;0x82;0x88;0x8A;0x8B;0xA1;0xA2;0xA4;0xA5;0xAB;0xAC;0xAF;0xBC;0xBF;0xCA;0xCB;0xCD;0xCF;</MSFT:EditionAllowList>
       </MSFT:Applicability>
     </DFProperties>
     <Node>
@@ -80,7 +81,7 @@ The following XML file contains the device description framework (DDF) for the L
 The allowable settings are:
 
 0=Disabled (password will not be backed up)
-1=Backup the password to Azure AD only
+1=Backup the password to Microsoft Entra ID only
 2=Backup the password to Active Directory only
 
 If not specified, this setting will default to 0.</Description>
@@ -103,7 +104,7 @@ If not specified, this setting will default to 0.</Description>
             </MSFT:Enum>
             <MSFT:Enum>
               <MSFT:Value>1</MSFT:Value>
-              <MSFT:ValueDescription>Backup the password to Azure AD only</MSFT:ValueDescription>
+              <MSFT:ValueDescription>Backup the password to Microsoft Entra ID only</MSFT:ValueDescription>
             </MSFT:Enum>
             <MSFT:Enum>
               <MSFT:Value>2</MSFT:Value>
@@ -126,7 +127,7 @@ If not specified, this setting will default to 0.</Description>
 
 If not specified, this setting will default to 30 days
 
-This setting has a minimum allowed value of 1 day when backing the password to onpremises Active Directory, and 7 days when backing the password to Azure AD.
+This setting has a minimum allowed value of 1 day when backing the password to onpremises Active Directory, and 7 days when backing the password to Microsoft Entra ID.
 
 This setting has a maximum allowed value of 365 days.</Description>
           <DFFormat>
@@ -154,7 +155,7 @@ This setting has a maximum allowed value of 365 days.</Description>
                 <MSFT:DependencyAllowedValue ValueType="ENUM">
                   <MSFT:Enum>
                     <MSFT:Value>1</MSFT:Value>
-                    <MSFT:ValueDescription>BackupDirectory configured to Azure AD</MSFT:ValueDescription>
+                    <MSFT:ValueDescription>BackupDirectory configured to Microsoft Entra ID</MSFT:ValueDescription>
                   </MSFT:Enum>
                 </MSFT:DependencyAllowedValue>
               </MSFT:Dependency>
@@ -327,7 +328,7 @@ This setting has a maximum allowed value of 10 words.</Description>
             <MIME />
           </DFType>
           <MSFT:Applicability>
-            <MSFT:OsBuildVersion>99.9.9999</MSFT:OsBuildVersion>
+            <MSFT:OsBuildVersion>10.0.26100</MSFT:OsBuildVersion>
             <MSFT:CspVersion>1.1</MSFT:CspVersion>
           </MSFT:Applicability>
           <MSFT:AllowedValues ValueType="Range">
@@ -442,7 +443,7 @@ If not specified, this setting defaults to True.</Description>
           <DefaultValue>True</DefaultValue>
           <Description>Use this setting to configure whether the password is encrypted before being stored in Active Directory.
 
-This setting is ignored if the password is currently being stored in Azure.
+This setting is ignored if the password is currently being stored in Microsoft Entra ID.
 
 This setting is only honored when the Active Directory domain is at Windows Server 2016 Domain Functional Level or higher.
 
@@ -499,7 +500,7 @@ If not specified, this setting defaults to True.</Description>
           </AccessType>
           <Description>Use this setting to configure the name or SID of a user or group that can decrypt the password stored in Active Directory.
 
-This setting is ignored if the password is currently being stored in Azure.
+This setting is ignored if the password is currently being stored in Microsoft Entra ID.
 
 If not specified, the password will be decryptable by the Domain Admins group in the device's domain.
 
@@ -690,7 +691,7 @@ If not specified, this setting defaults to False.</Description>
             <MIME />
           </DFType>
           <MSFT:Applicability>
-            <MSFT:OsBuildVersion>99.9.9999</MSFT:OsBuildVersion>
+            <MSFT:OsBuildVersion>10.0.26100</MSFT:OsBuildVersion>
             <MSFT:CspVersion>1.1</MSFT:CspVersion>
           </MSFT:Applicability>
           <MSFT:AllowedValues ValueType="ENUM">
@@ -736,7 +737,7 @@ If not specified, this setting will default to 1.</Description>
             <MIME />
           </DFType>
           <MSFT:Applicability>
-            <MSFT:OsBuildVersion>99.9.9999</MSFT:OsBuildVersion>
+            <MSFT:OsBuildVersion>10.0.26100</MSFT:OsBuildVersion>
             <MSFT:CspVersion>1.1</MSFT:CspVersion>
           </MSFT:Applicability>
           <MSFT:AllowedValues ValueType="ENUM">
@@ -791,7 +792,7 @@ If not specified, this setting will default to "WLapsAdmin".</Description>
             <MIME />
           </DFType>
           <MSFT:Applicability>
-            <MSFT:OsBuildVersion>99.9.9999</MSFT:OsBuildVersion>
+            <MSFT:OsBuildVersion>10.0.26100</MSFT:OsBuildVersion>
             <MSFT:CspVersion>1.1</MSFT:CspVersion>
           </MSFT:Applicability>
           <MSFT:DependencyBehavior>
@@ -839,7 +840,7 @@ If not specified, this setting defaults to False.</Description>
             <MIME />
           </DFType>
           <MSFT:Applicability>
-            <MSFT:OsBuildVersion>99.9.9999</MSFT:OsBuildVersion>
+            <MSFT:OsBuildVersion>10.0.26100</MSFT:OsBuildVersion>
             <MSFT:CspVersion>1.1</MSFT:CspVersion>
           </MSFT:Applicability>
           <MSFT:AllowedValues ValueType="ENUM">
@@ -897,7 +898,7 @@ If not specified, this setting defaults to False.</Description>
             <MIME />
           </DFType>
           <MSFT:Applicability>
-            <MSFT:OsBuildVersion>99.9.9999</MSFT:OsBuildVersion>
+            <MSFT:OsBuildVersion>10.0.26100</MSFT:OsBuildVersion>
             <MSFT:CspVersion>1.1</MSFT:CspVersion>
           </MSFT:Applicability>
           <MSFT:AllowedValues ValueType="ENUM">

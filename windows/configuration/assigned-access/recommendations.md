@@ -2,7 +2,7 @@
 title: Assigned Access recommendations
 description: Learn about the recommended kiosk and restricted user experience configuration options.
 ms.topic: best-practice
-ms.date: 03/11/2024
+ms.date: 10/31/2024
 ---
 
 # Assigned Access recommendations
@@ -103,6 +103,10 @@ You can also disable the accessibility features and other options on the lock sc
 | Path | Name | Type | Value |
 |--|--|--|--|
 | `HKLM\Software\Microsoft\Windows Embedded\EmbeddedLogon\BrandingNeutral` | `BrandingNeutral` | REG_DWORD | 8 |
+
+### Microsoft Edge shortcuts
+
+To disable certain [Microsoft Edge default shortcuts](/deployedge/edge-learnmore-configurable-edge-commands), you can use the [ConfigureKeyboardShortcuts](/deployedge/microsoft-edge-policies#configurekeyboardshortcuts) policy.
 
 ## Choose an app for a kiosk experience
 

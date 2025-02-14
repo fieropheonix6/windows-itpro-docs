@@ -1,7 +1,7 @@
 ---
 title: Plan a Windows Hello for Business Deployment
 description: Learn about the role of each component within Windows Hello for Business and how certain deployment decisions affect other aspects of your infrastructure.
-ms.date: 05/16/2024
+ms.date: 10/30/2024
 ms.topic: concept-article
 ---
 
@@ -65,7 +65,7 @@ Windows Hello for Business authentication to Microsoft Entra ID always uses the 
 
 The trust type determines whether you issue authentication certificates to your users. One trust model isn't more secure than the other.
 
-The deployment of certificates to users and Domain Controllers requires more configuration and infrastructure, which could also be a factor to consider in your decision. More infrastructure needed for certificate-trust deployments includes a certificate registration authority. In a federated environment, you must activate the Device Writeback option in Microsoft Entra Connect.
+The deployment of certificates to users and domain controllers requires more configuration and infrastructure, which could also be a factor to consider in your decision. More infrastructure needed for certificate-trust deployments includes a certificate registration authority. In a federated environment, you must activate the Device Writeback option in Microsoft Entra Connect.
 
 There are three trust types from which you can choose:
 
@@ -146,7 +146,9 @@ The goal of Windows Hello for Business is to move organizations away from passwo
 - On-premises deployments must use a multifactor option that can integrate as an AD FS multifactor adapter. Organizations can choose from non-Microsoft options that offer an AD FS MFA adapter. For more information, see [Microsoft and non-Microsoft additional authentication methods][SER-2]
 
 > [!IMPORTANT]
-> As of July 1, 2019, Microsoft doesn't offer MFA Server for new deployments. New deployments that require multifactor authentication should use cloud-based Microsoft Entra multifactor authentication. Existing deployment where the MFA Server was activated prior to July 1, 2019 can download the latest version, future updates, and generate activation credentials. For more information, see [Getting started with the Azure Multi-Factor Authentication Server][ENTRA-2].
+> Beginning July 1, 2019, Microsoft doesn't offer MFA Server for new deployments. New deployments that require multifactor authentication should use cloud-based Microsoft Entra multifactor authentication.
+>
+>Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service MFA requests. To ensure uninterrupted authentication services and to remain in a supported state, organizations should [migrate their users' authentication data](/entra/identity/authentication/how-to-migrate-mfa-server-to-mfa-user-authentication) to the cloud-based Azure MFA.
 
 || Deployment model | MFA options |
 |--|--|--|
@@ -159,7 +161,6 @@ The goal of Windows Hello for Business is to move organizations away from passwo
 For more information:
 
 - [Configure Microsoft Entra multifactor authentication settings][ENTRA-4]
-- [Configure Azure MFA as authentication provider with AD FS][SER-1]
 - [Manage an external authentication method in Microsoft Entra ID][ENTRA-11]
 
 #### MFA and federated authentication
@@ -205,6 +206,9 @@ Hybrid and on-premises deployments use directory synchronization, however, each 
 | **Hybrid** | Microsoft Entra Connect Sync|
 | **On-premises** | Azure MFA server |
 
+> [!IMPORTANT]
+>Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service MFA requests. To ensure uninterrupted authentication services and to remain in a supported state, organizations should [migrate their users' authentication data](/entra/identity/authentication/how-to-migrate-mfa-server-to-mfa-user-authentication) to the cloud-based Azure MFA.
+
 ## Device configuration options
 
 Windows Hello for Business provides a rich set of granular policy settings. There are two main options to configure Windows Hello for Business: configuration service provider (CSP) and group policy (GPO).
@@ -240,6 +244,9 @@ Here are some considerations regarding licensing requirements for cloud services
 | **🔲** | **On-premises** | Key | Azure MFA, if used as MFA solution |
 | **🔲** | **On-premises** | Certificate | Azure MFA, if used as MFA solution |
 
+> [!IMPORTANT]
+>Beginning September 30, 2024, Azure Multi-Factor Authentication Server deployments will no longer service MFA requests. To ensure uninterrupted authentication services and to remain in a supported state, organizations should [migrate their users' authentication data](/entra/identity/authentication/how-to-migrate-mfa-server-to-mfa-user-authentication) to the cloud-based Azure MFA.
+
 ## Operating System requirements
 
 ### Windows requirements
@@ -257,16 +264,18 @@ All supported Windows versions can be used with Windows Hello for Business. Howe
 
 ### Windows Server requirements
 
-All supported Windows Server versions can be used with Windows Hello for Business as Domain Controller. However, cloud Kerberos trust requires minimum versions:
+Windows Hello for Business can be used to authenticate against all supported Windows Server versions as a domain controller. However, cloud Kerberos trust requires minimum versions:
 
-|  | Deployment model | Trust type | Domain Controller OS version |
+|  | Deployment model | Trust type | Domain controller OS version |
 |--|--|--|--|
 | **🔲** | **Cloud-only** | n/a | All supported versions |
-| **🔲** | **Hybrid** | Cloud Kerberos | - Windows Server 2016, with [KB3534307][KB-3] and later<br>- Windows Server 2019, with [KB4534321][KB-4] and later<br>- Windows Server 2022 |
+| **🔲** | **Hybrid** | Cloud Kerberos | - Windows Server 2016, with [KB3534307][KB-3] and later<br>- Windows Server 2019, with [KB4534321][KB-4] and later<br>- Windows Server 2022<br>- Windows Server 2025|
 | **🔲** | **Hybrid** | Key | All supported versions |
 | **🔲** | **Hybrid** | Certificate | All supported versions |
 | **🔲** | **On-premises** | Key | All supported versions |
 | **🔲** | **On-premises** | Certificate | All supported versions |
+
+The minimum required domain functional and forest functional levels are Windows Server 2008 R2 for all deployment models.
 
 ## Prepare users
 
@@ -291,7 +300,6 @@ Now that you've read about the different deployment options and requirements, yo
 <!--links-->
 
 [ENTRA-1]: /entra/identity/authentication/concept-mfa-howitworks
-[ENTRA-2]: /entra/identity/authentication/howto-mfaserver-deploy
 [ENTRA-3]: /entra/identity/hybrid/connect/how-to-connect-sync-whatis
 [ENTRA-4]: /entra/identity/authentication/howto-mfa-mfasettings
 [ENTRA-5]: /entra/identity/devices/hybrid-join-plan
@@ -302,7 +310,6 @@ Now that you've read about the different deployment options and requirements, yo
 [ENTRA-10]: /entra/identity/hybrid/connect/whatis-fed
 [ENTRA-11]: /entra/identity/authentication/how-to-authentication-external-method-manage
 
-[SER-1]: /windows-server/identity/ad-fs/operations/configure-ad-fs-2016-and-azure-mfa
 [SER-2]: /windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs#microsoft-and-third-party-additional-authentication-methods
 
 [KB-1]: https://support.microsoft.com/topic/5010415

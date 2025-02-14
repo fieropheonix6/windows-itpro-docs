@@ -1,8 +1,8 @@
 ---
-title: BCD settings and BitLocker 
+title: BCD settings and BitLocker
 description: Learn how BCD settings are used by BitLocker.
 ms.topic: reference
-ms.date: 10/30/2023
+ms.date: 12/05/2024
 ---
 
 # Boot Configuration Data settings and BitLocker

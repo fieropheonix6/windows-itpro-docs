@@ -6,9 +6,9 @@ description: Download the Feedback Hub app, and then submit Windows upgrade erro
 ms.service: windows-client
 author: frankroj
 ms.localizationpriority: medium
-ms.topic: article
+ms.topic: conceptual
 ms.subservice: itpro-deploy
-ms.date: 01/18/2024
+ms.date: 01/29/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

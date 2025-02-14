@@ -5,7 +5,7 @@ metadata:
   author: paolomatarazzo
   ms.author: paoloma
   ms.topic: faq
-  ms.date: 01/03/2024
+  ms.date: 10/10/2024
 
 title: Common questions about Windows Hello for Business
 summary: Windows Hello for Business replaces password sign-in with strong authentication, using an asymmetric key pair. This Frequently Asked Questions (FAQ) article is intended to help you learn more about Windows Hello for Business.
@@ -16,7 +16,10 @@ sections:
     questions:
       - question: What's the difference between Windows Hello and Windows Hello for Business?
         answer: |
-          Windows Hello represents the biometric framework provided in Windows. Windows Hello lets users use biometrics to sign in to their devices by securely storing their user name and password and releasing it for authentication when the user successfully identifies themselves using biometrics. Windows Hello for Business uses asymmetric keys protected by the device's security module that requires a user gesture (PIN or biometrics) to authenticate.
+          *Windows Hello* is an authentication technology that allows users to sign in to their Windows devices using biometric data, or a PIN, instead of a traditional password.
+
+          *Windows Hello for Business* is an extension of Windows Hello that provides enterprise-grade security and management capabilities, including device attestation, certificate-based authentication, and conditional access policies. Policy settings can be deployed to devices to ensure they're secure and compliant with organizational requirements.
+
       - question: Why a PIN is better than an online password
         answer: |
           Three main reasons:
@@ -44,7 +47,7 @@ sections:
           The smart card emulation feature of Windows Hello for Business verifies the PIN and then discards the PIN in exchange for a ticket. The process doesn't receive the PIN, but rather the ticket that grants them private key operations. There isn't a policy setting to adjust the caching.
       - question: Where is Windows Hello biometrics data stored?
         answer: |
-            When you enroll in Windows Hello, a representation of your biometrics, called an enrollment profile, is created more information can be found on [Windows Hello face authentication](/windows-hardware/design/device-experiences/windows-hello-face-authentication). This enrollment profile biometrics data is device specific, is stored locally on the device, and does not leave the device or roam with the user. Some external fingerprint sensors store biometric data on the fingerprint module itself rather than on Windows device. Even in this case, the biometrics data is stored locally on those modules, is device specific, doesn't roam, never leaves the module, and is never sent to Microsoft cloud or external server. For more details, see [Windows Hello biometrics in the enterprise](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise#where-is-windows-hello-data-stored).
+            When you enroll in Windows Hello, a representation of your biometrics, called an enrollment profile, is created. The enrollment profile biometrics data is device specific, is stored locally on the device, and does not leave the device or roam with the user. Some external fingerprint sensors store biometric data on the fingerprint module itself rather than on Windows device. Even in this case, the biometrics data is stored locally on those modules, is device specific, doesn't roam, never leaves the module, and is never sent to Microsoft cloud or external server. For more details, see [Windows Hello biometrics in the enterprise](/windows/security/identity-protection/hello-for-business/how-it-works#biometric-data-storage) and [Windows Hello face authentication](/windows-hardware/design/device-experiences/windows-hello-face-authentication).
       - question: What is the format used to store Windows Hello biometrics data on the device?
         answer: |
           Windows Hello biometrics data is stored on the device as an encrypted template database. The data from the biometrics sensor (like face camera or fingerprint reader) creates a data representation—or graph—that is then encrypted before it's stored on the device. Each biometrics sensor on the device which is used by Windows Hello (face or fingerprint) will have its own biometric database file where template data is stored. Each biometrics database file is encrypted with unique, randomly generated key that is encrypted to the system using AES encryption producing an SHA256 hash.
@@ -150,7 +153,7 @@ sections:
 
           It's possible to Microsoft Entra register a domain joined device. If the domain joined device has a convenience PIN, sign in with the convenience PIN will no longer work. This configuration isn't supported by Windows Hello for Business.
 
-          For more information, see [Microsoft Entra registered devices](/azure/active-directory/devices/concept-azure-ad-register).
+          For more information, see [Microsoft Entra registered devices](/entra/identity/devices/concept-device-registration).
       - question: Does Windows Hello for Business work with non-Windows operating systems?
         answer: |
           Windows Hello for Business is a feature of the Windows platform.
@@ -162,7 +165,7 @@ sections:
           Windows Hello for Business is two-factor authentication based on the observed authentication factors of: *something you have*, *something you know*, and *something that's part of you*. Windows Hello for Business incorporates two of these factors: something you have (the user's private key protected by the device's security module) and something you know (your PIN). With the proper hardware, you can enhance the user experience by introducing biometrics. By using biometrics, you can replace the "something you know" authentication factor with the "something that is part of you" factor, with the assurances that users can fall back to the "something you know factor".
 
           > [!NOTE]
-          > The Windows Hello for Business key meets Microsoft Entra multifactor authentication (MFA) requirements and reduces the number of MFA prompts users will see when accessing resources. For more information, see [What is a Primary Refresh Token](/azure/active-directory/devices/concept-primary-refresh-token#when-does-a-prt-get-an-mfa-claim).
+          > The Windows Hello for Business key meets Microsoft Entra multifactor authentication (MFA) requirements and reduces the number of MFA prompts users will see when accessing resources. For more information, see [What is a Primary Refresh Token](/entra/identity/devices/concept-primary-refresh-token#when-does-a-prt-get-an-mfa-claim).
       - question: Which is a better or more secure for of authentication, key or certificate?
         answer: |
           Both types of authentication provide the same security; one is not more secure than the other.
@@ -203,17 +206,17 @@ sections:
     questions:
       - question: What is Windows Hello for Business cloud Kerberos trust?
         answer: |
-          Windows Hello for Business *cloud Kerberos trust* is a *trust model* that enables Windows Hello for Business deployment using the infrastructure introduced for supporting [security key sign-in on Microsoft Entra hybrid joined devices and on-premises resource access on Microsoft Entra joined devices](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises). Cloud Kerberos trust is the preferred deployment model if you do not need to support certificate authentication scenarios. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/hello-for-business/deploy).
+          Windows Hello for Business *cloud Kerberos trust* is a *trust model* that enables Windows Hello for Business deployment using the infrastructure introduced for supporting [security key sign-in on Microsoft Entra hybrid joined devices and on-premises resource access on Microsoft Entra joined devices](/entra/identity/authentication/howto-authentication-passwordless-security-key-on-premises). Cloud Kerberos trust is the preferred deployment model if you do not need to support certificate authentication scenarios. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/hello-for-business/deploy).
       - question: Does Windows Hello for Business cloud Kerberos trust work in my on-premises environment?
         answer: |
           This feature doesn't work in a pure on-premises AD domain services environment.
-      - question: Does Windows Hello for Business cloud Kerberos trust work in a Windows sign-in with RODC present in the hybrid environment?
+      - question: Does Windows Hello for Business cloud Kerberos trust work with RODC present in the hybrid environment?
         answer: |
-          Windows Hello for Business cloud Kerberos trust looks for a writeable DC to exchange the partial TGT. As long as you have at least one writeable DC per site, login with cloud Kerberos trust will work.
+          Windows Hello for Business cloud Kerberos trust functions correctly when the client authenticates directly to a writable domain controller or to a Read-Only Domain Controller (RODC) that doesn't cache the user's credentials, in accordance with the Password Replication Policy. If the client attempts to authenticate to an RODC that can cache the user's credentials, cloud Kerberos trust authentication might fail. To mitigate this, deploy KDC certificates to all RODCs to support Windows Hello for Business key trust authentication, which is also required for those RODCs to support LDAP over SSL. This configuration ensures that authentication can seamlessly failover to Windows Hello for Business key trust authentication, thereby guaranteeing successful user authentication.
       - question: Do I need line of sight to a domain controller to use Windows Hello for Business cloud Kerberos trust?
         answer: |
           Windows Hello for Business cloud Kerberos trust requires line of sight to a domain controller when:
-          - a user signs-in for the first time or unlocks with Windows Hello for Business after provisioning
+          - a user signs in for the first time or unlocks with Windows Hello for Business after provisioning
           - attempting to access on-premises resources secured by Active Directory
       - question: Can I use RDP/VDI with Windows Hello for Business cloud Kerberos trust?
         answer: |

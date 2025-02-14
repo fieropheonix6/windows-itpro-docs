@@ -1,9 +1,8 @@
 ---
 title: Use Quick Assist to help users
 description: Learn how IT Pros can use Quick Assist to help users.
-ms.date: 05/09/2024
+ms.date: 07/01/2024
 ms.topic: conceptual
-ms.localizationpriority: medium
 ms.collection:
 - highpri
 - tier1
@@ -20,7 +19,7 @@ Quick Assist is an application that enables a person to share their [Windows](#i
 
 ## Before you begin
 
-All that's required to use Quick Assist is suitable network and internet connectivity. No roles, permissions, or policies are involved. Neither party needs to be in a domain. The helper must have a Microsoft account. The sharer doesn't have to authenticate.
+All you need to use Quick Assist is suitable network and internet connectivity. No roles, permissions, or policies are involved. Neither party needs to be in a domain. The helper must have a Microsoft account. The sharer doesn't have to authenticate.
 
 ### Authentication
 
@@ -99,7 +98,7 @@ In some scenarios, the helper does require the sharer to respond to application 
 ### Install Quick Assist from the Microsoft Store
 
 1. Download the new version of Quick Assist by visiting the [Microsoft Store](https://apps.microsoft.com/store/detail/quick-assist/9P7BP5VNWKX5).
-1. In the Microsoft Store, select **Get in Store app**. Then, give permission to install Quick Assist. When the installation is complete, **Get** changes to **Open**.</br> :::image type="content" source="images/quick-assist-get.png" lightbox="images/quick-assist-get.png" alt-text="Microsoft Store window showing the Quick Assist app with a button labeled get in the bottom right corner.":::
+1. In the Microsoft Store, select **View in store**, then install Quick Assist. When the installation is complete, **Install** changes to **Open**.
 
 For more information, visit [Install Quick Assist](https://support.microsoft.com/windows/install-quick-assist-c17479b7-a49d-4d12-938c-dbfb97c88bca).
 
@@ -107,14 +106,15 @@ For more information, visit [Install Quick Assist](https://support.microsoft.com
 
 To deploy Quick Assist with Intune, see [Add Microsoft Store apps to Microsoft Intune](/mem/intune/apps/store-apps-microsoft).
 
+<!-- commenting out since Store for Business and Microsoft Store for Education retired May 31, 20203
 ### Install Quick Assist Offline
 
 To install Quick Assist offline, you need to download your APPXBUNDLE and unencoded XML file from [Microsoft Store for Business](https://businessstore.microsoft.com). Visit [Download an offline-licensed app](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) for more information.
 
 1. Start **Windows PowerShell** with Administrative privileges
 1. In PowerShell, change the directory to the location where you saved the file in step 1: `cd <location of package file>`
-1. Run the following command to install Quick Assist: `Add-AppxProvisionedPackage -Online -PackagePath "MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe.AppxBundle" -LicensePath "MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe_4bc27046-84c5-8679-dcc7-d44c77a47dd0.xml"`
-1. After Quick Assist is installed, run this command to confirm that Quick Assist is installed for the user: `Get-AppxPackage *QuickAssist* -AllUsers`
+1. To install Quick Assist, run the following command: `Add-AppxProvisionedPackage -Online -PackagePath "MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe.AppxBundle" -LicensePath "MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe_4bc27046-84c5-8679-dcc7-d44c77a47dd0.xml"`
+1. After Quick Assist is installed, run this command to confirm that Quick Assist is installed for the user: `Get-AppxPackage *QuickAssist* -AllUsers` --> 
 
 ### Microsoft Edge WebView2
 
@@ -134,11 +134,14 @@ Quick Assist for macOS is available for interactions with Microsoft Support. If 
 
 ## Disable Quick Assist within your organization
 
-If your organization utilizes another remote support tool such as [Remote Help](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune-remote-help), disable or remove Quick Assist as a best practice, if it isn't used within your environment. This prevents external users from using Quick Assist to gain access to devices within your organization.
+If your organization utilizes another remote support tool such as [Remote Help](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune-remote-help), disable or remove Quick Assist as a best practice, if it isn't used within your environment. This prevents guests from using Quick Assist to gain access to devices within your organization.
 
 ### Disable Quick Assist
 
 To disable Quick Assist, block traffic to the `https://remoteassistance.support.services.microsoft.com` endpoint. This is the primary endpoint used by Quick Assist to establish a session, and once blocked, Quick Assist can't be used to get help or help someone.
+
+> [!NOTE]
+> Blocking the endpoint will disrupt the functionality of Remote Help, as it relies on this endpoint for operation.
 
 ### Uninstall Quick Assist
 

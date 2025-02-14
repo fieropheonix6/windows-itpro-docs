@@ -1,7 +1,8 @@
 ---
 title: Defender CSP
 description: Learn more about the Defender CSP.
-ms.date: 05/20/2024
+ms.date: 02/13/2025
+ms.topic: generated-reference
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -33,6 +34,9 @@ The following list shows the Defender configuration service provider nodes:
         - [BruteForceProtectionConfiguredState](#configurationbehavioralnetworkblocksbruteforceprotectionbruteforceprotectionconfiguredstate)
         - [BruteForceProtectionExclusions](#configurationbehavioralnetworkblocksbruteforceprotectionbruteforceprotectionexclusions)
         - [BruteForceProtectionMaxBlockTime](#configurationbehavioralnetworkblocksbruteforceprotectionbruteforceprotectionmaxblocktime)
+        - [BruteForceProtectionPlugins](#configurationbehavioralnetworkblocksbruteforceprotectionbruteforceprotectionplugins)
+          - [BruteForceProtectionLocalNetworkBlocking](#configurationbehavioralnetworkblocksbruteforceprotectionbruteforceprotectionpluginsbruteforceprotectionlocalnetworkblocking)
+          - [BruteForceProtectionSkipLearningPeriod](#configurationbehavioralnetworkblocksbruteforceprotectionbruteforceprotectionpluginsbruteforceprotectionskiplearningperiod)
       - [RemoteEncryptionProtection](#configurationbehavioralnetworkblocksremoteencryptionprotection)
         - [RemoteEncryptionProtectionAggressiveness](#configurationbehavioralnetworkblocksremoteencryptionprotectionremoteencryptionprotectionaggressiveness)
         - [RemoteEncryptionProtectionConfiguredState](#configurationbehavioralnetworkblocksremoteencryptionprotectionremoteencryptionprotectionconfiguredstate)
@@ -752,6 +756,142 @@ Set the maximum time an IP address is blocked by Brute-Force Protection. After t
 
 <!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionMaxBlockTime-End -->
 
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Begin -->
+##### Configuration/BehavioralNetworkBlocks/BruteForceProtection/BruteForceProtectionPlugins
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Applicability-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Defender/Configuration/BehavioralNetworkBlocks/BruteForceProtection/BruteForceProtectionPlugins
+```
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-OmaUri-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Description-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Editable-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `node` |
+| Access Type | Get |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-DFProperties-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-Examples-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Begin -->
+###### Configuration/BehavioralNetworkBlocks/BruteForceProtection/BruteForceProtectionPlugins/BruteForceProtectionLocalNetworkBlocking
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Applicability-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Defender/Configuration/BehavioralNetworkBlocks/BruteForceProtection/BruteForceProtectionPlugins/BruteForceProtectionLocalNetworkBlocking
+```
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-OmaUri-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Description-Begin -->
+<!-- Description-Source-DDF -->
+Extend brute-force protection coverage in Microsoft Defender Antivirus to block local network addresses.
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Description-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Editable-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-DFProperties-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Brute-force protection won't block local network addresses. |
+| 1 | Brute-force protection will block local network addresses. |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-AllowedValues-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-Examples-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionLocalNetworkBlocking-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Begin -->
+###### Configuration/BehavioralNetworkBlocks/BruteForceProtection/BruteForceProtectionPlugins/BruteForceProtectionSkipLearningPeriod
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Applicability-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Defender/Configuration/BehavioralNetworkBlocks/BruteForceProtection/BruteForceProtectionPlugins/BruteForceProtectionSkipLearningPeriod
+```
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-OmaUri-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Description-Begin -->
+<!-- Description-Source-DDF -->
+Skip the 2-week initial learning period, so brute-force protection in Microsoft Defender Antivirus can start blocking immediately.
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Description-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Editable-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-DFProperties-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Brute-force protection blocks threats only after completing a 2-week learning period. |
+| 1 | Brute-force protection starts blocking threats immediately. |
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-AllowedValues-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-Examples-End -->
+
+<!-- Device-Configuration-BehavioralNetworkBlocks-BruteForceProtection-BruteForceProtectionPlugins-BruteForceProtectionSkipLearningPeriod-End -->
+
 <!-- Device-Configuration-BehavioralNetworkBlocks-RemoteEncryptionProtection-Begin -->
 #### Configuration/BehavioralNetworkBlocks/RemoteEncryptionProtection
 
@@ -1150,7 +1290,7 @@ Define data duplication remote location for Device Control. When configuring thi
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Description-Begin -->
 <!-- Description-Source-DDF -->
-Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 25 days when enabled.
+Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 30 days when enabled.
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Description-End -->
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Editable-Begin -->
@@ -1165,7 +1305,7 @@ Configure how many days can pass before an aggressive quick scan is triggered. T
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
 | Allowed Values | Range: `[7-60]` |
-| Default Value  | 25 |
+| Default Value  | 30 |
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-DFProperties-End -->
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Examples-Begin -->
@@ -3636,9 +3776,9 @@ Enable this policy to specify when devices receive Microsoft Defender security i
 
 | Value | Description |
 |:--|:--|
-| 0 (Default) | Not configured (Default). The device will stay up to date automatically during the gradual release cycle. Suitable for most devices. |
-| 4 | Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%). |
-| 5 | Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). |
+| 0 (Default) | Not configured (Default). Microsoft will either assign the device to Current Channel (Broad) or a beta channel early in the gradual release cycle. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which may not be suitable for devices in a production or critical environment. |
+| 4 | Current Channel (Staged): Same as Current Channel (Broad). |
+| 5 | Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in all populations, including production. |
 <!-- Device-Configuration-SecurityIntelligenceUpdatesChannel-AllowedValues-End -->
 
 <!-- Device-Configuration-SecurityIntelligenceUpdatesChannel-Examples-Begin -->

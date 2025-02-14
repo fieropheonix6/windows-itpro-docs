@@ -2,8 +2,8 @@
 title: Cryptography and Certificate Management
 description: Get an overview of cryptography and certificate management in Windows
 ms.topic: conceptual
-ms.date: 08/11/2023
-ms.reviewer: skhadeer, raverma
+ms.date: 07/10/2024
+ms.reviewer: skhadeer, aathipsa
 ---
 
 # Cryptography and Certificate Management
@@ -12,17 +12,23 @@ ms.reviewer: skhadeer, raverma
 
 Cryptography uses code to convert data so that only a specific recipient can read it by using a key. Cryptography enforces privacy to prevent anyone except the intended recipient from reading data, integrity to ensure data is free of tampering, and authentication that verifies identity to ensure that communication is secure. The cryptography stack in Windows extends from the chip to the cloud enabling Windows, applications, and services protect system and user secrets.
 
-Cryptography in Windows is Federal Information Processing Standards (FIPS) 140 certified. FIPS 140 certification ensures that US government approved algorithms are being used (RSA for signing, ECDH with NIST curves for key agreement, AES for symmetric encryption, and SHA2 for hashing), tests module integrity to prove that no tampering has occurred and proves the randomness for entropy sources.
+Cryptography in Windows is Federal Information Processing Standards (FIPS) 140 certified. FIPS 140 certification ensures that US government approved algorithms are being used (RSA for signing, ECDH with NIST curves for key agreement, AES for symmetric encryption, and SHA2 for hashing), tests module integrity to prove that no tampering occurred and proves the randomness for entropy sources.
 
 Windows cryptographic modules provide low-level primitives such as:
 
 - Random number generators (RNG)
-- Symmetric and asymmetric encryption (support for  AES 128/256 and RSA 512 to 16384, in 64-bit increments and ECDSA over NIST-standard prime curves P-256, P-384, P-521)
-- Hashing (support for SHA-256, SHA-384, and SHA-512)
+- Symmetric and asymmetric encryption (support for AES 128/256 and RSA 512 to 16384, in 64-bit increments and ECDSA over NIST-standard prime curves P-256, P-384, P-521)
+- Hashing (support for SHA-256, SHA-384, SHA-512, and SHA-3*)
 - Signing and verification (padding support for OAEP, PSS, PKCS1)
 - Key agreement and key derivation (support for ECDH over NIST-standard prime curves P-256, P-384, P-521, and HKDF)
 
 These modules are natively exposed on Windows through the Crypto API (CAPI) and the Cryptography Next Generation API (CNG) which is powered by Microsoft's open-source cryptographic library SymCrypt. Application developers can use these APIs to perform low-level cryptographic operations (BCrypt), key storage operations (NCrypt), protect static data (DPAPI), and securely share secrets (DPAPI-NG).
+
+*With this release we added support for the SHA-3 family of hash functions and SHA-3 derived functions (SHAKE, cSHAKE, and KMAC). These are the latest standardized hash functions by the National Institute of Standards and Technology (NIST) and can be leveraged through the Windows CNG library. Below is a list of the supported SHA-3 functions:
+
+Supported SHA-3 hash functions: SHA3-256, SHA3-384, SHA3-512 (SHA3-224 is not supported)
+Supported SHA-3 HMAC algorithms: HMAC-SHA3-256, HMAC-SHA3-384, HMAC-SHA3-512
+Supported SHA-3 derived algorithms: extendable-output functions (XOF) (SHAKE128, SHAKE256), customizable XOFs (cSHAKE128, cSHAKE256), and KMAC (KMAC128, KMAC256, KMACXOF128, KMACXOF256).
 
 ## Certificate management
 

@@ -1,7 +1,8 @@
 ---
 title: Personalization DDF file
 description: View the XML file containing the device description framework (DDF) for the Personalization configuration service provider.
-ms.date: 04/10/2024
+ms.date: 02/13/2025
+ms.topic: generated-reference
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -101,7 +102,7 @@ The following XML file contains the device description framework (DDF) for the P
           <Get />
           <Replace />
         </AccessType>
-        <Description>A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.</Description>
+        <Description>A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.</Description>
         <DFFormat>
           <chr />
         </DFFormat>
@@ -148,7 +149,7 @@ The following XML file contains the device description framework (DDF) for the P
           <Get />
           <Replace />
         </AccessType>
-        <Description>A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Company Logo or a file Url to a local image on the file system that needs to be used as the Company Logo. This setting is currently available for boot to cloud shared pc mode only.</Description>
+        <Description>A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Company Logo or a file Url to a local image on the file system that needs to be used as the Company Logo. This setting is currently available for boot to cloud shared pc mode only.</Description>
         <DFFormat>
           <chr />
         </DFFormat>
@@ -162,7 +163,7 @@ The following XML file contains the device description framework (DDF) for the P
           <MIME />
         </DFType>
         <MSFT:Applicability>
-          <MSFT:OsBuildVersion>99.9.99999</MSFT:OsBuildVersion>
+          <MSFT:OsBuildVersion>10.0.22621.3374</MSFT:OsBuildVersion>
           <MSFT:CspVersion>2.0</MSFT:CspVersion>
         </MSFT:Applicability>
         <MSFT:AllowedValues ValueType="None">
@@ -189,7 +190,7 @@ The following XML file contains the device description framework (DDF) for the P
           <MIME />
         </DFType>
         <MSFT:Applicability>
-          <MSFT:OsBuildVersion>99.9.99999</MSFT:OsBuildVersion>
+          <MSFT:OsBuildVersion>10.0.22621.3374</MSFT:OsBuildVersion>
           <MSFT:CspVersion>2.0</MSFT:CspVersion>
         </MSFT:Applicability>
       </DFProperties>
@@ -217,7 +218,7 @@ The following XML file contains the device description framework (DDF) for the P
           <MIME />
         </DFType>
         <MSFT:Applicability>
-          <MSFT:OsBuildVersion>99.9.99999</MSFT:OsBuildVersion>
+          <MSFT:OsBuildVersion>10.0.22621.3374</MSFT:OsBuildVersion>
           <MSFT:CspVersion>2.0</MSFT:CspVersion>
         </MSFT:Applicability>
         <MSFT:AllowedValues ValueType="RegEx">

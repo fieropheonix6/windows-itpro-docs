@@ -2,7 +2,7 @@
 title: Enterprise app management
 description: This article covers one of the key mobile device management (MDM) features for managing the lifecycle of apps across Windows devices.
 ms.topic: conceptual
-ms.date: 08/10/2023
+ms.date: 07/08/2024
 ---
 
 # Enterprise app management
@@ -15,7 +15,6 @@ By using Windows MDM to manage app lifecycles, administrators can deploy and man
 
 Windows offers the ability for management servers to:
 
-- Install apps directly from the Microsoft Store for Business
 - Deploy offline Store apps and licenses
 - Deploy line-of-business (LOB) apps (non-Store apps)
 - Inventory all apps for a user (Store and non-Store apps)
@@ -28,7 +27,7 @@ Windows offers the ability for management servers to:
 
 Windows lets you inventory all apps deployed to a user, and inventory all apps for all users of a Windows device. The [EnterpriseModernAppManagement](mdm/enterprisemodernappmanagement-csp.md) configuration service provider (CSP) inventories packaged apps and doesn't include traditional Win32 apps installed via MSI or executables. When the apps are inventoried, they're separated based on the following app classifications:
 
-- **Store**: Apps that have been acquired from the Microsoft Store, either directly or delivered with the enterprise from the Store for Business.
+- **Store**: Apps that have been acquired from the Microsoft Store.
 - **nonStore**: Apps that weren't acquired from the Microsoft Store.
 - **System**: Apps that are part of the operating system and can't be uninstalled. This classification is read-only and can only be inventoried.
 
@@ -116,7 +115,7 @@ There are two basic types of apps you can deploy:
 - Store apps.
 - Enterprise signed apps.
 
-To deploy enterprise signed apps, you must enable a setting on the device to allow trusted apps. The apps can be signed by a Microsoft approved root (such as Symantec), an enterprise deployed root, or apps that are self-signed. This section covers the steps to configure the device for non-store app deployment.
+To deploy enterprise signed apps, you must enable a setting on the device to allow trusted apps. The apps can be signed by a Microsoft approved root (such as Symantec), an enterprise deployed root, or apps that are self-signed. This section covers the steps to configure the device for nonstore app deployment.
 
 ### Unlock the device for non-Store apps
 
@@ -154,7 +153,7 @@ Here's an example:
 
 ### Unlock the device for developer mode
 
-Development of apps on Windows devices no longer requires a special license. You can enable debugging and deployment of non-packaged apps using [ApplicationManagement/AllowDeveloperUnlock](mdm/policy-csp-applicationmanagement.md) policy in Policy CSP.
+Development of apps on Windows devices no longer requires a special license. You can enable debugging and deployment of nonpackaged apps using [ApplicationManagement/AllowDeveloperUnlock](mdm/policy-csp-applicationmanagement.md) policy in Policy CSP.
 
 AllowDeveloperUnlock policy enables the development mode on the device. The AllowDeveloperUnlock isn't configured by default, which means only Microsoft Store apps can be installed. If the management server explicitly sets the value to off, the setting is disabled in the settings panel on the device.
 
@@ -198,6 +197,9 @@ To deploy an app to a user directly from the Microsoft Store, the management ser
 
 If you purchased an app from the Store for Business and the app is specified for an online license, then the app and license must be acquired directly from the Microsoft Store.
 
+> [!NOTE]
+> The Microsoft Store for Business and Microsoft Store for Education are retired. For more information, see [Microsoft Store for Business and Education retiring March 31, 2023](/lifecycle/announcements/microsoft-store-for-business-education-retiring).
+
 Here are the requirements for this scenario:
 
 - The app is assigned to a user Microsoft Entra identity in the Store for Business. You can assign directly in the Store for Business or through a management server.
@@ -238,8 +240,8 @@ If you purchased an app from the Store for Business, the app license must be dep
 
 In the SyncML, you need to specify the following information in the `Exec` command:
 
-- License ID - This ID is specified in the LocURI. The License ID for the offline license is referred to as the "Content ID" in the license file. You can retrieve this information from the Base64 encoded license download from the Store for Business.
-- License Content - This content is specified in the data section. The License Content is the Base64 encoded blob of the license.
+- License ID - This ID is specified in the LocURI. The License ID for the offline license is referred to as the "Content ID" in the license file. You can retrieve this information from the Base 64 encoded license download from the Store for Business.
+- License Content - This content is specified in the data section. The License Content is the Base 64 encoded blob of the license.
 
 Here's an example of an offline license installation.
 
@@ -469,7 +471,7 @@ When an app installation is completed, a Windows notification is sent. You can a
   - NOT\_INSTALLED (0) - The node was added, but the execution wasn't completed.
   - INSTALLING (1) - Execution has started, but the deployment hasn't completed. If the deployment completes regardless of success, then this value is updated.
   - FAILED (2) - Installation failed. The details of the error can be found under LastError and LastErrorDescription.
-  - INSTALLED (3) - Once an install is successful this node is cleaned up. If the clean up action hasn't completed, then this state may briefly appear.
+  - INSTALLED (3) - Once an install is successful this node is cleaned up. If the clean-up action hasn't completed, then this state may briefly appear.
 - LastError - The last error reported by the app deployment server.
 - LastErrorDescription - Describes the last error reported by the app deployment server.
 - Status - An integer that indicates the progress of the app installation. In cases of an HTTPS location, this status shows the estimated download progress. Status isn't available for provisioning and only used for user-based installations. For provisioning, the value is always 0.

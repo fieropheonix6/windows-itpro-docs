@@ -1,7 +1,8 @@
 ---
 title: DMClient DDF file
 description: View the XML file containing the device description framework (DDF) for the DMClient configuration service provider.
-ms.date: 04/10/2024
+ms.date: 02/13/2025
+ms.topic: generated-reference
 ---
 
 <!-- Auto-Generated CSP Document -->
@@ -2988,11 +2989,11 @@ The following XML file contains the device description framework (DDF) for the D
               <MSFT:AllowedValues ValueType="ENUM">
                 <MSFT:Enum>
                   <MSFT:Value>true</MSFT:Value>
-                  <MSFT:ValueDescription>ConfigRefresh is enabled.</MSFT:ValueDescription>
+                  <MSFT:ValueDescription>Enabled</MSFT:ValueDescription>
                 </MSFT:Enum>
                 <MSFT:Enum>
                   <MSFT:Value>false</MSFT:Value>
-                  <MSFT:ValueDescription>ConfigRefresh is disabled.</MSFT:ValueDescription>
+                  <MSFT:ValueDescription>Disabled</MSFT:ValueDescription>
                 </MSFT:Enum>
               </MSFT:AllowedValues>
               <MSFT:ConflictResolution>LastWrite</MSFT:ConflictResolution>
