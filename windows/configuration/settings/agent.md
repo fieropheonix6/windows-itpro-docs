@@ -19,6 +19,9 @@ The Settings agent is designed to be a helpful assistant that can guide users th
 
 :::image type="content" source="images/settings-agent.png" alt-text="Screenshot of Settings showing the search agent." border="false":::
 
+> [!NOTE]
+> The Settings agent respects the policy settings already configured on the device. For example, if a user is restricted from accessing certain settings, the agent won't be able to change those settings on their behalf.
+
 ## System requirements
 
 Here's a list of requirements to use the Settings agent:
@@ -27,9 +30,18 @@ Here's a list of requirements to use the Settings agent:
 > - Windows Insider 22635.xxxx (Beta Channel) and later
 > - A [Copilot+ PC](https://aka.ms/copilotpluspcs)
 
+> [!NOTE]
+> Settings agent is not available on Windows IoT devices.
+
 ## Settings agent policy setting
 
-As an administrator, you can control the Settings agent's visibility and functionality.
+As an administrator, you can control the Settings agent's visibility using policy settings.
+
+The Settings agent experience enhances search within Windows Settings by enabling natural language. When activated, it utilizes an AI model to provide intelligent Settings search suggestions. The policy setting allows you to determine whether the Settings agent search experience is available for users on their devices.
+
+- When the policy setting is enabled, the agent experience isn't available, and search results are limited to statically indexed searches and semantic searches.
+- When the policy setting is disabled (default), the Settings agent search experience is available, and the agent can provide recommendations and automate tasks based on user input.
+
 
 ## Configuration
 
@@ -41,7 +53,7 @@ As an administrator, you can control the Settings agent's visibility and functio
 
 | Category | Setting name | Value |
 |--|--|--|
-| **Settings** | - Page Visibility List<br>- Page Visibility List (User)| List of URIs to show or hide, separated by semicolons.|
+| **Windows AI** | - Disable Settings Agent | Toggle to enable or disable the Settings agent search experience |
 
 [!INCLUDE [intune-settings-catalog-2](../../../includes/configure/intune-settings-catalog-2.md)]
 
@@ -51,7 +63,7 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Setting |
 |--|
-|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`<br>- **Data type:** string<br>- **Value:** List of URIs to show or hide, separated by semicolons.<br><br>Or<br><br>- **OMA-URI:** `./User/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`<br>- **Data type:** string<br>- **Value:** List of URIs to show or hide, separated by semicolons.|
+|- **OMA-URI:** `./Vendor/MSFT/Policy/Config/WindowsAI/DisableSettingsAgent`<br>- **Data type:** Boolean<br>- **Value:** <br> - `0` (default): Settings agent search experience is enabled <br>- `1`: Settings agent search experience is disabled|
 
 #### [:::image type="icon" source="../images/icons/group-policy.svg" border="false"::: **GPO**](#tab/gpo)
 
@@ -59,15 +71,11 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Group policy path | Group policy setting | Value |
 | - | - | - |
-| **Computer Configuration\Administrative Templates\Control Panel**<br><br>Or<br><br>**User Configuration\Administrative Templates\Control Panel** | Settings Page Visibility | List of URIs to show or hide, separated by semicolons.|
+| **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows AI** | Disable Settings Agent | |
 
 [!INCLUDE [gpo-settings-2](../../../includes/configure/gpo-settings-2.md)]
 
 ---
-
-## User Experience
-
-By controlling the visibility of Settings pages, you can create a customized user experience tailored to your organization's specific needs. Once the policy is applied, users have access only to the Settings pages you explicitly allow, ensuring a focused and streamlined interface.
 
 <!--links-->
 
