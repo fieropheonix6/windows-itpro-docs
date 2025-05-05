@@ -1,6 +1,6 @@
 ---
-title: Configure the Settings agent in Windows
-description: Learn how to configure the Settings agent in Windows.
+title: Configure the agent in Windows Settings
+description: Learn how to configure the agent in Windows Settings.
 ms.topic: how-to
 ms.date: 05/05/2025
 author: paolomatarazzo
@@ -9,22 +9,22 @@ appliesto:
   - "✅ <a href=\"https://learn.microsoft.com/windows-insider/flight-hub\" target=\"_blank\">Windows Insider (Beta Channel)</a>"
 ---
 
-# Configure the Settings agent in Windows
+# Configure the agent in Windows Settings
 
 [!INCLUDE [insider-feature](../includes/insider-feature.md)]
 
-Starting with [Windows Insider 22635.xxxx (Beta Channel)][KB-1], the Settings agent is a new feature in Windows that uses on-device AI to help you find and change settings on your PC. It can also help you troubleshoot issues by providing recommendations and automating tasks based on your input.
+Starting with [Windows Insider 22635.xxxx (Beta Channel)][KB-1], the agent in Windows Settings is a feature that uses on-device AI to help you find and change settings on your PC. It can also help you troubleshoot issues by providing recommendations and automating tasks based on your input.
 
-The Settings agent is designed to be a helpful assistant that can guide users through the process of finding and changing settings on thier PCs. Users can ask the agent questions or describe what they need help with, and it will provide relevant information and recommendations. Once the user has provided their permission, the agent can even automate the process of changing settings on their behalf.
+The agent guides users through finding and changing settings, offering relevant information and recommendations. With user permission, it can automate the process of changing settings. This feature enhances search within Windows Settings by enabling natural language queries and utilizing an AI model for intelligent search suggestions.
+
+The agent is designed to respect existing policy settings on the device, ensuring that it doesn't override any restrictions already in place.
 
 :::image type="content" source="images/settings-agent.png" alt-text="Screenshot of Settings showing the search agent." border="false":::
 
-> [!NOTE]
-> The Settings agent respects the policy settings already configured on the device. For example, if a user is restricted from accessing certain settings, the agent won't be able to change those settings on their behalf.
 
 ## System requirements
 
-Here's a list of requirements to use the Settings agent:
+Here's a list of requirements to use the agent in Settings:
 
 > [!div class="checklist"]
 > - Windows Insider 22635.xxxx (Beta Channel) and later
@@ -33,14 +33,12 @@ Here's a list of requirements to use the Settings agent:
 > [!NOTE]
 > Settings agent is not available on Windows IoT devices.
 
-## Configure Settings agent
+## Configure the agent
 
-As an administrator, you can enable or disable the Settings agent using policy settings.
-
-The Settings agent experience enhances search within Windows Settings by enabling natural language. When activated, it utilizes an AI model to provide intelligent Settings search suggestions. The policy setting allows you to determine whether the Settings agent search experience is available for users on their devices.
+As an administrator, you can enable or disable the agent in Settings using a policy setting:
 
 - When the policy setting is enabled, the agent experience isn't available, and search results are limited to statically indexed searches and semantic searches.
-- When the policy setting is disabled (default), the Settings agent search experience is available, and the agent can provide recommendations and automate tasks based on user input.
+- When the policy setting is disabled (default), the agent search experience is available. The agent can provide recommendations and automate tasks based on user input.
 
 
 ## Configuration
@@ -63,7 +61,7 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Setting |
 |--|
-|- **OMA-URI:** `./Vendor/MSFT/Policy/Config/WindowsAI/`[DisableSettingsAgent](/windows/client-management/mdm/policy-csp-windowsai)<br>- **Data type:** Boolean<br>- **Value:** <br>&nbsp;&nbsp;&nbsp;&nbsp;- `0` (default): Settings agent search experience is enabled <br>&nbsp;&nbsp;&nbsp;&nbsp;- `1`: Settings agent search experience is disabled|
+|- **OMA-URI:** `./Vendor/MSFT/Policy/Config/WindowsAI/`[DisableSettingsAgent](/windows/client-management/mdm/policy-csp-windowsai)<br>- **Data type:** Boolean<br>- **Value:** <br>&nbsp;&nbsp;&nbsp;&nbsp;- `0` (default): the agent search experience in Settings is enabled <br>&nbsp;&nbsp;&nbsp;&nbsp;- `1`: the agent search experience in Settings is disabled|
 
 #### [:::image type="icon" source="../images/icons/group-policy.svg" border="false"::: **GPO**](#tab/gpo)
 
@@ -77,9 +75,9 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 ---
 
-## User Experience
+## User experience
 
-If the Settings agent is enabled, users can access it by opening Settings and typing their question in the search box. The agent will provide relevant information and recommendations based on the user's input.
+If the agent is enabled, users can access it by opening Settings and typing their question in the search box. The agent will provide relevant information and recommendations based on the user's input.
 
 :::image type="content" source="images/settings-agent-example.png" alt-text="Screenshot of Settings showing the search agent with an example search." border="false":::
 
