@@ -12,9 +12,7 @@ items:
 - name: Windows spotlight
   href: windows-spotlight/index.md
 - name: Settings
-  items:
-  - name: Page visibility
-    href: settings/page-visibility.md
+  href: settings/toc.yml
 - name: Microsoft Store
   href: store/toc.yml
 - name: Quick machine recovery

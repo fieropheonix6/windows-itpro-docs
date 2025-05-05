@@ -23,7 +23,7 @@ When you configure a **restricted user experience**, users can only execute a de
 > [!NOTE]
 > When you configure a restricted user experience, different policy settings are applied to the device. Some policy settings apply to standard users only, and some to administrator accounts too. For more information, see [Assigned Access policy settings](policy-settings.md).
 
-## Requirements
+## System requirements
 
 Here are the requirements for Assigned Access:
 
