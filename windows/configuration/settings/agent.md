@@ -17,6 +17,8 @@ Starting with [Windows Insider 22635.xxxx (Beta Channel)][KB-1], the Settings ag
 
 The Settings agent is designed to be a helpful assistant that can guide users through the process of finding and changing settings on thier PCs. Users can ask the agent questions or describe what they need help with, and it will provide relevant information and recommendations. Once the user has provided their permission, the agent can even automate the process of changing settings on their behalf.
 
+:::image type="content" source="images/settings-agent.png" alt-text="Screenshot of Settings showing the search agent." border="false":::
+
 ## System requirements
 
 Here's a list of requirements to use the Settings agent:
