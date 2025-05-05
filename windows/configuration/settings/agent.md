@@ -77,6 +77,12 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 ---
 
+## User Experience
+
+If the Settings agent is enabled, users can access it by opening Settings and typing their question in the search box. The agent will provide relevant information and recommendations based on the user's input.
+
+:::image type="content" source="images/settings-agent-example.png" alt-text="Screenshot of Settings showing the search agent with an example search." border="false":::
+
 <!--links-->
 
 [CSP-1]: /windows/client-management/mdm/policy-csp-settings#pagevisibilitylist
