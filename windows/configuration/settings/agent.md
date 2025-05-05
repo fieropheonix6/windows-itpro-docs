@@ -33,9 +33,9 @@ Here's a list of requirements to use the Settings agent:
 > [!NOTE]
 > Settings agent is not available on Windows IoT devices.
 
-## Settings agent policy setting
+## Configure Settings agent
 
-As an administrator, you can control the Settings agent's visibility using policy settings.
+As an administrator, you can enable or disable the Settings agent using policy settings.
 
 The Settings agent experience enhances search within Windows Settings by enabling natural language. When activated, it utilizes an AI model to provide intelligent Settings search suggestions. The policy setting allows you to determine whether the Settings agent search experience is available for users on their devices.
 
@@ -51,9 +51,9 @@ The Settings agent experience enhances search within Windows Settings by enablin
 
 [!INCLUDE [intune-settings-catalog-1](../../../includes/configure/intune-settings-catalog-1.md)]
 
-| Category | Setting name | Value |
-|--|--|--|
-| **Windows AI** | - Disable Settings Agent | Toggle to enable or disable the Settings agent search experience |
+| Category | Setting name |
+|--|--|
+| **Windows AI** | Disable Settings Agent |
 
 [!INCLUDE [intune-settings-catalog-2](../../../includes/configure/intune-settings-catalog-2.md)]
 
@@ -63,15 +63,15 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Setting |
 |--|
-|- **OMA-URI:** `./Vendor/MSFT/Policy/Config/WindowsAI/DisableSettingsAgent`<br>- **Data type:** Boolean<br>- **Value:** <br> - `0` (default): Settings agent search experience is enabled <br>- `1`: Settings agent search experience is disabled|
+|- **OMA-URI:** `./Vendor/MSFT/Policy/Config/WindowsAI/`[DisableSettingsAgent](/windows/client-management/mdm/policy-csp-windowsai)<br>- **Data type:** Boolean<br>- **Value:** <br>&nbsp;&nbsp;&nbsp;&nbsp;- `0` (default): Settings agent search experience is enabled <br>&nbsp;&nbsp;&nbsp;&nbsp;- `1`: Settings agent search experience is disabled|
 
 #### [:::image type="icon" source="../images/icons/group-policy.svg" border="false"::: **GPO**](#tab/gpo)
 
 [!INCLUDE [gpo-settings-1](../../../includes/configure/gpo-settings-1.md)]
 
-| Group policy path | Group policy setting | Value |
-| - | - | - |
-| **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows AI** | Disable Settings Agent | |
+| Group policy path | Group policy setting |
+| - | - |
+| **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Windows AI** | Disable Settings Agent |
 
 [!INCLUDE [gpo-settings-2](../../../includes/configure/gpo-settings-2.md)]
 
@@ -85,7 +85,7 @@ If the Settings agent is enabled, users can access it by opening Settings and ty
 
 <!--links-->
 
-[CSP-1]: /windows/client-management/mdm/policy-csp-settings#pagevisibilitylist
+[CSP-1]: /windows/client-management/mdm/policy-csp-windowsai
 [M365-1]: /microsoft-365/admin/misc/organizational-messages-microsoft-365?view=o365-worldwide
 [INT-1]: /mem/intune/configuration/settings-catalog
 [KB-1]: https://blogs.windows.com/windows-insider/2025/04/25/announcing-windows-11-insider-preview-build-22635-5305-beta-channel/
