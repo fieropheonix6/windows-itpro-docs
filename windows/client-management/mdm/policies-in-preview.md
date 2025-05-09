@@ -1,7 +1,7 @@
 ---
 title: Configuration service provider preview policies
 description: Learn more about configuration service provider (CSP) policies that are available for Windows Insider Preview.
-ms.date: 04/21/2025
+ms.date: 05/02/2025
 ms.topic: generated-reference
 ---
 
@@ -86,6 +86,7 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 - [EnableDevDrive](policy-csp-filesystem.md#enabledevdrive)
 - [DevDriveAttachPolicy](policy-csp-filesystem.md#devdriveattachpolicy)
+- [ClfsAuthenticationChecking](policy-csp-filesystem.md#clfsauthenticationchecking)
 
 ## HealthAttestation CSP
 
@@ -135,6 +136,8 @@ This article lists the policies that are applicable for Windows Insider Preview 
 ## LocalPoliciesSecurityOptions
 
 - [InteractiveLogon_NumberOfPreviousLogonsToCache](policy-csp-localpoliciessecurityoptions.md#interactivelogon_numberofpreviouslogonstocache)
+- [NetworkAccess_RemotelyAccessibleRegistryPaths](policy-csp-localpoliciessecurityoptions.md#networkaccess_remotelyaccessibleregistrypaths)
+- [NetworkAccess_RemotelyAccessibleRegistryPathsAndSubpaths](policy-csp-localpoliciessecurityoptions.md#networkaccess_remotelyaccessibleregistrypathsandsubpaths)
 - [UserAccountControl_BehaviorOfTheElevationPromptForAdministratorProtection](policy-csp-localpoliciessecurityoptions.md#useraccountcontrol_behavioroftheelevationpromptforadministratorprotection)
 - [UserAccountControl_TypeOfAdminApprovalMode](policy-csp-localpoliciessecurityoptions.md#useraccountcontrol_typeofadminapprovalmode)
 
@@ -179,7 +182,7 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 ## SettingsSync
 
-- [EnableWindowsbackup](policy-csp-settingssync.md#enablewindowsbackup)
+- [EnableWindowsBackup](policy-csp-settingssync.md#enablewindowsbackup)
 
 ## Start
 
@@ -219,6 +222,10 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [DisableCocreator](policy-csp-windowsai.md#disablecocreator)
 - [DisableGenerativeFill](policy-csp-windowsai.md#disablegenerativefill)
 - [AllowRecallEnablement](policy-csp-windowsai.md#allowrecallenablement)
+
+## WindowsBackupAndRestore CSP
+
+- [EnableWindowsRestore](windowsbackupandrestore-csp.md#enablewindowsrestore)
 
 ## WindowsLicensing CSP
 

@@ -1,7 +1,7 @@
 ---
 title: WirelessNetworkPreference CSP
 description: Learn more about the WirelessNetworkPreference CSP.
-ms.date: 04/21/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -577,8 +577,8 @@ When evaluating eSIM profiles for connectivity, this value configures the amount
 |:--|:--|
 | Format | `int` |
 | Access Type | Get, Replace |
-| Allowed Values | Range: `[30-360]` |
-| Default Value  | 60 |
+| Allowed Values | Range: `[20-360]` |
+| Default Value  | 30 |
 <!-- Device-Parameters-CellularParameters-ProfileRegistrationTimerInSeconds-DFProperties-End -->
 
 <!-- Device-Parameters-CellularParameters-ProfileRegistrationTimerInSeconds-Examples-Begin -->
@@ -733,7 +733,7 @@ Nodes that indicate the status of the wireless connectivity management service.
 
 <!-- Device-Status-eSIMpolicyStatus-Description-Begin -->
 <!-- Description-Source-DDF -->
-An integer indicating the current status of the wireless connectivity management service. If the value is zero, there are no errors. \n\n 0 = No errors. \n 1 = No policies are configured. \n 2 = More than one policy has the same priority. \n 3 = More than one policy references the same PLMNID. \n 4 = Invalid PLMNID for one or more of the configured profiles. \n 5 = More than one eSIM profile stored in the eUICC with the same PLMN ID. \n 6 = Invalid configuration value for one or more of the cellular parameters. Please review CSP documentation. \n\n Warning: Any of these errors will result in a complete halt of the wireless connectivity management service.
+An integer indicating the current status of the wireless connectivity management service. If the value is zero, there are no errors. \n\n 0 = No errors. \n 1 = No policies are configured. \n 2 = More than one policy has the same priority. \n 3 = More than one policy references the same PLMN ID. \n 4 = Invalid PLMN ID for one or more of the configured profiles. \n 5 = More than one eSIM profile stored in the eUICC with the same PLMN ID. \n 6 = Invalid configuration value for one or more of the cellular parameters. Please review CSP documentation. \n\n Warning: Any of these errors will result in a complete halt of the wireless connectivity management service.
 <!-- Device-Status-eSIMpolicyStatus-Description-End -->
 
 <!-- Device-Status-eSIMpolicyStatus-Editable-Begin -->
@@ -811,7 +811,7 @@ Count of operational eSIM profiles stored in the eUICC.
 
 <!-- Device-Status-eSIMprofilesMatched-Description-Begin -->
 <!-- Description-Source-DDF -->
-Count of operational eSIM profiles stored on the eUICC whose PLMN matches one of the ConnectionProfileIDs setup under the ConnectionProfiles node. Only matched profiles with no errors will be counted. If more than one eSIM profile with the same PLMN ID is configured on the policy and/or more than one eSIM profile with the same PLMN ID is stored in the eUICC, then they won't be counted even if there is a match.
+Count of operational eSIM profiles stored on the eUICC whose PLMN ID matches one of the ConnectionProfileIDs setup under the ConnectionProfiles node. Only matched profiles with no errors will be counted. If more than one eSIM profile with the same PLMN ID is configured on the policy and/or more than one eSIM profile with the same PLMN ID is stored in the eUICC, then they won't be counted even if there is a match.
 <!-- Device-Status-eSIMprofilesMatched-Description-End -->
 
 <!-- Device-Status-eSIMprofilesMatched-Editable-Begin -->

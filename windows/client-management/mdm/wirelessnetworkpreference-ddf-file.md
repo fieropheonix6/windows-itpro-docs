@@ -1,7 +1,7 @@
 ---
 title: WirelessNetworkPreference DDF file
 description: View the XML file containing the device description framework (DDF) for the WirelessNetworkPreference configuration service provider.
-ms.date: 04/21/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -25,7 +25,7 @@ The following XML file contains the device description framework (DDF) for the W
       <AccessType>
         <Get />
       </AccessType>
-      <Description>Represents information associated with wireless networks prioritization including detailed connectivity priorities for specific cellular networks with a unique PLMN_ID.</Description>
+      <Description>Represents information associated with wireless networks prioritization including detailed connectivity priorities for specific cellular networks with a unique PLMN ID.</Description>
       <DFFormat>
         <node />
       </DFFormat>
@@ -157,7 +157,7 @@ The following XML file contains the device description framework (DDF) for the W
           <AccessType>
             <Get />
           </AccessType>
-          <Description>Count of operational eSIM profiles stored on the eUICC whose PLMN matches one of the ConnectionProfileIDs setup under the ConnectionProfiles node. Only matched profiles with no errors will be counted. If more than one eSIM profile with the same PLMN ID is configured on the policy and/or more than one eSIM profile with the same PLMN ID is stored in the eUICC, then they will not be counted even if there is a match.</Description>
+          <Description>Count of operational eSIM profiles stored on the eUICC whose PLMN ID matches one of the ConnectionProfileIDs setup under the ConnectionProfiles node. Only matched profiles with no errors will be counted. If more than one eSIM profile with the same PLMN ID is configured on the policy and/or more than one eSIM profile with the same PLMN ID is stored in the eUICC, then they will not be counted even if there is a match.</Description>
           <DFFormat>
             <int />
           </DFFormat>
@@ -178,7 +178,7 @@ The following XML file contains the device description framework (DDF) for the W
           <AccessType>
             <Get />
           </AccessType>
-          <Description>An integer indicating the current status of the wireless connectivity management service. If the value is zero, there are no errors. \n\n 0 = No errors. \n 1 = No policies are configured. \n 2 = More than one policy has the same priority. \n 3 = More than one policy references the same PLMNID. \n 4 = Invalid PLMNID for one or more of the configured profiles. \n 5 = More than one eSIM profile stored in the eUICC with the same PLMN ID. \n 6 = Invalid configuration value for one or more of the cellular parameters. Please review CSP documentation. \n\n Warning: Any of these errors will result in a complete halt of the wireless connectivity management service.</Description>
+          <Description>An integer indicating the current status of the wireless connectivity management service. If the value is zero, there are no errors. \n\n 0 = No errors. \n 1 = No policies are configured. \n 2 = More than one policy has the same priority. \n 3 = More than one policy references the same PLMN ID. \n 4 = Invalid PLMN ID for one or more of the configured profiles. \n 5 = More than one eSIM profile stored in the eUICC with the same PLMN ID. \n 6 = Invalid configuration value for one or more of the cellular parameters. Please review CSP documentation. \n\n Warning: Any of these errors will result in a complete halt of the wireless connectivity management service.</Description>
           <DFFormat>
             <int />
           </DFFormat>
@@ -326,7 +326,7 @@ The following XML file contains the device description framework (DDF) for the W
               <Get />
               <Replace />
             </AccessType>
-            <DefaultValue>60</DefaultValue>
+            <DefaultValue>30</DefaultValue>
             <Description>When evaluating eSIM profiles for connectivity, this value configures the amount of time (in seconds) that the agent will wait for network registration before considering this profile unsatisfactory and moving on to the next one.</Description>
             <DFFormat>
               <int />
@@ -341,7 +341,7 @@ The following XML file contains the device description framework (DDF) for the W
               <MIME />
             </DFType>
             <MSFT:AllowedValues ValueType="Range">
-              <MSFT:Value>[30-360]</MSFT:Value>
+              <MSFT:Value>[20-360]</MSFT:Value>
             </MSFT:AllowedValues>
           </DFProperties>
         </Node>

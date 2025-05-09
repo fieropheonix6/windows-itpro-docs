@@ -1,7 +1,7 @@
 ---
 title: UserRights Policy CSP
 description: Learn more about the UserRights Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 04/30/2025
 ms.topic: generated-reference
 ---
 
@@ -257,7 +257,7 @@ This user right allows a process to impersonate any user without authentication.
 <!-- AdjustMemoryQuotasForProcess-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AdjustMemoryQuotasForProcess-Applicability-End -->
 
 <!-- AdjustMemoryQuotasForProcess-OmaUri-Begin -->
@@ -366,7 +366,7 @@ This user right determines which users can log on to the computer.
 <!-- AllowLogOnThroughRemoteDesktop-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllowLogOnThroughRemoteDesktop-Applicability-End -->
 
 <!-- AllowLogOnThroughRemoteDesktop-OmaUri-Begin -->
@@ -467,7 +467,7 @@ This user right determines which users can bypass file, directory, registry, and
 <!-- BypassTraverseChecking-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- BypassTraverseChecking-Applicability-End -->
 
 <!-- BypassTraverseChecking-OmaUri-Begin -->
@@ -582,7 +582,7 @@ This user right determines which users and groups can change the time and date o
 <!-- ChangeTimeZone-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ChangeTimeZone-Applicability-End -->
 
 <!-- ChangeTimeZone-OmaUri-Begin -->
@@ -1058,7 +1058,7 @@ This security setting determines which service accounts are prevented from regis
 <!-- DenyLogOnAsBatchJob-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- DenyLogOnAsBatchJob-Applicability-End -->
 
 <!-- DenyLogOnAsBatchJob-OmaUri-Begin -->
@@ -1590,7 +1590,7 @@ This user right determines which accounts can use a process to keep data in phys
 <!-- LogOnAsBatchJob-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- LogOnAsBatchJob-Applicability-End -->
 
 <!-- LogOnAsBatchJob-OmaUri-Begin -->
@@ -1639,7 +1639,7 @@ This security setting allows a user to be logged-on by means of a batch-queue fa
 <!-- LogOnAsService-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- LogOnAsService-Applicability-End -->
 
 <!-- LogOnAsService-OmaUri-Begin -->
@@ -1936,7 +1936,7 @@ This user right determines which users can use performance monitoring tools to m
 <!-- ProfileSystemPerformance-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ProfileSystemPerformance-Applicability-End -->
 
 <!-- ProfileSystemPerformance-OmaUri-Begin -->
@@ -2034,7 +2034,7 @@ This user right determines which users are allowed to shut down a computer from 
 <!-- ReplaceProcessLevelToken-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ReplaceProcessLevelToken-Applicability-End -->
 
 <!-- ReplaceProcessLevelToken-OmaUri-Begin -->
@@ -2143,7 +2143,7 @@ This user right determines which users can bypass file, directory, registry, and
 <!-- ShutDownTheSystem-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5053657](https://support.microsoft.com/help/5053657) [10.0.22621.5126] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ShutDownTheSystem-Applicability-End -->
 
 <!-- ShutDownTheSystem-OmaUri-Begin -->

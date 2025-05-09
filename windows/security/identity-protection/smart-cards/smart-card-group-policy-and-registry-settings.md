@@ -357,8 +357,8 @@ The following table lists the keys and the corresponding values to turn off cert
 
 | Registry Key | Details |
 |--|--|
-| `HKEY_LOCAL_MACHINE\SYSTEM\CCS\Services\Kdc\UseCachedCRLOnlyAndIgnoreRevocationUnknownErrors` | Type = DWORD<br>Value = 1 |
-| `HKEY_LOCAL_MACHINE\SYSTEM\CCS\Control\LSA\Kerberos\Parameters\UseCachedCRLOnlyAndIgnoreRevocationUnknownErrors` | Type = DWORD<br>Value = 1 |
+| `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Kdc\UseCachedCRLOnlyAndIgnoreRevocationUnknownErrors` | Type = DWORD<br>Value = 1 |
+| `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA\Kerberos\Parameters\UseCachedCRLOnlyAndIgnoreRevocationUnknownErrors` | Type = DWORD<br>Value = 1 |
 
 ## Additional smart card Group Policy settings and registry keys
 

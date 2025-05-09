@@ -1,7 +1,7 @@
 ---
 title: WindowsAI Policy CSP
 description: Learn more about the WindowsAI Area in Policy CSP.
-ms.date: 03/27/2025
+ms.date: 05/02/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- AllowRecallEnablement-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/help/5052093) [10.0.26100.3323] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- AllowRecallEnablement-Applicability-End -->
 
 <!-- AllowRecallEnablement-OmaUri-Begin -->
@@ -91,7 +91,7 @@ This policy setting allows you to determine whether the Recall optional componen
 <!-- DisableAIDataAnalysis-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/help/5052093) [10.0.26100.3323] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- DisableAIDataAnalysis-Applicability-End -->
 
 <!-- DisableAIDataAnalysis-OmaUri-Begin -->
@@ -193,7 +193,7 @@ Click to Do lets people take action on content on their screens. When activated,
 |:--|:--|
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
-| Default Value  | 1 |
+| Default Value  | 0 |
 <!-- DisableClickToDo-DFProperties-End -->
 
 <!-- DisableClickToDo-AllowedValues-Begin -->
@@ -201,8 +201,8 @@ Click to Do lets people take action on content on their screens. When activated,
 
 | Value | Description |
 |:--|:--|
-| 0 | Click to Do is enabled. |
-| 1 (Default) | Click to Do is disabled. |
+| 0 (Default) | Click to Do is enabled. |
+| 1 | Click to Do is disabled. |
 <!-- DisableClickToDo-AllowedValues-End -->
 
 <!-- DisableClickToDo-GpMapping-Begin -->
@@ -226,7 +226,7 @@ Click to Do lets people take action on content on their screens. When activated,
 <!-- DisableCocreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
 <!-- DisableCocreator-Applicability-End -->
 
 <!-- DisableCocreator-OmaUri-Begin -->
@@ -288,7 +288,7 @@ This policy setting allows you to control whether Cocreator functionality is dis
 <!-- DisableGenerativeFill-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
 <!-- DisableGenerativeFill-Applicability-End -->
 
 <!-- DisableGenerativeFill-OmaUri-Begin -->
@@ -350,7 +350,7 @@ This policy setting allows you to control whether generative fill functionality 
 <!-- DisableImageCreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
 <!-- DisableImageCreator-Applicability-End -->
 
 <!-- DisableImageCreator-OmaUri-Begin -->
@@ -469,7 +469,7 @@ The property value is the Application User Model ID (AUMID) for the target appli
 <!-- SetDenyAppListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/help/5052093) [10.0.26100.3323] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetDenyAppListForRecall-Applicability-End -->
 
 <!-- SetDenyAppListForRecall-OmaUri-Begin -->
@@ -538,7 +538,7 @@ For example: `code.exe;Microsoft.WindowsNotepad_8wekyb3d8bbwe!App;ms-teams.exe`
 <!-- SetDenyUriListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/help/5052093) [10.0.26100.3323] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetDenyUriListForRecall-Applicability-End -->
 
 <!-- SetDenyUriListForRecall-OmaUri-Begin -->
@@ -603,7 +603,7 @@ Adding `https://www.WoodgroveBank.com` to the list would also filter `https://Ac
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/help/5052093) [10.0.26100.3323] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageDurationForRecallSnapshots-OmaUri-Begin -->
@@ -679,7 +679,7 @@ Snapshots aren't deleted until the maximum storage allocation for Recall is reac
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/help/5052093) [10.0.26100.3323] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageSpaceForRecallSnapshots-OmaUri-Begin -->
