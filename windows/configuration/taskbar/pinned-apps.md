@@ -110,9 +110,9 @@ You can change the apps pinned to the taskbar by modifying the `<TaskbarLayout>`
 
 #### PinGeneration
 
-[!INCLUDE [insider-setting](../includes/insider-setting.md)]
+[!INCLUDE [cfr-note](../includes/cfr-note.md)]
 
-Starting with [Windows Insider 22635.5305 (Beta Channel)][KB-1], you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
+Starting with Windows 11, version 24H2 with [KBXYZ][KB-1] or later, you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
 
 To use this option, add `PinGeneration="1"` to the pins you want to allow users to unpin. The value of `PinGeneration` can be any number, and it's used to identify the pin version. If the value changes, the app is pinned again during the next policy update cycle. This allows IT admins to repin an app, if needed.
 
