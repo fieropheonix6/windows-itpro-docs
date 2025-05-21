@@ -20,8 +20,10 @@ appliesto:
 Click to Do (preview) helps users to get things done faster by identifying text and images that are currently on their screen so they can perform actions on them. This article provides information about Click to Do and how to manage it in a commercial environment.
 
 > [!NOTE]
+> - Click to Do is behind [temporary enterprise feature control](/windows/whats-new/temporary-enterprise-feature-control) and will be enabled when the next annual feature update is installed. To enable Click to Do, use the **Enable features introduced via servicing that are off by default** policy setting. For more information, see [Enable features introduced via servicing that are off by default](/windows/deployment/update/waas-configure-wufb#enable-features-introduced-via-servicing-that-are-off-by-default). <!--10088089-->
 > - In-market commercial devices are defined as devices with an Enterprise (ENT) or Education (EDU) SKU or any premium SKU device that is managed by an IT administrator (whether via Microsoft Endpoint Manager or other endpoint management solution), has a volume license key, or is joined to a domain. Commercial devices during Out of Box Experience (OOBE) are defined as those with ENT or EDU SKU or any premium SKU device that has a volume license key or is Microsoft Entra joined. 
 > - Click to Do is optimized for select languages English, Chinese (simplified), French, German, Japanese, and Spanish. Content-based and storage limitations apply. For more information, see [https://aka.ms/copilotpluspcs](https://aka.ms/copilotpluspcs).
+
 
 ## What is Click to Do?
 
@@ -64,7 +66,8 @@ The policy setting below allows you to determine whether Click to Do is availabl
 - When the policy is disabled or not configured, users will have Click to Do available on their device.
 
 > [!Important]
-> This policy doesn't affect Click to Do in Recall. For more information, see [Manage Recall](manage-recall.md). 
+> - This policy doesn't affect Click to Do in Recall. For more information, see [Manage Recall](manage-recall.md).
+> - If a user prefers to disable Click to Do on their device, they can turn it **Off** using the **Click to Do** setting under **Settings** > **Privacy & security** > **Click to Do**. <!--10088089-->
 
 ## Click to Do privacy considerations  
 

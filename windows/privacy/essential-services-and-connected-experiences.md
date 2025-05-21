@@ -6,9 +6,12 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
+manager: dansimp
 ms.date: 06/13/2024
 ms.topic: reference
+ms.collection: 
+- privacy-windows
+- must-keep
 ---
 
 # Essential services and connected experiences for Windows

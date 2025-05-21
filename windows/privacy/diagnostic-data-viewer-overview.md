@@ -6,10 +6,12 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
+manager: dansimp
 ms.date: 01/09/2018
-ms.collection: highpri
 ms.topic: how-to
+ms.collection: 
+- privacy-windows
+- must-keep
 ---
 
 # Diagnostic Data Viewer Overview

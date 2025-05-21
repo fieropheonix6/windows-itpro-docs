@@ -6,10 +6,12 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
+manager: dansimp
 ms.date: 10/01/2024
 ms.topic: reference
-ms.collection: privacy-windows
+ms.collection: 
+- privacy-windows
+- must-keep
 ---
 
 

@@ -6,10 +6,12 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
+manager: dansimp
 ms.date: 03/31/2017
-ms.collection: highpri
 ms.topic: reference
+ms.collection: 
+- privacy-windows
+- must-keep
 ---
 
 # Optional diagnostic data for Windows 11 and Windows 10
