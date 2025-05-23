@@ -8,7 +8,7 @@ author: mestew
 manager: aaroncz
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 04/14/2025
+ms.date: 05/21/2025
 ms.collection:
   - highpri
   - tier2
@@ -17,18 +17,17 @@ appliesto:
 ---
 
 # Extended Security Updates (ESU) program for Windows 10
-
 <!-- 8280171-->
+> **Looking for consumer information?** For individuals or Windows 10 Home customers, more information about Extended Security Updates for Windows 10 is available in the frequently asked questions section of the [End of support for Windows 10](https://www.microsoft.com/windows/end-of-support) page. <!--10013381-->
+
 The Windows 10 Extended Security Updates (ESU) program gives customers the option to receive security updates for PCs enrolled in the program. ESU is a paid program that provides individuals and organizations of all sizes with the option to extend the use of Windows 10 devices past the end of support date in a more secure manner. For more information about the Windows 10 lifecycle, see the [Windows Lifecycle FAQ](/lifecycle/faq/windows).
 
 Individuals or organizations who elect to continue using Windows 10 after support ends on October 14, 2025, will have the option of enrolling their PCs into a paid ESU subscription. The ESU program enables PCs to continue to receive critical and important security updates through an annual subscription service after support ends. The [Microsoft Security Response Center](https://msrc.microsoft.com/) defines the [severity rating for security updates](https://www.microsoft.com/msrc/security-update-severity-rating-system).
 
-> [!Note]
-> Looking for consumer information? For individuals or Windows 10 Home customers, more information about Extended Security Updates for Windows 10 is available in the frequently asked questions section of the [End of support for Windows 10](https://www.microsoft.com/windows/end-of-support) page. <!--10013381-->
 
 ## Device prerequisites
 
-To be eligible to install updates from the ESU program, devices must be running Windows 10, version 22H2.
+To be eligible to install updates from the ESU program, devices must be running Windows 10, version 22H2. For more information on prerequisites and enabling ESU in commercial environments, see [Enable Extended Security Updates (ESU)](enable-extended-security-updates.md).
 
 ## Limitations
 
@@ -66,11 +65,11 @@ For individuals or Windows 10 Home customers, Extended Security Updates for Wind
 
 ### Is there a minimum license purchase requirement for Windows 10 ESU?
 
-The minimum license purchase requirements for Windows 10 ESU is one license.
+The minimum license purchase requirement for Windows 10 ESU is one license.
 
 ### Can ESUs be purchased for a specific duration?
 
-The Extended Security Update Program for Windows 10 must be purchased by year. Customers can't buy partial periods, for instance, only six months. Year One starts in November 2025. If you decide to purchase the program in Year Two, you'll have to pay for Year One too, as ESUs are cumulative.
+The Extended Security Update Program for Windows 10 must be purchased by year. Customers can't buy partial periods, for instance, only six months. Year One starts in November 2025. If you decide to purchase the program in Year Two, you have to pay for Year One too, as ESUs are cumulative.
 
 
 ### When will the ESU offer be available for licensing?
@@ -92,3 +91,7 @@ Windows 10 PCs will continue to work, but we recommend customers upgrade eligibl
 - Technical support
 - Feature updates or new features
 - Quality updates (including security and reliability fixes)
+
+## Related content
+
+For more information about enabling ESU in commercial environments, see [Enable Extended Security Updates (ESU)](enable-extended-security-updates.md).

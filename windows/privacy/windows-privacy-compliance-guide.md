@@ -6,10 +6,13 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
+manager: dansimp
 ms.date: 05/20/2019
 ms.topic: article
-ms.collection: essentials-compliance
+ms.collection: 
+- essentials-compliance
+- privacy-windows
+- must-keep
 ---
 
 # Windows Privacy Compliance:<br />A Guide for IT and Compliance Professionals

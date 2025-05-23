@@ -31,6 +31,7 @@ The following is a list of other Microsoft products that might be updated:
 
 - Active Directory Rights Management Service
 - AppFabric
+- Azure Connected Machine agent
 - Azure File Sync
 - Bing Bar
 - Bing IME

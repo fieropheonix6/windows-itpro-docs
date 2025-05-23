@@ -9,11 +9,11 @@ ms.service: windows-client
 ms.subservice: activation
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 9/03/2024
+ms.date: 05/14/2025
 zone_pivot_groups: windows-versions-11-10
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
-  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
+- ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+- ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Deploy Windows Enterprise licenses

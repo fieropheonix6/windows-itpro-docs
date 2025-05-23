@@ -6,9 +6,12 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
+manager: dansimp
 ms.date: 05/15/2019
 ms.topic: reference
+ms.collection: 
+- privacy-windows
+- must-keep
 ---
 
 # Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services using Microsoft Intune MDM Server

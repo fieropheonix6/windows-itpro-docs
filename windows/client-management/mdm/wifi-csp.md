@@ -1,7 +1,7 @@
 ---
 title: WiFi CSP
 description: Learn more about the WiFi CSP.
-ms.date: 03/12/2025
+ms.date: 05/13/2025
 ms.topic: generated-reference
 ---
 
@@ -16,12 +16,11 @@ The WiFi configuration service provider provides the functionality to add or del
 
 Programming considerations:
 
-- If the authentication method needs a certificate, for example, EAP-TLS requires client certificates, you must configure it through the CertificateStore configuration service provider. The WiFi configuration service provider doesn't provide that functionality; instead, the Wi-Fi profile can specify characteristics of the certificate to be used for choosing the right certificate for that network. The server must successfully enroll the certificate first before deploying the Wi-Fi network configuration. For example, for an EAP-TLS profile, the server must successfully configure and enroll the required client certificate before deploying the Wi-Fi profile. Self-signed certificate works for EAP-TLS/PEAP-MSCHAPv2, but it isn't supported in EAP-TLS.
+- If the authentication method needs a certificate (for example, client certificates for EAP-TLS), you must configure it through the [CertificateStore](certificatestore-csp.md) configuration service provider. The WiFi configuration service provider doesn't provide that functionality; instead, the Wi-Fi profile can specify characteristics of the certificate to be used for choosing the right certificate for that network. The server must successfully enroll the certificate first before deploying the Wi-Fi network configuration. For example, for an EAP-TLS profile, the server must successfully configure and enroll the required client certificate before deploying the Wi-Fi profile. Self-signed certificate works for EAP-TLS/PEAP-MSCHAPv2, but it isn't supported in EAP-TLS.
 - For WEP, WPA, and WPA2-based networks, include the passkey in the network configuration in plaintext. The passkey is encrypted automatically when it's stored on the device.
-- The SSID of the Wi-Fi network part of the LocURI node must be a valid URI based on RFC 2396. This condition requires that all non-ASCII characters must be escaped using a %-character. Unicode characters without the necessary escaping aren't supported.
-- The `<name>name_goes_here</name>\<SSIDConfig>` must match `<SSID><name>name_goes_here</name></SSID>`.
+- The `SSID` part of the LocURI node must be a valid URI based on RFC 2396. This condition requires that all nonexcluded ASCII characters must be escaped using a %-character, including replacing the space character (' ') with '%20'. Characters (including Unicode) without the necessary escaping aren't supported.
 - For the WiFi CSP, you can't use the Replace command unless the node already exists.
-- Using ProxyPacUrl or ProxyWPAD in Windows 10 client editions (Home, Pro, Enterprise, and Education) will result in failure.
+- Using `Proxy`, `ProxyPacUrl` or `ProxyWPAD` in Windows client editions (Home, Pro, Enterprise, and Education) may fail or have no effect. Use [NetworkProxy](networkproxy-csp.md) CSP instead.
 <!-- WiFi-Editable-End -->
 
 <!-- WiFi-Tree-Begin -->
@@ -108,9 +107,13 @@ The Profile name of the Wi-Fi network. This is added when WlanXml node is added 
 
 <!-- Device-Profile-{SSID}-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-Specifies the name of the Wi-Fi network (32 bytes maximum) to create, configure, query, or delete. The name is case sensitive and can be represented in ASCII.
+Specifies the Profile name of the Wi-Fi network (32 bytes maximum) to create, configure, query, or delete. The name is case sensitive and can be represented in ASCII. In the URI, it must be %-escaped, but the non-%-escaped value is used inside the system.
 
-SSID is the name of network you're connecting to, while Profile name is the name of the Profile that contains the WiFi settings information. If the Profile name isn't set right in the MDM SyncML, as per the information in the WiFi settings XML, it could lead to some unexpected errors. For example, `<LocURI>./Vendor/MSFT/WiFi/Profile/<MUST BE NAME OF PROFILE AS PER WIFI XML>/WlanXml</LocURI>`.
+> [!NOTE]
+> This field is the Profile Name that appears as a "Friendly Name" to the user and contains the Wi-Fi settings information. The non-%-escaped value must correspond to `<name>` in `<WLANProfile> <name>`.
+
+The Profile name can be the same or different from the SSID of the actual network being broadcast (which is under `<WLANProfile> <SSIDConfig> <SSID> <name>`). For example, the broadcast SSID might be "CC_Corp_7" but the Profile name might be "ContosoWiFi".
+
 <!-- Device-Profile-{SSID}-Editable-End -->
 
 <!-- Device-Profile-{SSID}-DFProperties-Begin -->
@@ -125,6 +128,32 @@ SSID is the name of network you're connecting to, while Profile name is the name
 
 <!-- Device-Profile-{SSID}-Examples-Begin -->
 <!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+
+In the following example, the 'ContosoWiFi' Profile is added, targeting the 'CC_Corp_7' SSID. The rest of the profile is omitted for brevity - for complete examples, see [Add a network](#add-a-network).
+
+```xml
+<Atomic>
+  <CmdID>300</CmdID>
+  <Add>
+    <CmdID>301</CmdID>
+    <Item>
+      <Target>
+        <LocURI>./Vendor/MSFT/WiFi/Profile/ContosoWiFi/WlanXml</LocURI>
+      </Target>
+      <Meta>
+        <Format xmlns="syncml:metinf">chr</Format>
+      </Meta>
+      <Data><![CDATA[<?xml version="1.0"?><WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1"><name>ContosoWiFi</name><SSIDConfig><SSID><name>CC_Corp_7</name></SSID></SSIDConfig>{...}</WLANProfile>]]></Data>
+    </Item>
+  </Add>
+</Atomic>
+```
+
+> [!IMPORTANT]
+> If the Profile name isn't set correctly in the MDM SyncML, as per the information in the Wi-Fi settings XML (`<WLANProfile>`), it could lead to some unexpected errors at runtime. In other words, if the profile is `<WLANProfile><name>Contoso Wi-Fi</name>{...}`, the MDM SyncML must be `<LocURI>./Vendor/MSFT/WiFi/Profile/Contoso%20Wi-Fi/WlanXml</LocURI>`.
+>
+> In this example, if we instead had `<LocURI>./Vendor/MSFT/WiFi/Profile/CC_Corp_7/WlanXml</LocURI>`, the profile would be considered to be User provisioned, not MDM provisioned, which may cause users to connect to the wrong network.
+
 <!-- Device-Profile-{SSID}-Examples-End -->
 
 <!-- Device-Profile-{SSID}-End -->
@@ -200,6 +229,9 @@ Optional node. The format is url:port. Configuration of the network proxy (if an
 
 <!-- Device-Profile-{SSID}-Proxy-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!NOTE]
+> Don't use. Using this configuration in Windows client editions may fail or have no effect. Use [NetworkProxy](networkproxy-csp.md) CSP instead.
+
 <!-- Device-Profile-{SSID}-Proxy-Editable-End -->
 
 <!-- Device-Profile-{SSID}-Proxy-DFProperties-Begin -->
@@ -240,7 +272,8 @@ Optional node. URL to the PAC file location.
 <!-- Device-Profile-{SSID}-ProxyPacUrl-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Don't use. Using this configuration in Windows 10 client editions will result in failure.
+> Don't use. Using this configuration in Windows client editions may fail or have no effect. Use [NetworkProxy](networkproxy-csp.md) CSP instead.
+
 <!-- Device-Profile-{SSID}-ProxyPacUrl-Editable-End -->
 
 <!-- Device-Profile-{SSID}-ProxyPacUrl-DFProperties-Begin -->
@@ -281,7 +314,8 @@ Optional node. The presence of the field enables WPAD for proxy lookup.
 <!-- Device-Profile-{SSID}-ProxyWPAD-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Don't use. Using this configuration in Windows 10 client editions will result in failure.
+> Don't use. Using this configuration in Windows client editions may fail or have no effect. Use [NetworkProxy](networkproxy-csp.md) CSP instead.
+
 <!-- Device-Profile-{SSID}-ProxyWPAD-Editable-End -->
 
 <!-- Device-Profile-{SSID}-ProxyWPAD-DFProperties-Begin -->
@@ -382,12 +416,13 @@ Link to schema: <https://msdn.microsoft.com/library/windows/desktop/ms707341(v=v
 
 <!-- Device-Profile-{SSID}-WlanXml-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-The profile XML must be escaped, as shown in the examples below.
+The profile XML must be escaped, as shown in the following examples.
 
 If it exists in the blob, the **keyType** and **protected** elements must come before **keyMaterial**, as shown in the example in [WPA2-Personal Profile Sample](/windows/win32/nativewifi/wpa2-personal-profile-sample).
 
 > [!NOTE]
-> If you need to specify other advanced conditions, such as specifying criteria for certificates that can be used by the Wi-Fi profile, you can do so by specifying this through the EapHostConfig portion of the WlanXML. For more information, see [EAP configuration](./eap-configuration.md).
+> If you need to specify other advanced conditions, such as specifying criteria for certificates that can be used by the Wi-Fi profile, you can do so by specifying this through the [EapHostConfig](/windows/win32/eaphost/eaphostconfigschema-eaphostconfig-element) portion of the WlanXml ([WLANProfile](/windows/win32/nativewifi/wlan-profileschema-elements) > [MSM](/windows/win32/nativewifi/wlan-profileschema-msm-wlanprofile-element) > [security](/windows/win32/nativewifi/wlan-profileschema-security-msm-element) > [OneX](/windows/win32/nativewifi/onexschema-onex-element) > EAPConfig). For more information, see [EAP configuration](./eap-configuration.md) and [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access). For an example, see [Wireless profile samples](/windows/win32/nativewifi/wireless-profile-samples).
+
 <!-- Device-Profile-{SSID}-WlanXml-Editable-End -->
 
 <!-- Device-Profile-{SSID}-WlanXml-DFProperties-Begin -->
@@ -401,6 +436,7 @@ If it exists in the blob, the **keyType** and **protected** elements must come b
 
 <!-- Device-Profile-{SSID}-WlanXml-Examples-Begin -->
 <!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+See [Add a network](#add-a-network) for examples.
 <!-- Device-Profile-{SSID}-WlanXml-Examples-End -->
 
 <!-- Device-Profile-{SSID}-WlanXml-End -->
@@ -466,9 +502,7 @@ The Profile name of the Wi-Fi network. This is added when WlanXml node is added 
 
 <!-- User-Profile-{SSID}-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-Specifies the name of the Wi-Fi network (32 bytes maximum) to create, configure, query, or delete. The name is case sensitive and can be represented in ASCII.
-
-SSID is the name of network you're connecting to, while Profile name is the name of the Profile that contains the WiFi settings information. If the Profile name isn't set right in the MDM SyncML, as per the information in the WiFi settings XML, it could lead to some unexpected errors. For example, `<LocURI>./Vendor/MSFT/WiFi/Profile/<MUST BE NAME OF PROFILE AS PER WIFI XML>/WlanXml</LocURI>`.
+For more information, see [Device/Profile/{SSID}](#deviceprofilessid).
 <!-- User-Profile-{SSID}-Editable-End -->
 
 <!-- User-Profile-{SSID}-DFProperties-Begin -->
@@ -558,6 +592,9 @@ Optional node. The format is url:port. Configuration of the network proxy (if an
 
 <!-- User-Profile-{SSID}-Proxy-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+> [!NOTE]
+> Don't use. Using this configuration in Windows client editions may fail or have no effect. Use [NetworkProxy](networkproxy-csp.md) CSP instead.
+
 <!-- User-Profile-{SSID}-Proxy-Editable-End -->
 
 <!-- User-Profile-{SSID}-Proxy-DFProperties-Begin -->
@@ -598,7 +635,8 @@ Optional node. URL to the PAC file location.
 <!-- User-Profile-{SSID}-ProxyPacUrl-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Don't use. Using this configuration in Windows 10 client editions will result in failure.
+> Don't use. Using this configuration in Windows client editions may fail or have no effect. Use [NetworkProxy](networkproxy-csp.md) CSP instead.
+
 <!-- User-Profile-{SSID}-ProxyPacUrl-Editable-End -->
 
 <!-- User-Profile-{SSID}-ProxyPacUrl-DFProperties-Begin -->
@@ -639,7 +677,8 @@ Optional node. The presence of the field enables WPAD for proxy lookup.
 <!-- User-Profile-{SSID}-ProxyWPAD-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Don't use. Using this configuration in Windows 10 client editions will result in failure.
+> Don't use. Using this configuration in Windows client editions may fail or have no effect. Use [NetworkProxy](networkproxy-csp.md) CSP instead.
+
 <!-- User-Profile-{SSID}-ProxyWPAD-Editable-End -->
 
 <!-- User-Profile-{SSID}-ProxyWPAD-DFProperties-Begin -->
@@ -740,12 +779,8 @@ Link to schema: <https://msdn.microsoft.com/library/windows/desktop/ms707341(v=v
 
 <!-- User-Profile-{SSID}-WlanXml-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-The profile XML must be escaped, as shown in the examples below.
 
-If it exists in the blob, the **keyType** and **protected** elements must come before **keyMaterial**, as shown in the example in [WPA2-Personal Profile Sample](/windows/win32/nativewifi/wpa2-personal-profile-sample).
-
-> [!NOTE]
-> If you need to specify other advanced conditions, such as specifying criteria for certificates that can be used by the Wi-Fi profile, you can do so by specifying this through the EapHostConfig portion of the WlanXML. For more information, see [EAP configuration](./eap-configuration.md).
+For more information, see [Device/Profile/{SSID}/WlanXml](#deviceprofilessidwlanxml).
 <!-- User-Profile-{SSID}-WlanXml-Editable-End -->
 
 <!-- User-Profile-{SSID}-WlanXml-DFProperties-Begin -->
@@ -771,7 +806,7 @@ These XML examples show how to perform various tasks using OMA DM.
 
 ### Add a network
 
-The following example shows how to add PEAP-MSCHAPv2 network with SSID 'MyNetwork'.
+The following example shows how to add a WPA2-Enterprise network with SSID and profile name `MyNetwork` that authenticates with PEAP-MSCHAPv2. This example is based on the sample profile at [WPA2-Enterprise with PEAP-MSCHAPv2 profile sample](/windows/win32/nativewifi/wpa2-enterprise-with-peap-mschapv2-profile-sample).
 
 ```xml
 <SyncML xmlns="SYNCML:SYNCML1.2">
@@ -787,13 +822,56 @@ The following example shows how to add PEAP-MSCHAPv2 network with SSID 'MyNetwor
           <Meta>
             <Format xmlns="syncml:metinf">chr</Format>
           </Meta>
-          <Data><?xml version="1.0"?><WLANProfile xmlns="http://contoso.com/networking/WLAN/profile/v1"><name>MyNetwork</name><SSIDConfig><SSID><hex>412D4D534654574C414E</hex><name>MyNetwork</name></SSID><nonBroadcast>false</nonBroadcast></SSIDConfig><connectionType>ESS</connectionType><connectionMode>manual</connectionMode><MSM><security><authEncryption><authentication>WPA2</authentication><encryption>AES</encryption><useOneX>true</useOneX></authEncryption><OneX xmlns="http://contoso.com/networking/OneX/v1"><authMode>user</authMode><EAPConfig><EapHostConfig xmlns="http://contoso.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://contoso.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://contoso.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://contoso.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://contoso.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://contoso.com/provisioning/EapHostConfig"><Eap xmlns="http://contoso.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://contoso.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://contoso.com/provisioning/BaseEapConnectionPropertiesV1"><Type>26</Type><EapType xmlns="http://contoso.com/provisioning/MsChapV2ConnectionPropertiesV1"><UseWinLogonCredentials>false</UseWinLogonCredentials></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://contoso.com/provisioning/MsPeapConnectionPropertiesV2">false</PerformServerValidation><AcceptServerName xmlns="http://contoso.com/provisioning/MsPeapConnectionPropertiesV2">false</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig></EAPConfig></OneX></security></MSM></WLANProfile> </Data>
+          <Data><![CDATA[<?xml version="1.0"?><WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1"><name>MyNetwork</name><SSIDConfig><SSID><hex>4d794e6574776f726b</hex><name>MyNetwork</name></SSID><nonBroadcast>false</nonBroadcast></SSIDConfig><connectionType>ESS</connectionType><connectionMode>manual</connectionMode><MSM><security><authEncryption><authentication>WPA2</authentication><encryption>AES</encryption><useOneX>true</useOneX></authEncryption><OneX xmlns="http://www.microsoft.com/networking/OneX/v1"><authMode>user</authMode><EAPConfig><EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>26</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsChapV2ConnectionPropertiesV1"><UseWinLogonCredentials>false</UseWinLogonCredentials></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">false</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">false</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig></EAPConfig></OneX></security></MSM></WLANProfile>]]></Data>
         </Item>
       </Add>
     </Atomic>
     <Final/>
   </SyncBody>
 </SyncML>
+```
+
+The following example shows how to add a WPA3-Enterprise network with profile name `My Network` and SSID `MySSID` that authenticates with EAP-TLS. This example is based on the sample profile at [WPA2-Enterprise with TLS profile sample](/windows/win32/nativewifi/wpa2-enterprise-with-tls-profile-sample).
+
+> [!IMPORTANT]
+> Notice how the space is %-escaped in the `LocURI` and unescaped in the `WLANProfile` > `name`.
+
+```xml
+<Atomic>
+  <CmdID>300</CmdID>
+  <Add>
+    <CmdID>301</CmdID>
+    <Item>
+      <Target>
+        <LocURI>./Vendor/MSFT/WiFi/Profile/My%20Network/WlanXml</LocURI>
+      </Target>
+      <Meta>
+        <Format xmlns="syncml:metinf">chr</Format>
+      </Meta>
+      <Data><![CDATA[<?xml version="1.0"?><WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1"><name>My Network</name><SSIDConfig><SSID><name>MySSID</name></SSID></SSIDConfig><connectionType>ESS</connectionType><connectionMode>auto</connectionMode><MSM><security><authEncryption><authentication>WPA3ENT</authentication><encryption>AES</encryption><useOneX>true</useOneX></authEncryption><PMKCacheMode>enabled</PMKCacheMode><PMKCacheTTL>720</PMKCacheTTL><PMKCacheSize>128</PMKCacheSize><preAuthMode>disabled</preAuthMode><OneX xmlns="http://www.microsoft.com/networking/OneX/v1"><authMode>machine</authMode><EAPConfig><EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">13</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>13</Type><EapType xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV1"><CredentialsSource><CertificateStore><SimpleCertSelection>true</SimpleCertSelection></CertificateStore></CredentialsSource><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames><TrustedRootCA>00 11 22 33 44 55 66 77 88 99 aa bb cc dd ee ff 00 11 22 33</TrustedRootCA></ServerValidation><DifferentUsername>false</DifferentUsername><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2">false</AcceptServerName><TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><AllPurposeEnabled>false</AllPurposeEnabled><CAHashList Enabled="true"><IssuerHash>00112233445566778899aabbccddeeff00112233</IssuerHash></CAHashList><EKUMapping><EKUMap><EKUName>Client Authentication</EKUName><EKUOID>1.3.6.1.5.5.7.3.2</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>Client Authentication</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions></EapType></Eap></Config></EapHostConfig></EAPConfig></OneX></security></MSM></WLANProfile>]]></Data>
+    </Item>
+  </Add>
+</Atomic>
+```
+
+The following example shows how to add a WPA3-Personal (transition mode) network with profile name and SSID `MyNetwork` that includes the passphrase `TestPassword1!`. This example is based on the sample profile at [WPA3-Personal with transition mode profile sample](/windows/win32/nativewifi/wpa3-personal-transition-profile-sample).
+
+```xml
+<Atomic>
+  <CmdID>300</CmdID>
+  <Add>
+    <CmdID>301</CmdID>
+    <Item>
+      <Target>
+        <LocURI>./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml</LocURI>
+      </Target>
+      <Meta>
+        <Format xmlns="syncml:metinf">chr</Format>
+      </Meta>
+      <Data><![CDATA[<?xml version="1.0"?><WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1"><name>MyNetwork</name><SSIDConfig><SSID><name>MyNetwork</name></SSID></SSIDConfig><connectionType>ESS</connectionType><connectionMode>auto</connectionMode><MSM><security><authEncryption><authentication>WPA3SAE</authentication><encryption>AES</encryption><useOneX>false</useOneX><transitionMode xmlns="http://www.microsoft.com/networking/WLAN/profile/v4">true</transitionMode></authEncryption><sharedKey><keyType>passPhrase</keyType><protected>false</protected><keyMaterial>TestPassword1!</keyMaterial></sharedKey></security></MSM></WLANProfile>]]></Data>
+    </Item>
+  </Add>
+</Atomic>
 ```
 
 ### Query network profiles
@@ -828,7 +906,7 @@ The following example shows the response.
 
 ### Remove a network
 
-The following example shows how to remove a network with SSID 'MyNetwork' and no proxy. Removing all network authentication types is done in this same manner.
+The following example shows how to remove a network with SSID `MyNetwork` and no proxy. Removing all network authentication types is done in this same manner.
 
 ```xml
 <Atomic>
@@ -843,32 +921,13 @@ The following example shows how to remove a network with SSID 'MyNetwork' and no
   </Delete>
 </Atomic>
 ```
-
-### Add a network and certification authority for a server certificate
-
-The following example shows how to add PEAP-MSCHAPv2 network with SSID 'MyNetwork' and root CA validation for server certificate.
-
-```xml
-<Atomic>
-  <CmdID>300</CmdID>
-  <Add>
-    <CmdID>301</CmdID>
-    <Item>
-      <Target>
-        <LocURI>./Vendor/MSFT/WiFi/Profile/MyNetwork/WlanXml</LocURI>
-      </Target>
-      <Meta>
-        <Format xmlns="syncml:metinf">chr</Format>
-      </Meta>
-      <Data><?xml version="1.0"?><WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1"><name>MyNetwork</name><SSIDConfig><SSID><name>MyNetwork</name></SSID><nonBroadcast>false</nonBroadcast></SSIDConfig><connectionType>ESS</connectionType><connectionMode>manual</connectionMode><MSM><security><authEncryption><authentication>WPA2</authentication><encryption>AES</encryption><useOneX>true</useOneX></authEncryption><OneX xmlns="http://www.microsoft.com/networking/OneX/v1"><authMode>user</authMode><EAPConfig><EapHostConfig xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><EapMethod><Type xmlns="http://www.microsoft.com/provisioning/EapCommon">25</Type><VendorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorId><VendorType xmlns="http://www.microsoft.com/provisioning/EapCommon">0</VendorType><AuthorId xmlns="http://www.microsoft.com/provisioning/EapCommon">0</AuthorId></EapMethod><Config xmlns="http://www.microsoft.com/provisioning/EapHostConfig"><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>25</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV1"><ServerValidation><DisableUserPromptForServerValidation>true</DisableUserPromptForServerValidation><ServerNames></ServerNames><TrustedRootCA> InsertCertThumbPrintHere </TrustedRootCA></ServerValidation><FastReconnect>true</FastReconnect><InnerEapOptional>false</InnerEapOptional><Eap xmlns="http://www.microsoft.com/provisioning/BaseEapConnectionPropertiesV1"><Type>26</Type><EapType xmlns="http://www.microsoft.com/provisioning/MsChapV2ConnectionPropertiesV1"><UseWinLogonCredentials>false</UseWinLogonCredentials></EapType></Eap><EnableQuarantineChecks>false</EnableQuarantineChecks><RequireCryptoBinding>false</RequireCryptoBinding><PeapExtensions><PerformServerValidation xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">true</PerformServerValidation><AcceptServerName xmlns="http://www.microsoft.com/provisioning/MsPeapConnectionPropertiesV2">false</AcceptServerName></PeapExtensions></EapType></Eap></Config></EapHostConfig></EAPConfig></OneX></security></MSM></WLANProfile> </Data>
-    </Item>
-  </Add>
-</Atomic>
-```
 <!-- WiFi-CspMoreInfo-End -->
 
 <!-- WiFi-End -->
 
 ## Related articles
 
-[Configuration service provider reference](configuration-service-provider-reference.md)
+- [Wireless profile samples](/windows/win32/nativewifi/wireless-profile-samples)
+- [Configuration service provider reference](configuration-service-provider-reference.md)
+- [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
+- [Configure EAP profiles and settings in Windows](/windows-server/networking/technologies/extensible-authentication-protocol/configure-eap-profiles)

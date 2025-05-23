@@ -6,10 +6,12 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
+manager: dansimp
 ms.date: 03/11/2016
-ms.collection: highpri
 ms.topic: how-to
+ms.collection: 
+- privacy-windows
+- must-keep
 ---
 
 # Configure Windows diagnostic data in your organization
