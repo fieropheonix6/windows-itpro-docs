@@ -1,7 +1,7 @@
 ---
 title: Resources for deprecated features in the Windows client
 description: Resources and details for deprecated features in the Windows client.
-ms.date: 04/24/2025
+ms.date: 05/23/2025
 ms.service: windows-client
 ms.subservice: itpro-fundamentals
 ms.localizationpriority: medium
@@ -36,7 +36,7 @@ In May 2024, we announced the unification of [Bing Maps for Enterprise](https://
 
 ## Paint 3D
 
-Paint 3D is deprecated and will be removed from the Microsoft Store on November 4, 2024. Existing installations of Paint 3D will continue to work, but the app will no longer be available for download from the Microsoft Store. If you remove the app, you can reinstall it from the Microsoft Store until November 4, 2024. After that date, Paint 3D will no longer be available for download. Paint 3D was preinstalled on some Windows 10 devices, but wasn't preinstalled on Windows 11 devices. Some alternatives to Paint 3D include:
+Paint 3D was deprecated in August 2024 and was removed from the Microsoft Store on November 4, 2024. Existing installations of Paint 3D will continue to work, but the app will no longer be available for download from the Microsoft Store. If you remove the app, you can reinstall it from the Microsoft Store until November 4, 2024. After that date, Paint 3D will no longer be available for download. Paint 3D was preinstalled on some Windows 10 devices, but wasn't preinstalled on Windows 11 devices. Some alternatives to Paint 3D include:
 
 - View and edit 2D images: [Paint](https://apps.microsoft.com/detail/9pcfs5b6t72h) or [Photos](https://apps.microsoft.com/detail/9wzdncrfjbh4)
 - View 3D content: [3D Viewer](https://apps.microsoft.com/detail/9nblggh42ths).

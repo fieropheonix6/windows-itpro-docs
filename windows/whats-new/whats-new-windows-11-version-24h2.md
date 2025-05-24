@@ -11,7 +11,7 @@ ms.collection:
   - highpri
   - tier2
 ms.subservice: itpro-fundamentals
-ms.date: 07/09/2024
+ms.date: 05/23/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11, version 24H2</a>
 ---
@@ -245,3 +245,4 @@ The following [deprecated features](deprecated-features.md) are [removed](remove
 - **NTLMv1**: NTLMv1 is removed starting in Windows 11, version 24H2 and Windows Server 2025. 
 - **WordPad**: WordPad is removed from all editions of Windows starting in Windows 11, version 24H2 and Windows Server 2025. <!--8254696, 8494641-->
 - **Alljoyn**: Microsoft's implementation of AllJoyn, which included the [Windows.Devices.AllJoyn API namespace](/uwp/api/windows.devices.alljoyn), a [Win32 API](/windows/win32/api/_alljoyn/), a [management configuration service provider (CSP)](/windows/client-management/mdm/alljoynmanagement-csp), and an [Alljoyn Router Service](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#alljoyn-router-service) is retired.<!--8396030-->
+- **Windows Mixed Reality**: Mixed Reality is removed starting in Windows 11, version 24H2. <!--10151217--> 

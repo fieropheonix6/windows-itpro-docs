@@ -32,7 +32,6 @@ To enable ESU for Windows 10, you must meet the following prerequisites:
 
 **Endpoints for client activation:**
 - `https://go.microsoft.com/`
-- `https://go.microsoft.com/`
 - `https://login.live.com`
 - `https://activation.sls.microsoft.com/`
 - `http://crl.microsoft.com/`
