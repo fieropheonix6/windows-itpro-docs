@@ -46,6 +46,17 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 > [!div class="checklist"]
 > - United States
 
+## How it works
+
+The agent in Settings uses a lightweight language model called *Settings Mu*, which is fine-tuned using Settings data to help users quickly find and adjust system settings.
+
+The model runs locally on the device, analyzing a user's query to match with relevant settings already available in Settings. If the model can't confidently classify a query to a specific setting, standard search results are displayed instead.
+
+> [!NOTE]
+> The agent only suggests settings, and it doesn't make any changes automatically. A user must select the **Apply** button to enable or disable a setting. If needed, a user can easily *undo* the change.
+
+The Settings Mu model has undergone fairness evaluations, as well as comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with [Microsoft's Responsible AI principles](https://www.microsoft.com/ai/responsible-ai).
+
 ## Configure the agent
 
 As an administrator, you can enable or disable the agent in Settings using a policy setting:
