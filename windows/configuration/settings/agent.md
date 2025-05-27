@@ -32,6 +32,7 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 > - Windows Insider 22635.xxxx (Beta Channel) and later
 > - A [Copilot+ PC](https://aka.ms/copilotpluspcs)
 > - Qualcomm Snapdragon. Intel and AMD support will be available at a later time
+> - The device must have enabled the [temporary enterprise feature control](/windows/whats-new/temporary-enterprise-feature-control) policy setting
 
 > [!NOTE]
 > Settings agent is not available on Windows IoT devices.
@@ -39,12 +40,12 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 ### Language requirements
 
 > [!div class="checklist"]
-> - English (United States)
+> - English
 
 ### Geography requirements
 
 > [!div class="checklist"]
-> - United States
+> - All countries, except for China and Canada
 
 ## How it works
 
