@@ -26,7 +26,7 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 ### System requirements
 
 > [!div class="checklist"]
-> - Windows Insider 22635.xxxx (Beta Channel) and later
+> - Windows 11, version 24H2 with [KBXYZ][KB-1] and later
 > - A [Copilot+ PC](https://aka.ms/copilotpluspcs)
 > - Qualcomm Snapdragon. Intel and AMD support will be available at a later time
 > - The device must have enabled the [temporary enterprise feature control](/windows/whats-new/temporary-enterprise-feature-control) policy setting
@@ -73,7 +73,7 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Setting |
 |--|
-|- **OMA-URI:** `./Vendor/MSFT/Policy/Config/WindowsAI/`[DisableSettingsAgent](/windows/client-management/mdm/policy-csp-windowsai)<br>- **Data type:** Boolean<br>- **Value:** <br>&nbsp;&nbsp;&nbsp;&nbsp;- `0` (default): the agent search experience in Settings is enabled <br>&nbsp;&nbsp;&nbsp;&nbsp;- `1`: the agent search experience in Settings is disabled|
+|- **OMA-URI:** `./Vendor/MSFT/Policy/Config/WindowsAI/`[DisableSettingsAgent](/windows/client-management/mdm/policy-csp-windowsai)<br>- **Data type:** Integer<br>- **Value:** <br>&nbsp;&nbsp;&nbsp;&nbsp;- `0` (default): the agent search experience in Settings is enabled <br>&nbsp;&nbsp;&nbsp;&nbsp;- `1`: the agent search experience in Settings is disabled|
 
 #### [:::image type="icon" source="../images/icons/group-policy.svg" border="false"::: **GPO**](#tab/gpo)
 
