@@ -47,7 +47,8 @@ The agent in Settings uses a lightweight language model called *Settings Mu*, wh
 
 - The model runs locally on the device, analyzing a user's query to match with relevant settings already available in Settings.
 - If the model can't confidently classify a query to a specific setting, standard search results are displayed instead.
-- The agent only suggests settings, and it doesn't make any changes automatically. A user must select the **Apply** button to enable or disable a setting. If needed, a user can easily *undo* the change.
+- The agent only suggests settings; it doesn't make any changes automatically. The user must explicitly request the agent to make a change.
+- If needed, the user can easily *undo* the change.
 
 The Settings Mu model has undergone fairness evaluations, as well as comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with [Microsoft's Responsible AI principles][RAI].
 
