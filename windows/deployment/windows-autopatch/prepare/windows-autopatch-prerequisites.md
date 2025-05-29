@@ -107,23 +107,4 @@ The following Windows editions, build version, and architecture **applies if you
 
 ## Required Intune permissions
 
-Your account must be assigned an [Intune role-based access control](/mem/intune/fundamentals/role-based-access-control) (RBAC) role that includes the following permissions:
-
-- **Device configurations**:
-    - Assign
-    - Create
-    - Delete
-    - View Reports
-    - Update
-- Read
-
-You can add the *Device configurations* permission with one or more rights to your own custom RBAC roles or use one of the built-in **Policy and Profile manager** roles, which include these rights. For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control). The Intune Service Administrator role is required to access and use all capabilities under:
-
- - Tenant administration > Windows Autopatch
- - Devices > Manage updates > Windows updates
- - [Autopatch groups membership report](../deploy/windows-autopatch-register-devices.md#autopatch-groups-membership-report)
-
-The **Intune Service Administrator** role is required to register devices, manage your update deployments, and reporting tasks.
-
-> [!TIP]
-> For more information, see [assign an owner of member of a group in Microsoft Entra ID](/entra/id-governance/privileged-identity-management/groups-assign-member-owner#assign-an-owner-or-member-of-a-group).
+For more information on roles and permissions, see [Role-based access control](../prepare/windows-autopatch-role-based-access-control.md) in Windows Autopatch.

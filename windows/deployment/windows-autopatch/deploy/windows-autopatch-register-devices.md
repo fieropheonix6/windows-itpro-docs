@@ -1,7 +1,7 @@
 ---
 title: Register devices with Autopatch groups
 description: This article details how to register devices in Autopatch.
-ms.date: 03/31/2025
+ms.date: 05/27/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -53,6 +53,9 @@ Windows Autopatch has an Autopatch groups membership report provides the followi
 - Autopatch group membership (only if the device is added to an Autopatch group)
 - Update status
 - Policies that target each device
+
+> [!NOTE]
+> You can configure custom roles to access the Autopatch groups membership report, including the various device actions.<p>To **Assign ring** the user requires a minimum of **Windows Autopatch Group/Read permissions**. Use the dropdown menu to select the deployment ring to move devices to, the menu will only display deployment rings in the users' scope. </p><p>To view the device's properties, the minimum permission required is **Manage Devices/Read**.</p><p>Scoped admins can only move devices between deployment rings in the same Autopatch group, with the same scope tags.</p><p>For more information, see [Windows Autopatch role-based access controls](../prepare/windows-autopatch-role-based-access-control.md).</p>
 
 ### View the Autopatch groups membership report
 
