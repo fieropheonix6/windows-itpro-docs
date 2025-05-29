@@ -6,21 +6,18 @@ ms.date: 05/05/2025
 author: paolomatarazzo
 ms.author: paoloma
 appliesto:
-  - "✅ <a href=\"https://learn.microsoft.com/windows-insider/flight-hub\" target=\"_blank\">Windows Insider (Beta Channel)</a>"
+- ✅ <a href=/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 ---
 
 # Configure the agent in Windows Settings
 
-[!INCLUDE [insider-feature](../includes/insider-feature.md)]
-
-Starting with [Windows Insider 22635.xxxx (Beta Channel)][KB-1], the agent in Windows Settings is a feature that uses on-device AI to help you find and change settings on your PC. It can also help you troubleshoot issues by providing recommendations and automating tasks based on your input.
+Starting in Windows 11, version 24H2 with [KBXYZ][KB-1], the agent in Windows Settings is a feature that uses on-device AI to help you find and change settings on your PC. It can also help you troubleshoot issues by providing recommendations and automating tasks based on your input.
 
 The agent guides users through finding and changing settings, offering relevant information and recommendations. With user permission, it can automate the process of changing settings. This feature enhances search within Windows Settings by enabling natural language queries and utilizing an AI model for intelligent search suggestions.
 
-The agent is designed to respect existing policy settings on the device, ensuring that it doesn't override any restrictions already in place.
+<!--The agent is designed to respect existing policy settings on the device, ensuring that it doesn't override any restrictions already in place.-->
 
 :::image type="content" source="images/settings-agent.png" alt-text="Screenshot of Settings showing the search agent." border="false":::
-
 
 ## Requirements
 
@@ -33,7 +30,6 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 > - A [Copilot+ PC](https://aka.ms/copilotpluspcs)
 > - Qualcomm Snapdragon. Intel and AMD support will be available at a later time
 > - The device must have enabled the [temporary enterprise feature control](/windows/whats-new/temporary-enterprise-feature-control) policy setting
-> - Not supported on Windows IoT devices
 
 ### Language and geography requirements
 
