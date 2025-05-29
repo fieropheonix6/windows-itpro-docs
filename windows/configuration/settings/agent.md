@@ -50,7 +50,7 @@ The agent in Settings uses a lightweight language model called *Settings Mu*, wh
 - The agent only suggests settings; it doesn't make any changes automatically. The user must explicitly request the agent to make a change.
 - If needed, the user can easily *undo* the change.
 
-The Settings Mu model has undergone fairness evaluations, as well as comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with [Microsoft's Responsible AI principles][RAI].
+The Settings Mu model has undergone fairness evaluations, and comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with [Microsoft's Responsible AI principles][RAI].
 
 ## Configuration
 
