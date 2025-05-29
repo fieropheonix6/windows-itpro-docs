@@ -45,12 +45,11 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 
 The agent in Settings uses a lightweight language model called *Settings Mu*, which is fine-tuned using Settings data to help users quickly find and adjust system settings.
 
-The model runs locally on the device, analyzing a user's query to match with relevant settings already available in Settings. If the model can't confidently classify a query to a specific setting, standard search results are displayed instead.
+- The model runs locally on the device, analyzing a user's query to match with relevant settings already available in Settings.
+- If the model can't confidently classify a query to a specific setting, standard search results are displayed instead.
+- The agent only suggests settings, and it doesn't make any changes automatically. A user must select the **Apply** button to enable or disable a setting. If needed, a user can easily *undo* the change.
 
-> [!NOTE]
-> The agent only suggests settings, and it doesn't make any changes automatically. A user must select the **Apply** button to enable or disable a setting. If needed, a user can easily *undo* the change.
-
-The Settings Mu model has undergone fairness evaluations, as well as comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with [Microsoft's Responsible AI principles](https://www.microsoft.com/ai/responsible-ai).
+The Settings Mu model has undergone fairness evaluations, as well as comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with [Microsoft's Responsible AI principles][RAI].
 
 ## Configure the agent
 
@@ -100,9 +99,14 @@ If the agent is enabled, users can access it by opening Settings and typing thei
 
 :::image type="content" source="images/settings-agent-example.png" alt-text="Screenshot of Settings showing the search agent with an example search." border="false":::
 
+## Microsoft's commitment to responsible AI and Privacy
+
+Microsoft has been working to advance AI responsibly since 2017, when we first defined our AI principles and later operationalized our approach through our Responsible AI Standard. Privacy and security are core principles as we develop and deploy AI systems. We work to help our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships. For more about our responsible AI efforts, the principles that guide us, and the tools and capabilities we've created to assure that we develop AI technology responsibly, see [Responsible AI][RAI].
+
 <!--links-->
 
 [CSP-1]: /windows/client-management/mdm/policy-csp-windowsai
 [M365-1]: /microsoft-365/admin/misc/organizational-messages-microsoft-365?view=o365-worldwide
 [INT-1]: /mem/intune/configuration/settings-catalog
 [KB-1]: https://blogs.windows.com/windows-insider/2025/04/25/announcing-windows-11-insider-preview-build-22635-5305-beta-channel/
+[RAI]: https://www.microsoft.com/ai/responsible-ai
