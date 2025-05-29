@@ -51,15 +51,12 @@ The agent in Settings uses a lightweight language model called *Settings Mu*, wh
 
 The Settings Mu model has undergone fairness evaluations, as well as comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with [Microsoft's Responsible AI principles][RAI].
 
-## Configure the agent
+## Configuration
 
 As an administrator, you can enable or disable the agent in Settings using a policy setting:
 
 - When the policy setting is enabled, the agent experience isn't available, and search results are limited to statically indexed searches and semantic searches.
 - When the policy setting is disabled (default), the agent search experience is available. The agent can provide recommendations and automate tasks based on user input.
-
-
-## Configuration
 
 [!INCLUDE [tab-intro](../../../includes/configure/tab-intro.md)]
 
@@ -95,13 +92,13 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 ## User experience
 
-If the agent is enabled, users can access it by opening Settings and typing their question in the search box. The agent will provide relevant information and recommendations based on the user's input.
+If the agent is enabled, users can access it by opening Settings and typing their question in the search box. The agent provides relevant information and recommendations based on the user's input.
 
 :::image type="content" source="images/settings-agent-example.png" alt-text="Screenshot of Settings showing the search agent with an example search." border="false":::
 
 ## Microsoft's commitment to responsible AI and Privacy
 
-Microsoft has been working to advance AI responsibly since 2017, when we first defined our AI principles and later operationalized our approach through our Responsible AI Standard. Privacy and security are core principles as we develop and deploy AI systems. We work to help our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships. For more about our responsible AI efforts, the principles that guide us, and the tools and capabilities we've created to assure that we develop AI technology responsibly, see [Responsible AI][RAI].
+Microsoft has been working to advance AI responsibly since 2017, when we first defined our AI principles and later operationalized our approach through our Responsible AI Standard. Privacy and security are core principles as we develop and deploy AI systems. We work to help our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships. For more information about our responsible AI efforts, the principles that guide us, and the tools and capabilities we've created to ensure that we develop AI technology responsibly, see [Responsible AI][RAI].
 
 <!--links-->
 
