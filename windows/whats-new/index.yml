@@ -12,9 +12,9 @@ metadata:
   ms.collection:
     - highpri
     - tier1
-  author: aczechowski
-  ms.author: aaroncz
-  manager: aaroncz
+  author: mestew
+  ms.author: mstewart
+  manager: bpardi
   ms.date: 07/01/2024
   ms.localizationpriority: medium
 
@@ -42,7 +42,7 @@ landingContent:
       - linkListType: whats-new
         links:
           - text: What's new in Windows 11, version 24H2
-            url: whats-new-windows-11-version-24h2.md        
+            url: whats-new-windows-11-version-24h2.md
           - text: What's new in Windows 11, version 23H2
             url: whats-new-windows-11-version-23h2.md
           - text: What's new in Windows 11, version 22H2
@@ -64,7 +64,7 @@ landingContent:
           - text: Windows Enterprise LTSC overview
             url: ltsc/overview.md
           - text: What's new in Windows 11 Enterprise LTSC 2024
-            url: ltsc/whats-new-windows-11-2024.md                
+            url: ltsc/whats-new-windows-11-2024.md
           - text: What's new in Windows 10 Enterprise LTSC 2021
             url: ltsc/whats-new-windows-10-2021.md
           - text: What's new in Windows 10 Enterprise LTSC 2019
@@ -73,7 +73,7 @@ landingContent:
             url: ltsc/whats-new-windows-10-2016.md
           - text: What's new in Windows 10 Enterprise LTSC 2015
             url: ltsc/whats-new-windows-10-2015.md
-      
+
 
   - title: Deprecated features
     linkLists:

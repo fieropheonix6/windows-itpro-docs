@@ -1,9 +1,9 @@
 ---
 title: Sideload line of business apps
 description: Learn how to sideload line-of-business (LOB) apps in Windows client operating systems. When you sideload an app, you deploy a signed app package to a device.
-author: aczechowski
-ms.author: aaroncz
-manager: aaroncz
+author: vinaypamnani-msft
+ms.author: vinpa
+manager: bpardi
 ms.date: 09/27/2024
 ms.topic: how-to
 ms.service: windows-client

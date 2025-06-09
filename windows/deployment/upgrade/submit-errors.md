@@ -1,6 +1,6 @@
 ---
 title: Submit Windows upgrade errors using Feedback Hub
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 description: Download the Feedback Hub app, and then submit Windows upgrade errors for diagnosis using Feedback Hub.
 ms.service: windows-client

@@ -7,7 +7,7 @@ ms.subservice: itpro-fundamentals
 ms.localizationpriority: medium
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.topic: reference
 ms.collection:
   - highpri

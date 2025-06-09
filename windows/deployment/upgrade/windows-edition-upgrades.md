@@ -1,7 +1,7 @@
 ---
 title: Windows edition upgrade
 description: With Windows, you can quickly upgrade from one edition of Windows to another, provided the upgrade path is supported.
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 ms.localizationpriority: medium
@@ -129,7 +129,7 @@ If only a few devices are being upgraded devices, a product key for the upgraded
 1. In the **Run** window, next to **Open**, enter
 
    `ms-settings:activation`
-  
+
    and then select **OK**.
 
 1. Select **Change product key**.
@@ -152,7 +152,7 @@ If you don't have a product key, you can upgrade your edition of Windows through
 1. In the **Run** window, next to **Open**, enter
 
    `ms-windows-store://windowsupgrade/`
-  
+
    and then select **OK**.
 
 1. Follow the on-screen instructions.

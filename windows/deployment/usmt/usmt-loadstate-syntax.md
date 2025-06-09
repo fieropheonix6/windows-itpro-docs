@@ -2,7 +2,7 @@
 title: LoadState Syntax
 description: Learn about the syntax and usage of the command-line options available when using the LoadState command.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

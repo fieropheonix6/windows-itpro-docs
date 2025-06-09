@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.subservice: itpro-fundamentals
 ms.author: mstewart
 author: mestew
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 07/09/2024

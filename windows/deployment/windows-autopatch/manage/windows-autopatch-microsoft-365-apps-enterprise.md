@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: hathind
 ms.collection:
   - highpri
@@ -74,7 +74,7 @@ To ensure that users are receiving automatic updates, Windows Autopatch prevents
 
 With the expanded Autopatch group capabilities, you can choose to turn on Microsoft 365 Apps updates on a per Autopatch group level. Depending on your tenant settings, one of the following scenarios occurs:
 
-- Tenants that previously turned on Autopatch Microsoft 365 Apps update, has the Microsoft 365 Apps updates Update Type checkbox selected and the updated policies applied to each Autopatch group.  
+- Tenants that previously turned on Autopatch Microsoft 365 Apps update, has the Microsoft 365 Apps updates Update Type checkbox selected and the updated policies applied to each Autopatch group.
 - Tenants that previously turned off Autopatch Microsoft 365 Apps updates, or are new to Windows Autopatch, Autopatch Microsoft 365 Apps updates remain turned off.
 
 If you [created an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group) and selected Microsoft 365 apps updates as a content type, the **Update Type** checkbox is **selected**, with new policies created, and any available old policies are removed. If you didn’t select Microsoft 365 apps updates as a content type upon creating an Autopatch group, the **Update Type** checkbox is **unselected**. Any available customized policies are retained and appear in the **Policies** tab.
@@ -85,11 +85,11 @@ If you [created an Autopatch group](../manage/windows-autopatch-manage-autopatch
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.
-1. Select an Autopatch group to modify (repeat these steps for each group).  
-1. Next to **Update types**, select **Edit**.  
-1. Select **Microsoft 365 Apps updates**.  
+1. Select an Autopatch group to modify (repeat these steps for each group). 
+1. Next to **Update types**, select **Edit**. 
+1. Select **Microsoft 365 Apps updates**. 
 1. Select **Next: Deployment settings** > **Next: Release schedules** > **Next: Review + save** > **Save** to save these changes.
-1. We recommend deleting old Autopatch default policies to avoid policy conflict. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.  
+1. We recommend deleting old Autopatch default policies to avoid policy conflict. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies** tab. 
 1. Manually remove the following profiles related to Microsoft 365 Apps:
     1. Windows Autopatch - Office Configuration
     2. Windows Autopatch - Office Update Configuration [Test]
@@ -98,7 +98,7 @@ If you [created an Autopatch group](../manage/windows-autopatch-manage-autopatch
     5. Windows Autopatch - Office Update Configuration [Broad]
 
 > [!NOTE]
-> If you previously selected **Microsoft 365 Apps updates** when [creating an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group), but your tenant isn't showing the new updates, there’s a possibility that you previously modified the policy. To ensure there are no disruptions, the Autopatch Service retains that policy.  
+> If you previously selected **Microsoft 365 Apps updates** when [creating an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group), but your tenant isn't showing the new updates, there’s a possibility that you previously modified the policy. To ensure there are no disruptions, the Autopatch Service retains that policy.
 
 ### Turn off Microsoft 365 Apps updates
 
@@ -106,9 +106,9 @@ If you [created an Autopatch group](../manage/windows-autopatch-manage-autopatch
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.
-1. Select an Autopatch group to modify (repeat these steps for each group).  
+1. Select an Autopatch group to modify (repeat these steps for each group). 
 1. Next to **Update types**, select **Edit**.
-1. Unselect **Microsoft 365 Apps updates**.  
+1. Unselect **Microsoft 365 Apps updates**. 
 1. Select **Next: Deployment settings** > **Next: Release schedules** > **Next: Review + save** > **Save** to save these changes.
 
 ### Verify Microsoft 365 Apps updates policies
@@ -116,7 +116,7 @@ If you [created an Autopatch group](../manage/windows-autopatch-manage-autopatch
 **To verify Microsoft 365 Apps updates policies:**
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**.  
+1. Navigate to **Tenant Administration** > **Windows Autopatch** > **Autopatch groups**. 
 1. Verify each Autopatch group has the **Microsoft 365 Apps Update Type** checkbox **selected**.
 1. Navigate to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
 1. The following new policies should be discoverable from the list of profiles:

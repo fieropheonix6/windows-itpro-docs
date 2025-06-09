@@ -6,7 +6,7 @@ ms.subservice: itpro-updates
 ms.topic: reference
 author: cmknox
 ms.author: carmenf
-manager: aaroncz
+manager: bpardi
 ms.reviewer: mstewart
 ms.collection: tier3
 ms.localizationpriority: medium
@@ -335,7 +335,7 @@ Configure this policy to designate Delivery Optimization in Network Cache server
 
 > [!NOTE]
 > If you format the DHCP Option ID incorrectly, the client will fall back to the Cache Server Hostname policy value if that value has been configured.
-> 
+>
 > If the [LocalPolicyMerge](/windows/security/operating-system-security/network-security/windows-firewall/rules#local-policy-merge-and-application-rules) setting is configured, such as part of security baselines, it can impact DHCP client and prevent it from retrieving this DHCP option, especially in Autopilot scenarios.
 
 ### Maximum foreground download bandwidth (in KB/s)

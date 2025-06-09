@@ -9,6 +9,8 @@ appliesto:
 
 # Tutorial: deploy applications to Windows 11 SE with Intune
 
+[!INCLUDE [winse-eos](../../includes/winse-eos.md)]
+
 This guide describes how to deploy applications to Windows 11 SE devices that are managed by Microsoft Intune in an education environment. The guide also describes how to validate the apps and how to create policies to allow apps that aren't installable or don't behave as intended.
 
 ## Windows 11 SE and application deployment

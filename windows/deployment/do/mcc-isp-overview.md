@@ -4,15 +4,15 @@ description: Overview of Microsoft Connected Cache for ISPs. Learn about how Con
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: overview
-manager: aaroncz
+manager: bpardi
 ms.author: carmenf
 author: cmknox
 ms.reviewer: mstewart
 ms.collection: tier3
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>
 ms.date: 05/23/2024
 ---
 

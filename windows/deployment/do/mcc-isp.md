@@ -7,11 +7,11 @@ ms.topic: how-to
 ms.author: carmenf
 author: cmknox
 ms.reviewer: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.date: 10/30/2024
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ Microsoft Connected Cache for ISPs (early preview)
@@ -33,7 +33,7 @@ Microsoft Connected Cache for Internet Service Providers is now in Public Previe
 
 
 
-<!-- 
+<!--
 
 ### Setting up a VM on Windows Server
 

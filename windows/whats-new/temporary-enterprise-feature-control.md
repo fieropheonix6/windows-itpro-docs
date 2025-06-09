@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.subservice: itpro-fundamentals
 ms.author: mstewart
 author: mestew
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 04/25/2025
@@ -55,7 +55,7 @@ The following features are behind temporary enterprise control in Windows 11:
 
 | Feature | KB article where the feature was introduced | Feature update that ends temporary control | Notes |
 |---|---|---|---|
-| Improved Windows search <!--9887454-->|[April 25, 2025 - KB5055627](https://support.microsoft.com/kb/5055627) |  |  Improved Windows search will continue to respect your existing [search policies](/windows/client-management/mdm/policy-csp-search). | 
+| Improved Windows search <!--9887454-->|[April 25, 2025 - KB5055627](https://support.microsoft.com/kb/5055627) |  |  Improved Windows search will continue to respect your existing [search policies](/windows/client-management/mdm/policy-csp-search). |
 | Click to Do <!--9887454-->| [April 25, 2025 - KB5055627](https://support.microsoft.com/kb/5055627)| | This feature also has a permanent control. For more information, see [Manage Click to Do](/windows/client-management/manage-click-to-do). |
 | Touch-optimized taskbar for 2-in-1 devices <!--8092554, WIP.25197--> | [February 28, 2023 - KB5022913](https://support.microsoft.com/kb/5022913) | [Feature Update to Windows 11, version 23H2](https://support.microsoft.com/kb/5027397) | |
 | Selecting **Uninstall** for a Win32 app from the right-click menu uses the **Installed Apps** page in **Settings** rather than **Programs and Features** under the **Control Panel** <!--8092554, WIP.25300-->| [September 2023 - KB5030310](https://support.microsoft.com/kb/5030310) | [Feature Update to Windows 11, version 23H2](https://support.microsoft.com/kb/5027397) | |

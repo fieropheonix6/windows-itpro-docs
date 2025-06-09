@@ -2,7 +2,7 @@
 title: USMT Best Practices
 description: This article discusses general and security-related best practices when using User State Migration Tool (USMT).
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

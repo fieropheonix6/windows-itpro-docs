@@ -4,15 +4,15 @@ description: Instructions on how to go through the service onboarding process fo
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-manager: aaroncz
+manager: bpardi
 author: nidos
 ms.author: nidos
 ms.reviewer: mstewart
 ms.collection: tier3
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>
 ms.date: 01/14/2024
 ---
 
@@ -39,7 +39,7 @@ Before you begin sign up, ensure you have the following components:
 1. **Server**: Ensure the server you wish to install Microsoft Connected Cache on is ready, and that the server is installed on Ubuntu 22.04 LTS.
 1. **Configure cache drive**: Make sure that you have a data drive configured with full permissions on your server. You'll need to specify the location for this cache drive during the cache node configuration process. The minimum size for the data drive is 100 GB. For instructions to mount a disk on a Linux VM, see [Attach a data disk to a Linux VM](/azure/virtual-machines/linux/attach-disk-portal#find-the-disk).
 
-## Resource creation and sign up process  
+## Resource creation and sign up process
 
 1. Navigate to the [Azure portal](https://www.portal.azure.com). Select **Create a Resource**. Then, search for **Microsoft Connected Cache**.
 

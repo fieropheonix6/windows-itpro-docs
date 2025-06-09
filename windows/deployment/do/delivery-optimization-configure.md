@@ -7,7 +7,7 @@ ms.topic: how-to
 author: cmknox
 ms.author: carmenf
 ms.reviewer: mstewart
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - tier3
   - essentials-get-started
@@ -34,7 +34,7 @@ Use this checklist to guide you through different aspects when modifying Deliver
     * Organization size
     * System resources
     * Improve P2P efficiencies
-  
+
 1. Using Microsoft Connected Cache
 1. Choose where to set Delivery Optimization policies
 
@@ -166,8 +166,8 @@ Looking to improve P2P efficiency? Some of the most powerful settings you can ch
 - Help optimize peer connection over HTTP connections using the [DOMinBackgroundQoS](waas-delivery-optimization-reference.md#minimum-background-qos) policy. A good value for the [DOMinBackgroundQoS](waas-delivery-optimization-reference.md#minimum-background-qos) policy is something lower than the average download speed seen in your network. For example, if your average speed is 1000 KB/s, set this policy to 500 KB/s.
 - Improve chances of downloading from peers and/or cache server by delaying the time DO attempts to make connections before falling back to the HTTP source. The set of delay-related policies include:
   - [DODelayBackgroundDownloadFromHttp](waas-delivery-optimization-reference.md#delay-background-download-from-http-in-secs)
-  - [DODelayForegroundDownloadFromHttp](waas-delivery-optimization-reference.md#delay-foreground-download-from-http-in-secs) 
-  
+  - [DODelayForegroundDownloadFromHttp](waas-delivery-optimization-reference.md#delay-foreground-download-from-http-in-secs)
+
   To improve efficiencies from peers or a dedicated cache server, a good starting point is 60 seconds for background settings and 30 seconds for foreground settings.
 
 > [!NOTE]
@@ -177,12 +177,12 @@ Looking to improve P2P efficiency? Some of the most powerful settings you can ch
 
 Regardless of P2P, consider setting the following policies to avoid network disruption.
 
-- Manage network usage as a percentage or absolute value. These policies include: 
+- Manage network usage as a percentage or absolute value. These policies include:
   - [DOPercentageMaxBackgroundBandwidth](waas-delivery-optimization-reference.md#maximum-background-download-bandwidth)
   - [DOPercentageMaxForegroundBandwidth](waas-delivery-optimization-reference.md#maximum-foreground-download-bandwidth)
   - [DOMaxBackgroundDownloadBandwidth](waas-delivery-optimization-reference.md#maximum-background-download-bandwidth-in-kbs)
   - [DOMaxForegroundDownloadBandwidth](waas-delivery-optimization-reference.md#maximum-foreground-download-bandwidth-in-kbs)
-- Reduce disruptions by throttling differently at different times of day, using the following business hours policies: 
+- Reduce disruptions by throttling differently at different times of day, using the following business hours policies:
   - [DOSetHoursToLimitBackgroundDownloadBandwidth](waas-delivery-optimization-reference.md#set-business-hours-to-limit-background-download-bandwidth)
   - [DOSetHoursToLimitForegroundDownloadBandwidth](waas-delivery-optimization-reference.md#set-business-hours-to-limit-foreground-download-bandwidth).
 
@@ -232,12 +232,12 @@ Delivery Optimization is integrated with both Microsoft Endpoint Manager and Con
 
 ## Monitor Delivery Optimization
 
-Whether you opt for the default Delivery Optimization configurations or tailor them to suit your environment, you'll want to track the outcomes to see how they improve your efficiency. The following options are available to monitor Delivery Optimization: 
+Whether you opt for the default Delivery Optimization configurations or tailor them to suit your environment, you'll want to track the outcomes to see how they improve your efficiency. The following options are available to monitor Delivery Optimization:
 
 - On clients, review the activity monitor, which displays a breakdown of downloads by source, average speed, and upload stats for the current month
    - **Windows 11**: Settings > Windows Update > Advanced Options > Delivery Optimization > Activity Monitor
    - **Windows 10**: Settings > Update & Security > Delivery Optimization > Activity Monitor
-- Windows Update for Business reports offers a Delivery Optimization report. For more information, see [Monitor Delivery Optimization](waas-delivery-optimization-monitor.md). 
+- Windows Update for Business reports offers a Delivery Optimization report. For more information, see [Monitor Delivery Optimization](waas-delivery-optimization-monitor.md).
 
 ## Troubleshoot Delivery Optimization
 

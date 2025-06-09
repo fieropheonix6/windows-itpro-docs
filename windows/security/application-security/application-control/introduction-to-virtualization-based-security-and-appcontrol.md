@@ -4,7 +4,7 @@ description: Hardware and software system integrity-hardening capabilities that 
 ms.localizationpriority: medium
 author: vinaypamnani-msft
 ms.author: vinpa
-manager: aaroncz
+manager: bpardi
 ms.date: 09/11/2024
 ms.topic: article
 appliesto:

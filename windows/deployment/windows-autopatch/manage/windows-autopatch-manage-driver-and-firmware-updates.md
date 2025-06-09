@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: andredm7
 ms.collection:
   - highpri
@@ -31,7 +31,7 @@ You can manage and control your driver and firmware updates by:
 
 The Autopatch service creates additional driver profiles on a per-deployment ring and per group basis within your tenant.
 
-Choosing between Automatic and Manual modes can be done per-deployment ring and/or per Autopatch group. For a single Autopatch group, a mix of both Automatic and Manual policies is allowed. If you were previously in Manual mode, we create Manual policies for all your group rings. If Automatic (the default) was previously used, we create Automatic policies instead.  
+Choosing between Automatic and Manual modes can be done per-deployment ring and/or per Autopatch group. For a single Autopatch group, a mix of both Automatic and Manual policies is allowed. If you were previously in Manual mode, we create Manual policies for all your group rings. If Automatic (the default) was previously used, we create Automatic policies instead.
 
 > [!IMPORTANT]
 > If you switch between Automatic and Manual modes, new policies are generated to **replace old policies**. **You’ll lose any approvals, paused drivers, and declined drivers previously made for those groups and/or deployment rings**.
@@ -67,9 +67,9 @@ Choosing between Automatic and Manual modes can be done per-deployment ring and/
 
 For deployment rings set to **Automatic**, you can choose the deferral period for driver and firmware updates. The deferral period is the number of days that you must wait to deploy after a driver becomes available. By default, these deferral values match the values you set for your Windows quality updates.
 
-The deferral period allows you to delay the installation of driver and firmware updates on the devices in the specified deployment ring in case you want to test the update on a smaller group of devices first or avoid potential disruptions during a busy period.  
+The deferral period allows you to delay the installation of driver and firmware updates on the devices in the specified deployment ring in case you want to test the update on a smaller group of devices first or avoid potential disruptions during a busy period.
 
-The deferral period can be set from 0 to 30 days, and it can be different for each deployment ring.  
+The deferral period can be set from 0 to 30 days, and it can be different for each deployment ring.
 
 > [!NOTE]
 > The deferral period only applies to automatically approved driver and firmware updates. An admin must specify the date to start offering a driver with any manual approval.
@@ -88,7 +88,7 @@ When an OEM releases a newer update version that qualifies to be the new recomme
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to **Devices** > **Manage updates** > **Windows updates** > **Driver updates**.
 1. Select **Manage drivers for Autopatch groups** or select one of the **Drivers to review** links.
-1. Select the driver or drivers you’d like to manage.  
+1. Select the driver or drivers you’d like to manage.
 1. Select **Manage**. You can either:
     1. Approve for all policies
     2. Decline for all unreviewed policies
@@ -128,6 +128,6 @@ These updates can include:
     1. Approve for all policies
     2. Decline for all unreviewed policies
     3. Manage for individual policies
-1. In the **Approve for all policies** dropdown, select the date to make the driver available through Windows Update.  
+1. In the **Approve for all policies** dropdown, select the date to make the driver available through Windows Update.
 1. In the **Manage for individual policies** dropdown, select the policies to approve or decline the driver.
 1. Select **Save**.

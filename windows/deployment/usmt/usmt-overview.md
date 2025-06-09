@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.subservice: itpro-deploy
 author: frankroj
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.date: 03/27/2025
 ms.topic: overview

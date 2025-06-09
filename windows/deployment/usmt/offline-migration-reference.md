@@ -2,7 +2,7 @@
 title: Offline Migration Reference
 description: Offline migration enables the ScanState tool to run inside a different Windows OS than the Windows OS from which ScanState is gathering files and settings.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

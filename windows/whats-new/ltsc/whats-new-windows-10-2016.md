@@ -1,6 +1,6 @@
 ---
 title: What's new in Windows 10 Enterprise LTSC 2016
-manager: aaroncz
+manager: bpardi
 ms.author: mstewart
 description: New and updated IT pro content about new features in Windows 10 Enterprise LTSC 2016 (also known as Windows 10 Enterprise 2016 LTSB).
 ms.service: windows-client

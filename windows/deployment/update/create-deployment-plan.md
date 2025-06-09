@@ -6,11 +6,11 @@ ms.subservice: itpro-updates
 ms.topic: install-set-up-deploy
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - tier2
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 12/31/2017
@@ -48,14 +48,14 @@ There are basically two strategies for moving deployments from one ring to the n
 - "Red button" (service-based): Assumes that content is good until proven bad. Content flows until an issue is discovered, at which point the IT administrator presses the "red button" to stop further distribution.
 - "Green button" (project-based): Assumes that content is bad until proven good. Once all validation has passed, the IT administrator presses the "green button" to push the content to the next ring.
 
-When it comes to deployments, having manual steps in the process usually impedes update velocity. A "red button" strategy is better when that is your goal. 
+When it comes to deployments, having manual steps in the process usually impedes update velocity. A "red button" strategy is better when that is your goal.
 
 ## Preview ring
 
 The purpose of the Preview ring is to evaluate the new features of the update. It's *not* for broad parts of the organization but is limited to the people who are responsible for knowing what is coming next, generally IT administrators. Ultimately, this phase is the time the design and planning work happens so that when the public update is shipped, you can have greater confidence in the update.
 
 > [!NOTE]
-> Being part of the [Windows Insider Program](https://insider.windows.com/for-business/) gives you early access to Windows releases so that you can use Insider Preview builds in your Preview ring to validate your apps and infrastructure, preparing you for public Windows releases. 
+> Being part of the [Windows Insider Program](https://insider.windows.com/for-business/) gives you early access to Windows releases so that you can use Insider Preview builds in your Preview ring to validate your apps and infrastructure, preparing you for public Windows releases.
 
 
 ### Who goes in the Preview ring?

@@ -2,7 +2,7 @@
 title: Migrate Application Settings
 description: Learn how to author a custom migration .xml file that migrates the settings of an application that isn't migrated by default using MigApp.xml.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

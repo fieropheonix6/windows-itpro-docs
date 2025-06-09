@@ -2,7 +2,7 @@
 title: User State Migration Tool (USMT) Overview Articles
 description: Learn about User State Migration Tool (USMT) overview articles that describe USMT as a highly customizable user-profile migration experience for IT professionals.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

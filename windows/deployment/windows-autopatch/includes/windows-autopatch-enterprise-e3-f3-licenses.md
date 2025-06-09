@@ -1,7 +1,7 @@
 ---
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: include

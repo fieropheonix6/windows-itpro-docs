@@ -3,7 +3,7 @@ title: Log files and resolving upgrade errors
 description: Learn how to interpret and analyze the log files that are generated during the Windows upgrade process.
 ms.service: windows-client
 author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.localizationpriority: medium
 ms.topic: troubleshooting

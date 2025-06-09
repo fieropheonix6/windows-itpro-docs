@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: hathind
 ms.collection:
   - highpri
@@ -30,7 +30,7 @@ Support requests are triaged and responded to as they're received.
 1. In the **Help** section, enter your questions and/or a description of the issue.
 1. Review the links that are provided to try to help with the issue.
 1. If the answers that were given don't help you resolve the issue, select **Contact support** at the bottom of the page.
-1. Follow the instructions to file a support request with Windows Autopatch. Make sure you provide the correct primary contact information for this specific support ticket.  
+1. Follow the instructions to file a support request with Windows Autopatch. Make sure you provide the correct primary contact information for this specific support ticket.
 1. When you're ready, select **Contact me**.
 
 ## Premier and Unified support options

@@ -7,7 +7,7 @@ ms.subservice: itpro-fundamentals
 ms.localizationpriority: medium
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.topic: reference
 ms.collection:
   - highpri
@@ -23,7 +23,7 @@ This article provides more information about some [deprecated features for Windo
 
 ## Maps app
 
-Maps is deprecated and will be removed from the Microsoft Store by July 2025. At this time, there will also be a final update to the app from the Store that makes it nonfunctional. If you remove the app before July 2025, you can still reinstall it from the Store, but past July 2025 you won't be able to reinstall it. You'll be able to uninstall the app at any time. Any personal data or files you have saved, such as guided navigation or URLs to maps, won't be removed, but they'll no longer function in the Maps app past July 2025. If you wish to still use maps powered by the Bing service, please visit [https://www.bing.com/maps](https://www.bing.com/maps). Maps is no longer preinstalled with Windows starting with the Windows 11, version 24H2 release. 
+Maps is deprecated and will be removed from the Microsoft Store by July 2025. At this time, there will also be a final update to the app from the Store that makes it nonfunctional. If you remove the app before July 2025, you can still reinstall it from the Store, but past July 2025 you won't be able to reinstall it. You'll be able to uninstall the app at any time. Any personal data or files you have saved, such as guided navigation or URLs to maps, won't be removed, but they'll no longer function in the Maps app past July 2025. If you wish to still use maps powered by the Bing service, please visit [https://www.bing.com/maps](https://www.bing.com/maps). Maps is no longer preinstalled with Windows starting with the Windows 11, version 24H2 release.
 
 ## Windows UWP Map control and Windows Maps platform APIs
 
@@ -43,11 +43,11 @@ Paint 3D was deprecated in August 2024 and was removed from the Microsoft Store 
 
 ## NTLM
 
-Customers concerned about NTLM usage in their environments are encouraged to utilize [NTLM auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-audit-ntlm-authentication-in-this-domain) to [investigate how NTLM is being used](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/ntlm-blocking-and-you-application-analysis-and-auditing/ba-p/397191).  
+Customers concerned about NTLM usage in their environments are encouraged to utilize [NTLM auditing](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-audit-ntlm-authentication-in-this-domain) to [investigate how NTLM is being used](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/ntlm-blocking-and-you-application-analysis-and-auditing/ba-p/397191).
 
 In many cases, applications should be able to replace NTLM with Negotiate using a one-line change in their `AcquireCredentialsHandle` request to the SSPI. One known exception is for applications that make hard assumptions about the maximum number of round trips needed to complete authentication. In most cases, Negotiate will add at least one additional round trip. Some scenarios might require additional configuration. For more information, see [Kerberos authentication troubleshooting guidance](/troubleshoot/windows-server/windows-security/kerberos-authentication-troubleshooting-guidance).
 
-Negotiate's built-in fallback to NTLM is preserved to mitigate compatibility issues during this transition. For updates on NTLM deprecation, see [https://aka.ms/ntlm](https://aka.ms/ntlm). 
+Negotiate's built-in fallback to NTLM is preserved to mitigate compatibility issues during this transition. For updates on NTLM deprecation, see [https://aka.ms/ntlm](https://aka.ms/ntlm).
 
 NTLM v1 is removed starting in Windows 11, version 24H2 and Windows Server 2025. Some situations still use NTLMv1 primitives for legacy reasons. MSCHAPv2 uses the same response function as NTLMv1 and is vulnerable to the same attacks against the weak crypto. MSCHAPv2 is only disabled by enabling Credential Guard.
 
@@ -57,14 +57,14 @@ WordPad is removed from all editions of Windows starting in Windows 11, version 
 
 - wordpad.exe
 - wordpadfilter.dll
-- write.exe 
+- write.exe
 
 Avoid taking a direct dependency on these binaries and Wordpad in your product. Instead, for trying to open a text file, rely on Microsoft Word or Notepad.
 
 ## VBScript
 
 VBScript will be available as a [feature on demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) before being retired in future Windows releases. Initially, the VBScript feature on demand will be preinstalled to allow for uninterrupted use while you prepare for the retirement of VBScript.
- 
+
 ## TLS versions 1.0 and 1.1 disablement resources
 
 Over the past several years, internet standards and regulatory bodies have [deprecated or disallowed](https://www.ietf.org/rfc/rfc8996.html) TLS versions 1.0 and 1.1 due to various security issues. Starting in Windows 11 Insider Preview builds for September 2023 and continuing in future Windows OS releases, TLS 1.0 and 1.1 are disabled by default. This change increases the security posture of Windows customers and encourages modern protocol adoption. For organizations that need to use these versions, there's an option to re-enable TLS 1.0 or TLS 1.1.
@@ -111,7 +111,7 @@ Re-enabling TLS 1.0 or TLS 1.1 on machines should only be done as a last resort,
 
 ## Microsoft Support Diagnostic Tool resources
 
-The [Microsoft Support Diagnostic Tool (MSDT)](/windows-server/administration/windows-commands/msdt) gathers diagnostic data for analysis by support professionals. MSDT is the engine used to run legacy Windows built-in troubleshooters. There are currently 28 built-in troubleshooters for MSDT. Half of the built-in troubleshooters have already been [redirected](#redirected-msdt-troubleshooters) to the Get Help platform, while the other half will be [retired](#retired-msdt-troubleshooters).  
+The [Microsoft Support Diagnostic Tool (MSDT)](/windows-server/administration/windows-commands/msdt) gathers diagnostic data for analysis by support professionals. MSDT is the engine used to run legacy Windows built-in troubleshooters. There are currently 28 built-in troubleshooters for MSDT. Half of the built-in troubleshooters have already been [redirected](#redirected-msdt-troubleshooters) to the Get Help platform, while the other half will be [retired](#retired-msdt-troubleshooters).
 
 If you're using MSDT to run [custom troubleshooting packages](/previous-versions/windows/desktop/wintt/package-schema), it will be available as a [feature on demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) before the tool is fully retired in 2025. This change allows you to continue to use MSDT to run custom troubleshooting packages while transitioning to a new platform. [Contact Microsoft support](https://support.microsoft.com/contactus) for Windows if you require more assistance.
 

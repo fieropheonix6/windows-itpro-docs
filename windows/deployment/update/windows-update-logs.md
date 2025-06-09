@@ -6,7 +6,7 @@ ms.subservice: itpro-updates
 ms.topic: reference
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - highpri
   - tier2

@@ -2,7 +2,7 @@
 title: USMT Log Files
 description: Learn how to use User State Migration Tool (USMT) logs to monitor the migration and to troubleshoot errors and failed migrations.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.subservice: itpro-fundamentals
 ms.author: mstewart
 author: mestew
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 05/21/2025
@@ -54,7 +54,7 @@ To enable ESU for Windows 10, you must meet the following prerequisites:
 If you bought ESU licenses, you can activate them with Multiple Activation Keys (MAK) that you get from the Microsoft 365 admin center. To find the ESU license MAK, use the following steps:
 
 1. In the [admin center](https://admin.microsoft.com), go to the **Billing** > **Your Products** page, then select the <a href="https://go.microsoft.com/fwlink/p/?linkid=2244144" target="_blank">Volume licensing</a> tab.
-2. In the **Contracts** section, select **View contracts**.  
+2. In the **Contracts** section, select **View contracts**.
 3. On the <a href="https://go.microsoft.com/fwlink/p/?linkid=2297440" target="_blank">Contracts</a> page, find the **License ID** that the ESU licenses were purchased under, select the three dots (**More actions**), then select **View product keys**. The **Product keys** details page includes contract details and a list of all keys for that contract.
 
 > [!NOTE]
@@ -150,10 +150,10 @@ If the device doesn't have access to the internet or to the Microsoft Activation
    The output should show the **Name** of the corresponding ESU program and the **License Status** as `Licensed` for that program.
 
 ## Activate large numbers of devices that don't have internet access
-  
+
 For more information on how to do manual activation of large numbers of devices, review the Volume Activation Management Tool (VAMT) [Proxy Activation](/windows/deployment/volume-activation/proxy-activation-vamt) scenario. You should install the latest [Automated Deployment Kit (ADK) tool](/windows-hardware/get-started/adk-install) to ensure that the VAMT tool includes updated PkeyConfig files for Windows 10 ESU MAK keys.
 
-For more information on adding additional activations to a Windows 10 ESU MAK, see [Request an increase to MAK activation limits](/microsoft-365/commerce/licenses/product-keys-for-vl#request-an-increase-to-mak-activation-limits). 
+For more information on adding additional activations to a Windows 10 ESU MAK, see [Request an increase to MAK activation limits](/microsoft-365/commerce/licenses/product-keys-for-vl#request-an-increase-to-mak-activation-limits).
 
 ## Related content
 

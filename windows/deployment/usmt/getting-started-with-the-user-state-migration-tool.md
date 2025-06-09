@@ -2,7 +2,7 @@
 title: User State Migration Tool (USMT) - Getting Started
 description: Plan, collect, and prepare the source computer for migration using the User State Migration Tool (USMT).
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

@@ -6,13 +6,13 @@ ms.subservice: itpro-updates
 ms.topic: reference
 author: nidos
 ms.author: nidos
-manager: aaroncz
+manager: bpardi
 ms.reviewer: mstewart
 ms.collection: tier3
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>
 ms.date: 01/14/2025
 ---
 
@@ -32,13 +32,13 @@ During sign-up, we verify the information you provide against what is present in
 
 #### Invalid verification code
 
-During sign-up, a verification code is sent to your NOC email address present in [Peering DB](https://www.peeringdb.com/). This code expires in 24 hours. If it's expired, you'll need to request a new verification code to complete the sign-up.  
+During sign-up, a verification code is sent to your NOC email address present in [Peering DB](https://www.peeringdb.com/). This code expires in 24 hours. If it's expired, you'll need to request a new verification code to complete the sign-up.
 
 #### Unable to re-sign up
 
 Delete any Microsoft Connected Cache resource that you're using before you resign up for the service. Deleting any existing Connected Cache resource unlocks your ASN, which allows you to successfully sign up.
 
-### Cache Node Errors  
+### Cache Node Errors
 
 #### Network connectivity issues
 

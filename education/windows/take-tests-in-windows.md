@@ -7,6 +7,8 @@ ms.topic: how-to
 
 # Take tests and assessments in Windows
 
+[!INCLUDE [winse-eos](../includes/winse-eos.md)]
+
 Many schools use online testing for formative and summation assessments. It's critical that students use a secure browser that prevents them from using other computer or Internet resources during the test. To help schools with testing, Windows provides an application called **Take a Test**. The application is a secure browser that provides different features to help with testing, and can be configured to only allow access a specific URL or a list of URLs. When using Take a Test, students can't:
 
 - Print, use screen capture, or text suggestions (unless enabled by the teacher or administrator)

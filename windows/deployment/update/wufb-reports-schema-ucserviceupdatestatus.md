@@ -7,10 +7,10 @@ ms.subservice: itpro-updates
 ms.topic: reference
 author: mestew
 ms.author: mstewart
-manager: aaroncz
-appliesto: 
+manager: bpardi
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
-- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 12/06/2023
 ---
 
@@ -19,7 +19,7 @@ ms.date: 12/06/2023
 Update Event that comes directly from the service-side. The event has only service-side information for one device (client), and one update, in one deployment. This event has certain fields removed from it in favor of being able to show data in near real time.
 
 ## Schema for UCServiceUpdateStatus
-<!--8506381--> 
+<!--8506381-->
 | Field |Type | Enumerated type |Example |Description |
 |---|---|---|---|---|
 | **AzureADDeviceId** | [string](/azure/data-explorer/kusto/query/scalar-data-types/string) | No | `71db1a1a-f1a6-4a25-b88f-79c2f513dae0` | Microsoft Entra Device ID |

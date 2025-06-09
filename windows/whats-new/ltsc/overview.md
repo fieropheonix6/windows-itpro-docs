@@ -4,7 +4,7 @@ description: An overview of the Windows long-term servicing channel (LTSC).
 ms.service: windows-client
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: low
 ms.topic: overview
 ms.subservice: itpro-fundamentals

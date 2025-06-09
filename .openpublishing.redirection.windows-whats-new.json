@@ -67,7 +67,7 @@
       },
       {
          "source_path":"windows/whats-new/security.md",
-         "redirect_url":"/windows/threat-protection/overview-of-threat-mitigations-in-windows-10",
+         "redirect_url":"/windows/security/index",
          "redirect_document_id":false
       },
       {

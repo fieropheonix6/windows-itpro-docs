@@ -1,6 +1,6 @@
 ---
 title: Deploy Windows with Microsoft 365
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 description: Learn about deploying Windows with Microsoft 365 and how to use a free 90-day trial account to review some of the benefits of Microsoft 365.
 ms.service: windows-client

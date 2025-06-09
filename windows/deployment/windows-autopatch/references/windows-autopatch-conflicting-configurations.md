@@ -8,7 +8,7 @@ ms.topic: concept-article
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: adnich
 ms.collection:
   - highpri

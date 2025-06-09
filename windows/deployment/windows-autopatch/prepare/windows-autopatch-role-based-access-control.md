@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: andredm7
 ms.collection:
   - highpri
@@ -26,13 +26,13 @@ Windows Autopatch enables role-based access control to use the least privileged 
 > [!IMPORTANT]
 > To successfully manage Windows Autopatch as a lower privilege role, the user must have both Autopatch Admin permissions and Policy and Profile admin permissions.
 
-The permissions defined in Windows Autopatch administrator or Windows Autopatch reader roles are used to manage Autopatch groups, support requests, Autopatch messages, and Autopatch reports.  
+The permissions defined in Windows Autopatch administrator or Windows Autopatch reader roles are used to manage Autopatch groups, support requests, Autopatch messages, and Autopatch reports.
 
 To manage update policies and Windows Update reports, Device Configuration permission is **required**. This permission is available in built-in roles such as the Policy and Profile Manager roles.
 
 ### Policy and Profile Manager roles
 
-Policy and Profile Manager roles include device configuration permissions for managing Intune policies including the following Update policies:  
+Policy and Profile Manager roles include device configuration permissions for managing Intune policies including the following Update policies:
 
 - Update rings
 - Quality updates
@@ -85,7 +85,7 @@ The following Microsoft Entra roles can access Windows Autopatch features via th
 
 You can create two custom roles that include permissions required for a specific job role.
 
-To achieve all-up update management, make sure that the groups assigned to the Autopatch custom role are also a member of the [Policy & Profile Manager role](#policy-and-profile-manager-roles) or a custom role with equivalent permissions.  
+To achieve all-up update management, make sure that the groups assigned to the Autopatch custom role are also a member of the [Policy & Profile Manager role](#policy-and-profile-manager-roles) or a custom role with equivalent permissions.
 
 Navigate to **Tenant Administration** > **Roles** > **Create Custom role** > **Windows Autopatch** to create a custom role.
 
@@ -109,18 +109,18 @@ Navigate to **Tenant Administration** > **Roles** > **Create Custom role** > **W
 
 ### Scopes
 
-Windows Autopatch supports Intune scope tags and scoped groups to be used for distributed update management. Use Microsoft Intune to create and manage scope tags.  
+Windows Autopatch supports Intune scope tags and scoped groups to be used for distributed update management. Use Microsoft Intune to create and manage scope tags.
 
 - Windows Autopatch supports Intune scope for Autopatch groups, Autopatch role assignments, update policies, and reports.
-- Autopatch messages, support, and Admin contacts don't support scopes.  
-- Autopatch groups created by scoped admins are assigned to the same scope tags as the user.  
+- Autopatch messages, support, and Admin contacts don't support scopes.
+- Autopatch groups created by scoped admins are assigned to the same scope tags as the user.
 - Only scoped admins, with the same scope tags assigned to them, can edit and manage Autopatch groups.
-- When you create Autopatch groups and assign scope tags, the update policies created inherit the same scope tags.  
+- When you create Autopatch groups and assign scope tags, the update policies created inherit the same scope tags.
 - The devices assigned to Autopatch groups don't inherit the Autopatch group scope tags. Use Intune to assign scope tag to devices.
 
 ## Permissions for Autopatch groups
 
-Autopatch groups create Microsoft Entra groups and update policies and assign the policies to the group as part of its workflow. To successfully complete the workflow, both permissions are **required**. The option to create Autopatch groups is only available when the user has both the permissions enabled.  
+Autopatch groups create Microsoft Entra groups and update policies and assign the policies to the group as part of its workflow. To successfully complete the workflow, both permissions are **required**. The option to create Autopatch groups is only available when the user has both the permissions enabled.
 
 1. Device Configuration, **all** permissions
 2. Windows Autopatch group, **all** permissions
@@ -163,8 +163,8 @@ The following table explains the high-level workflow:
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to **Tenant Administration** > **Autopatch groups** > **select a group**. All rings and policies of the Autopatch group have the same scope.
 1. In the **Add group to ring** option, select the Microsoft Entra groups to be assigned to the Autopatch group. Only groups with scope objects are available for selection.
 1. Navigate to **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > select the tags that you want to add to the profile. You can assign a **maximum of 100 scope tags** to an object.
-    1. The **Scope Group** section is displayed when the service detects Autopatch groups that are created before role-based access controls. This indicates that a Microsoft Entra group is created, which can be added as a Scoped Group. A scoped admin can manage this Autopatch group if included in their scope.  
-    2. Follow the steps in the [Scoped admins and Autopatch group workflow](#scoped-admins-and-autopatch-group-workflow) section to assign scoped groups.  
+    1. The **Scope Group** section is displayed when the service detects Autopatch groups that are created before role-based access controls. This indicates that a Microsoft Entra group is created, which can be added as a Scoped Group. A scoped admin can manage this Autopatch group if included in their scope.
+    2. Follow the steps in the [Scoped admins and Autopatch group workflow](#scoped-admins-and-autopatch-group-workflow) section to assign scoped groups.
 1. Select **Review + save**.
 
 ## Known issues

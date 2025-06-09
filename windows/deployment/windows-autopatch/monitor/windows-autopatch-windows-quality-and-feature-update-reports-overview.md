@@ -8,7 +8,7 @@ ms.topic: overview
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: adnich
 ms.collection:
   - highpri
@@ -26,7 +26,7 @@ Windows Autopatch requires, and uses Windows diagnostic data to display device u
 
 This data collection configuration method using Windows diagnostic data in Intune is shared across Autopatch reports. To support Autopatch reporting, you must configure the [Enable Windows diagnostic data collection settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) from devices at the **Required** or higher level.
 
-### Permissions and scope to view reports  
+### Permissions and scope to view reports 
 
 To view Windows Update reports, you must be assigned an Intune role with the **Device Configuration** > **View reports** permission. This permission is included in the following built-in roles:
 

@@ -4,7 +4,7 @@ description: This article describes how to customize a Windows PE (WinPE) boot i
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.topic: how-to
 ms.date: 08/16/2024

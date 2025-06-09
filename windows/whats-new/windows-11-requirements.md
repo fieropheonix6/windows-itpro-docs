@@ -1,7 +1,7 @@
 ---
 title: Windows 11 requirements
 description: Hardware requirements to deploy Windows 11.
-manager: aaroncz
+manager: bpardi
 author: mestew
 ms.author: mstewart
 ms.service: windows-client

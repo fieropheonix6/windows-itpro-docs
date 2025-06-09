@@ -1,6 +1,6 @@
 ---
 title: Cache node configuration settings
-manager: aaroncz
+manager: bpardi
 description: List of options that are available while configuring a cache node for your environment from the Azure portal.
 ms.service: windows-client
 ms.subservice: itpro-updates
@@ -11,7 +11,7 @@ ms.reviewer: mstewart
 ms.collection:
   - tier3
   - must-keep
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>

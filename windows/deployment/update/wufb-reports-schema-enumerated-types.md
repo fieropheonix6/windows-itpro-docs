@@ -7,8 +7,8 @@ ms.subservice: itpro-updates
 ms.topic: reference
 author: mestew
 ms.author: mstewart
-manager: aaroncz
-appliesto: 
+manager: bpardi
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 12/06/2023
@@ -30,7 +30,7 @@ SKU of Windows the device is running.
 | **ProfessionalN** | Similar to Windows Professional edition but doesn't include Windows media player. |
 | **Education** | Windows Education |
 
-## OSArchitecture 
+## OSArchitecture
 
 Architecture of the OS running on the client.
 
@@ -40,7 +40,7 @@ Architecture of the OS running on the client.
 | **x86** | OS is 32-bit |
 | **Unknown** | The OS architecture is unknown |
 
-## OSFeatureUpdateStatus 
+## OSFeatureUpdateStatus
 
 Feature updates status
 
@@ -50,7 +50,7 @@ Feature updates status
 | **InService** | Client is on a version of Windows 10 that is serviced.  |
 | **EndOfService** | Client is on a version of Windows 10 that is no longer serviced. |
 
-## OSQualityUpdateStatus 
+## OSQualityUpdateStatus
 
 Quality updates status
 
@@ -119,7 +119,7 @@ Lower-level service state
 | **ServicePaused** | Update is on hold because of an automatic action by the deployment service. |
 | **SafeguardHold** | Update isn't offered because an existing safeguard hold on the device. |
 
-## ClientState 
+## ClientState
 
 High-level client state
 
@@ -136,7 +136,7 @@ High-level client state
 
 ## ClientSubstate
 
-Lower-level client state 
+Lower-level client state
 
 |Value | Description |
 |---|---|

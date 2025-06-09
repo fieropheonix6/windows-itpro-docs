@@ -5,7 +5,7 @@ ms.service: windows-client
 author: frankroj
 ms.author: frankroj
 ms.date: 05/07/2025
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: high
 ms.topic: how-to
 ms.collection:

@@ -1,7 +1,7 @@
 ---
 title: Windows Upgrade and Migration Considerations
 description: Discover the Microsoft tools that can be used to move files and settings between installations including special considerations for performing an upgrade or migration.
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

@@ -6,11 +6,11 @@ ms.subservice: itpro-updates
 ms.topic: article
 ms.author: mstewart
 author: mestew
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - tier2
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11, version 24H2 and later</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2025 and later</a>
 ms.date: 01/31/2025
@@ -65,7 +65,7 @@ Devices or images that have the latest checkpoint cumulative update installed an
 
 Examples of eligible devices:
 
-| Device is on | Needs to install| 
+| Device is on | Needs to install|
 |---|---|
 |<ul><li>The checkpoint cumulative update, 2024-09 (KB5043080)</li></ul>|<ul><li>A subsequent monthly security update like 2024-11 (KB5046617), or</li> <li>A subsequent optional nonsecurity release like 2024-11 (KB5046740) </li></ul>|
 |<ul><li>A subsequent optional nonsecurity preview release like 2024-09 (KB5043178), or</li> <li> A subsequent monthly security update like 2024-10 (KB5044284)</li></ul>|<ul><li>A subsequent monthly security update like 2025-01 (KB5050009), or</li> <li> A subsequent optional nonsecurity release like 2024-11 (KB5046740) </li></ul>|
@@ -79,15 +79,15 @@ Installing FoDs or language packs requires the full latest cumulative update pay
 1.	Run `DISM /add-package` with the latest `.msu` file as the sole target.
 1.	Run `/Cleanup-Image /StartComponentCleanup`.
 1.	Unmount.
-1.	Run `DISM /export-image` to optimize the image size, if that's important to you.  
+1.	Run `DISM /export-image` to optimize the image size, if that's important to you.
 
 **Device doesn't have the latest checkpoint cumulative update and doesn't need customization:**
 
-Devices that aren't on the latest checkpoint cumulative update and don't need FoD/language pack customization can either install all needed cumulative updates one by one in the right sequence. Alternately they can be updated using DISM to install all cumulative updates in one go. For more information, see the [Updating through checkpoint cumulative updates](#updating-through-checkpoint-cumulative-updates) section. If there are total four checkpoint cumulative updates available and device already has the first one installed, DISM applies the remaining three checkpoint cumulative updates in the right order followed by the target cumulative update, all in one go. 
+Devices that aren't on the latest checkpoint cumulative update and don't need FoD/language pack customization can either install all needed cumulative updates one by one in the right sequence. Alternately they can be updated using DISM to install all cumulative updates in one go. For more information, see the [Updating through checkpoint cumulative updates](#updating-through-checkpoint-cumulative-updates) section. If there are total four checkpoint cumulative updates available and device already has the first one installed, DISM applies the remaining three checkpoint cumulative updates in the right order followed by the target cumulative update, all in one go.
 
 ## Related articles
 
 - [Servicing stack updates](/windows/deployment/update/servicing-stack-updates)
 - [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities)
 - [How to download updates that include drivers and hotfixes from the Microsoft Update Catalog](/troubleshoot/windows-client/installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog)
-- [Update Windows installation media with Dynamic Update](media-dynamic-update.md) 
+- [Update Windows installation media with Dynamic Update](media-dynamic-update.md)

@@ -1,6 +1,6 @@
 ---
-author: aczechowski
-ms.author: aaroncz
+author: vinaypamnani-msft
+ms.author: vinpa
 ms.service: windows-client
 ms.topic: include
 ms.date: 07/20/2022

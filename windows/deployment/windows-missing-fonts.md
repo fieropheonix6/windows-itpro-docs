@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.topic: how-to
 ms.date: 02/27/2025
 ms.subservice: itpro-deploy

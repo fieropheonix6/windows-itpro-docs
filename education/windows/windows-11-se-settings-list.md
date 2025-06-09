@@ -12,6 +12,8 @@ ms.collection:
 
 # Windows 11 SE for Education settings list
 
+[!INCLUDE [winse-eos](../includes/winse-eos.md)]
+
 Windows 11 SE automatically configures certain settings and features in the operating system. You can use Microsoft Intune to customize these settings.
 
 This article lists the settings automatically configured. For more information on Windows 11 SE, see [Windows 11 SE for Education overview](windows-11-se-overview.md).

@@ -6,7 +6,7 @@ ms.subservice: itpro-updates
 ms.topic: overview
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
 ms.collection:
   - highpri

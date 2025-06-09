@@ -6,9 +6,9 @@ ms.subservice: itpro-updates
 ms.topic: article
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 10/31/2023

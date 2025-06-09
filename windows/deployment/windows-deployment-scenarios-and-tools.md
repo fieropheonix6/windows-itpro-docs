@@ -1,7 +1,7 @@
 ---
 title: Windows deployment scenarios and tools
 description: Learn about the tools that can be used to deploy Windows and related applications to your organization. Explore deployment scenarios.
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 author: frankroj
 ms.service: windows-client
@@ -87,7 +87,7 @@ By default USMT migrates many settings, most of which are related to the user pr
 - The following specific file types:
 
     `.accdb`, `.ch3`, `.csv`, `.dif`, `.doc*`, `.dot*`, `.dqy`, `.iqy`, `.mcw`, `.mdb*`, `.mpp`, `.one*`, `.oqy`, `.or6`, `.pot*`, `.ppa`, `.pps*`, `.ppt*`, `.pre`, `.pst`, `.pub`, `.qdf`, `.qel`, `.qph`, `.qsd`, `.rqy`, `.rtf`, `.scd`, `.sh3`, `.slk`, `.txt`, `.vl*`, `.vsd`, `.wk*`, `.wpd`, `.wps`, `.wq1`, `.wri`, `.xl*`, `.xla`, `.xlb`, `.xls*`
-  
+
   > [!NOTE]
   >
   > - The asterisk (`*`) stands for zero or more characters.

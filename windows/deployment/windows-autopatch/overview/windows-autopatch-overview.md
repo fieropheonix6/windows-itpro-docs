@@ -8,7 +8,7 @@ ms.topic: overview
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - highpri
   - tier1

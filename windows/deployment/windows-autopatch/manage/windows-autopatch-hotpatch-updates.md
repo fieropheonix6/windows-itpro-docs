@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: adnich
 ms.collection:
   - highpri
@@ -68,11 +68,11 @@ You can also use the CSP DisableCHPE (available on Windows Insider Preview). For
 > [!NOTE]
 > There are no plans to support hotpatch updates on Arm64 devices with CHPE enabled. Disabling CHPE is required only for Arm64 devices. AMD and Intel CPUs don’t have CHPE.
 
-If you choose to no longer use Hotpatch updates, clear the CHPE disable flag (`HotPatchRestrictions=0`) then restart the device to turn on CHPE usage.  
+If you choose to no longer use Hotpatch updates, clear the CHPE disable flag (`HotPatchRestrictions=0`) then restart the device to turn on CHPE usage.
 
 ## Ineligible devices
 
-Devices that don't meet one or more prerequisites automatically receive the Latest Cumulative Update (LCU) instead. Latest Cumulative Update (LCU) contains monthly updates that supersede the previous month's updates containing both security and nonsecurity releases.  
+Devices that don't meet one or more prerequisites automatically receive the Latest Cumulative Update (LCU) instead. Latest Cumulative Update (LCU) contains monthly updates that supersede the previous month's updates containing both security and nonsecurity releases.
 
 LCUs requires you to restart the device, but the LCU ensures that the device remains fully secure and compliant.
 
@@ -149,7 +149,7 @@ For the latest release schedule, see the [hotpatch release notes](https://suppor
 
 ### Step 3: Verify the device is properly configured to turn on hotpatch updates
 
-1. In Intune, review your configured policies within Autopatch to see which groups of devices are targeted with a hotpatch policy by going to the **Windows Update** > **Quality Updates** page.  
+1. In Intune, review your configured policies within Autopatch to see which groups of devices are targeted with a hotpatch policy by going to the **Windows Update** > **Quality Updates** page.
 1. Ensure the hotpatch update policy is set to **Allow**.
 1. On the device, select **Start** > **Settings** > **Windows Update** > **Advanced options** > **Configured update policies** > find **Enable hotpatching when available**. This setting indicates that the device is enrolled in hotpatch updates as configured by Autopatch.
 

@@ -9,6 +9,8 @@ appliesto:
 
 # Configure Stickers for Windows 11 SE
 
+[!INCLUDE [winse-eos](../includes/winse-eos.md)]
+
 Starting in **Windows 11 SE, version 22H2**, *Stickers* is a feature that allows students to decorate their desktop with digital stickers. Students can choose from over 500 cheerful, education-friendly digital stickers. Stickers can be arranged, resized, and customized on top of the desktop background. Each student's stickers remain, even when the background changes.
 
 Similar to the [education theme packs](edu-themes.md), Stickers is a personalization feature that helps the device feel like it was designed for students.

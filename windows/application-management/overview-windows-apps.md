@@ -1,9 +1,9 @@
 ---
 title: Overview of apps on Windows client devices
 description: Learn about the different types of apps that run on Windows. For example, Universal Windows Platform (UWP), Windows Presentation Foundation (WPF), Win32, and Windows Forms apps. This article also includes the best way to install these apps.
-author: aczechowski
-ms.author: aaroncz
-manager: aaroncz
+author: vinaypamnani-msft
+ms.author: vinpa
+manager: bpardi
 ms.date: 09/03/2024
 ms.topic: overview
 ms.service: windows-client

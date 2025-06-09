@@ -1,11 +1,11 @@
 ---
-title: Extended Security Updates (ESU) program for Windows 10 
+title: Extended Security Updates (ESU) program for Windows 10
 description: Learn about the Extended Security Updates (ESU) program for Windows 10. The ESU program gives customers the option to receive security updates for Windows 10.
 ms.service: windows-client
 ms.subservice: itpro-fundamentals
 ms.author: mstewart
 author: mestew
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 05/21/2025
@@ -42,13 +42,13 @@ ESUs doesn't include the following items:
 
 ## Frequently asked questions
 
-The following are frequently asked questions about the ESU program for Windows 10: 
+The following are frequently asked questions about the ESU program for Windows 10:
 
 ### How much does ESU cost?
 
 Extended Security Updates for organizations and businesses on Windows 10 can be purchased today through the Microsoft Volume Licensing Program, at $61 USD per device for Year One. For more information, see [When to use Windows 10 Extended Security Updates](https://techcommunity.microsoft.com/blog/windows-itpro-blog/when-to-use-windows-10-extended-security-updates/4102628). The price doubles every consecutive year, for a maximum of three years. ESU is available at no additional cost for Windows 10 virtual machines in the following services:
 
-- [Windows 365](/windows-365/overview) 
+- [Windows 365](/windows-365/overview)
 - [Azure Virtual Desktop](/azure/virtual-desktop/overview)
 - [Azure virtual machines](/azure/virtual-machines/overview)
 - [Azure Dedicated Host](/azure/virtual-machines/dedicated-hosts)
@@ -60,7 +60,7 @@ Extended Security Updates for organizations and businesses on Windows 10 can be 
 
 Additionally, Windows 10 endpoints connecting to Windows 365 Cloud PCs will be entitled to the ESU for up to three years, with an active Windows 365 subscription license. For more information about Windows 365, see [What is Windows 365?](/windows-365/overview).
 
-For individuals or Windows 10 Home customers, Extended Security Updates for Windows 10 will be available for purchase at $30 for one year. 
+For individuals or Windows 10 Home customers, Extended Security Updates for Windows 10 will be available for purchase at $30 for one year.
 
 
 ### Is there a minimum license purchase requirement for Windows 10 ESU?
@@ -82,7 +82,7 @@ Enrolled PCs belonging to a commercial or educational organization can receive s
 
 ### Is technical support included in ESU?
 
-No, technical support isn't included in the ESU program. Microsoft will provide support for customers that encounter challenges related to the ESU. 
+No, technical support isn't included in the ESU program. Microsoft will provide support for customers that encounter challenges related to the ESU.
 
 ### Will Windows 10 PCs stop working without the ESU offering?
 

@@ -2,7 +2,7 @@
 title: User State Migration Tool (USMT) How-to articles
 description: Reference the articles in this article to learn how to use User State Migration Tool (USMT) to perform specific tasks.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

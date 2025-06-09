@@ -2,7 +2,7 @@
 title: Plan The Migration
 description: Learn how to plan the migration carefully so the migration can proceed smoothly and so that the risk of migration failure is reduced.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj
