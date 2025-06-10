@@ -1016,7 +1016,7 @@ This user right determines which users are prevented from accessing a computer o
 
 <!-- DenyLocalLogOn-Description-Begin -->
 <!-- Description-Source-DDF -->
-This security setting determines which service accounts are prevented from registering a process as a service.
+This security setting determines which users are prevented from logging on to the computer.
 
 > [!NOTE]
 > This security setting doesn't apply to the System, Local Service, or Network Service accounts.
