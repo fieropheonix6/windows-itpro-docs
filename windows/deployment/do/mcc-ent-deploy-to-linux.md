@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 10/30/2024
+ms.date: 06/15/2025
 appliesto: 
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -23,35 +23,35 @@ Before deploying Connected Cache to a Linux host machine, ensure that the host m
 
 # [Azure portal](#tab/portal)
 
-1. Within the Azure portal, navigate to the **Provisioning** tab of your cache node and copy the provisioning command.
-1. Download the provisioning package using the option at the top of the Cache Node Configuration page and extract the package onto the host machine.
-1. Open a command line window *as administrator* on the host machine, then change directory to the extracted provisioning package.
+1. Within the Azure portal, navigate to the **Deployment** tab of your cache node and copy the deployment command.
+1. Download the Linux deployment package using the option at the top of the Cache Node Configuration page and extract the package onto the host machine.
+1. Open a command line window *as administrator* on the host machine, then change directory to the extracted deployment package.
 
     >[!Note]
-    >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted provisioning package directory and then add `proxytlscertificatepath="/path/to/pem/file"` to the provisioning command.
+    >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted deployment package directory and add `proxytlscertificatepath="/path/to/pem/file"` to the deployment command.
 
-1. Set access permissions to allow the `provisionmcc.sh` script within the provisioning package directory to execute.
-1. Run the provisioning command on the host machine.
+1. Set access permissions to allow the `provisionmcc.sh` script within the deployment package directory to execute.
+1. Run the deployment command on the host machine.
 
 # [Azure CLI](#tab/cli)
 
-To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's provisioning details and then run the provisioning command on the host machine.
+To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's deployment details and then run the deployment command on the host machine.
 
-1. To get the cache node's provisioning details, use `az mcc ent node get-provisioning-details`
+1. To get the cache node's deployment details, use `az mcc ent node get-provisioning-details`
 
    ```azurecli-interactive
    az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
    ```
 
-1. Save the resulting output. These values will be passed as parameters within the provisioning command.
-1. Download and extract the [Connected Cache provisioning package for Linux](https://aka.ms/MCC-Ent-InstallScript-Linux) to your host machine.
-1. Open a command line window *as administrator* on the host machine, then change directory to the extracted provisioning package.
+1. Save the resulting output. These values will be passed as parameters within the deployment command.
+1. Download and extract the [Connected Cache deployment package for Linux](https://aka.ms/MCC-Ent-InstallScript-Linux) to your host machine.
+1. Open a command line window *as administrator* on the host machine, then change directory to the extracted deployment package.
 
     > [!Note]
-    >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted provisioning package directory and then add `proxytlscertificatepath="/path/to/pem/file"` to the provisioning command.
+    >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted deployment package directory and then add `proxytlscertificatepath="/path/to/pem/file"` to the deployment command.
 
-1. Set access permissions to allow the `provisionmcc.sh` script within the provisioning package directory to execute.
-1. Replace the values in the following provisioning command before running it on the host machine.
+1. Set access permissions to allow the `provisionmcc.sh` script within the deployment package directory to execute.
+1. Replace the values in the following deployment command before running it on the host machine.
 
    ```azurepowershell-interactive
    sudo ./provisionmcc.sh customerid="enter mccResourceId here" cachenodeid="enter cacheNodeId here" customerkey=" enter customerKey here " registrationkey="enter registrationKey here" drivepathandsizeingb="enter physicalPath value,enter sizeInGb value here" shoulduseproxy="enter true if present, enter false if not" proxyurl=http://enter proxy hostname:enter port

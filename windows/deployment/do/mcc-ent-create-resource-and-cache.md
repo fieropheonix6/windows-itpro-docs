@@ -11,12 +11,12 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 03/19/2025
+ms.date: 06/15/2025
 ---
 
 # Create Microsoft Connected Cache Azure resource and cache nodes
 
-This article outlines how to create and configure your Microsoft Connected Cache for Enterprise and Education cache nodes. The creation and configuration of your cache node takes place in Azure. The deployment of your cache node requires downloading and running an OS-specific provisioning package on your host machine.
+This article outlines how to create and configure your Microsoft Connected Cache for Enterprise and Education cache nodes. The creation and configuration of your cache node takes place in Azure. The deployment of your cache node requires downloading and using an OS-specific deployment package on your host machine.
 
 ## Prerequisites
 
@@ -97,10 +97,10 @@ For more information about different cache node states, see [Cache node states](
 Use the following command to create a new cache node if you don't already have one.
 
 Replace the following placeholders with your own information:
-* *\<resource-group>*: Name of existing resource group in your subscription.
-* *\<mcc-resource-name>*: Name of the Microsoft Connected Cache for Enterprise resource.
-* *\<cache-node-name>*: A name for your Microsoft Connected Cache node.
-* *\<host-os>*: The OS on which cache node will be provisioned.
+* *\<resource-group>*: The name of the existing resource group in your subscription.
+* *\<mcc-resource-name>*: The name of the Microsoft Connected Cache for Enterprise Azure resource.
+* *\<cache-node-name>*: The desired name for your Microsoft Connected Cache node.
+* *\<host-os>*: The host machine operating system on which the cache node will be deployed.
   Accepted values: `windows`, `linux`
 
 ```azurecli-interactive
@@ -226,7 +226,7 @@ To deploy cache nodes using Azure CLI, see
 ##### Cache node for Linux
 
 >[!Important]
->All cache drives must have full read/write permissions set or the cache node will not function. For example, in a terminal you can run: sudo chmod 777 /path/to/cachedrivefolder
+>All cache drives must have full read/write permissions set or the cache node will not function. For example, in a terminal you can run: sudo chmod 777 /path/to/cachedrivefolder.
 <br>
 
 | Field Name |Expected Value |Description|
@@ -248,7 +248,7 @@ You can choose to enable or disable proxy settings on your cache node. Proxy sho
 <br>
 
 >[!IMPORTANT]
->Enabling or disabling the proxy settings after your cache node has been deployed will require running the provisioning script on the host machine again. This ensures that proxy changes are in effect on the cache node. 
+>Enabling or disabling the proxy settings of a deployed cache node will require redeployment to the host machine before the proxy changes take effect.
 
 | Field Name	|Expected Value	 |Description|
 |---|---|---|
@@ -346,7 +346,7 @@ az mcc ent node delete --cache-node-name <mycachenode> --mcc-resource-name <mymc
 |Operation in progress| An operation is being done on the cache node|
 |Registration in progress| Cache node is being registered|
 |Not configured| Cache node is ready to be configured|
-|Not provisioned| Cache node is ready to be provisioned on host machine|
+|Not provisioned| Cache node is ready to be deployed to the host machine|
 |Healthy| Cache node phoning home|
 |Unhealthy| Cache node has stopped phoning home|
-|Never phoned home| Cache node has provisioned but has never phoned home|
+|Never phoned home| Cache node has been deployed but has never phoned home|

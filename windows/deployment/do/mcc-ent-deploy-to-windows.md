@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 10/30/2024
+ms.date: 06/16/2025
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -25,18 +25,23 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
 
 # [Azure portal](#tab/portal)
 
-1. Within the Azure portal, navigate to the **Provisioning** tab of your cache node and copy the provisioning command.
-1. Download the provisioning package using the option at the top of the Cache Node Configuration page and extract the archive onto the host machine.
+1. Within the Azure portal, navigate to the **Deployment** tab of your cache node and copy the deployment command.
+1. Download the Connected Cache Windows application using the option at the top of the Cache Node Configuration page and run the following command to install it:
 
-   >[!Note]
-   >* The provisioning package should be extracted to a directory that isn't synced to OneDrive, as the sychronization process will interfere with the installation. It is recommended to extract the provisioning package to the root directory of the host machine (e.g. C:\mccInstaller)
+   ```powershell-interactive
+   Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
+   ```
+1. You can verify that the Connected Cache app has been installed by running the following command:
 
-1. Open a PowerShell window *as administrator* on the host machine, then change directory to the extracted provisioning package.
+   ```powershell-interactive
+   Get-AppxPackage Microsoft.DeliveryOptimization
+   ```
+1. Register the Connected Cache app for automatic updates by running the following command:
 
-   >[!Note]
-   >* If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted provisioning package directory and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the provisioning command.
-
-1. Set the Execution Policy to *Unrestricted* to allow the provisioning scripts to run.
+   ```powershell-interactive
+   deliveryoptimization-cli register
+   ```
+1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
     For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
@@ -46,44 +51,54 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    >[!Note]
    >* You'll need to apply a local security policy to permit the local user account to `Log on as a batch job`.
 
-1. Run the provisioning command on the host machine.
+1. In the same PowerShell window, run the deployment command that you copied from the Azure portal.
+
+   >[!Note]
+   >* If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the path given by `$(deliveryoptimization-cli mcc-get-scripts-path)` and add `-proxyTlsCertificatePath "path/to/pem/file"` to the deployment command.
 
 # [Azure CLI](#tab/cli)
 
-To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's provisioning details and then run the provisioning command on the host machine.
+To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's deployment details before running the deployment command on the host machine.
 
-1. To get the cache node's provisioning details, use `az mcc ent node get-provisioning-details`.
+1. To get the cache node's deployment details, use `az mcc ent node get-provisioning-details`.
 
    ```azurecli-interactive
    az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
    ```
 
-1. Save the resulting output. These values will be passed as parameters within the provisioning command.
-1. Download and extract the [Connected Cache provisioning package for Windows](https://aka.ms/MCC-Ent-InstallScript-WSL) to your host machine.
+1. Save the resulting output. These values must be passed as parameters within the deployment command.
+1. Download the [Connected Cache Windows application](https://aka.ms/MCC-Ent-InstallScript-WSL) to your host machine and run the following command to install it:
 
-   >[!Note]
-   >* The provisioning package should be extracted to a directory that isn't synced to OneDrive, as the sychronization process will interfere with the installation. It is recommended to extract the provisioning package to the root directory of the host machine (e.g. C:\mccInstaller)
+   ```powershell-interactive
+   Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
+   ```
+1. You can verify that the Connected Cache app has been installed by running the following command:
 
-1. Open a PowerShell window *as administrator* on the host machine, then change directory to the extracted provisioning package.
+   ```powershell-interactive
+   Get-AppxPackage Microsoft.DeliveryOptimization
+   ```
+1. Register the Connected Cache app for automatic updates by running the following command:
 
-   >[!Note]
-   >* If you are deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted provisioning package directory and add `-proxyTlsCertificatePath "path/to/pem/file"` to the provisioning command.
-
-1. Set the Execution Policy to *Unrestricted* to allow the provisioning scripts to run.
+   ```powershell-interactive
+   deliveryoptimization-cli register
+   ```
+1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
-    For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, the `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
+    For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
 
    If you're using a local user account as the Connected Cache runtime account, you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
    >* You'll need to apply a local security policy to permit the local user account to `Log on as a batch job`.
 
-1. Replace the values in the following provisioning command before running it on the host machine.
+1. Replace the values in the following deployment command before running it on the host machine.
 
    ```powershell-interactive
-   ./provisionmcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid [enter mccResourceId here] -cachenodeid [enter cacheNodeId here] -customerkey [enter customerKey here] -registrationkey [enter registration key] -cacheDrives "/var/mcc,enter drive size"  -shouldUseProxy [enter true if present, enter false if not] -proxyurl "http://[enter proxy host name]:[enter port]"  -mccRunTimeAccount $User -mccLocalAccountCredential $myLocalAccountCredential
+   & "$(deliveryoptimization-cli mcc-get-scripts-path)\provisionmcconwsl.ps1" -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true]
    ```
+   >[!Note]
+   >* If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the path given by `$(deliveryoptimization-cli mcc-get-scripts-path)` and add `-proxyTlsCertificatePath "path/to/pem/file"` to the deployment command.
 
 ---
 

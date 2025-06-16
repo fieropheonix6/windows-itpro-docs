@@ -13,7 +13,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>
-ms.date: 10/30/2024
+ms.date: 06/16/2025
 ---
 
 # Manage cache nodes using CLI
@@ -48,7 +48,7 @@ To create a resource group, use `az group create`. You can find more details on 
 az group create --name myrg --location westus
 ```
 
-Once the resource group is created, you'll need to create a Microsoft Connected Cache for Enterprise resource.
+Once the resource group is created, you'll need to create a Microsoft Connected Cache for Enterprise Azure resource.
 
 ### 2. Create a Connected Cache Azure resource
 
@@ -117,28 +117,30 @@ az mcc ent node update --cache-node-name <mycachenode> --mcc-resource-name <mymc
 --cache-drive "[{physical-path:</physical/path>,size-in-gb:<size of cache drive>},{</physical/path>,size-in-gb:<size of cache drive>}...]"> --proxy <enabled> --proxy-host <"proxy host name"> --proxy-port <proxy port>  --auto-update-day <day of week> --auto-update-time <time of day> --auto-update-week <week of month> --auto-update-ring <update ring>
 ```
 
+Remember that the minimum size of a cache drive is 50 GB. You can specify multiple cache drives for Linux-hosted cache nodes by adding additional entries to the `--cache-drive` parameter.
+
 >[!Note]
->* For a cache node that is to be deployed on Windows host OS, the physical path of the cache drive <u>must</u> be **/var/mcc**.<br>
+>* For Windows-hosted cache nodes, the physical path of the cache drive <u>must</u> be **/var/mcc**.<br>
 >* In the output, look for operationStatus. **operationStatus = Succeeded** indicates that our services have successfully updated the cache node. You will also see that cacheNodeState will show *Not Provisioned*. <br>
->* Please save values for <u>physicalPath, sizeInGb, proxyPort, proxyHostName</u> as these values will be needed to construct the provisioning script.
+>* Please save values for <u>physicalPath, sizeInGb, proxyPort, proxyHostName</u> as these values will be needed to construct the deployment command.
 
 
 <br>
 
-### 6. Get provisioning details for the cache node
+### 6. Get deployment details for the cache node
 
-After successfully configuring the cache node, the next step is to deploy the cache node to a host machine. To deploy the cache node, you'll need to create a provisioning script with relevant information.
+After successfully configuring the cache node, the next step is to deploy the cache node to a host machine. To deploy the cache node, you'll need to create a deployment command using the cache nodes unique identifiers.
 
-To get the relevant information for provisioning script, use `az mcc ent node get-provisioning-details`
+To get the relevant information for the deployment command, use `az mcc ent node get-provisioning-details`
 
 ```azurecli-interactive
 az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
 ```
 
 >[!IMPORTANT]
->* Save the resulting values for cacheNodeId, customerKey, mccResourceId, registrationKey. These GUIDs are needed to create the provisioning script.
->* In the output look for cacheNodeState. If **cacheNodeState = Not Provisioned**, you can continue with cache node provisioning.
->* If **cacheNodeState = Not Configured**, then the cache node has not been configured. Configure the cache node before provisioning.
+>* Save the resulting values for cacheNodeId, customerKey, mccResourceId, registrationKey. These GUIDs are needed for the deployment command.
+>* In the output look for cacheNodeState. If **cacheNodeState = Not Provisioned**, you can continue with cache node deployment.
+>* If **cacheNodeState = Not Configured**, then the cache node hasn't been configured. Configure the cache node before deployment.
 
 <br>
 

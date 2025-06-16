@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a> 
-ms.date: 10/30/2024
+ms.date: 06/16/2025
 ---
 
 # Uninstall Connected Cache software from a host machine
@@ -20,12 +20,12 @@ This article describes how to uninstall Microsoft Connected Cache for Enterprise
 
 ## Steps to uninstall Connected Cache from a Windows host machine
 
-1. Launch a PowerShell window *as administrator* and navigate to the Connected Cache installation directory (C:\mcconwsl01 by default)
+1. Launch a PowerShell window *as administrator* and navigate to the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`
 1. Run the `uninstallmcconwsl.ps1` script
 
 ## Steps to uninstall Connected Cache from a Linux host machine
 
-The `uninstallmcc.sh` script within the provisioning package uninstalls the Connected Cache caching software and all related components, including:
+The `uninstallmcc.sh` script within the deployment package uninstalls the Connected Cache caching software and all related components, including:
 
 - IoT Edge
 - IoT Edge Agent

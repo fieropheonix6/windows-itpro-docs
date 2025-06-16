@@ -11,12 +11,37 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
-ms.date: 02/28/2025
+ms.date: 06/16/2025
 ---
 
 # Release Notes for Microsoft Connected Cache for Enterprise and Education
 
 This article contains details about the latest releases of Connected Cache. Since Connected Cache is a preview service, some releases may contain breaking changes.
+
+## General Availability Release
+
+Released on **7/09/2025**
+
+This release contains improvements that can only be applied by redeploying your cache nodes using the updated Linux-hosted installation scripts or new Connected Cache Windows application.
+
+### New Connected Cache container version
+
+- v1.2.1.2100_E
+
+### New Linux-hosted installation script version
+
+- v1.09
+
+### New capabilities
+
+- **Connected Cache Windows application**: We are introducing a new Connected Cache Windows application that allows you to manage your cache nodes directly from your Windows host machine. This application provides a user-friendly interface for monitoring and managing cache nodes, including viewing metrics, updating configurations, and troubleshooting issues.
+- **Configure cache nodes to support Intune and Teams content via HTTPS**: You can now configure your cache nodes to support Intune and Teams content via HTTPS. This allows for secure and efficient caching of content delivered through these services, improving performance and reducing bandwidth usage.
+- **Script to update Scheduled Tasks on Windows-hosted cache nodes**: A new PowerShell script is available to update the credentials used by Connected Cache Scheduled Tasks on Windows-hosted cache nodes. This script is necessary when the Connected Cache runtime account password is changed. It ensures that the Scheduled Tasks continue to run with the correct credentials, preventing potential issues with task execution.
+
+### Bug fixes and upgrades
+- **Upgrade to Ubuntu 24.04 LTS**: The Connected Cache container now runs on Ubuntu 24.04 LTS, ensuring that the container environment is up-to-date with the latest security patches and features. Windows-hosted cache nodes also use Ubuntu 24.04 LTS as their WSL distribution.
+- **Windows-hosted cache nodes no longer grow past their configured disk size**: Fixed a bug that caused Windows-hosted cache nodes to grow past their configured disk size, potentially leading to performance issues and storage constraints.
+- **Support for non-English locales**: Connected Cache installation on Windows now supports non-English locales, improving accessibility and usability for international customers.
 
 ## February 2025 Release
 
