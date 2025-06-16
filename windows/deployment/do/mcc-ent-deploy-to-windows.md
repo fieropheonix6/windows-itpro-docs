@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 6/15/2025
+ms.date: 06/16/2025
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -66,7 +66,7 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
    az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
    ```
 
-1. Save the resulting output. These values will be passed as parameters within the deployment command.
+1. Save the resulting output. These values must be passed as parameters within the deployment command.
 1. Download the [Connected Cache Windows application](https://aka.ms/MCC-Ent-InstallScript-WSL) to your host machine and run the following command to install it:
 
    ```powershell-interactive
