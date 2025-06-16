@@ -226,7 +226,7 @@ To deploy cache nodes using Azure CLI, see
 ##### Cache node for Linux
 
 >[!Important]
->All cache drives must have full read/write permissions set or the cache node will not function. For example, in a terminal you can run: sudo chmod 777 /path/to/cachedrivefolder
+>All cache drives must have full read/write permissions set or the cache node will not function. For example, in a terminal you can run: sudo chmod 777 /path/to/cachedrivefolder.
 <br>
 
 | Field Name |Expected Value |Description|
