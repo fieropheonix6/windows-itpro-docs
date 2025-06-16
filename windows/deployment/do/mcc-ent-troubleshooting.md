@@ -132,6 +132,24 @@ If you don't see any port forwarding rules for port 80 to 0.0.0.0, you can run t
 
 You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the installation directory you specified in the Connected Cache provisioning command ("c:\mccwsl01" by default).
 
+### Cache node goes offline without user action
+
+If your cache node goes offline without any user action, it may be due to the "MCC_Monitor_Task" scheduled task not running properly. This task is responsible for monitoring the Connected Cache container and ensuring it remains active.
+To check the status of this scheduled task, open the Task Scheduler on the host machine and navigate to the Active Tasks section. Look for the **MCC_Monitor_Task** and ensure it is enabled and running as expected.
+
+If the **MCC_Monitor_Task** is failing to run successfully, it may be due to expired Connected Cache runtime account credentials. In this case, you can use the `UpdateMccScheduledTasks.ps1` script to update the credentials.
+
+1. Open a PowerShell process as Administrator.
+1. Change directory to the "MccScripts" directory and verify the presence of `UpdateMccScheduledTasks.ps1`.
+    - If you installed Connected Cache using the Public Preview deployment package, the "MccScripts" directory is located within the installationFolder specified in the original deployment command ("C:\mccwsl01" by default).
+    - If you installed Connected Cache using the Connected Cache Windows application, the "MccScripts" directory is located within the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`.
+1. Create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) representing the Connected Cache runtime account with the new password.
+1. Run the `UpdateMccScheduledTasks.ps1` script with the following command:
+
+    ```powershell-interactive
+    .\UpdateMccScheduledTasks.ps1 -Credential $myLocalAccountCredential
+    ```
+
 ## Troubleshooting cache node deployment to Linux host machine
 
 [Deploying a Connected Cache node to a Linux host machine](mcc-ent-deploy-to-linux.md) involves running a series of Bash scripts contained within the Linux provisioning package.
@@ -148,7 +166,7 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 You can generate a support bundle with detailed diagnostic information by running the `collectMccDiagnostics.sh` script included in the installation package.
 
-For Windows host machines, you'll need to do the following:
+For **Windows** host machines, you'll need to do the following:
 
 1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
 1. Change directory to the "MccScripts" directory within the extracted Connected Cache provisioning package and verify the presence of `collectmccdiagnostics.sh`
@@ -159,9 +177,9 @@ For Windows host machines, you'll need to do the following:
 
 1. Run the `wsl cp` command to copy the support bundle from the location within the Ubuntu distribution to the Windows host OS
 
-    For example, `wsl cp /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz /mnt/c/mccwsl01/SupportBundles`
+    For example, `wsl cp /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz /mnt/c/mccwsl01/SupportBundles/`
 
-For Linux host machines, you'll need to do the following:
+For **Linux** host machines, you'll need to do the following:
 
 1. Change directory to the "MccScripts" directory within the extracted Connected Cache provisioning package and verify the presence of `collectmccdiagnostics.sh`
 1. Run `collectmccdiagnostics.sh` to generate the diagnostic support bundle
