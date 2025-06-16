@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 02/28/2025
+ms.date: 06/16/2025
 ---
 
 
@@ -23,11 +23,7 @@ This article contains instructions on how to troubleshoot different issues you m
 
 This section describes known issues with the latest release of Microsoft Connected Cache for Enterprise and Education. See the [Release Notes page](mcc-ent-release-notes.md) for more details on the fixes included in the latest release.
 
-### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use Japanese language
-
-In the Connected Cache installation script (provisionmcconwsl.ps1), the check processing is executed until the value of the last execution code (Last Result) of the installation task becomes 0 in the following processing. However, in Japanese OS, the return value is null because "Last Result" is displayed, and an exception occurs.
-
-As a temporary workaround, the above error doesn't occur by changing the language setting of the local administrator user from Japanese to English and then executing the script.
+### There are no known issues with the latest release of Connected Cache.
 
 ## Steps to obtain an Azure subscription ID
 
@@ -48,7 +44,7 @@ If you're encountering a validation error, check that you have filled out all re
 
 If your configuration doesn't appear to be taking effect, check that you have selected the **Save** option at the top of the configuration page in the Azure portal user interface.
 
-If you have changed the proxy configuration, you'll need to re-provision the Connected Cache software on the host machine for the proxy configuration to take effect.
+If you have changed the proxy configuration, you'll need to redeploy the Connected Cache software on the host machine for the proxy configuration to take effect.
 
 ## Troubleshooting cache nodes created during early preview
 
@@ -60,7 +56,7 @@ As such, we strongly recommend you [recreate your existing resources in Azure](m
 
 ### Collecting Windows-hosted installation logs
 
-[Deploying a Connected Cache node to a Windows host machine](mcc-ent-deploy-to-windows.md) involves running a series of PowerShell scripts contained within the Windows provisioning package. These scripts attempt to write log files to the installation directory specified in the provisioning command (`C:\mccwsl01\InstallLogs` by default).
+[Deploying a Connected Cache node to a Windows host machine](mcc-ent-deploy-to-windows.md) involves running a series of PowerShell scripts contained within the Connected Cache Windows application. These scripts attempt to write log files to the Connected Cache application's installation directory, specified by `deliveryoptimization-cli mcc-get-scripts-path`.
 
 There are three types of installation log files:
 
@@ -130,12 +126,12 @@ If you don't see any port forwarding rules for port 80 to 0.0.0.0, you can run t
 
 `netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=<WSL IP Address>`
 
-You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the installation directory you specified in the Connected Cache provisioning command ("c:\mccwsl01" by default).
+You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the Connected Cache application's installation directory, specified by `deliveryoptimization-cli mcc-get-scripts-path`.
 
 ### Cache node goes offline without user action
 
 If your cache node goes offline without any user action, it may be due to the "MCC_Monitor_Task" scheduled task not running properly. This task is responsible for monitoring the Connected Cache container and ensuring it remains active.
-To check the status of this scheduled task, open the Task Scheduler on the host machine and navigate to the Active Tasks section. Look for the **MCC_Monitor_Task** and ensure it is enabled and running as expected.
+To check the status of this scheduled task, open the Task Scheduler on the host machine and navigate to the Active Tasks section. Look for the **MCC_Monitor_Task** and ensure it's enabled and running as expected.
 
 If the **MCC_Monitor_Task** is failing to run successfully, it may be due to expired Connected Cache runtime account credentials. In this case, you can use the `UpdateMccScheduledTasks.ps1` script to update the credentials.
 
@@ -152,7 +148,7 @@ If the **MCC_Monitor_Task** is failing to run successfully, it may be due to exp
 
 ## Troubleshooting cache node deployment to Linux host machine
 
-[Deploying a Connected Cache node to a Linux host machine](mcc-ent-deploy-to-linux.md) involves running a series of Bash scripts contained within the Linux provisioning package.
+[Deploying a Connected Cache node to a Linux host machine](mcc-ent-deploy-to-linux.md) involves running a series of Bash scripts contained within the Linux deployment package.
 
 Once the Connected Cache software has been successfully deployed to the Linux host machine, you can check if the cache node is running properly by doing the following on the Linux host machine:
 
@@ -169,7 +165,7 @@ You can generate a support bundle with detailed diagnostic information by runnin
 For **Windows** host machines, you'll need to do the following:
 
 1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
-1. Change directory to the "MccScripts" directory within the extracted Connected Cache provisioning package and verify the presence of `collectmccdiagnostics.sh`
+1. Change directory to the "MccScripts" directory within the Connected Cache application's installation directory (specified by `deliveryoptimization-cli mcc-get-scripts-path`) and verify the presence of `collectmccdiagnostics.sh`
 1. Run `wsl bash collectmccdiagnostics.sh` to generate the diagnostic support bundle
 1. Once the script has completed, note the console output describing the location of the diagnostic support bundle
 
@@ -181,7 +177,7 @@ For **Windows** host machines, you'll need to do the following:
 
 For **Linux** host machines, you'll need to do the following:
 
-1. Change directory to the "MccScripts" directory within the extracted Connected Cache provisioning package and verify the presence of `collectmccdiagnostics.sh`
+1. Change directory to the "MccScripts" directory within the extracted Connected Cache deployment package and verify the presence of `collectmccdiagnostics.sh`
 1. Run `collectmccdiagnostics.sh` to generate the diagnostic support bundle
 1. Once the script has completed, note the console output describing the location of the diagnostic support bundle
 
