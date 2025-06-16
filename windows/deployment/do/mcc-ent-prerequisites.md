@@ -56,6 +56,10 @@ This article details the requirements and recommended specifications for using M
     - Red Hat Enterprise Linux (RHEL) 8.* or 9.*
         - If using RHEL, the default container engine (Podman) must be replaced with [Moby](https://github.com/moby/moby#readme)
 
+### Proxy support
+
+Connected Cache is designed as a reverse proxy and will not work when placed behind a forward proxy that has caching on by default (e.g. most Squid-based proxies). Such forward proxies must be configured to allow internal proxies to directly connect to origin, or otherwise allow the Connected Cache node to directly access the Internet.
+
 ### Recommended host machine networking specifications
 
 - Multiple network interface cards (NICs) on a single Connected Cache host machine isn't supported.
