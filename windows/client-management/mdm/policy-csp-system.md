@@ -1,7 +1,7 @@
 ---
 title: System Policy CSP
 description: Learn more about the System Area in Policy CSP.
-ms.date: 04/04/2025
+ms.date: 06/16/2025
 ms.topic: generated-reference
 ---
 
@@ -1203,7 +1203,7 @@ If you don't configure this policy setting, or you set it to "Enable diagnostic 
 <!-- DisableCHPE-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055523](https://support.microsoft.com/help/5055523) [10.0.26100.3775] and later <br> ✅ Windows Insider Preview |
 <!-- DisableCHPE-Applicability-End -->
 
 <!-- DisableCHPE-OmaUri-Begin -->
