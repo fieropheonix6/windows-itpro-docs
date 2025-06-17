@@ -49,6 +49,14 @@
             href: mcc-ent-deploy-to-linux.md
           - name: Deploy Connected Cache to Windows
             href: mcc-ent-deploy-to-windows.md
+        - name: Configure cache nodes to use HTTPS
+          items:
+          - name: HTTPS Overview
+            href: mcc-ent-https-overview.md
+          - name: Configure HTTPS on Linux
+            href: mcc-ent-https-linux.md
+          - name: Deploy Connected Cache to Windows
+            href: mcc-ent-https-windows.md
         - name: Use Azure CLI to manage Connected Cache
           href: mcc-ent-manage-using-cli.md 
         - name: Verify Connected Cache node functionality
