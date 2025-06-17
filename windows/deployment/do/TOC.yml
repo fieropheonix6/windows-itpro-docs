@@ -45,10 +45,10 @@
           href: mcc-ent-create-resource-and-cache.md
         - name: Deploy Connected Cache nodes to host machines
           items:
-          - name: Deploy Connected Cache to Linux
-            href: mcc-ent-deploy-to-linux.md
           - name: Deploy Connected Cache to Windows
             href: mcc-ent-deploy-to-windows.md
+          - name: Deploy Connected Cache to Linux
+            href: mcc-ent-deploy-to-linux.md          
         - name: Use Azure CLI to manage Connected Cache
           href: mcc-ent-manage-using-cli.md 
         - name: Verify Connected Cache node functionality
