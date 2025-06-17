@@ -21,7 +21,7 @@ Microsoft Connected Cache for Enterprise and Education is a software-only cachin
 
 For information about Microsoft Connected Cache in Configuration Manager<!-- version 2111-->, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache).
 
-Microsoft Connected Cache deployed directly to Windows relies on [Windows Subsystem for Linux (WSL)](/windows/wsl/about), which runs in a user context and therefore requires either a [Group Managed Service Account](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts), local user account, or domain user account. More information about host machine pre-requisites can be found in the [Microsoft Connected Cache for Enterprise and Education prerequisites](mcc-ent-prerequisites.md) article.
+Microsoft Connected Cache deployed directly to Windows relies on [Windows Subsystem for Linux (WSL)](/windows/wsl/about), which runs in a user context and therefore requires either a [Group Managed Service Account](/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts), local user account, or domain user account. More information about host machine prerequisites can be found in the [Microsoft Connected Cache for Enterprise and Education prerequisites](mcc-ent-prerequisites.md) article.
 
 ## Supported scenarios and configurations
 
@@ -35,7 +35,7 @@ Microsoft Connected Cache is built for flexible deployments to support several d
 
 ### Branch offices
 
-Customers may have globally-dispersed office sites that have some or all of the following characteristics:
+Customers may have globally dispersed office sites that have some or all of the following characteristics:
 
 - 10 to 50 Windows devices on-site
 - No dedicated server hardware
@@ -88,7 +88,7 @@ The following diagram displays an overview of how Connected Cache functions.
 
 1. The Connected Cache container is deployed to the host machine using Azure IoT Edge container management services. After successful container deployment, the cache node begins reporting status and metrics to Delivery Optimization services.
 1. The DOCacheHost policy is applied to managed devices using a Mobile Device Management (MDM) solution such as Intune, a DHCP custom option, or a registry key. This configures the devices to request content from the Connected Cache node instead of directly from a Content Delivery Network (CDN).
-1. Devices request content from the cache node, the cache node forwards the requests to the CDN and fills the cache, the cache node delivers the requested content to the devices.
+1. Devices request content from the cache node > the cache node forwards the requests to the CDN and fills the cache > the cache node delivers the requested content to the devices.
 1. Devices can fall back to CDN if the cache node is unavailable. To delay this behavior, set the [DelayCacheServerFallbackForeground/DelayCacheServerFallbackBackground](/windows/deployment/do/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) setting to avoid immediate fallback.
 
 The Azure management portal for Connected Cache and Windows Update for Business reports can be used to view usage metrics for Connected Cache nodes and managed devices, respectively.
