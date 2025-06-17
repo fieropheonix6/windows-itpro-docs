@@ -19,6 +19,9 @@ This article describes how to deploy Microsoft Connected Cache for Enterprise an
 
 Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) or a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d) as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
 
+> [!NOTE]
+> If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you are logged on to the host machine as a **domain-joined** account when following the deployment steps below. If you are logged on as a local administrator account, the Connected Cache deployment scripts will fail.
+
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
 
 ## Steps to deploy Connected Cache node to Windows
@@ -26,7 +29,7 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
 # [Azure portal](#tab/portal)
 
 1. Within the Azure portal, navigate to the **Deployment** tab of your cache node and copy the deployment command.
-1. Download the Connected Cache Windows application using the option at the top of the Cache Node Configuration page and run the following command to install it:
+1. Download the Connected Cache Windows application to your host machine using the option at the top of the Cache Node Configuration page and run the following command to install it:
 
    ```powershell-interactive
    Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
