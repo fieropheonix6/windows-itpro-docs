@@ -34,17 +34,29 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    ```powershell-interactive
    Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
    ```
+
 1. You can verify that the Connected Cache app has been installed by running the following command:
 
    ```powershell-interactive
    Get-AppxPackage Microsoft.DeliveryOptimization
    ```
+
 1. Register the Connected Cache app for automatic updates by running the following command:
 
    ```powershell-interactive
    deliveryoptimization-cli register
    ```
+
+1. Confirm that the Connected Cache app has placed the Connected Cache installation scripts by running the following command:
+
+   ```powershell-interactive
+   deliveryoptimization-cli mcc-get-scripts-path
+   ```
+
+   This command should return a path to the Connected Cache scripts folder, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts folder to a different location, as the deployment scripts will not be updateable if they are moved to a different path.
+
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
+
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
     For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
