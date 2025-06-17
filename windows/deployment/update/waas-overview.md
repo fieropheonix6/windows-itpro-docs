@@ -14,7 +14,7 @@ ms.collection:
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-ms.date: 03/13/2024
+ms.date: 06/17/2025
 ---
 
 # Overview of Windows as a service
@@ -98,7 +98,7 @@ Microsoft never publishes feature updates through Windows Update on devices that
 > [!NOTE]
 > LTSC releases will support the currently released processors and chipsets at the time of release of the LTSC. As future CPU generations are released, support will be created through future LTSC releases that customers can deploy for those systems. For more information, see **Supporting the latest processor and chipsets on Windows** in [Lifecycle support policy FAQ - Windows Products](/lifecycle/faq/windows).
 
-The Long-term Servicing Channel is available only in the Windows 10 Enterprise LTSC editions. This edition of Windows doesn't include some applications, such as Microsoft Edge, Microsoft Store, Microsoft Mail, Calendar, OneNote, Weather, News, Sports, Money, Photos, Camera, Music, and Clock. These apps aren't supported in the Enterprise LTSC editions, even if you install by using sideloading.
+The Long-term Servicing Channel is available only in the Windows Enterprise LTSC editions. This edition of Windows doesn't include some applications, such as Microsoft Edge, Microsoft Store, Microsoft Mail, Calendar, OneNote, Weather, News, Sports, Money, Photos, Camera, Music, and Clock. These apps aren't supported in the Enterprise LTSC editions, even if you install by using sideloading.
 
 ### Windows Insider
 
