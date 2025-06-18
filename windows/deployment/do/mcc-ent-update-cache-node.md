@@ -69,16 +69,16 @@ The Microsoft Connected Cache installation modifies kernel-level configurations 
 The following kernel parameters are commonly tuned on MCC Linux hosts to optimize network performance and container behavior:
 
 ```bash
-net.ipv4.tcp\\\_congestion\\\_control
-net.core.default\\\_qdisc
+net.ipv4.tcp_congestion_control
+net.core.default_qdisc
 net.core.somaxconn
-net.ipv4.ip\\\_local\\\_port\\\_range
-net.ipv4.tcp\\\_rmem
-net.ipv4.tcp\\\_wmem
-net.ipv4.tcp\\\_mem
-net.netfilter.nf\\\_conntrack\\\_max
-net.nf\\\_conntrack\\\_max
-net.core.optmem\\\_max
+net.ipv4.ip_local_port_range
+net.ipv4.tcp_rmem
+net.ipv4.tcp_wmem
+net.ipv4.tcp_mem
+net.netfilter.nf_conntrack_max
+net.nf_conntrack_max
+net.core.optmem_max
 ```
 
 #### Cleanup of Old Docker Images
