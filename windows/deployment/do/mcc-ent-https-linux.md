@@ -39,13 +39,6 @@ o You will be using the new Installer package that you unzipped earlier
 o Please run the provisioning command as provided in your Azure Portal, this includes a list of credentials (customerid, cachenodeid, etc.)
 6. Follow these steps to verify cache node functionality
 
-## Update MCC container
-
-1. Send your cache node ID to <adityamiddha@microsoft.com>
-a. The engineering team will update the MCC container version to support port forwarding, TLS certificates, and other configurations for HTTPS
-b. You will be emailed once your  cache node ID is unblocked
-2. Once your ID is unblocked, check Azure Portal and verify that your MCC version is 2090-TLS before proceeding
-
 ## Generate a CSR
 
  1. On your Linux host, open a terminal and navigate to the lnstaller directory

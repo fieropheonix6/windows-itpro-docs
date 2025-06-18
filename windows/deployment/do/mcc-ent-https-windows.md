@@ -37,13 +37,6 @@ HTTPS support for Microsoft Connected Cache (MCC) enhances security and enables 
     - Please run the provisioning command as provided in your Azure Portal, this includes a list of credentials (customerid, cachenodeid, etc.)
 6. Follow these steps to verify cache node functionality
 
-## Update MCC Container
-
-1. Send your cache node ID to <adityamiddha@microsoft.com> and <barora@microsoft.com>
-    - The engineering team will update the MCC container version to support port forwarding, TLS certificates, and other configurations for HTTPS
-    - You will be emailed once your  cache node ID is unblocked
-2. Check Azure Portal and verify that your MCC version is 2090-TLS before proceeding
-
 ## Generate a CSR
 
 1. On your Windows host, open a PowerShell terminal and navigate to the Installer directory
