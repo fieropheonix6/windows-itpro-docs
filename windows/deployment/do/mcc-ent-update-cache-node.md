@@ -84,9 +84,7 @@ The following kernel parameters are commonly tuned on MCC Linux hosts to optimiz
 The update process includes cleanup of outdated or unused Docker images, including:
 
 * `edgeAgent`
-
 * `edgeHub`
-
 * `mcc`
 
 This ensures disk space is reclaimed and only current versions are retained.
