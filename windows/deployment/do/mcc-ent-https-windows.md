@@ -27,41 +27,47 @@ HTTPS support for Microsoft Connected Cache (MCC) enhances security and enables 
 
 1. Ensure your Windows host machine is compliant with MCC prerequisites
 2. Download and unzip the given file, WSLInstaller.zip, to your host machine
-o The installer should be in a folder not synced to OneDrive; we recommend using your C drive
-o Take note of this file path, you will run all new PowerShell scripts from it
+    - The installer should be in a folder not synced to OneDrive; we recommend using your C drive
+    - Take note of this file path, you will run all new PowerShell scripts from it
 3. If you do not have an active MCC node, create one by following our public docs
-o Make sure to indicate “Windows” OS on the cache node creation page
+    - Make sure to indicate “Windows” OS on the cache node creation page
 4. Complete the steps to deploy Connected Cache cache node to Windows, but do not download the provisioning package given in the Portal.
-o You will be using the new Installer package that you unzipped earlier
+    - You will be using the new Installer package that you unzipped earlier
 5. On your host machine, run the provisioning command from the Installer directory location
-o Please run the provisioning command as provided in your Azure Portal, this includes a list of credentials (customerid, cachenodeid, etc.)
+    - Please run the provisioning command as provided in your Azure Portal, this includes a list of credentials (customerid, cachenodeid, etc.)
 6. Follow these steps to verify cache node functionality
 
 ## Update MCC Container
 
 1. Send your cache node ID to <adityamiddha@microsoft.com> and <barora@microsoft.com>
-a. The engineering team will update the MCC container version to support port forwarding, TLS certificates, and other configurations for HTTPS
-b. You will be emailed once your  cache node ID is unblocked
+    - The engineering team will update the MCC container version to support port forwarding, TLS certificates, and other configurations for HTTPS
+    - You will be emailed once your  cache node ID is unblocked
 2. Check Azure Portal and verify that your MCC version is 2090-TLS before proceeding
 
 ## Generate a CSR
 
 1. On your Windows host, open a PowerShell terminal and navigate to the Installer directory
 2. Input required parameters for the given PowerShell script, .\generateCsr.ps1, and then run the script. Parameter usage and examples in the table below.
-o If you miss a required parameter, the script should alert you which parameters you missed
-o To test optional parameters not included in the given script, run the script with “-h” appended. Try various inputs for these optional parameters
-o If you encounter errors, locate the GenerateCSR.log file with the folder specified in the script output. Email this to the Adi and Bhavya, the contacts listed in step 2.
- Line starts with “You can find logs here: …”, should list the folder “…\Certificates\logs” in your MCC Installation folder
+
+    - If you miss a required parameter, the script should alert you which parameters you missed
+    - To test optional parameters not included in the given script, run the script with “-h” appended. Try various inputs for these optional parameters
+    - If you encounter errors, locate the GenerateCSR.log file with the folder specified in the script output. Email this to the Adi and Bhavya, the contacts listed in step 2.
+    - Line starts with “You can find logs here: …”, should list the folder “…\Certificates\logs” in your MCC Installation folder
+
 3. Once the CSR Generation Process is completed, find the CSR in your Certificates folder (this is specified at the end of the script output)
-a. Output line starts with “CSR file created at: …”
-b. This folder should be in your install scripts folder under “…\Certificates\certs\”
+
+- Output line starts with “CSR file created at: …”
+- This folder should be in your install scripts folder under “…\Certificates\certs\”
 
 Required parameters:
-  -algo, --algorithm    Certificate algorithm (RSA, EC, ED25519, ED448) [REQUIRED]
-  -keySizeOrCurve, --keySize   Key size for RSA (e.g. 2048, 3072) or curve for EC (e.g. prime256v1) [REQUIRED if using RSA or EC]
-  -csrName, --csrName   Name of the CSR [REQUIRED]
-  -RunTimeAccountName, --RunTimeAccountName   the username of your PS credential object [REQUIRED]
-  -LocalAccountCredential, --LocalAccountCredential   the complete PS credential object [REQUIRED]
+
+| Parameter Name | Description | Required? |
+|---|---|---|
+|-algo </br></br> --algorithm | Certificate algorithm (RSA, EC, ED25519, ED448) | [REQUIRED] |
+|-keySizeOrCurve </br></br> --keySize | Key size for RSA (e.g. 2048, 3072) or curve for EC (e.g. prime256v1) | [REQUIRED if using RSA or EC] |
+|-csrName </br></br> --csrName | Name of the CSR | [REQUIRED] |
+|-RunTimeAccountName </br></br> --RunTimeAccountName | the username of your PS credential object | [REQUIRED] |
+|-LocalAccountCredential </br></br> --LocalAccountCredential |  the complete PS credential object | [REQUIRED] |
 
 Subject options [only CommonName is REQUIRED]:
   -subjectCountry, --subjectCountry Subject country code (optional, e.g., "US")
@@ -90,13 +96,11 @@ Examples:
 ## Sign the CSR
 
 1. Select a public or enterprise Certificate Authority (CA) to use for signing the CSR. Please note, the CA signature must match a root certificate in the client’s trusted root store.
-a. Common Public CAs to use
-i. DigiCert
-ii. Let’s Encrypt
+    - Common Public CAs to use: DigiCert, Let's Encrypt
 2. Submit your CSR to the CA of your choice and save the resultant signed certificate
-a. Signing requirements: .crt file type and X509 format
+    - Signing requirements: .crt file type and X509 format
 3. Move your signed certificate to the Certificates folder
-a. In your MCC Install directory, place under “…\Certificates\certs\”
+    - In your MCC Install directory, place under “…\Certificates\certs\”
 
 ## Import signed certificate
 
@@ -104,9 +108,12 @@ a. In your MCC Install directory, place under “…\Certificates\certs\”
 2. Input the parameters of the given PowerShell script, importCert.ps1, and then run the script.
 
 Required parameters:
-  -certName, --certName   the entire file name of your signed TLS certificate, with or without the .crt at the end [REQUIRED]
- -RunTimeAccountName, --RunTimeAccountName   the username of your PS credential object [REQUIRED]
-  -LocalAccountCredential, --LocalAccountCredential   the complete PS credential object [REQUIRED]
+
+| Parameter Name | Description | Required? |
+|------|---|---|
+|-certName </br></br> --certName| the entire file name of your signed TLS certificate, with or without the .crt at the end | Yes |
+|-RunTimeAccountName </br></br> --RunTimeAccountName|  the username of your PS credential object | Yes |
+|-LocalAccountCredential </br></br> --LocalAccountCredential|  the complete PS credential object | Yes |
 
 Example:
 .\importCert.ps1  -RunTimeAccountName $myLocalAccountCredential.Username   -LocalAccountCredential $myLocalAccountCredential  -certName  myTlsCert.crt
