@@ -41,27 +41,20 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    Get-AppxPackage Microsoft.DeliveryOptimization
    ```
 
-1. Register the Connected Cache app for automatic updates by running the following command:
-
-   ```powershell-interactive
-   deliveryoptimization-cli register
-   ```
-
 1. Confirm that the Connected Cache app has placed the Connected Cache installation scripts by running the following command:
 
    ```powershell-interactive
    deliveryoptimization-cli mcc-get-scripts-path
    ```
 
-   This command should return a path to the Connected Cache scripts folder, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts folder to a different location, as the deployment scripts will not be updateable if they are moved to a different path.
+   This command should return a path to the Connected Cache scripts directory, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts will not be updateable if they are moved to a different path.
 
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
-    For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
-
-   If you're using a local user account as the Connected Cache runtime account, you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
+   * For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. You will also need to be logged in as a domain-joined account when you run the deployment command.
+   * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"` and you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
    > You'll need to apply a local security policy to permit the local user account to `Log on as a batch job`.
@@ -88,16 +81,13 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
    ```powershell-interactive
    Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
    ```
+
 1. You can verify that the Connected Cache app has been installed by running the following command:
 
    ```powershell-interactive
    Get-AppxPackage Microsoft.DeliveryOptimization
    ```
-1. Register the Connected Cache app for automatic updates by running the following command:
 
-   ```powershell-interactive
-   deliveryoptimization-cli register
-   ```
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
@@ -113,6 +103,7 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
    ```powershell-interactive
    & "$(deliveryoptimization-cli mcc-get-scripts-path)\provisionmcconwsl.ps1" -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true]
    ```
+
    >[!Note]
    >* If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the path given by `$(deliveryoptimization-cli mcc-get-scripts-path)` and add `-proxyTlsCertificatePath "path/to/pem/file"` to the deployment command.
 
