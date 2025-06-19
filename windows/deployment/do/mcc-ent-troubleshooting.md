@@ -51,7 +51,7 @@ If you're encountering a validation error, check that you have filled out all re
 
 If your configuration doesn't appear to be taking effect, check that you have selected the **Save** option at the top of the configuration page in the Azure portal user interface.
 
-If you have changed the proxy configuration, you'll need to redeploy the Connected Cache software on the host machine for the proxy configuration to take effect.
+If you have changed the proxy configuration, you need to redeploy the Connected Cache software on the host machine for the proxy configuration to take effect.
 
 ## Troubleshooting cache nodes created during early preview
 
@@ -83,9 +83,55 @@ You can expect to see the following types of log files:
 1. **WSL_Mcc_UserUninstall_Transcript**: This log file records the output of the "uninstallmcconwsl.ps1" script that the user can run to uninstall MCC software from the host machine.
 1. **WSL_Mcc_Uninstall_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Uninstall_Task" scheduled task that is responsible for uninstalling the MCC software from the host machine when called by the "uninstallmcconwsl.ps1" script.
 
-### Group Policy Object conflicts with Scheduled Task registration
+### Connected Cache installation fails during cache node registration
+
+As part of the installation process on Windows host machines, Connected Cache will attempt to register itself with the Delivery Optimization service by calling a registration endpoint `geomcc.prod.do.dsp.mp.microsoft.com`. This call originates from within the WSL2 distribution that hosts the Connected Cache container, and must be successful for the cache node to be installed.
+
+To troubleshoot the connection, you can try running the following commands from an elevated PowerShell window as the MCC runtime account.
+
+First, access the WSL2 distribution that hosts the Connected Cache container:
+
+```powershell
+wsl -d Ubuntu-24.04-Mcc-Base
+```
+
+Then, run the following bash command to check DNS resolution of the registration endpoint:
+
+```bash
+nslookup geomcc.prod.do.dsp.mp.microsoft.com
+```
+
+Check TCP connectivity (port 443 for HTTPS) to the registration endpoint:
+
+```bash
+nc -vz geomcc.prod.do.dsp.mp.microsoft.com 443
+```
+
+Check HTTPS response from the registration endpoint:
+
+```bash
+curl -v https://geomcc.prod.do.dsp.mp.microsoft.com
+```
+
+### MCC_Install_Task scheduled task fails to run
+
+Connected Cache installation on Windows host machines relies on the "MCC_Install_Task" scheduled task to perform installation actions as the designated MCC runtime account. If this task fails to run, it may be due to one of the following reasons.
+
+#### Group Policy Object conflicts with Scheduled Task registration
 
 Enabling the Group Policy Object: [Network access: Do not allow storage of passwords and credentials for network authentication](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-access-do-not-allow-storage-of-passwords-and-credentials-for-network-authentication) will prevent the Connected Cache software from registering the scheduled tasks necessary for successful cache node registration and operation.
+
+#### MCC runtime account doesn't have permissions to log on as batch job
+
+Ensure that you have granted the MCC runtime account the "Log on as a batch job" permission. This permission is required for the MCC runtime account to run scheduled tasks.
+
+#### Enterprise security policy prevents execution of PowerShell scripts
+
+Ensure that the PowerShell execution policy on the Windows host machine allows the execution of scripts. You can check the current execution policy by running the following command in an elevated PowerShell window:
+
+```powershell
+Get-ExecutionPolicy
+```
 
 ### WSL2 fails to install with message "A specified logon session doesn't exist"
 
@@ -107,38 +153,17 @@ If it shows the **edgeAgent** and **edgeHub** containers but doesn't show **MCC*
 
 You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
-### Checking Connected Cache scheduled tasks
+### MCC_Monitor_Task scheduled task fails to run
 
-Once the Connected Cache container is running, a scheduled task is periodically run under the Connected Cache runtime account to keep WSL from cleaning up the Connected Cache container.
+Once the Connected Cache container is running, the MCC_Monitor_Task scheduled task periodically runs under the Connected Cache runtime account to keep WSL from stopping the Connected Cache WSL distribution. If your cache node goes offline without any user action, it may be due to the "MCC_Monitor_Task" scheduled task not running properly.
 
 You can use Task Scheduler on the host machine to check the status of this scheduled task.
 
 1. Open Task Scheduler on the host machine
 1. Navigate to the Active Tasks section and double-click on **MCC_Monitor_Task**
-1. Select the scheduled task **MCC_Monitor_Task**
+1. Check the **Last Run Time** and **Last Run Result** columns to see if the operation completed successfully.
 1. Select the **Triggers** tab and confirm that the Status is **Enabled**
-
-> [!Note]
-> If the password of the runtime account changes, you'll need to update the user in all of the Connected Cache scheduled tasks in order for the Connected Cache node to continue functioning properly.
-
-### Cache node successfully deployed but not serving requests
-
-If your cache node isn't responding to requests outside of localhost, it may be because the host machine's port forwarding rules weren't correctly set during Connected Cache installation. Since WSL2 uses a virtualized ethernet adapter by default, port forwarding rules are needed to allow traffic to reach the WSL2 instance from your LAN. For more information, see [Accessing network applications with WSL](/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan). 
-
-To check your host machine's port forwarding rules, use the following PowerShell command.
-
-`netsh interface portproxy show v4tov4`
-
-If you don't see any port forwarding rules for port 80 to 0.0.0.0, you can run the following command from an elevated PowerShell instance to set the proper forwarding to WSL.
-
-`netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=<WSL IP Address>`
-
-You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the Connected Cache application's installation directory (`C:\mccwsl01` by default).
-
-### Cache node goes offline without user action
-
-If your cache node goes offline without any user action, it may be due to the "MCC_Monitor_Task" scheduled task not running properly. This task is responsible for monitoring the Connected Cache WSL distribution and ensuring it remains active.
-To check the status of this scheduled task, open the Task Scheduler on the host machine and navigate to the Active Tasks section. Look for the **MCC_Monitor_Task** and ensure it's enabled and running as expected.
+1. Select the **History** tab and check for any errors or warnings related to the task execution.
 
 If the **MCC_Monitor_Task** is failing to run successfully, it may be due to expired Connected Cache runtime account credentials. In this case, you can use the `updatetaskpasswords.ps1` script to update the credentials.
 
@@ -152,6 +177,20 @@ If the **MCC_Monitor_Task** is failing to run successfully, it may be due to exp
     ```powershell-interactive
     .\updatetaskpasswords.ps1 -Credential $myLocalAccountCredential
     ```
+
+### Cache node successfully deployed but not serving requests
+
+If your cache node isn't responding to requests outside of localhost, it may be because the host machine's port forwarding rules weren't correctly set during Connected Cache installation. Since WSL2 uses a virtualized ethernet adapter by default, port forwarding rules are needed to allow traffic to reach the WSL2 instance from your LAN. For more information, see [Accessing network applications with WSL](/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan).
+
+To check your host machine's port forwarding rules, use the following PowerShell command.
+
+`netsh interface portproxy show v4tov4`
+
+If you don't see any port forwarding rules for port 80 to 0.0.0.0, you can run the following command from an elevated PowerShell instance to set the proper forwarding to WSL.
+
+`netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=<WSL IP Address>`
+
+You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the Connected Cache application's installation directory (`C:\mccwsl01` by default).
 
 ## Troubleshooting cache node deployment to Linux host machine
 
@@ -169,7 +208,7 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 You can generate a support bundle with detailed diagnostic information by running the `collectMccDiagnostics.sh` script included in the installation package.
 
-For **Windows** host machines, you'll need to do the following:
+For **Windows** host machines, you need to do the following:
 
 1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
 1. Change directory to the "MccScripts" directory within the Connected Cache application's installation directory (specified by `deliveryoptimization-cli mcc-get-scripts-path`) and verify the presence of `collectmccdiagnostics.sh`
@@ -182,11 +221,11 @@ For **Windows** host machines, you'll need to do the following:
 
     For example, `wsl cp /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz /mnt/c/mccwsl01/SupportBundles/`
 
-For **Linux** host machines, you'll need to do the following:
+For **Linux** host machines, you need to do the following:
 
 1. Change directory to the "MccScripts" directory within the extracted Connected Cache deployment package and verify the presence of `collectmccdiagnostics.sh`
 1. Run `collectmccdiagnostics.sh` to generate the diagnostic support bundle
-1. Once the script has completed, note the console output describing the location of the diagnostic support bundle
+1. Once the script completes, note the console output describing the location of the diagnostic support bundle
 
     For example, "Successfully zipped package, please send file created at /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz"
 
