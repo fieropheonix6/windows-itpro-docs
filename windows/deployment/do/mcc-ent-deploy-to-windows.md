@@ -57,7 +57,7 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"` and you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
-   > You'll need to apply a local security policy to permit the local user account to `Log on as a batch job`.
+   > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
 1. In the same PowerShell window, run the deployment command that you copied from the Azure portal.
 
