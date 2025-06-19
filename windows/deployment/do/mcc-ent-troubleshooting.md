@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 06/16/2025
+ms.date: 06/18/2025
 ---
 
 
@@ -23,7 +23,14 @@ This article contains instructions on how to troubleshoot different issues you m
 
 This section describes known issues with the latest release of Microsoft Connected Cache for Enterprise and Education. See the [Release Notes page](mcc-ent-release-notes.md) for more details on the fixes included in the latest release.
 
-### There are no known issues with the latest release of Connected Cache.
+* No known issues at this time.
+
+### Patched in latest release
+
+[GA release: 7/09/2025](mcc-ent-release-notes.md)
+
+* Connected Cache installation fails when Windows host machine is configured with a non-EN locale.
+* Windows-hosted Connected Cache nodes can grow past their configured cache drive size.
 
 ## Steps to obtain an Azure subscription ID
 
@@ -56,7 +63,7 @@ As such, we strongly recommend you [recreate your existing resources in Azure](m
 
 ### Collecting Windows-hosted installation logs
 
-[Deploying a Connected Cache node to a Windows host machine](mcc-ent-deploy-to-windows.md) involves running a series of PowerShell scripts contained within the Connected Cache Windows application. These scripts attempt to write log files to the Connected Cache application's installation directory, specified by `deliveryoptimization-cli mcc-get-scripts-path`.
+[Deploying a Connected Cache node to a Windows host machine](mcc-ent-deploy-to-windows.md) involves running a series of PowerShell scripts contained within the Connected Cache Windows application. These scripts attempt to write log files to the Connected Cache application's script directory, specified by `deliveryoptimization-cli mcc-get-scripts-path`.
 
 There are three types of installation log files:
 
@@ -116,7 +123,7 @@ You can use Task Scheduler on the host machine to check the status of this sched
 
 ### Cache node successfully deployed but not serving requests
 
-If your cache node isn't responding to requests outside of localhost, it may be because the host machine's port forwarding rules weren't correctly set during Connected Cache installation. Since WSL 2 uses a virtualized ethernet adapter by default, port forwarding rules are needed to allow traffic to reach the WSL 2 instance from your LAN. For more information, see [Accessing network applications with WSL](/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan). 
+If your cache node isn't responding to requests outside of localhost, it may be because the host machine's port forwarding rules weren't correctly set during Connected Cache installation. Since WSL2 uses a virtualized ethernet adapter by default, port forwarding rules are needed to allow traffic to reach the WSL2 instance from your LAN. For more information, see [Accessing network applications with WSL](/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan). 
 
 To check your host machine's port forwarding rules, use the following PowerShell command.
 
@@ -126,24 +133,24 @@ If you don't see any port forwarding rules for port 80 to 0.0.0.0, you can run t
 
 `netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=<WSL IP Address>`
 
-You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the Connected Cache application's installation directory, specified by `deliveryoptimization-cli mcc-get-scripts-path`.
+You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the Connected Cache application's installation directory (`C:\mccwsl01` by default).
 
 ### Cache node goes offline without user action
 
-If your cache node goes offline without any user action, it may be due to the "MCC_Monitor_Task" scheduled task not running properly. This task is responsible for monitoring the Connected Cache container and ensuring it remains active.
+If your cache node goes offline without any user action, it may be due to the "MCC_Monitor_Task" scheduled task not running properly. This task is responsible for monitoring the Connected Cache WSL distribution and ensuring it remains active.
 To check the status of this scheduled task, open the Task Scheduler on the host machine and navigate to the Active Tasks section. Look for the **MCC_Monitor_Task** and ensure it's enabled and running as expected.
 
-If the **MCC_Monitor_Task** is failing to run successfully, it may be due to expired Connected Cache runtime account credentials. In this case, you can use the `UpdateMccScheduledTasks.ps1` script to update the credentials.
+If the **MCC_Monitor_Task** is failing to run successfully, it may be due to expired Connected Cache runtime account credentials. In this case, you can use the `updatetaskpasswords.ps1` script to update the credentials.
 
 1. Open a PowerShell process as Administrator.
-1. Change directory to the "MccScripts" directory and verify the presence of `UpdateMccScheduledTasks.ps1`.
-    - If you installed Connected Cache using the Public Preview deployment package, the "MccScripts" directory is located within the installationFolder specified in the original deployment command ("C:\mccwsl01" by default).
-    - If you installed Connected Cache using the Connected Cache Windows application, the "MccScripts" directory is located within the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`.
-1. Create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) representing the Connected Cache runtime account with the new password.
-1. Run the `UpdateMccScheduledTasks.ps1` script with the following command:
+1. Change directory to the script directory and verify the presence of `updatetaskpasswords.ps1`.
+    * If you installed Connected Cache using the Public Preview deployment package, the script directory is located within the installationFolder specified in the original deployment command ("C:\mccwsl01\MccScripts" by default).
+    * If you installed Connected Cache using the Connected Cache Windows application, the script directory is located within the directory returned by `deliveryoptimization-cli mcc-get-scripts-path`.
+1. Create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential` representing the Connected Cache runtime account with the new password.
+1. Run the `updatetaskpasswords.ps1` script with the following command:
 
     ```powershell-interactive
-    .\UpdateMccScheduledTasks.ps1 -Credential $myLocalAccountCredential
+    .\updatetaskpasswords.ps1 -Credential $myLocalAccountCredential
     ```
 
 ## Troubleshooting cache node deployment to Linux host machine
