@@ -21,18 +21,33 @@ This article describes how to uninstall Microsoft Connected Cache for Enterprise
 ## Steps to uninstall Connected Cache from a Windows host machine
 
 1. Launch a PowerShell window *as administrator* and navigate to the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`
-1. Run the `uninstallmcconwsl.ps1` script
+1. Run the `uninstallmcconwsl.ps1` script, passing in the runtime account credentials you designated during cache node deployment.
+
+    **For Local User Accounts:**
+
+   ```powershell
+   .\uninstallmcconwsl.ps1 -mccLocalAccountCredential $myLocalAccountCredential
+   ```
+
+    **For Group Managed Service Accounts:**
+
+   ```powershell
+   .\uninstallmcconwsl.ps1 -RunTimeAccountName "DOMAIN\ServiceAccountName$"
+   ```
+
+This script will remove the Connected Cache container, IoT Edge, and all related components from the host machine.
 
 This will also unregister the Connected Cache application from the host machine, stopping it from receiving further updates.
 
 ### Uninstall the Connected Cache application
+
 To completely uninstall the Connected Cache application, run the following command in an elevated PowerShell window.
 
 ```powershell
 Get-AppxPackage -AllUsers Microsoft.DeliveryOptimization | Remove-AppxPackage -AllUsers
 ```
 
-This command removes the Connected Cache application from all user accounts on the host machine.
+This command removes the Connected Cache application and all Connected Cache install scripts from the host machine.
 
 ## Steps to uninstall Connected Cache from a Linux host machine
 
