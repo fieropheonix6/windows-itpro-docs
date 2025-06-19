@@ -47,7 +47,7 @@ To completely uninstall the Connected Cache application, run the following comma
 Get-AppxPackage -AllUsers Microsoft.DeliveryOptimization | Remove-AppxPackage -AllUsers
 ```
 
-This command removes the Connected Cache application and all Connected Cache install scripts from the host machine.
+This command removes the Connected Cache application and Connected Cache install scripts for all users on the host machine.
 
 ## Steps to uninstall Connected Cache from a Linux host machine
 
