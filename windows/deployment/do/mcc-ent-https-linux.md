@@ -18,11 +18,7 @@ ms.date: 06/13/2025
 
 This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
 
-## Overview
-
-HTTPS support for Microsoft Connected Cache (MCC) enhances security and enables local delivery of Teams, Intune, and other content that require HTTPS downloads.
-
-## Deploy your MCC node with the new Installer
+## Install latest deployment package
 
 If you don't have an active MCC node, create one by following these instructions [Link text](http://ask.fm). When you install MCC, your deployment package will have the new Installer.
 
@@ -38,9 +34,9 @@ If you are using an existing cache node, you will need to reinstall the deployme
     - To test optional parameters not included in the given script, run the script with "-h" appended.
     - If you encounter errors, locate the GenerateCSR.log file with the folder specified in the script output. The output line starts with "You can find logs here: …"
   
-    ## Generate CSR Script Parameters
+    ### Generate CSR script parameters
 
-    ### Required Parameters
+    #### Required parameters
 
     **`-algo` / `--algorithm`** *(Required)*  
     Certificate algorithm options: `RSA`, `EC`, `ED25519`, `ED448`
@@ -52,7 +48,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
     **`-csrName` / `--csrName`** *(Required)*  
     Name for the generated CSR file
 
-    ### Subject Parameters
+    #### Subject parameters
 
     **`-subjectCommonName` / `--subjectCommonName`** *(Required)*  
     Common name for the certificate  
@@ -70,7 +66,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
     Organization name  
     Examples: `"MyOrg"`, `"ACME Corp"`
 
-    ### Subject Alternative Names (At least one required)
+    #### Subject Alternative Name (SAN) parameters (At least one required)
 
     **`-sanDns` / `--sanDns`**  
     DNS names (comma-separated)  
@@ -97,12 +93,12 @@ If you are using an existing cache node, you will need to reinstall the deployme
     **`-sanOtherName` / `--sanOtherName`**  
     Other names (comma-separated)
 
-    ### Guidance (not required)
+    #### Guidance (not required)
 
     **`-h` / `--help`**  
     Show help message and exit
 
-    ## Examples
+    ### Examples
 
     **Full subject with multiple components:**
 
@@ -146,19 +142,19 @@ If you are using an existing cache node, you will need to reinstall the deployme
  3. Move your signed certificate to the Certificates folder
     - In your MCC Install directory, place under "…\Certificates\certs\"
 
-## Import signed certificate
+## Import signed TLS certificate
 
  1. On your Linux host, open a terminal and navigate to the location of the WSL Installer
  2. Add the correct permissions to the given bash script, ./importCert.sh
 
-    ## Import Certificate Script Parameters
+    ### Parameters
 
       **`-certName` / `--certName`** *(Required)*  
       The complete filename of your signed TLS certificate  
             Examples: `"myTlsCert.crt"`, `"server.crt"`, `"webapp-cert"`  
             *Note: Include or omit the .crt extension - both work*
 
-    ## Example
+    ### Example
 
       ```bash
       ./importCert.sh -certName myTlsCert.crt
@@ -171,27 +167,27 @@ If you are using an existing cache node, you will need to reinstall the deployme
 Once the import process completes, test HTTP and HTTPS content download using the following commands:
 
 ```bash
-# Test HTTPS with 127.0.0.1
-curl -v -o /dev/null "https://127.0.0.1/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+# Test HTTPS
+curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
     
-# Test HTTPS with localhost
+# Test HTTPS
 curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
 ```
 
-## Monitor TLS Certificate
+## Monitor TLS certificate
 
 Ability to monitor the  status (active/inactive, expiry date) of your TLS Certificate will soon be available in the Azure portal.
 
-## Disable TLS
+## Disable TLS certificate
 
 1. On your Linux host, open a command line window and navigate to the location of the WSL Installer
 2. Add the correct permissions to the given bash script, ./disableTLS.sh, then run the script
 3. Test HTTPS content download using the following commands:
 
 ```bash
-# Test HTTPS with 127.0.0.1
-curl -v -o /dev/null "https://127.0.0.1/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+# Test HTTPS
+curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
     
-# Test HTTPS with localhost
+# Test HTTPS
 curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
 ```

@@ -73,10 +73,13 @@ In the HTTPS communication between your client device and your MCC node, your ca
 
 ## Certificate maintenance on MCC
 
-    TLS certificates require consistent maintenance, as they often expire or are revoked. To ease this process on MCC, we ha
-    Available on portal soon
-    - Watch for revocation and expiry – will be automated in future (add blue info bubble on this)
-    - Certificate retention policy – active certs stored for duration, deactivated certs will be stored for 18 months after they have been deactivated or expired
+TLS certificates require consistent maintenance, as they often expire or are revoked. To ease this process on MCC, we ha
+
+Available on portal soon
+
+Watch for revocation and expiry – will be automated in future (add blue info bubble on this)
+
+Certificate retention policy – active certs stored for duration, deactivated certs will be stored for 18 months after they have been deactivated or expired
 
 ## Next step
 

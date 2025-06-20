@@ -18,15 +18,11 @@ ms.date: 06/13/2025
 
 This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
 
-## Overview
-
-HTTPS support for Microsoft Connected Cache (MCC) enhances security and enables local delivery of Teams, Intune, and other content that require HTTPS downloads.
-
-## Deploy your MCC with the new Installer
+## Install latest deployment package
 
 If you don't have an active MCC node, create one by following these instructions [Link text](http://ask.fm). When you install MCC, your deployment package will have the new Installer.
 
-If you are using an existing cache node, you will need to reinstall the deployment package on your cache node. Skip the create and configure step, complete deployment instructions.
+If you are using an existing cache node, **you will need to reinstall the deployment package on your cache node**. Skip the create and configure step, complete deployment instructions.
 
 ## Generate a Certificate Signing Request (CSR)
 
@@ -36,9 +32,9 @@ If you are using an existing cache node, you will need to reinstall the deployme
     - If you miss a required parameter, the script should alert you which parameters you missed
     - If you encounter errors, locate the GenerateCSR.log file with the folder specified in the script output. The output line starts with "You can find logs here: …"
 
-    ## Generate CSR Script Parameters
+    ### Generate CSR Script Parameters
 
-    ### Required Parameters
+    #### Required Parameters
 
     **`-algo` / `--algorithm`** *(Required)*  
     Certificate algorithm options: `RSA`, `EC`, `ED25519`, `ED448`
@@ -56,7 +52,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
     **`-LocalAccountCredential` / `--LocalAccountCredential`** *(Required)*  
     Complete PowerShell credential object
 
-    ### Subject Parameters
+    #### Subject Parameters
 
     **`-subjectCommonName` / `--subjectCommonName`** *(Required)*  
     Common name for the certificate  
@@ -74,7 +70,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
     Organization name  
     Examples: `"MyCompany"`, `"ACME Corp"`
 
-    ### Subject Alternative Names (At least one required)
+    #### Subject Alternative Names (At least one required)
 
     **`-sanDns` / `--sanDns`**  
     DNS names (comma-separated)  
@@ -92,7 +88,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
     Email addresses (comma-separated)  
     Example: `"admin@example.com,user@domain.com"`
 
-    ### Examples
+    #### Examples
 
     **Full Certificate with Multiple Components**
 
@@ -154,7 +150,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
 3. Move your signed certificate to the Certificates folder
     - In your MCC Install directory, place under "…\Certificates\certs\"
 
-## Import signed certificate
+## Import signed TLS certificate
 
 1. Open a PowerShell terminal and navigate to the location of the WSL Installer
 2. Input the parameters of the given PowerShell script, importCert.ps1, and then run the script.
@@ -196,21 +192,31 @@ curl -v -o $null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd
 curl -v -o $null "http://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
 ```
 
-## Monitor TLS Certificate
+## Monitor TLS certificate
 
 Ability to monitor the  status (active/inactive, expiry date) of your TLS Certificate will soon be available in the Azure portal.
 
-## Disable TLS
+## Remove TLS certificate
 
 1. Open a PowerShell terminal and navigate to the location of the WSL Installer
 2. From this folder, run .\disableTLS.ps1
 
-    Required parameters:
-     -RunTimeAccountName,--RunTimeAccountName   the username of your PowerShell credential object [REQUIRED]
-    -LocalAccountCredential,--LocalAccountCredential   the complete PowerShell credential object [REQUIRED]
+   ### .\disableTLS.ps1 parameters
 
-    Example:
-    .\disableTLS.ps1  -RunTimeAccountName $myLocalAccountCredential.Username   -LocalAccountCredential $myLocalAccountCredential
+     **`-RunTimeAccountName` / `--RunTimeAccountName`** *(Required)*  
+    Username from your PowerShell credential object  
+    Example: `$myLocalAccountCredential.Username`
+
+    **`-LocalAccountCredential` / `--LocalAccountCredential`** *(Required)*  
+    Complete PowerShell credential object  
+    Example: `$myLocalAccountCredential`
+
+   ### .\disableTLS.ps1 example
+
+  ```powershell
+    .\disableTLS.ps1 `
+      -RunTimeAccountName $myLocalAccountCredential.Username `
+      -LocalAccountCredential $myLocalAccountCredential `
 
 3. Once the disable process completes, test HTTP and HTTPS (should no longer work) content downloads using the following commands:
 
