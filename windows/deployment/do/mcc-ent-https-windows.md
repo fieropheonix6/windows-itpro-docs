@@ -14,7 +14,7 @@ appliesto:
 ms.date: 06/13/2025
 ---
 
-# HTTPS Support for Windows
+HTTPS Support for Windows
 
 This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
 
@@ -86,7 +86,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
 
     **`-sanUri` / `--sanUri`**  
     URIs (comma-separated)  
-    Example: `"https://example.com,http://localhost"`
+    Example: `"https://example.com, http://localhost"`
 
     **`-sanEmail` / `--sanEmail`**  
     Email addresses (comma-separated)  
