@@ -20,7 +20,7 @@ This article describes how to deploy Microsoft Connected Cache for Enterprise an
 Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) or a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d) as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
 
 > [!NOTE]
-> If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you are logged on to the host machine as a **domain-joined** account when following the deployment steps below. If you are logged on as a local administrator account, the Connected Cache deployment scripts will fail.
+> If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you're logged on to the host machine as a **domain-joined** account when following the deployment steps below. If you're logged on as a local administrator account, the Connected Cache deployment scripts will fail.
 
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
 
@@ -47,13 +47,13 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    deliveryoptimization-cli mcc-get-scripts-path
    ```
 
-   This command should return a path to the Connected Cache scripts directory, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts will not be updateable if they are moved to a different path.
+   This command should return a path to the Connected Cache scripts directory, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts won't be updateable if they're moved to a different path.
 
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
-   * For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. You will also need to be logged in as a domain-joined account when you run the deployment command.
+   * For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. You'll also need to be logged in as a domain-joined account when you run the deployment command.
    * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"` and you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
@@ -69,7 +69,7 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
 
 # [Azure CLI](#tab/cli)
 
-To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's deployment details before running the deployment command on the host machine.
+To deploy a cache node programmatically, you need to use Azure CLI to get the cache node's deployment details before running the deployment command on the host machine.
 
 1. To get the cache node's deployment details, use `az mcc ent node get-provisioning-details`.
 
@@ -113,7 +113,7 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
 
 ## Steps to point Windows client devices at Connected Cache node
 
-Once you have successfully deployed Connected Cache to your Windows host machine, you'll need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
+Once you have successfully deployed Connected Cache to your Windows host machine, you need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
 
 You can do this by setting the [DOCacheHost or DOCacheHostSource policies via Intune](./waas-delivery-optimization-reference.md#cache-server-hostname).
 
@@ -124,5 +124,5 @@ You can do this by setting the [DOCacheHost or DOCacheHostSource policies via In
 
 ## Related content
 
-- [Deploy to a Linux host machine](mcc-ent-deploy-to-linux.md)
-- [Uninstall Connected Cache node](mcc-ent-uninstall-cache-node.md)
+* [Deploy to a Linux host machine](mcc-ent-deploy-to-linux.md)
+* [Uninstall Connected Cache node](mcc-ent-uninstall-cache-node.md)
