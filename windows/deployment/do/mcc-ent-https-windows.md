@@ -17,128 +17,209 @@ ms.date: 06/13/2025
 # HTTPS Support for Windows
 
 This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
-placeholder text here.
 
 ## Overview
 
 HTTPS support for Microsoft Connected Cache (MCC) enhances security and enables local delivery of Teams, Intune, and other content that require HTTPS downloads.
 
-## Provision your MCC with the new Installer
+## Deploy your MCC with the new Installer
 
-1. Ensure your Windows host machine is compliant with MCC prerequisites
-2. Download and unzip the given file, WSLInstaller.zip, to your host machine
-    - The installer should be in a folder not synced to OneDrive; we recommend using your C drive
-    - Take note of this file path, you will run all new PowerShell scripts from it
-3. If you do not have an active MCC node, create one by following our public docs
-    - Make sure to indicate “Windows” OS on the cache node creation page
-4. Complete the steps to deploy Connected Cache cache node to Windows, but do not download the provisioning package given in the Portal.
-    - You will be using the new Installer package that you unzipped earlier
-5. On your host machine, run the provisioning command from the Installer directory location
-    - Please run the provisioning command as provided in your Azure Portal, this includes a list of credentials (customerid, cachenodeid, etc.)
-6. Follow these steps to verify cache node functionality
+If you don't have an active MCC node, create one by following these instructions [Link text](http://ask.fm). When you install MCC, your deployment package will have the new Installer.
 
-## Generate a CSR
+If you are using an existing cache node, you will need to reinstall the deployment package on your cache node. Skip the create and configure step, complete deployment instructions.
 
-1. On your Windows host, open a PowerShell terminal and navigate to the Installer directory
-2. Input required parameters for the given PowerShell script, .\generateCsr.ps1, and then run the script. Parameter usage and examples in the table below.
+## Generate a Certificate Signing Request (CSR)
+
+ 1. On your Windows host, open a PowerShell terminal and navigate to the Installer directory
+ 2. Input parameters for the given PowerShell script, .\generateCsr.ps1, and then run the script.
 
     - If you miss a required parameter, the script should alert you which parameters you missed
-    - To test optional parameters not included in the given script, run the script with “-h” appended. Try various inputs for these optional parameters
-    - If you encounter errors, locate the GenerateCSR.log file with the folder specified in the script output. Email this to the Adi and Bhavya, the contacts listed in step 2.
-    - Line starts with “You can find logs here: …”, should list the folder “…\Certificates\logs” in your MCC Installation folder
+    - If you encounter errors, locate the GenerateCSR.log file with the folder specified in the script output. The output line starts with "You can find logs here: …"
 
-3. Once the CSR Generation Process is completed, find the CSR in your Certificates folder (this is specified at the end of the script output)
+    ## Generate CSR Script Parameters
 
-- Output line starts with “CSR file created at: …”
-- This folder should be in your install scripts folder under “…\Certificates\certs\”
+    ### Required Parameters
 
-Required parameters:
+    **`-algo` / `--algorithm`** *(Required)*  
+    Certificate algorithm options: `RSA`, `EC`, `ED25519`, `ED448`
 
-| Parameter Name | Description | Required? |
-|---|---|---|
-|-algo </br></br> --algorithm | Certificate algorithm (RSA, EC, ED25519, ED448) | [REQUIRED] |
-|-keySizeOrCurve </br></br> --keySize | Key size for RSA (e.g. 2048, 3072) or curve for EC (e.g. prime256v1) | [REQUIRED if using RSA or EC] |
-|-csrName </br></br> --csrName | Name of the CSR | [REQUIRED] |
-|-RunTimeAccountName </br></br> --RunTimeAccountName | the username of your PS credential object | [REQUIRED] |
-|-LocalAccountCredential </br></br> --LocalAccountCredential |  the complete PS credential object | [REQUIRED] |
+    **`-keySizeOrCurve` / `--keySize`** *(Required for RSA/EC)*  
+    - For RSA: Key size like `2048`, `3072`, `4096`
+    - For EC: Curve name like `prime256v1`, `secp384r1`
 
-Subject options [only CommonName is REQUIRED]:
-  -subjectCountry, --subjectCountry Subject country code (optional, e.g., "US")
-  -subjectState, --subjectState     Subject state/province (optional, e.g., "WA")
-  -subjectOrg, --subjectOrg         Subject organization (optional, e.g., "MyOrg")
-  -subjectCommonName, --subjectCommonName    Subject common name ([REQUIRED], e.g., "localhost")
-SAN (Subject Alternative Name) options [At least one REQUIRED]:
-  -sanDns, --sanDns     DNS names (comma-separated, e.g., "localhost,example.com")
-  -sanIp, --sanIp       IP addresses (comma-separated, e.g., "127.0.0.1,192.168.1.100")
-  -sanUri, --sanUri     URIs (comma-separated, e.g., "<https://example.com,http://localhost>")
-  -sanEmail, --sanEmail Email addresses (comma-separated, e.g., "<admin@example.com>,<user@domain.com>")
-  -sanRid, --sanRid     Registered IDs (comma-separated)
-  -sanDirName, --sanDirName Directory names (comma-separated)
-  -sanOtherName, --sanOtherName Other names (comma-separated)
+    **`-csrName` / `--csrName`** *(Required)*  
+    Name for the generated CSR file
 
-Examples:
+    **`-RunTimeAccountName` / `--RunTimeAccountName`** *(Required)*  
+    Username from your PowerShell credential object
 
-    Full subject with multiple components
+    **`-LocalAccountCredential` / `--LocalAccountCredential`** *(Required)*  
+    Complete PowerShell credential object
 
-  .\generateCsr.ps1 -RunTimeAccountName $myLocalAccountCredential.Username                                   -LocalAccountCredential $myLocalAccountCredential  -algo RSA  -keySize 2048 -csrName myservercsr -subjectCountry "US" -subjectState "WA" -subjectOrg "MyOrg" -subjectCN "localhost" -sanDns "localhost,example.com" -sanIp "127.0.0.1,192.168.1.100"
+    ### Subject Parameters
 
-    Minimal subject with CN only
+    **`-subjectCommonName` / `--subjectCommonName`** *(Required)*  
+    Common name for the certificate  
+    Examples: `"localhost"`, `"example.com"`
 
-  .\generateCsr.ps1 -RunTimeAccountName $myLocalAccountCredential.Username -LocalAccountCredential $myLocalAccountCredential -algo EC -keySize prime256v1 -csrName webapp -subjectCN "webapp.company.com" -sanDns "webapp.company.com,api.company.com"
+    **`-subjectCountry` / `--subjectCountry`** *(Optional)*  
+    Two-letter country code  
+    Examples: `"US"`, `"CA"`, `"GB"`
+
+    **`-subjectState` / `--subjectState`** *(Optional)*  
+    State or province  
+    Examples: `"WA"`, `"TX"`, `"Ontario"`
+
+    **`-subjectOrg` / `--subjectOrg`** *(Optional)*  
+    Organization name  
+    Examples: `"MyCompany"`, `"ACME Corp"`
+
+    ### Subject Alternative Names (At least one required)
+
+    **`-sanDns` / `--sanDns`**  
+    DNS names (comma-separated)  
+    Example: `"localhost,example.com,api.example.com"`
+
+    **`-sanIp` / `--sanIp`**  
+    IP addresses (comma-separated)  
+    Example: `"127.0.0.1,192.168.1.100"`
+
+    **`-sanUri` / `--sanUri`**  
+    URIs (comma-separated)  
+    Example: `"https://example.com,http://localhost"`
+
+    **`-sanEmail` / `--sanEmail`**  
+    Email addresses (comma-separated)  
+    Example: `"admin@example.com,user@domain.com"`
+
+    ### Examples
+
+    **Full Certificate with Multiple Components**
+
+    ```powershell
+    .\generateCsr.ps1 `
+      -RunTimeAccountName $myLocalAccountCredential.Username `
+      -LocalAccountCredential $myLocalAccountCredential `
+      -algo RSA `
+      -keySize 2048 `
+      -csrName "myservercsr" `
+      -subjectCountry "US" `
+      -subjectState "WA" `
+      -subjectOrg "MyOrg" `
+      -subjectCommonName "localhost" `
+      -sanDns "localhost,example.com" `
+      -sanIp "127.0.0.1,192.168.1.100"
+    ```
+
+    **Minimal Certificate with Common Name Only**
+
+    ```powershell
+    .\generateCsr.ps1 `
+      -RunTimeAccountName $myLocalAccountCredential.Username `
+      -LocalAccountCredential $myLocalAccountCredential `
+      -algo EC `
+      -keySize prime256v1 `
+      -csrName "webapp" `
+      -subjectCommonName "webapp.company.com" `
+      -sanDns "webapp.company.com,api.company.com"
+    ```
+
+    **RSA Certificate with Email SAN**
+
+    ```powershell
+    .\generateCsr.ps1 `
+      -RunTimeAccountName $myLocalAccountCredential.Username `
+      -LocalAccountCredential $myLocalAccountCredential `
+      -algo RSA `
+      -keySize 3072 `
+      -csrName "emailcert" `
+      -subjectCommonName "John Doe" `
+      -subjectOrg "ACME Corporation" `
+      -sanEmail "john.doe@acme.com,admin@acme.com"
+    ```
+
+ 3. Once the CSR Generation Process is completed, find the CSR in your Certificates folder (location is specified at the end of the script output)
+
+    - Output line starts with "CSR file created at: …"
+    - This folder should be in your install scripts folder under "…\Certificates\certs\"
+
+ 4. Copy the CSR to the machine that you will be using to sign it
 
 ## Sign the CSR
 
-1. Select a public or enterprise Certificate Authority (CA) to use for signing the CSR. Please note, the CA signature must match a root certificate in the client’s trusted root store.
+1. Select a public or enterprise Certificate Authority (CA) to use for signing the CSR. The CA signature must match a root certificate in the client’s trusted root store.
     - Common Public CAs to use: DigiCert, Let's Encrypt
 2. Submit your CSR to the CA of your choice and save the resultant signed certificate
     - Signing requirements: .crt file type and X509 format
 3. Move your signed certificate to the Certificates folder
-    - In your MCC Install directory, place under “…\Certificates\certs\”
+    - In your MCC Install directory, place under "…\Certificates\certs\"
 
 ## Import signed certificate
 
 1. Open a PowerShell terminal and navigate to the location of the WSL Installer
 2. Input the parameters of the given PowerShell script, importCert.ps1, and then run the script.
 
-Required parameters:
+   ### Parameters
 
-| Parameter Name | Description | Required? |
-|------|---|---|
-|-certName </br></br> --certName| the entire file name of your signed TLS certificate, with or without the .crt at the end | Yes |
-|-RunTimeAccountName </br></br> --RunTimeAccountName|  the username of your PS credential object | Yes |
-|-LocalAccountCredential </br></br> --LocalAccountCredential|  the complete PS credential object | Yes |
+    **`-certName` / `--certName`** *(Required)*  
+    The complete filename of your signed TLS certificate  
+    Examples: `"myTlsCert.crt"`, `"server.crt"`, `"webapp-cert"`  
+    *Note: Include or omit the .crt extension - both work*
 
-Example:
-.\importCert.ps1  -RunTimeAccountName $myLocalAccountCredential.Username   -LocalAccountCredential $myLocalAccountCredential  -certName  myTlsCert.crt
+    **`-RunTimeAccountName` / `--RunTimeAccountName`** *(Required)*  
+    Username from your PowerShell credential object  
+    Example: `$myLocalAccountCredential.Username`
+
+    **`-LocalAccountCredential` / `--LocalAccountCredential`** *(Required)*  
+    Complete PowerShell credential object  
+    Example: `$myLocalAccountCredential`
+
+   ### Example
+
+    **Import a TLS certificate:**
+
+    ```powershell
+    .\importCert.ps1 `
+      -RunTimeAccountName $myLocalAccountCredential.Username `
+      -LocalAccountCredential $myLocalAccountCredential `
+      -certName "myTlsCert.crt"
 
 ## Validation
 
-Once the import process has completed, test HTTP and HTTPS content download using the following commands:
-    • curl.exe -v -o "null" "<https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin>" --include -H "host:swda01-mscdn.manage.microsoft.com"
-    •  curl.exe -v -o "null" "<http://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin>" --include -H "host:swda01-mscdn.manage.microsoft.com"
+Once the import process completes, test HTTP and HTTPS content download using the following commands:
 
----
+```powershell
+# Test HTTPS
+curl -v -o $null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+
+# Test HTTP
+curl -v -o $null "http://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+```
 
 ## Monitor TLS Certificate
 
-placeholder text
-
----
+Ability to monitor the  status (active/inactive, expiry date) of your TLS Certificate will soon be available in the Azure portal.
 
 ## Disable TLS
 
 1. Open a PowerShell terminal and navigate to the location of the WSL Installer
 2. From this folder, run .\disableTLS.ps1
 
-Required parameters:
- -RunTimeAccountName, --RunTimeAccountName   the username of your PS credential object [REQUIRED]
-  -LocalAccountCredential, --LocalAccountCredential   the complete PS credential object [REQUIRED]
+    Required parameters:
+     -RunTimeAccountName,--RunTimeAccountName   the username of your PowerShell credential object [REQUIRED]
+    -LocalAccountCredential,--LocalAccountCredential   the complete PowerShell credential object [REQUIRED]
 
-Example:
-.\disableTLS.ps1  -RunTimeAccountName $myLocalAccountCredential.Username   -LocalAccountCredential $myLocalAccountCredential
+    Example:
+    .\disableTLS.ps1  -RunTimeAccountName $myLocalAccountCredential.Username   -LocalAccountCredential $myLocalAccountCredential
 
-3. Once the disable process is completed, test HTTP and HTTPS (should no longer work) content downloads using the following commands:
-    a. curl.exe -v -o "null" "<https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin>" --include -H "host:swda01-mscdn.manage.microsoft.com"
-    b.  curl.exe -v -o "null" "<http://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin>" --include -H "host:swda01-mscdn.manage.microsoft.com
+3. Once the disable process completes, test HTTP and HTTPS (should no longer work) content downloads using the following commands:
+
+    ```powershell
+    # Test HTTPS
+    curl -v -o $null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+    
+    # Test HTTP
+    curl -v -o $null "http://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+    ```
 
 ---
