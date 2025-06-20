@@ -93,21 +93,23 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
-    For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
-
-   If you're using a local user account as the Connected Cache runtime account, you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
+   * For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. You'll also need to be logged in as a domain-joined account when you run the deployment command.
+   * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`. For domain user and service accounts, `$User` should be formatted as `"Domain\Username"`. For local user, domain user, and service accounts you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
-   >* You'll need to apply a local security policy to permit the local user account to `Log on as a batch job`.
+   > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
+
+1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
 
 1. Replace the values in the following deployment command before running it on the host machine.
 
    ```powershell-interactive
-   & "$(deliveryoptimization-cli mcc-get-scripts-path)\provisionmcconwsl.ps1" -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true]
+   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./provisionmcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -adminCredential $myAdminCredential -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
    ```
 
    >[!Note]
-   >* If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the path given by `$(deliveryoptimization-cli mcc-get-scripts-path)` and add `-proxyTlsCertificatePath "path/to/pem/file"` to the deployment command.
+   > If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in your desired **installationFolder** path and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
+   > For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
 
 ---
 
