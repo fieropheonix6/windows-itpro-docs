@@ -55,7 +55,7 @@ Importantly, this dual-delivery capability has no effect on the download experie
 
 In the HTTPS communication between your client device and your MCC node, your cache node is acting as a server. Your client device requests a secure connection with your cache node, to which your cache node must provide a CA-signed certificate to validate its identity. Once your client device validates the certificate against its preexisting certificate store, it creates a symmetric "session key" to more easily encrypt/decrypt further communication. A secure connection is established upon verifying the session key.
 
-:::image type="content" source="./images/csr_workflow.png" alt-text="Diagram displaying how CSR generation works." lightbox="./images/csr_workflow.png":::
+:::image type="content" source="./images/ent-mcc-https-walkthrough.png" alt-text="Diagram displaying how CSR generation works." lightbox="./images/ent-mcc-https-walkthrough.png.png":::
 
 *Paragraph about why we decided to do CSR process*
 *why we can’t automate it*
