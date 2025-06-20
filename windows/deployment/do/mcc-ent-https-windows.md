@@ -213,10 +213,11 @@ Ability to monitor the  status (active/inactive, expiry date) of your TLS Certif
 
    ### .\disableTLS.ps1 example
 
-  ```powershell
-    .\disableTLS.ps1 `
+    ```powershell
+      .\disableTLS.ps1 `
       -RunTimeAccountName $myLocalAccountCredential.Username `
       -LocalAccountCredential $myLocalAccountCredential `
+    ```
 
 3. Once the disable process completes, test HTTP and HTTPS (should no longer work) content downloads using the following commands:
 
