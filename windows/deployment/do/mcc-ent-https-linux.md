@@ -12,10 +12,9 @@ appliesto:
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a> 
 ms.date: 06/13/2025
-
 ---
 
-HTTPS Support for Linux
+# HTTPS Support for Linux
 
 This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
 

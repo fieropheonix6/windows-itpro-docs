@@ -14,7 +14,7 @@ appliesto:
 ms.date: 06/13/2025
 ---
 
-HTTPS Support for Windows
+# HTTPS Support for Windows
 
 This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
 
