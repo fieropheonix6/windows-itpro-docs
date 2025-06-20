@@ -59,11 +59,13 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    >[!Note]
    > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
+1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
+
 1. In the same PowerShell window, run the deployment command that you copied from the Azure portal.
 
    >[!Note]
-   > If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in your desired **installationFolder** path and add `-proxyTlsCertificatePath "mycert.pem"` to the deployment command.
-   > For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePath "mycert.pem"` to the deployment command.
+   > If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in your desired **installationFolder** path and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
+   > For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
 
 # [Azure CLI](#tab/cli)
 
