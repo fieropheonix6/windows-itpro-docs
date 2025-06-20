@@ -1,5 +1,5 @@
 ---
-title: Configure HTTPS Support for Cache nodes
+title: HTTPS Support for MCC Overview
 description: Details on how to configure HTTPS support Microsoft Connected Cache for Enterprise and Education cache nodes.
 ms.service: windows-client
 ms.subservice: itpro-updates

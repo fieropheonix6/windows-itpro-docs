@@ -1,5 +1,5 @@
 ---
-title: Configure HTTPS Support for Cache nodes
+title: Configure HTTPS Support for Linux
 description: Details on how to configure HTTPS support Microsoft Connected Cache for Enterprise and Education cache nodes.
 ms.service: windows-client
 ms.subservice: itpro-updates
@@ -195,3 +195,4 @@ curl -v -o /dev/null "https://127.0.0.1/ee344de8-d177-4720-86c1-a076581766f9/070
     
 # Test HTTPS with localhost
 curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+```
