@@ -17,10 +17,10 @@ appliesto:
 
 This article describes how to deploy Microsoft Connected Cache for Enterprise and Education caching software to a Windows host machine.
 
-Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) or a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d) as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
+Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts), a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d), a domain user account, or a serivce account as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
 
 > [!NOTE]
-> If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you're logged on to the host machine as a **domain-joined** account when following the deployment steps below. If you're logged on as a local administrator account, the Connected Cache deployment scripts will fail.
+> If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you're logged on to the host machine as a **domain-joined** account when following the deployment steps below.
 
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
 
