@@ -83,6 +83,40 @@ You can expect to see the following types of log files:
 1. **WSL_Mcc_UserUninstall_Transcript**: This log file records the output of the "uninstallmcconwsl.ps1" script that the user can run to uninstall MCC software from the host machine.
 1. **WSL_Mcc_Uninstall_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Uninstall_Task" scheduled task that is responsible for uninstalling the MCC software from the host machine when called by the "uninstallmcconwsl.ps1" script.
 
+### Lauching a PowerShell process as the Connected Cache runtime account
+
+To troubleshoot issues with the Connected Cache software on a Windows host machine, you may need to run commands as the Connected Cache runtime account. You can do this by launching a PowerShell process as the runtime account specified during the Connected Cache installation.
+
+* **If the runtime account is a local account**, you can launch a PowerShell process as the runtime account by running the following command in an elevated PowerShell window:
+
+    ```powershell
+    Start-Process powershell.exe -Credential (Get-Credential "<RuntimeAccountName>") -ArgumentList '-NoExit'
+    ```
+
+* **If the runtime account is a domain or service account**, you can launch a PowerShell process as the runtime account by running the following command in an elevated PowerShell window:
+
+    ```powershell
+    Start-Process powershell.exe -Credential (Get-Credential "<Domain>\<RuntimeAccountName>") -ArgumentList '-NoExit'
+    ```
+
+* **If the runtime account is a Group Managed Service Account (gMSA)**, you can launch a PowerShell process as the runtime account by running the following command in an elevated PowerShell window:
+
+    ```powershell
+    Start-Process powershell.exe -Credential (New-Object System.Management.Automation.PSCredential("<Domain>\<RuntimeAccountName>$", (ConvertTo-SecureString "<Password>" -AsPlainText -Force))) -ArgumentList '-NoExit'
+    ```
+
+### Checking if the Connected Cache container is running
+
+Once the Connected Cache software has been successfully deployed to the Windows host machine, you can check if the cache node is running properly by doing the following on the Windows host machine:
+
+1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
+1. Run `wsl -d Ubuntu-24.04-Mcc-Base` to access the Linux distribution that hosts the Connected Cache container
+1. Run `sudo iotedge list` to show which containers are running within the IoT Edge runtime
+
+If it shows the **edgeAgent** and **edgeHub** containers but doesn't show **MCC**, you can view the status of the IoT Edge security manager using `sudo iotedge system logs -- -f`.
+
+You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
+
 ### Connected Cache installation fails during cache node registration
 
 As part of the installation process on Windows host machines, Connected Cache will attempt to register itself with the Delivery Optimization service by calling a registration endpoint `geomcc.prod.do.dsp.mp.microsoft.com`. This call originates from within the WSL2 distribution that hosts the Connected Cache container, and must be successful for the cache node to be installed.
@@ -140,18 +174,6 @@ If you're encountering this failure message when attempting to run the PowerShel
 ### Updating the WSL2 kernel
 
 If the Connected Cache installation is failing due to WSL-related issues, try running `wsl.exe --update` to get the latest version of the WSL kernel.
-
-### Checking if the Connected Cache container is running
-
-Once the Connected Cache software has been successfully deployed to the Windows host machine, you can check if the cache node is running properly by doing the following on the Windows host machine:
-
-1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
-1. Run `wsl -d Ubuntu-24.04-Mcc-Base` to access the Linux distribution that hosts the Connected Cache container
-1. Run `sudo iotedge list` to show which containers are running within the IoT Edge runtime
-
-If it shows the **edgeAgent** and **edgeHub** containers but doesn't show **MCC**, you can view the status of the IoT Edge security manager using `sudo iotedge system logs -- -f`.
-
-You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 ### MCC_Monitor_Task scheduled task fails to run
 
