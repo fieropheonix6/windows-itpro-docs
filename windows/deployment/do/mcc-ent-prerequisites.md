@@ -27,8 +27,8 @@ This article details the requirements and recommended specifications for using M
 
 - **E3/E5 or A3/A5 license**: Your organization must have one of the following license subscriptions for each device that downloads content from a Connected Cache node:
 
-    - [Windows Enterprise E3 or E5](/windows/whats-new/windows-licensing#windows-11-enterprise), included in [Microsoft 365 F3, E3, or E5](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing?msockid=32c407b43d5968050f2b13443c746916)
-    - Windows Education A3 or A5, included in [Microsoft 365 A3 or A5](https://www.microsoft.com/education/products/microsoft-365?msockid=32c407b43d5968050f2b13443c746916#Education-plans)
+    * [Windows Enterprise E3 or E5](/windows/whats-new/windows-licensing#windows-11-enterprise), included in [Microsoft 365 F3, E3, or E5](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing?msockid=32c407b43d5968050f2b13443c746916)
+    * Windows Education A3 or A5, included in [Microsoft 365 A3 or A5](https://www.microsoft.com/education/products/microsoft-365?msockid=32c407b43d5968050f2b13443c746916#Education-plans)
 
     Note that there's no limit to the number of licensed machines that can concurrently download from a Connected Cache node.
 
@@ -44,19 +44,13 @@ This article details the requirements and recommended specifications for using M
 ### Additional requirements for Windows host machines
 
 - The Windows host machine must be using Windows 11 or Windows Server 2022 (or later) with the latest cumulative update applied.
-    - Windows 11 must have [OS Build 22631.3296](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b) or later
-    - Windows Server 2022 must have [OS Build 20348.2227](https://support.microsoft.com/topic/january-9-2024-kb5034129-os-build-20348-2227-6958a36f-efaf-4ef5-a576-c5931072a89a) or later
+    * Windows 11 must have [OS Build 22631.3296](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b) or later
+    * Windows Server 2022 must have [OS Build 20348.2227](https://support.microsoft.com/topic/january-9-2024-kb5034129-os-build-20348-2227-6958a36f-efaf-4ef5-a576-c5931072a89a) or later
 - The Windows host machine must support nested virtualization. Ensure that any security settings that may restrict nested virtualization aren't enabled, such as ["Trusted launch" in Azure VMs](/azure/virtual-machines/trusted-launch-portal).
 - The Windows host machine must have [WSL 2 installed](/windows/wsl/install#install-wsl-command). You can install this on Windows 11 and Windows Server 2025 by logging on as a local administrator and running the following command in an elevated PowerShell window:
 
     ```powershell
     wsl.exe --install --no-distribution
-    ```
-
-- The Windows host machine must have Hyper-V enabled. You can enable this by running the following command in an elevated PowerShell window:
-
-    ```powershell
-    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
     ```
 
 ### Additional requirements for Linux host machines

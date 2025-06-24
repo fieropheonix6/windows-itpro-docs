@@ -17,10 +17,10 @@ appliesto:
 
 This article describes how to deploy Microsoft Connected Cache for Enterprise and Education caching software to a Windows host machine.
 
-Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) or a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d) as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
+Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts), a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d), a domain user account, or a serivce account as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
 
 > [!NOTE]
-> If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you are logged on to the host machine as a **domain-joined** account when following the deployment steps below. If you are logged on as a local administrator account, the Connected Cache deployment scripts will fail.
+> If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you're logged on to the host machine as a **domain-joined** account when following the deployment steps below.
 
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
 
@@ -41,40 +41,35 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    Get-AppxPackage Microsoft.DeliveryOptimization
    ```
 
-1. Register the Connected Cache app for automatic updates by running the following command:
-
-   ```powershell-interactive
-   deliveryoptimization-cli register
-   ```
-
 1. Confirm that the Connected Cache app has placed the Connected Cache installation scripts by running the following command:
 
    ```powershell-interactive
    deliveryoptimization-cli mcc-get-scripts-path
    ```
 
-   This command should return a path to the Connected Cache scripts folder, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts folder to a different location, as the deployment scripts will not be updateable if they are moved to a different path.
+   This command should return a path to the Connected Cache scripts directory, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts won't be updateable if they're moved to a different path.
 
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
-    For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
-
-   If you're using a local user account as the Connected Cache runtime account, you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
+   * For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. You'll also need to be logged in as a domain-joined account when you run the deployment command.
+   * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`. For domain user and service accounts, `$User` should be formatted as `"Domain\Username"`. For local user, domain user, and service accounts you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
-   > You'll need to apply a local security policy to permit the local user account to `Log on as a batch job`.
+   > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
+
+1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
 
 1. In the same PowerShell window, run the deployment command that you copied from the Azure portal.
 
    >[!Note]
-   > If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in your desired **installationFolder** path and add `-proxyTlsCertificatePath "mycert.pem"` to the deployment command.
-   > For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePath "mycert.pem"` to the deployment command.
+   > If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in your desired **installationFolder** path and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
+   > For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
 
 # [Azure CLI](#tab/cli)
 
-To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's deployment details before running the deployment command on the host machine.
+To deploy a cache node programmatically, you need to use Azure CLI to get the cache node's deployment details before running the deployment command on the host machine.
 
 1. To get the cache node's deployment details, use `az mcc ent node get-provisioning-details`.
 
@@ -88,39 +83,39 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
    ```powershell-interactive
    Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
    ```
+
 1. You can verify that the Connected Cache app has been installed by running the following command:
 
    ```powershell-interactive
    Get-AppxPackage Microsoft.DeliveryOptimization
    ```
-1. Register the Connected Cache app for automatic updates by running the following command:
 
-   ```powershell-interactive
-   deliveryoptimization-cli register
-   ```
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
-    For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`.
-
-   If you're using a local user account as the Connected Cache runtime account, you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
+   * For gMSAs, the `$User` PowerShell variable should be formatted as `"Domain\Username$"`. You'll also need to be logged in as a domain-joined account when you run the deployment command.
+   * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`. For domain user and service accounts, `$User` should be formatted as `"Domain\Username"`. For local user, domain user, and service accounts you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
-   >* You'll need to apply a local security policy to permit the local user account to `Log on as a batch job`.
+   > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
+
+1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
 
 1. Replace the values in the following deployment command before running it on the host machine.
 
    ```powershell-interactive
-   & "$(deliveryoptimization-cli mcc-get-scripts-path)\provisionmcconwsl.ps1" -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true]
+   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./provisionmcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -adminCredential $myAdminCredential -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
    ```
+
    >[!Note]
-   >* If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the path given by `$(deliveryoptimization-cli mcc-get-scripts-path)` and add `-proxyTlsCertificatePath "path/to/pem/file"` to the deployment command.
+   > If you are deploying your cache node to a Windows host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in your desired **installationFolder** path and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
+   > For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
 
 ---
 
 ## Steps to point Windows client devices at Connected Cache node
 
-Once you have successfully deployed Connected Cache to your Windows host machine, you'll need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
+Once you have successfully deployed Connected Cache to your Windows host machine, you need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
 
 You can do this by setting the [DOCacheHost or DOCacheHostSource policies via Intune](./waas-delivery-optimization-reference.md#cache-server-hostname).
 
@@ -131,5 +126,5 @@ You can do this by setting the [DOCacheHost or DOCacheHostSource policies via In
 
 ## Related content
 
-- [Deploy to a Linux host machine](mcc-ent-deploy-to-linux.md)
-- [Uninstall Connected Cache node](mcc-ent-uninstall-cache-node.md)
+* [Deploy to a Linux host machine](mcc-ent-deploy-to-linux.md)
+* [Uninstall Connected Cache node](mcc-ent-uninstall-cache-node.md)

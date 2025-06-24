@@ -3,7 +3,7 @@ title: Manage Recall for Windows clients
 description: Learn how to manage Recall for commercial environments and about Recall features.
 ms.topic: how-to
 ms.subservice: windows-copilot
-ms.date: 06/13/2025
+ms.date: 06/23/2025
 ms.author: mstewart
 author: mestew
 ms.collection:
@@ -185,7 +185,7 @@ Before starting an export, the user must authenticate with Windows Hello and the
 > [!Important]
 > - This setting applies to devices in the European Economic Area (EEA) only. Export of Recall snapshots is a user-initiated process and is per user. IT admins or other users can't initiate an export on behalf of another.
 > - Changes to this policy take effect after device restart.
-> - Developer documentation will be coming at a later date. 
+> - For information about adding exported Recall snapshots to your application or website, see [Decrypt exported snapshots from Recall](/windows/ai/recall/decrypt-exported-snapshots).
 
 | &nbsp; | Setting  |
 |---|---|
@@ -225,6 +225,8 @@ For managed devices, IT admins have control over if they want to allow users acc
 If you're a developer and want to launch Recall, you can call the `ms-recall` protocol URI. When you call this URI, Recall opens and takes a snapshot of the screen, which is the default behavior for when Recall is launched. For more information about using Recall in your Windows app, see [Recall overview](/windows/ai/apis/recall) in the Windows AI API documentation.
 
 If your remote desktop connection doesn't support screen capture protection, then it's an easy feature to add. Windows allows applications to exclude their window from being included in screenshot. This DRM flag is set by the application as a property on its window. It's a simple feature for application developers to implement using [SetWindowDisplayAffinity function (winuser.h)](/windows/win32/api/winuser/nf-winuser-setwindowdisplayaffinity). By setting the flag `WDA_EXCLUDEFROMCAPTURE`, the window content won't show up in Recall or any other screenshot application. 
+
+If you're a developer and need information about adding exported Recall snapshots to your application or website, see [Decrypt exported snapshots from Recall](/windows/ai/recall/decrypt-exported-snapshots).
 
 ## Microsoft's commitment to responsible AI
 
