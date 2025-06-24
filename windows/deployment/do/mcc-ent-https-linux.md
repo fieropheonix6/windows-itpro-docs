@@ -20,7 +20,7 @@ This article outlines how to configure HTTPS support your Microsoft Connected Ca
 
 ## Install latest deployment package
 
-If you don't have an active MCC node, create one by following these instructions [Link text](http://ask.fm). When you install MCC, your deployment package will have the new Installer.
+If you don't have an active Connected Cache node, create one by following these instructions [Link text](http://ask.fm). When you install Connected Cache, your deployment package will have the new Installer.
 
 If you are using an existing cache node, you will need to reinstall the deployment package on your cache node. Skip the create and configure step, complete deployment instructions.
 
@@ -128,10 +128,10 @@ If you are using an existing cache node, you will need to reinstall the deployme
 
  4. Once the CSR Generation Process is completed, find the CSR in your Certificates folder (location is specified at the end of the script output)
 
-    - Output line starts with “CSR file created at: …”
-    - This folder should be in your MCC Install directory under “…\Certificates\certs”
+    - Output line starts with "CSR file created at: …"
+    - This folder should be in your Install directory under “…\Certificates\certs”
 
- 5. Copy the CSR to the machine that you'll be using to sign it
+ 5. Copy the CSR to the machine that you are using to sign it
 
 ## Sign the CSR
 
@@ -140,7 +140,7 @@ If you are using an existing cache node, you will need to reinstall the deployme
  2. Submit your CSR to the CA of your choice and save the resultant signed certificate
     - Signing requirements: .crt file type and X509 format
  3. Move your signed certificate to the Certificates folder
-    - In your MCC Install directory, place under "…\Certificates\certs\"
+    - In your Install directory, place under "…\Certificates\certs\"
 
 ## Import signed TLS certificate
 

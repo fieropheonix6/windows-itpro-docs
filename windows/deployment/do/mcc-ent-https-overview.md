@@ -14,46 +14,46 @@ appliesto:
 ms.date: 06/13/2025
 ---
 
-# HTTPS Support for MCC Overview
+# HTTPS Support for Microsoft Connected Cache Overview
 
-This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
+This article outlines how to configure HTTPS support your Connected Cache for Enterprise and Education cache nodes.
 
 ## Overview
 
-With the GA release version of Microsoft Connected Cache for Enterprise, your cache node can now deliver using HTTPS. This feature allows your node to continue delivering Intune-managed Win32 apps and newly deliver Microsoft Teams content. Along with these content types, we expect more publishers to have HTTPS requirements soon, so it's important to configure your node for HTTPS support as soon as possible.
-To set up HTTPS delivery, your cache node generates a Certificate Signing Request (CSR) for you to sign using a Certificate Authority (CA) and reupload back to MCC. We have instructions and scripts for both Windows and Linux host machines to help guide this process.
+With the GA release version of Connected Cache for Enterprise, your cache node can now deliver using HTTPS. This feature allows your node to continue delivering Intune-managed Win32 apps and newly deliver Microsoft Teams content. Along with these content types, we expect more publishers to have HTTPS requirements soon, so it's important to configure your node for HTTPS support as soon as possible.
+To set up HTTPS delivery, your cache node generates a Certificate Signing Request (CSR) for you to sign using a Certificate Authority (CA) and reupload back to your Connected Cache. We have instructions and scripts for both Windows and Linux host machines to help guide this process.
 
 *Must do for every cache node!!!*
 
 ## Change
 
-Previously, MCC could deliver content to clients requesting HTTP URLs only. If a client requested an HTTPS URL, MCC would reject the request, and the client immediately redirected to CDN. With no TLS certificate or port 443 configuration, MCC had no way to initiate an HTTPS connection.
+Previously, Connected Cache could deliver content to clients requesting HTTP URLs only. If a client requested an HTTPS URL, Connected Cache would reject the request, and the client immediately redirected to CDN. With no TLS certificate or port 443 configuration, Connected Cache had no way to initiate an HTTPS connection.
 
-Without HTTPS, MCC could still deliver securely with methods such as hash validation and container hardening to protect against external threats. But with some publishers making their content HTTPS-exclusive, MCC now supports HTTPS delivery to ensure customers continue to have access to new and existing content types.
+Without HTTPS, Connected Cache could still deliver securely with methods such as hash validation and container hardening to protect against external threats. But with some publishers making their content HTTPS-exclusive, Connected Cache now supports HTTPS delivery to ensure customers continue to have access to new and existing content types.
 
-## Benefits of HTTPS support on MCC
+## Benefits of HTTPS support on Connected Cache
 
 We recommend setting up HTTPS support on your cache node to receive the following benefits:
 
 - Microsoft Teams content (not available via HTTP)
 - Continue to receive managed Win32 apps after Intune enforces HTTPS delivery
 - Avoid failover to CDN for HTTPS URLs, which increases networking costs and limits bandwidth
-- Improved security of MCC content delivery
+- Improved security of content delivery
 
 > [!IMPORTANT]
-> Intune will require all managed Win32 apps to be delivered via HTTPS starting November 6, 2025. Thus, all Intune customers using MCC must complete the HTTPS setup process on their cache nodes to continue using MCC to deliver Intune content.
+> Intune will require all managed Win32 apps to be delivered via HTTPS starting November 6, 2025. Thus, all Intune customers using Connected Cache must complete the HTTPS setup process on their cache nodes to continue using Connected Cache to deliver Intune content.
 >
 > Hybrid / SCCM customers will have an alternate process; details are being discussed
 
-## Dual-delivery on MCC
+## Dual-delivery on Connected Cache
 
-With HTTPS support established, your MCC cache node will have the ability to use either HTTP or HTTPS for content delivery; the URL that the DO client requests determines the protocol. For now, only Teams content is requested using an HTTPS URL, but we expect Intune and other publishers to follow soon.
+With HTTPS support established, your cache node will have the ability to use either HTTP or HTTPS for content delivery; the URL that the DO client requests determines the protocol. For now, only Teams content is requested using an HTTPS URL, but we expect Intune and other publishers to follow soon.
 
-Importantly, this dual-delivery capability has no effect on the download experience for the client. As tested, performance is not affected, and if either method is not working correctly, MCC fails over to CDN. Downloads directly from CDN won't be affected if HTTPS support is enabled; P2P with DO will continue to work.
+Importantly, this dual-delivery capability has no effect on the download experience for the client. As tested, performance is not affected, and if either method is not working correctly, Connected Cache fails over to CDN. Downloads directly from CDN won't be affected if HTTPS support is enabled; P2P with DO will continue to work.
 
 ## How it works
 
-In the HTTPS communication between your client device and your MCC node, your cache node is acting as a server. Your client device requests a secure connection with your cache node, to which your cache node must provide a CA-signed certificate to validate its identity. Once your client device validates the certificate against its preexisting certificate store, it creates a symmetric "session key" to more easily encrypt/decrypt further communication. A secure connection is established upon verifying the session key.
+In the HTTPS communication between your client device and your Connected Cache, your cache node is acting as a server. Your client device requests a secure connection with your cache node, to which your cache node must provide a CA-signed certificate to validate its identity. Once your client device validates the certificate against its preexisting certificate store, it creates a symmetric "session key" to more easily encrypt/decrypt further communication. A secure connection is established upon verifying the session key.
 
 :::image type="content" source="./images/ent-mcc-https-walkthrough.png" alt-text="Diagram displaying how CSR generation works." lightbox="./images/ent-mcc-https-walkthrough.png":::
 
@@ -71,9 +71,9 @@ In the HTTPS communication between your client device and your MCC node, your ca
 3. Import signed TLS Certificate
     - Authentication Code – what does it make sure
 
-## Certificate maintenance on MCC
+## Certificate maintenance on Connected Cache
 
-TLS certificates require consistent maintenance, as they often expire or are revoked. To ease this process on MCC, we ha
+TLS certificates require consistent maintenance, as they often expire or are revoked. To ease this process on Connected Cache, we have:
 
 Available on portal soon
 
