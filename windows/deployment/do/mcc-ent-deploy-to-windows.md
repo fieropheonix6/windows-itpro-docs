@@ -109,7 +109,8 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
 
 ---
 
-## Deployment command parameters
+## Windows deployment command parameters
+
 | Parameter | Description |
 |-----------|-------------|
 | `-installationFolder` | The folder where the Connected Cache will be installed. This can be changed to any desired path on the host machine.|
