@@ -59,6 +59,20 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
 
 ---
 
+## Linux deployment command parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `-customerid` | The unique ID for your Connected Cache Azure resource. This is available in the Azure portal on the **Overview** page. |
+| `-cachenodeid` | The unique ID for your Connected Cache node. This is available in the Azure portal on the **Cache Node Management** page. |
+| `-customerkey` | The unique customer key for your Connected Cache Azure resource. This is available in the Azure portal on the **Cache Node Configuration** page. |
+| `-registrationkey` | The unique registration key for your Connected Cache node. This is available in the Azure portal on the **Cache Node Configuration** page. This registration key will be refreshed after each successful deployment attempt of this cache node. |
+| `-drivepathandsizeingb` | The drive path and amount of storage that the cache node will use. This should be formatted as `"<PATH>,<SIZE>"`, where `<PATH>` is the desired drive path and `<SIZE>` is the desired size of the cache node in GB. You can specify multiple drives using `"<PATH1>,<SIZE1>,<PATH2><SIZE2>..."`|
+| `-rebootBypass` | If set to `$true`, the Connected Cache installation process will not check for pending reboot on the host machine. This is optional and defaults to `$false`. |
+| `-shouldUseProxy` | If set to `$true`, the deployed cache node will communicate through your proxy server. This is optional and defaults to `$false`. |
+| `-proxyurl` | The URL of the proxy server for the cache node use. This is optional and only needed if you're using a proxy server. For example, `-proxyurl "http://proxy.example.com:8080"`. |
+| `-proxytlscertificatepath` | The path of the proxy certificate file in PEM format. This is optional and only needed if you're using a TLS-inspecting proxy. For example, `-proxytlscertificatepath="/path/to/pem/file"`. |
+
 ## Steps to point Windows client devices at Connected Cache node
 
 Once you have successfully deployed Connected Cache to your Linux host machine, you'll need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
