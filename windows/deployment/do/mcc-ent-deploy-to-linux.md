@@ -30,14 +30,14 @@ Before deploying Connected Cache to a Linux host machine, ensure that the host m
     >[!Note]
     >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted deployment package directory and add `proxytlscertificatepath="/path/to/pem/file"` to the deployment command.
 
-1. Set access permissions to allow the `provisionmcc.sh` script within the deployment package directory to execute.
+1. Set access permissions to allow the `deploynmcc.sh` script within the deployment package directory to execute.
 1. Run the deployment command on the host machine.
 
 # [Azure CLI](#tab/cli)
 
 To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's deployment details and then run the deployment command on the host machine.
 
-1. To get the cache node's deployment details, use `az mcc ent node get-provisioning-details`
+1. To get the cache node's deployment details, use `az mcc ent node get-deployment-details`
 
    ```azurecli-interactive
    az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
@@ -50,11 +50,11 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
     > [!Note]
     >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted deployment package directory and then add `proxytlscertificatepath="/path/to/pem/file"` to the deployment command.
 
-1. Set access permissions to allow the `provisionmcc.sh` script within the deployment package directory to execute.
+1. Set access permissions to allow the `deploymcc.sh` script within the deployment package directory to execute.
 1. Replace the values in the following deployment command before running it on the host machine.
 
    ```azurepowershell-interactive
-   sudo ./provisionmcc.sh customerid="enter mccResourceId here" cachenodeid="enter cacheNodeId here" customerkey=" enter customerKey here " registrationkey="enter registrationKey here" drivepathandsizeingb="enter physicalPath value,enter sizeInGb value here" shoulduseproxy="enter true if present, enter false if not" proxyurl=http://enter proxy hostname:enter port
+   sudo ./deploymcc.sh customerid="enter mccResourceId here" cachenodeid="enter cacheNodeId here" customerkey=" enter customerKey here " registrationkey="enter registrationKey here" drivepathandsizeingb="enter physicalPath value,enter sizeInGb value here" shoulduseproxy="enter true if present, enter false if not" proxyurl=http://enter proxy hostname:enter port
    ```
 
 ---

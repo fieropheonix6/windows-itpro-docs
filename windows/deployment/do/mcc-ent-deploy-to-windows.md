@@ -100,7 +100,7 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
 1. Replace the values in the following deployment command before running it on the host machine. Parameters in square brackets are optional depending on your cache node configuration.
 
    ```powershell-interactive
-   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./provisionmcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
+   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./deploymcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
    ```
 
    >[!Note]
