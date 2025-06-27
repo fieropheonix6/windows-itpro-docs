@@ -109,6 +109,22 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
 
 ---
 
+## Deployment command parameters
+| Parameter | Description |
+|-----------|-------------|
+| `-installationFolder` | The folder where the Connected Cache will be installed. This can be changed to any desired path on the host machine.|
+| `-customerid` | The unique ID for your Connected Cache Azure resource. This is available in the Azure portal on the **Overview** page. |
+| `-cachenodeid` | The unique ID for your Connected Cache node. This is available in the Azure portal on the **Cache Node Management** page. |
+| `-customerkey` | The unique customer key for your Connected Cache Azure resource. This is available in the Azure portal on the **Cache Node Configuration** page. |
+| `-registrationkey` | The unique registration key for your Connected Cache node. This is available in the Azure portal on the **Cache Node Configuration** page. This registration key will be refreshed after each successful deployment attempt of this cache node. |
+| `-cacheDrives` | The amount of storage that the cache node will use. This should be formatted as `"/var/mcc,<SIZE>"`, where `<SIZE>` is the desired size of the cache node in GB. |
+| `-mccRunTimeAccount` | The account that will run the Connected Cache service. This should be a PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account. For example, `$User = "LocalMachineName\Username"` for a local user account. If you're using a Group Managed Service Account (gMSA), it should be formatted as `"Domain\Username$"`. |
+| `-mccLocalAccountCredential` | A PowerShell credential object for the Connected Cache runtime account. This is only needed if you're using a local user account, domain user account, or service account. For example, `$myLocalAccountCredential = Get-Credential`. |
+| `-rebootBypass` | If set to `$true`, the Connected Cache installation process will not check for pending reboot on the host machine. This is optional and defaults to `$false`. |
+| `-shouldUseProxy` | If set to `$true`, the deployed cache node will communicate through your proxy server. This is optional and defaults to `$false`. |
+| `-proxyurl` | The URL of the proxy server for the cache node use. This is optional and only needed if you're using a proxy server. For example, `-proxyurl "http://proxy.example.com:8080"`. |
+| `-proxyTlsCertificatePemFileName` | The name of the proxy certificate file in PEM format. This is optional and only needed if you're using a TLS-inspecting proxy. For example, `-proxyTlsCertificatePemFileName "mycert.pem"`. The .pem file must be placed in the **installationFolder** path. |
+
 ## Steps to point Windows client devices at Connected Cache node
 
 Once you have successfully deployed Connected Cache to your Windows host machine, you need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
