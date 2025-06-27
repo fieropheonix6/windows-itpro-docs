@@ -37,12 +37,14 @@ This release contains improvements that can only be applied by redeploying your 
 - **Connected Cache Windows application**: We're introducing a new Connected Cache Windows application that streamlines the installation of Connected Cache on Windows-hosted cache nodes. This first iteration focuses on providing autoupdate functionality for the Connected Cache scripts used to maintain the Connected Cache after installation.
 - **Configure cache nodes to support Intune and Teams content via HTTPS**: You can now configure your cache nodes to support download of Intune and Teams content via HTTPS. This allows for secure and efficient caching of content delivered through these services, improving performance and reducing bandwidth usage.
 - **Script to update Scheduled Tasks on Windows-hosted cache nodes**: A new PowerShell script is available to update the credentials used by Connected Cache Scheduled Tasks on Windows-hosted cache nodes. This script is necessary when the Connected Cache runtime account password is changed. It ensures that the Scheduled Tasks continue to run with the correct credentials, preventing potential issues with scheduled task execution.
+- **Terse summary page for Connected Cache**: A new terse summary page is available for Connected Cache nodes that use the GA container version. This page provides a quick overview of the cache node's status, performance, and configuration, making it easier to monitor and manage your cache nodes. Instructions for accessing the summary page are available in the [Connected Cache monitoring documentation](mcc-ent-monitoring.md).
 
 ### Bug fixes and upgrades
 
 - **Windows-hosted cache nodes no longer grow past their configured disk size**: Fixed a bug that caused Windows-hosted cache nodes to grow past their configured disk size, potentially leading to performance issues and storage constraints.
 - **Support for non-English locales on Windows**: Connected Cache installation on Windows now supports non-English locales, improving accessibility and usability for international customers.
 - **Support for file paths with spaces on Windows**: Fixed a bug that caused issues when file paths contained spaces during the installation of Connected Cache on Windows. This change ensures that cache nodes can be installed and configured correctly regardless of file path formatting.
+- **Removed X-FF header conflict with ZScaler**: Removed the X-Forwarded-For (X-FF) header from the HTTP requests made by the MCC container in order to prevent traffic routing issues in networks using ZScaler.
 
 ## February 2025 Release
 
