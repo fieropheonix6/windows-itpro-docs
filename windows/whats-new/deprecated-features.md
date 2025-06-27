@@ -1,7 +1,7 @@
 ---
 title: Deprecated features in the Windows client
 description: Review the list of features that Microsoft is no longer actively developing in Windows 10 and Windows 11.
-ms.date: 05/23/2025
+ms.date: 06/26/2025
 ms.service: windows-client
 ms.subservice: itpro-fundamentals
 ms.localizationpriority: medium
@@ -47,6 +47,7 @@ The features in this article are no longer being actively developed, and might b
 
 | Feature | Details and mitigation  | Deprecation announced |
 |---|---|---|
+| Windows PowerShell 2.0 <!--10271878--> | Deprecation reminder: Windows PowerShell 2.0 is deprecated and will be removed in an upcoming Windows release. Applications and components should be migrated to PowerShell 5.0+. | Original announcement: 1709 </br> <br> Courtesy reminder: June 2025 |
 | Device metadata <!--9364071-->| Device metadata is deprecated and will be removed in a future release of Windows. For more information about the replacement for this functionality, see [Driver Package Container Metadata](/windows-hardware/drivers/install/driver-package-container-metadata). | May 2025 |
 | Maps app <!--9853653--> | Maps app is deprecated. It will be removed from the Microsoft Store by July 2025 and will no longer be supported. For more information, see [Resources for deprecated features](deprecated-features-resources.md#maps-app). | April 2025 |
 | VBS enclaves for Windows 11, version 23H2 and earlier <!--9693593-->|  [VBS enclaves](/windows/win32/trusted-execution/vbs-enclaves) are being deprecated on Windows 11, version 23H2 and earlier versions of Windows. Support for VBS enclaves will continue for Windows 11, version 24H2 and later. </br> </br> **[Update May 2025]** Existing enclaves signed with the EKU 1.3.6.1.4.1.311.76.57.1.15 will continue to be supported for all  Windows 11, version 23H2 and earlier versions of Windows, so long as no changes are made to the enclave that requires a re-sign of it. If a re-sign of the enclave occurs, the new EKU will be used to re-sign and the enclave will only be supported on Windows 11, version 24H2 and later. Existing enclaves signed with EKU 1.3.6.1.4.1.311.76.57.1.15 will continue to function without disruption on the following operating systems until a re-sign is needed: </br> <ul><li>Windows 10, version 22H2 </li> <li> Windows 11, version 22H2 </li><li> Windows 11, version 23H2 </li><li>Windows 11, version 24H2 and later</li></ul>| April 2025 |

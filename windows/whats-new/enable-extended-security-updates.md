@@ -28,11 +28,7 @@ To enable ESU for Windows 10, you must meet the following prerequisites:
 
 - Windows 10, version 22H2 with [KB5046613](https://support.microsoft.com/help/5046613), or a later update installed
 - Administrative privileges on the device
-- The Windows 10 device is either Microsoft Entra joined or Microsoft Entra hybrid joined.
-   - Devices that are only Entra registered aren't eligible for commercial ESU access.
-   >[!NOTE]
-   > Personal or BYOD devices that are not managed by the organization and are only Entra registered will not qualify for this entitlement. These devices should be enrolled via the [Consumer ESU program](https://support.microsoft.com/windows/33e17de9-36b3-43bb-874d-6c53d2e4bf42).
- 
+
 
 **Endpoints for client activation:**
 - `https://go.microsoft.com/`
@@ -67,7 +63,8 @@ Some cloud and virtualization scenarios have specific considerations for enablin
    - [Azure Stack Edge](/azure/databox-online/)
 
 - **Windows 365 Cloud PCs**: Windows 10 devices accessing Cloud PCs via [Windows 365](/windows-365/overview) are automatically entitled to ESU for the duration of the ESU offer if the user has an active Windows 365 license assigned, provided the following conditions are met:
-   - The Windows 10 device meets the [prerequisites](#prerequisites)
+   - The Windows 10 device is either Microsoft Entra joined or Microsoft Entra hybrid joined.
+      - Devices that are only Entra registered aren't eligible for commercial ESU access. Personal or BYOD devices that are not managed by the organization and are only Entra registered will not qualify for this entitlement. These devices should be enrolled via the [Consumer ESU program](https://support.microsoft.com/windows/33e17de9-36b3-43bb-874d-6c53d2e4bf42).
    - The user must sign in to the Windows 10 device using their Microsoft Entra ID account at least once every 22 days to maintain ESU access.
       - If this 22-day window lapses without sign-in, the device will no longer be entitled to new ESU updates until the user signs in again.
       - The ESU license is valid for 30 days once issued, and the system attempts to renew it starting at day 22 to avoid service interruption.
