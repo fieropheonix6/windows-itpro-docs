@@ -59,8 +59,6 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    >[!Note]
    > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
-1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
-
 1. In the same PowerShell window, run the deployment command that you copied from the Azure portal.
 
    >[!Note]
@@ -99,12 +97,10 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
    >[!Note]
    > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
-1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
-
-1. Replace the values in the following deployment command before running it on the host machine.
+1. Replace the values in the following deployment command before running it on the host machine. Parameters in square brackets are optional depending on your cache node configuration.
 
    ```powershell-interactive
-   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./provisionmcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -adminCredential $myAdminCredential -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
+   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./provisionmcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
    ```
 
    >[!Note]
