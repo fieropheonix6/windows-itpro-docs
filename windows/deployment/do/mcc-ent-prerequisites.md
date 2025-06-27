@@ -40,6 +40,7 @@ This article details the requirements and recommended specifications for using M
 - [These listed endpoints](delivery-optimization-endpoints.md) must be reachable by the host machine.
 - The host machine must have no other services / applications utilizing port 80 (for example, Configuration Manager or a distribution point).
 - The host machine must have at least 4 GB of free memory.
+- The host machine must have at least 100 GB of free disk space.
 
 ### Additional requirements for Windows host machines
 
