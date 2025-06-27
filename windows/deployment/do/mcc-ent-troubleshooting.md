@@ -99,10 +99,10 @@ To troubleshoot issues with the Connected Cache software on a Windows host machi
     Start-Process powershell.exe -Credential (Get-Credential "<Domain>\<RuntimeAccountName>") -ArgumentList '-NoExit'
     ```
 
-* **If the runtime account is a Group Managed Service Account (gMSA)**, you can launch a PowerShell process as the runtime account by running the following command in an elevated PowerShell window:
+* **If the runtime account is a Group Managed Service Account (gMSA)**, you must use [PsExec](https://learn.microsoft.com/sysinternals/downloads/psexec) to launch a PowerShell process as the runtime account by running the following command in an elevated PowerShell window:
 
     ```powershell
-    Start-Process powershell.exe -Credential (New-Object System.Management.Automation.PSCredential("<Domain>\<RuntimeAccountName>$", (ConvertTo-SecureString "<Password>" -AsPlainText -Force))) -ArgumentList '-NoExit'
+    psexec.exe -i -u <DOMAIN\GmsaAccountName$> -p ~ powershell.exe 
     ```
 
 ### Checking if the Connected Cache container is running
