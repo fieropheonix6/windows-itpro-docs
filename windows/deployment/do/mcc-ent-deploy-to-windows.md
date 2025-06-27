@@ -71,10 +71,10 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
 
 To deploy a cache node programmatically, you need to use Azure CLI to get the cache node's deployment details before running the deployment command on the host machine.
 
-1. To get the cache node's deployment details, use `az mcc ent node get-provisioning-details`.
+1. To get the cache node's deployment details, use `az mcc ent node get-deployment-details`.
 
    ```azurecli-interactive
-   az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
+   az mcc ent node get-deployment-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
    ```
 
 1. Save the resulting output. These values must be passed as parameters within the deployment command.
