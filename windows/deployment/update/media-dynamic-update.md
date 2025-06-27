@@ -13,7 +13,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Windows Server</a>
-ms.date: 1/31/2024
+ms.date: 6/27/2025
 ---
 
 # Update Windows installation media with Dynamic Update
@@ -144,10 +144,8 @@ This table shows the correct sequence for applying the various tasks to the file
 |Export image                                            | 8                 | 16                             | 25               |           |
 
 > [!NOTE]
-> Starting in February 2021, the latest cumulative update and servicing stack update is combined and distributed in the Microsoft Update Catalog as a new combined cumulative update. For Steps 1, 9, and 17 that require the servicing stack update for updating the installation media, you should use the combined cumulative update. For more information on the combined cumulative update, see [Servicing stack updates](./servicing-stack-updates.md).
-
-> [!NOTE]
-> Microsoft removes the Flash component from Windows through [KB4577586: Update for Removal of Adobe Flash Player](https://support.microsoft.com/kb/4577586). You can also remove Flash anytime by deploying the update in KB4577586 (available on the Catalog) between steps 20 and 21. As of July 2021, KB4577586, "Update for Removal of Adobe Flash Player" will be included in the latest cumulative update for Windows 10, versions 1607 and 1507. The update will also be included in the Monthly Rollup and the Security Only Update for Windows 8.1, Windows Server 2012, and Windows Embedded 8 Standard. For more information, see [Update on Adobe Flash Player End of Support](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/).
+> - Starting in February 2021, the latest cumulative update and servicing stack update is combined and distributed in the Microsoft Update Catalog as a new combined cumulative update. For Steps 1, 9, and 17 that require the servicing stack update for updating the installation media, you should use the combined cumulative update. For more information on the combined cumulative update, see [Servicing stack updates](./servicing-stack-updates.md). When acquiring Dynamic Update packages, ensure the packages correspond to the same month as the latest cumulative update. If, for example, the SafeOS Dynamic Update or Setup Dynamic Update is not available for the same month as the latest cumulative update, use the most recent published version of each.
+> - Microsoft removes the Flash component from Windows through [KB4577586: Update for Removal of Adobe Flash Player](https://support.microsoft.com/kb/4577586). You can also remove Flash anytime by deploying the update in KB4577586 (available on the Catalog) between steps 20 and 21. As of July 2021, KB4577586, "Update for Removal of Adobe Flash Player" will be included in the latest cumulative update for Windows 10, versions 1607 and 1507. The update will also be included in the Monthly Rollup and the Security Only Update for Windows 8.1, Windows Server 2012, and Windows Embedded 8 Standard. For more information, see [Update on Adobe Flash Player End of Support](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/).
 
 ### Multiple Windows editions
 
