@@ -1,7 +1,7 @@
 ---
 title: Defender DDF file
 description: View the XML file containing the device description framework (DDF) for the Defender configuration service provider.
-ms.date: 02/13/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -2920,6 +2920,7 @@ The following XML file contains the device description framework (DDF) for the D
               <MSFT:ValueDescription>QUIC parsing is enabled</MSFT:ValueDescription>
             </MSFT:Enum>
           </MSFT:AllowedValues>
+          <MSFT:Deprecated OsBuildDeprecated="10.0.14393" />
         </DFProperties>
       </Node>
       <Node>
@@ -3726,6 +3727,69 @@ The following XML file contains the device description framework (DDF) for the D
               </MSFT:AllowedValues>
             </DFProperties>
           </Node>
+        </Node>
+      </Node>
+      <Node>
+        <NodeName>Reporting</NodeName>
+        <DFProperties>
+          <AccessType>
+            <Get />
+          </AccessType>
+          <DFFormat>
+            <node />
+          </DFFormat>
+          <Occurrence>
+            <One />
+          </Occurrence>
+          <Scope>
+            <Dynamic />
+          </Scope>
+          <DFType>
+            <DDFName />
+          </DFType>
+          <MSFT:Applicability>
+            <MSFT:OsBuildVersion>10.0.14393</MSFT:OsBuildVersion>
+            <MSFT:CspVersion>1.3</MSFT:CspVersion>
+          </MSFT:Applicability>
+        </DFProperties>
+        <Node>
+          <NodeName>EnableDynamicSignatureDroppedEventReporting</NodeName>
+          <DFProperties>
+            <AccessType>
+              <Add />
+              <Delete />
+              <Get />
+              <Replace />
+            </AccessType>
+            <DefaultValue>0</DefaultValue>
+            <Description>This setting controls whether to report a Dynamic Security Intelligence Update dropped event. By default, such events are not reported.</Description>
+            <DFFormat>
+              <int />
+            </DFFormat>
+            <Occurrence>
+              <One />
+            </Occurrence>
+            <Scope>
+              <Dynamic />
+            </Scope>
+            <DFType>
+              <MIME />
+            </DFType>
+            <MSFT:Applicability>
+              <MSFT:OsBuildVersion>10.0.14393</MSFT:OsBuildVersion>
+              <MSFT:CspVersion>1.3</MSFT:CspVersion>
+            </MSFT:Applicability>
+            <MSFT:AllowedValues ValueType="ENUM">
+              <MSFT:Enum>
+                <MSFT:Value>0</MSFT:Value>
+                <MSFT:ValueDescription>Dynamic Security intelligence update dropped events will not be reported.</MSFT:ValueDescription>
+              </MSFT:Enum>
+              <MSFT:Enum>
+                <MSFT:Value>1</MSFT:Value>
+                <MSFT:ValueDescription>Dynamic Security intelligence update events will be reported.</MSFT:ValueDescription>
+              </MSFT:Enum>
+            </MSFT:AllowedValues>
+          </DFProperties>
         </Node>
       </Node>
     </Node>
