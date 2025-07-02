@@ -1,7 +1,7 @@
 ---
 title: Start Policy CSP
 description: Learn more about the Start Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -977,6 +977,68 @@ To validate this policy, do the following steps:
 <!-- HideAppList-Examples-End -->
 
 <!-- HideAppList-End -->
+
+<!-- HideCategoryView-Begin -->
+## HideCategoryView
+
+<!-- HideCategoryView-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+<!-- HideCategoryView-Applicability-End -->
+
+<!-- HideCategoryView-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/Start/HideCategoryView
+```
+
+```Device
+./Device/Vendor/MSFT/Policy/Config/Start/HideCategoryView
+```
+<!-- HideCategoryView-OmaUri-End -->
+
+<!-- HideCategoryView-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy setting allows you to hide the category view in the Start Menu. If you enable this policy setting, the Start Menu will no longer show the category view as an option and will default to grid view.
+<!-- HideCategoryView-Description-End -->
+
+<!-- HideCategoryView-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- HideCategoryView-Editable-End -->
+
+<!-- HideCategoryView-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- HideCategoryView-DFProperties-End -->
+
+<!-- HideCategoryView-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Category view shown. |
+| 1 | Category view hidden. |
+<!-- HideCategoryView-AllowedValues-End -->
+
+<!-- HideCategoryView-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | HideCategoryView |
+| Path | StartMenu > AT > StartMenu |
+<!-- HideCategoryView-GpMapping-End -->
+
+<!-- HideCategoryView-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- HideCategoryView-Examples-End -->
+
+<!-- HideCategoryView-End -->
 
 <!-- HideChangeAccountSettings-Begin -->
 ## HideChangeAccountSettings
