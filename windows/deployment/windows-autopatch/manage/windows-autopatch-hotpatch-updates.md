@@ -50,7 +50,7 @@ VBS must be turned on for a device to be offered Hotpatch updates. For informati
 ### Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)
 
 > [!NOTE]
-> **Hotpatch updates on Arm 64 devices follow the same [release cycle](#release-cycles).**.
+> **Hotpatch updates on Arm 64 devices follow the same [release cycle](#release-cycles).**
 
 This requirement only applies to Arm 64 CPU devices when using Hotpatch updates. Hotpatch updates aren't compatible with servicing CHPE OS binaries located in the `%SystemRoot%\SyChpe32` folder.
 
