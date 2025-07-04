@@ -1,7 +1,7 @@
 ---
 title: Hotpatch updates
 description: Use Hotpatch updates to receive security updates without restarting your device
-ms.date: 04/11/2025
+ms.date: 07/04/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -49,8 +49,8 @@ VBS must be turned on for a device to be offered Hotpatch updates. For informati
 
 ### Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)
 
-> [!IMPORTANT]
-> **Hotpatch updates on Arm 64 devices are generally available and follow the same release cycle.**.
+> [!NOTE]
+> **Hotpatch updates on Arm 64 devices follow the same [release cycle](#release-cycles).**.
 
 This requirement only applies to Arm 64 CPU devices when using Hotpatch updates. Hotpatch updates aren't compatible with servicing CHPE OS binaries located in the `%SystemRoot%\SyChpe32` folder.
 
