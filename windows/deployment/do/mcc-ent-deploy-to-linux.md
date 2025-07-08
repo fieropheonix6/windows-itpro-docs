@@ -19,6 +19,8 @@ This article describes how to deploy Microsoft Connected Cache for Enterprise an
 
 Before deploying Connected Cache to a Linux host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource and cache node](mcc-ent-create-resource-and-cache.md).
 
+For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com).
+
 ## Steps to deploy Connected Cache cache node to Linux
 
 # [Azure portal](#tab/portal)
