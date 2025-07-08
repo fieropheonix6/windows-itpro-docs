@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 06/18/2025
+ms.date: 07/07/2025
 ---
 
 
@@ -23,11 +23,15 @@ This article contains instructions on how to troubleshoot different issues you m
 
 This section describes known issues with the latest release of Microsoft Connected Cache for Enterprise and Education. See the [Release Notes page](mcc-ent-release-notes.md) for more details on the fixes included in the latest release.
 
-* No known issues at this time.
+### Connected Cache Azure resource is missing from Scope selection under the "Metrics" tab
+
+You can create custom charts on the Connected Cache Azure portal by selecting the Metrics tab under the Monitoring section of the Connected Cache Azure resource. The Connected Cache Azure resource is correctly selected as the Scope by default, but if you change the selected Scope you're unable to reselect the Connected Cache Azure resource, preventing subsequent creation of custom charts.
+
+As a temporary workaround, you can navigate away from the Metrics tab and then return to it. The Connected Cache Azure resource is once again correctly selected as the Scope.
 
 ### Patched in latest release
 
-[GA release: 7/09/2025](mcc-ent-release-notes.md)
+[GA release: 7/16/2025](mcc-ent-release-notes.md)
 
 * Connected Cache installation fails when Windows host machine is configured with a non-EN locale.
 * Windows-hosted Connected Cache nodes can grow past their configured cache drive size.
