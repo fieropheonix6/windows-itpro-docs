@@ -78,6 +78,15 @@ The **Cache Nodes** section under the **Cache Node Management** tab displays cac
 | OS | The host machine OS that this cache node is compatible with. |
 | Software version | The version number of the cache node's Connected Cache container. |
 | Cache node ID | The unique identifier of the cache node. |
+| Migrated | Indicates whether the cache node has been migrated from the public preview to the generally available version of Microsoft Connected Cache. |
+
+If you created cache nodes during public preview, the **Migrated** column will help you determine whether the cache nodes have been migrated to the generally available release of Connected Cache.
+
+| Value | Description |
+| --- | --- |
+| Yes | The cache node was created and deployed _before_ GA launch, and you have completed the required steps to migrate it to the GA release. |
+| No | The cache node was created and deployed _before_ GA launch, and you must follow the required steps to migrate it to the GA release. |
+| N/A | The cache node was created and deployed _after_ GA launch and is already using the GA release. |
 
 ## Advanced Monitoring
 
