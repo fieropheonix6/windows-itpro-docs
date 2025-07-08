@@ -1,7 +1,7 @@
 ---
 title: Configuration service provider preview policies
 description: Learn more about configuration service provider (CSP) policies that are available for Windows Insider Preview.
-ms.date: 06/12/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -210,10 +210,6 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 - [TouchKeyboardControllerModeAvailability](policy-csp-textinput.md#touchkeyboardcontrollermodeavailability)
 
-## Update
-
-- [AllowTemporaryEnterpriseFeatureControl](policy-csp-update.md#allowtemporaryenterprisefeaturecontrol)
-
 ## Wifi
 
 - [AllowWFAQosManagementMSCS](policy-csp-wifi.md#allowwfaqosmanagementmscs)
@@ -232,6 +228,7 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [DisableCocreator](policy-csp-windowsai.md#disablecocreator)
 - [DisableGenerativeFill](policy-csp-windowsai.md#disablegenerativefill)
 - [AllowRecallEnablement](policy-csp-windowsai.md#allowrecallenablement)
+- [DisableSettingsAgent](policy-csp-windowsai.md#disablesettingsagent)
 
 ## WindowsBackupAndRestore CSP
 

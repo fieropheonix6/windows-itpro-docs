@@ -1,7 +1,7 @@
 ---
 title: DeviceLock Policy CSP
 description: Learn more about the DeviceLock Area in Policy CSP.
-ms.date: 06/09/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -113,7 +113,7 @@ Allow Administrator account lockout This security setting determines whether the
 <!-- AllowIdleReturnWithoutPassword-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ❌ Pro <br> ❌ Enterprise <br> ❌ Education <br> ❌ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowIdleReturnWithoutPassword-Applicability-End -->
 
 <!-- AllowIdleReturnWithoutPassword-OmaUri-Begin -->
@@ -784,7 +784,7 @@ On HoloLens, this timeout is controlled by the device's system sleep timeout, re
 <!-- MaxInactivityTimeDeviceLockWithExternalDisplay-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ❌ Pro <br> ❌ Enterprise <br> ❌ Education <br> ❌ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- MaxInactivityTimeDeviceLockWithExternalDisplay-Applicability-End -->
 
 <!-- MaxInactivityTimeDeviceLockWithExternalDisplay-OmaUri-Begin -->

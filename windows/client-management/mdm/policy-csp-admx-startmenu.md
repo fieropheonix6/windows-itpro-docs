@@ -1,7 +1,7 @@
 ---
 title: ADMX_StartMenu Policy CSP
 description: Learn more about the ADMX_StartMenu Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -263,6 +263,60 @@ This setting doesn't prevent new notifications from appearing. See the "Turn off
 <!-- ClearTilesOnExit-Examples-End -->
 
 <!-- ClearTilesOnExit-End -->
+
+<!-- ConfigureStartPins-Begin -->
+## ConfigureStartPins
+
+<!-- ConfigureStartPins-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
+<!-- ConfigureStartPins-Applicability-End -->
+
+<!-- ConfigureStartPins-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/ADMX_StartMenu/ConfigureStartPins
+```
+
+```Device
+./Device/Vendor/MSFT/Policy/Config/ADMX_StartMenu/ConfigureStartPins
+```
+<!-- ConfigureStartPins-OmaUri-End -->
+
+<!-- ConfigureStartPins-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- ConfigureStartPins-Description-End -->
+
+<!-- ConfigureStartPins-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ConfigureStartPins-Editable-End -->
+
+<!-- ConfigureStartPins-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `chr` (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ConfigureStartPins-DFProperties-End -->
+
+<!-- ConfigureStartPins-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
+[!INCLUDE [ADMX-backed policy note](includes/mdm-admx-policy-note.md)]
+
+**ADMX mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | ConfigureStartPins |
+| ADMX File Name | StartMenu.admx |
+<!-- ConfigureStartPins-AdmxBacked-End -->
+
+<!-- ConfigureStartPins-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ConfigureStartPins-Examples-End -->
+
+<!-- ConfigureStartPins-End -->
 
 <!-- DesktopAppsFirstInAppsView-Begin -->
 ## DesktopAppsFirstInAppsView
@@ -576,6 +630,60 @@ If you disable this setting or don't configure it, all Start menu shortcuts appe
 <!-- GreyMSIAds-Examples-End -->
 
 <!-- GreyMSIAds-End -->
+
+<!-- HideCategoryView-Begin -->
+## HideCategoryView
+
+<!-- HideCategoryView-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
+<!-- HideCategoryView-Applicability-End -->
+
+<!-- HideCategoryView-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/ADMX_StartMenu/HideCategoryView
+```
+
+```Device
+./Device/Vendor/MSFT/Policy/Config/ADMX_StartMenu/HideCategoryView
+```
+<!-- HideCategoryView-OmaUri-End -->
+
+<!-- HideCategoryView-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- HideCategoryView-Description-End -->
+
+<!-- HideCategoryView-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- HideCategoryView-Editable-End -->
+
+<!-- HideCategoryView-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `chr` (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- HideCategoryView-DFProperties-End -->
+
+<!-- HideCategoryView-AdmxBacked-Begin -->
+<!-- ADMX-Not-Found -->
+[!INCLUDE [ADMX-backed policy note](includes/mdm-admx-policy-note.md)]
+
+**ADMX mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | HideCategoryView |
+| ADMX File Name | StartMenu.admx |
+<!-- HideCategoryView-AdmxBacked-End -->
+
+<!-- HideCategoryView-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- HideCategoryView-Examples-End -->
+
+<!-- HideCategoryView-End -->
 
 <!-- HidePowerOptions-Begin -->
 ## HidePowerOptions

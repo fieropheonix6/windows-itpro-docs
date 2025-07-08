@@ -353,10 +353,21 @@ The following example hides the taskbar:
 
 ::: zone pivot="windows-11"
 
-You can customize the Taskbar by creating a custom layout and adding it to your XML file. To learn how to customize and export the Taskbar configuration, see [Customize the Taskbar](../taskbar/configure.md).
+To show or hide the taskbar, use the `ShowTaskbar` boolean attribute.
 
-> [!NOTE]
-> In Windows 11, the `ShowTaskbar` attribute is no-op. Configure it with a value of `true`.
+The following example exposes the taskbar:
+
+```xml
+<Taskbar ShowTaskbar="true"/>
+```
+
+The following example hides the taskbar:
+
+```xml
+<Taskbar ShowTaskbar="false"/>
+```
+
+To configure the applications pinned to the taskbar, create a custom layout and add it to your XML file. To learn how to customize and export the taskbar configuration, see [Configure the Windows taskbar](../taskbar/index.md).
 
 With the exported Taskbar configuration, use the `v5:TaskbarLayout` element and add the content of the XML file. For example:
 
@@ -395,8 +406,6 @@ Here's an example of a custom Taskbar with a few apps pinned:
 ```
 
 ::: zone-end
-
-<!--here-->
 
 ## Configs
 
@@ -437,7 +446,7 @@ The following example shows how to specify an account to sign in automatically, 
 ```
 
 >[!IMPORTANT]
->When Exchange Active Sync (EAS) password restrictions are active on the device, the autologon feature doesn't work. This behavior is by design. For more informations, see [How to turn on automatic logon in Windows](/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon).
+>When Exchange Active Sync (EAS) password restrictions are active on the device, the autologon feature doesn't work. This behavior is by design. For more information, see [How to turn on automatic logon in Windows](/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon).
 
 ### Global profile
 

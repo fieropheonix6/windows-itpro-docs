@@ -8,7 +8,7 @@ author: mestew
 manager: bpardi
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 06/25/2025
+ms.date: 07/02/2025
 ms.collection:
   - highpri
   - tier2
@@ -76,12 +76,12 @@ Some cloud and virtualization scenarios have specific considerations for enablin
 
 If you bought ESU licenses, you can activate them with Multiple Activation Keys (MAK) that you get from the Microsoft 365 admin center. To find the ESU license MAK, use the following steps:
 
-1. In the [admin center](https://admin.microsoft.com), go to the **Billing** > **Your Products** page, then select the <a href="https://go.microsoft.com/fwlink/p/?linkid=2244144" target="_blank">Volume licensing</a> tab.
+1. In the [admin center](https://admin.microsoft.com), go to the **Billing** > **Your Products** page, then select the [Volume licensing](https://go.microsoft.com/fwlink/p/?linkid=2244144) tab.
 2. In the **Contracts** section, select **View contracts**.
-3. On the <a href="https://go.microsoft.com/fwlink/p/?linkid=2297440" target="_blank">Contracts</a> page, find the **License ID** that the ESU licenses were purchased under, select the three dots (**More actions**), then select **View product keys**. The **Product keys** details page includes contract details and a list of all keys for that contract.
+3. On the [Contracts](https://go.microsoft.com/fwlink/p/?linkid=2297440) page, find the **License ID** that the ESU licenses were purchased under, select the three dots (**More actions**), then select **View product keys**. The **Product keys** details page includes contract details and a list of all keys for that contract.
 
 > [!NOTE]
-> You can order ESU licenses before the start of the ESU coverage period. However, the ESU MAK displayed in the Product keys details panel isn't usable until the defined ESU coverage period begins. For more information, see [Product Lifecycle FAQ - Extended Security Updates](/lifecycle/faq/extended-security-updates).
+> After you purchase the ESU licenses, the MAK will appear in the [Microsoft 365 admin center](https://admin.microsoft.com). You can activate the key now and verify that it has been activated successfully using the instructions. The first ESU update which requires the activation will be the November 2025 security update.
 
 ## Install and activate the ESU key
 

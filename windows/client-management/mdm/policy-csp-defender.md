@@ -1,7 +1,7 @@
 ---
 title: Defender Policy CSP
 description: Learn more about the Defender Area in Policy CSP.
-ms.date: 04/04/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -1549,7 +1549,7 @@ This policy setting defines the number of days items should be kept in the Quara
 <!-- Description-Source-DDF -->
 This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that's initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
-- If you disable or don't configure this setting, catch-up scans for scheduled full scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run.
+- If you disable or don't configure this setting, catch-up scans for scheduled full scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there is no scheduled scan configured, there will be no catch-up scan run.
 
 - If you enable this setting, catch-up scans for scheduled full scans will be disabled.
 <!-- DisableCatchupFullScan-Description-End -->
@@ -1814,7 +1814,7 @@ This policy setting allows you to enable or disable low CPU priority for schedul
 
 - If you enable this setting, low CPU priority will be used during scheduled scans.
 
-- If you disable or don't configure this setting, no changes will be made to CPU priority for scheduled scans.
+- If you disable or don't configure this setting, not changes will be made to CPU priority for scheduled scans.
 <!-- EnableLowCPUPriority-Description-End -->
 
 <!-- EnableLowCPUPriority-Editable-Begin -->
@@ -2069,7 +2069,7 @@ Allows an administrator to specify a list of directory paths to ignore during a 
 Allows an administrator to specify a list of files opened by processes to ignore during a scan.
 
 > [!IMPORTANT]
-> The process itself isn't excluded from the scan, but can be by using the Defender/ExcludedPaths policy to exclude its path. Each file type must be separated by a |. For example, C:\Example.exe|C:\Example1.exe.
+> The process itself isn't excluded from the scan, but can be by using the Defender/ExcludedPaths policy to exclude its path. Each file type must be separated by a |. For example, C:\Example. exe|C:\Example1.exe.
 <!-- ExcludedProcesses-Description-End -->
 
 <!-- ExcludedProcesses-Editable-Begin -->
@@ -2164,7 +2164,7 @@ Same as Disabled.
 | Value | Description |
 |:--|:--|
 | 0 (Default) | PUA Protection off. Windows Defender won't protect against potentially unwanted applications. |
-| 1 | PUA Protection on. Detected items are blocked. They'll show in history along with other threats. |
+| 1 | PUA Protection on. Detected items are blocked. They will show in history along with other threats. |
 | 2 | Audit mode. Windows Defender will detect potentially unwanted applications, but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer. |
 <!-- PUAProtection-AllowedValues-End -->
 
@@ -2204,7 +2204,7 @@ Same as Disabled.
 
 <!-- RealTimeScanDirection-Description-Begin -->
 <!-- Description-Source-ADMX -->
-This policy setting allows you to configure monitoring for incoming and outgoing files, without having to turn off monitoring entirely. It's recommended for use on servers where there's a lot of incoming and outgoing file activity but for performance reasons need to have scanning disabled for a particular scan direction. The appropriate configuration should be evaluated based on the server role.
+This policy setting allows you to configure monitoring for incoming and outgoing files, without having to turn off monitoring entirely. It's recommended for use on servers where there is a lot of incoming and outgoing file activity but for performance reasons need to have scanning disabled for a particular scan direction. The appropriate configuration should be evaluated based on the server role.
 
 Note that this configuration is only honored for NTFS volumes. For any other file system type, full monitoring of file and program activity will be present on those volumes.
 
@@ -2888,7 +2888,7 @@ Valid remediation action values are:
 | Name | Value |
 |:--|:--|
 | Name | Threats_ThreatSeverityDefaultAction |
-| Friendly Name | Specify threat alert levels at which default action shouldn't be taken when detected |
+| Friendly Name | Specify threat alert levels at which default action should not be taken when detected |
 | Element Name | Specify threat alert levels at which default action shouldn't be taken when detected. |
 | Location | Computer Configuration |
 | Path | Windows Components > Microsoft Defender Antivirus > Threats |
