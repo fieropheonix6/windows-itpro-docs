@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 06/16/2025
+ms.date: 07/07/2025
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -23,6 +23,8 @@ Deploying Connected Cache to a Windows host machine requires designating a [Grou
 > If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you're logged on to the host machine as a **domain-joined** account when following the deployment steps below.
 
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
+
+For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com).
 
 ## Steps to deploy Connected Cache node to Windows
 

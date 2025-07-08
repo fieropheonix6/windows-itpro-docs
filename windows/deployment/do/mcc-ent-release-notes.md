@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
-ms.date: 06/16/2025
+ms.date: 07/07/2025
 ---
 
 # Release Notes for Microsoft Connected Cache for Enterprise and Education
@@ -20,13 +20,13 @@ This article contains details about the latest releases of Connected Cache. Sinc
 
 ## General Availability Release
 
-Released on **7/09/2025**
+Released on **7/16/2025**
 
 This release contains improvements that can only be applied by redeploying your cache nodes using the updated Linux-hosted installation scripts or new Connected Cache Windows application.
 
 ### New Connected Cache container version
 
-- v1.2.1.2100_E
+- v1.2.1.2107_E
 
 ### New Linux-hosted installation script version
 
@@ -68,7 +68,7 @@ This release contains improvements that can only be applied by redeploying your 
 
 - **Connected Cache WSL distribution now uses Ubuntu 24.04**: The Windows Subsystem for Linux (WSL) distribution used by Connected Cache has been updated to Ubuntu 24.04 (was 22.04). This change ensures that the WSL distribution is up-to-date with the latest security patches and features.
 - **Connected Cache container now uses Ubuntu 24.04 Docker environment**: The Connected Cache container now runs using an Ubuntu 24.04 Docker environment (was 22.04). This change ensures that the container environment is up-to-date with the latest security patches and features.
-- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation.
+- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation. Added an intermediate certificate verification step to the installation process on both Windows-hosted and Linux-hosted cache nodes. Calls to *.prod.do.dsp must be enabled for installation to succeed.
 - **Security improvements**: Kept intentionally vague to protect previous versions of Connected Cache.
 
 ### Improvements to Linux-hosted cache nodes

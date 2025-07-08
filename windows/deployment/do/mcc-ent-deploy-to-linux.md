@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 06/15/2025
+ms.date: 07/07/2025
 appliesto: 
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -18,6 +18,8 @@ appliesto:
 This article describes how to deploy Microsoft Connected Cache for Enterprise and Education caching software to a Linux host machine.
 
 Before deploying Connected Cache to a Linux host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource and cache node](mcc-ent-create-resource-and-cache.md).
+
+For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com).
 
 ## Steps to deploy Connected Cache cache node to Linux
 
