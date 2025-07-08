@@ -24,7 +24,7 @@ Deploying Connected Cache to a Windows host machine requires designating a [Grou
 
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
 
-For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com).
+For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com) to bypass the proxy's interception, otherwise the certificate chain will be broken and cache node deployment will fail.
 
 ## Steps to deploy Connected Cache node to Windows
 
