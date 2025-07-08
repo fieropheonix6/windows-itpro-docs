@@ -21,6 +21,8 @@ Deploying Connected Cache to a Windows host machine requires designating a [Grou
 
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
 
+For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com).
+
 ## Steps to deploy Connected Cache node to Windows
 
 # [Azure portal](#tab/portal)
@@ -29,7 +31,7 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
 1. Download the provisioning package using the option at the top of the Cache Node Configuration page and extract the archive onto the host machine.
 
    >[!Note]
-   >* The provisioning package should be extracted to a directory that isn't synced to OneDrive, as the sychronization process will interfere with the installation. It is recommended to extract the provisioning package to the root directory of the host machine (e.g. C:\mccInstaller)
+   >* The provisioning package should be extracted to a directory that isn't synced to OneDrive, as the synchronization process will interfere with the installation. It is recommended to extract the provisioning package to the root directory of the host machine (e.g. C:\mccInstaller)
 
 1. Open a PowerShell window *as administrator* on the host machine, then change directory to the extracted provisioning package.
 

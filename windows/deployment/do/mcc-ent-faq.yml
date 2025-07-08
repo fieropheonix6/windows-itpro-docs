@@ -23,7 +23,7 @@ summary: |
 sections:
   - name: Ignored
     questions:
-      - question: What are the licesning requirement?
+      - question: What are the licensing requirement?
         answer: Microsoft Connected Cache for Enterprise and Education is available to all Windows E3, E5 and F3 and Education A3 and A5 customers.
       - question: Is there a charge to create Connected Cache resources and cache node on Azure?
         answer: No. You won't be charged to create Connected Cache resource and cache nodes on Azure. However, you need an Azure pay-as-you-go subscription to create the resources but there is no charge for the resource itself.
