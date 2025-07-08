@@ -37,7 +37,7 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
 
 # [Azure CLI](#tab/cli)
 
-To deploy a cache node programmatically, you'll need to use Azure CLI to get the cache node's deployment details and then run the deployment command on the host machine.
+To deploy a cache node programmatically, you need to use Azure CLI to get the cache node's deployment details and then run the deployment command on the host machine.
 
 1. To get the cache node's deployment details, use `az mcc ent node get-deployment-details`
 
@@ -45,7 +45,7 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
    az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
    ```
 
-1. Save the resulting output. These values will be passed as parameters within the deployment command.
+1. Save the resulting output. These values are passed as parameters within the deployment command.
 1. Download and extract the [Connected Cache deployment package for Linux](https://aka.ms/MCC-Ent-InstallScript-Linux) to your host machine.
 1. Open a command line window *as administrator* on the host machine, then change directory to the extracted deployment package.
 
@@ -70,14 +70,14 @@ To deploy a cache node programmatically, you'll need to use Azure CLI to get the
 | `-customerkey` | The unique customer key for your Connected Cache Azure resource. This is available in the Azure portal on the **Cache Node Configuration** page. |
 | `-registrationkey` | The unique registration key for your Connected Cache node. This is available in the Azure portal on the **Cache Node Configuration** page. This registration key will be refreshed after each successful deployment attempt of this cache node. |
 | `-drivepathandsizeingb` | The drive path and amount of storage that the cache node will use. This should be formatted as `"<PATH>,<SIZE>"`, where `<PATH>` is the desired drive path and `<SIZE>` is the desired size of the cache node in GB. You can specify multiple drives using `"<PATH1>,<SIZE1>,<PATH2><SIZE2>..."`|
-| `-rebootBypass` | If set to `$true`, the Connected Cache installation process will not check for pending reboot on the host machine. This is optional and defaults to `$false`. |
-| `-shouldUseProxy` | If set to `$true`, the deployed cache node will communicate through your proxy server. This is optional and defaults to `$false`. |
+| `-rebootBypass` | If set to `$true`, the Connected Cache installation process won't check for pending reboot on the host machine. This is optional and defaults to `$false`. |
+| `-shouldUseProxy` | If set to `$true`, the deployed cache node communicates through your proxy server. This is optional and defaults to `$false`. |
 | `-proxyurl` | The URL of the proxy server for the cache node use. This is optional and only needed if you're using a proxy server. For example, `-proxyurl "http://proxy.example.com:8080"`. |
 | `-proxytlscertificatepath` | The path of the proxy certificate file in PEM format. This is optional and only needed if you're using a TLS-inspecting proxy. For example, `-proxytlscertificatepath="/path/to/pem/file"`. |
 
 ## Steps to point Windows client devices at Connected Cache node
 
-Once you have successfully deployed Connected Cache to your Linux host machine, you'll need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
+Once you have successfully deployed Connected Cache to your Linux host machine, you need to configure your Windows client devices to request Microsoft content from the Connected Cache node.
 
 You can do this by setting the [DOCacheHost or DOCacheHostSource policies via Intune](./waas-delivery-optimization-reference.md#cache-server-hostname).
 
