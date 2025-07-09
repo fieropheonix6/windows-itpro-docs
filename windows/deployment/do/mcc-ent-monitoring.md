@@ -92,6 +92,8 @@ If you created cache nodes during public preview, the **Migrated** column helps 
 
 ## Advanced Monitoring
 
+### Customizable Azure portal charts
+
 To expand upon the metrics shown in the Overview tab, navigate to the **Metrics** tab in the left side toolbar of Azure portal.
 
 Listed below are the metrics you can access in this section:
@@ -102,8 +104,6 @@ Listed below are the metrics you can access in this section:
 | Hits | The number of times your Connected Cache node fulfills a content request by pulling from its cache. |
 | Misses | The number of times your Connected Cache node isn't able to fulfill a content request by pulling from its cache |
 
-### Customizable Dashboards
-
 Once you select the charts you would like to track, you can save them to a personalized dashboard. You can configure the chart title, filters, range, legend, and more. You can also use this personalized dashboard to set up alerts that notify you if your Connected Cache node dips in performance.
 
 Some example scenarios where you would want to set up a custom alert:
@@ -111,6 +111,16 @@ Some example scenarios where you would want to set up a custom alert:
 - My Connected Cache node is being shown as unhealthy and I want to know exactly when it stopped egressing last
 - A new Microsoft Word update was released last night and I want to know if my Connected Cache node is helping deliver this content to my Windows devices
 
-## Client-Side Metrics
+### Terse summary page
+
+When your cache node is up and running, you can access a web-based summary page that provides a terse overview of the cache node's status and performance. This page is accessible at the following URL.
+
+```HTML
+https://localhost:5000/details?apiKey=DOINC_Microsoft_Internal__D0508632-1B4D-431C-9EF3-49285AF4DC1F
+```
+
+This page is only accessible from the host machine where the Connected Cache node is deployed.
+
+## Client device metrics
 
 Your Connected Cache node can keep track of how much content has been sent to requesting Windows devices, but the node can't track whether the content was successfully received by the device. For more information on accessing client-side data from your Windows devices, see [Monitor Delivery Optimization](waas-delivery-optimization-monitor.md).
