@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a> 
-ms.date: 10/30/2024
+ms.date: 06/17/2025
 ---
 # Configure container update frequency for Microsoft Connected Cache for Enterprise and Education
 
@@ -43,6 +43,53 @@ Configuring a Connected Cache node to update as part of the `Slow` ring provides
 | Week of the month | 1st to 4th week can be selected. There are three to four months in a year that could have a fifth week. If there's a fifth week, the update could be applied during that fifth week if the day of the week falls near the last day of the month.|
 | Day of the week | Monday through Sunday can be selected. |
 | Time of day | Time of day is based on UTC and a 24 hour clock. |
+
+![Screenshot of a calendar showing how weeks are counted.](images/mcc-ent-update-calendar.png)
+
+## Updating Connected Cache Linux Components
+
+As part of the Connected Cache installation process, there are several packages and kernel-level configurations that are installed and configured within the Connected Cache Linux environment to optimize delivery. If Connected Cache is deployed to a Linux host machine, these packages and configurations are made to the host machine itself. If Connected Cache is deployed to a Windows host machine, these packages and configurations are made to the Windows Subsystem for Linux (WSL) distribution.
+
+These packages and kernel-level configuration may need to be updated for several reasons, such as security and compatibility. Note that while Connected Cache uses Azure IoT Edge as its container orchestration layer, this guidance is focused on the host-level implications and configurations.
+
+### Package Version Updates
+
+The following packages are updated as part of MCC lifecycle operations.
+
+#### Azure IoT Edge and Identity Service Versions
+
+Microsoft Connected Cache is deployed as an Azure IoT Edge module today and the IoT Edge runtime and associated identity services are updated to ensure compatibility with Microsoft Connected Cache container images.
+
+##### Docker Server and Client Versions
+
+Azure IoT Edge uses Moby-based Docker components (`moby-engine`, `moby-cli`) for container management. These are updated to maintain compatibility with the Azure IoT Edge infrastructure.
+
+### Kernel Network Configuration
+
+The Microsoft Connected Cache installation modifies kernel-level configurations for performance tuning and updates to these configurations may be required to ensure efficient, performant delivery of content to your network.
+
+The following kernel parameters are commonly tuned on MCC Linux hosts to optimize network performance and container behavior:
+
+* net.ipv4.tcp_congestion_control
+* net.core.default_qdisc
+* net.core.somaxconn
+* net.ipv4.ip_local_port_range
+* net.ipv4.tcp_rmem
+* net.ipv4.tcp_wmem
+* net.ipv4.tcp_mem
+* net.netfilter.nf_conntrack_max
+* net.nf_conntrack_max
+* net.core.optmem_max
+
+#### Cleanup of Old Docker Images
+
+The update process includes cleanup of outdated or unused Docker images, including:
+
+* edgeAgent
+* edgeHub
+* mcc
+
+This ensures disk space is reclaimed and only current versions are retained.
 
 ## Update process
 
