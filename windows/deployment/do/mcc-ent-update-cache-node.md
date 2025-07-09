@@ -44,7 +44,7 @@ Configuring a Connected Cache node to update as part of the `Slow` ring provides
 | Day of the week | Monday through Sunday can be selected. |
 | Time of day | Time of day is based on UTC and a 24 hour clock. |
 
-![Screenshot of a calendar showing how weeks are counted.](images/mcc-ent-upd-cal.png)
+![Screenshot of a calendar showing how weeks are counted.](images/mcc-ent-update-calendar.png)
 
 ## Updating Connected Cache Linux Components
 
