@@ -80,6 +80,8 @@ The **Cache Nodes** section under the **Cache Node Management** tab displays cac
 | Cache node ID | The unique identifier of the cache node. |
 | Migrated | Indicates whether the cache node has been migrated from the public preview to the generally available version of Microsoft Connected Cache. |
 
+#### GA migration status
+
 If you created cache nodes during public preview, the **Migrated** column helps you determine whether the cache nodes have been migrated to the generally available release of Connected Cache.
 
 | Value | Description |
