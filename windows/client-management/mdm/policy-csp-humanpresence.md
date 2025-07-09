@@ -1,7 +1,7 @@
 ---
 title: HumanPresence Policy CSP
 description: Learn more about the HumanPresence Area in Policy CSP.
-ms.date: 04/04/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -629,7 +629,6 @@ Determines whether the Onlooker Detection action is forced by the MDM policy. Th
 |:--|:--|
 | 3 | ForcedDimAndNotify. |
 | 2 | ForcedNotify. |
-| 1 | ForcedDim. |
 | 0 (Default) | DefaultToUserChoice. |
 <!-- ForceOnlookerDetectionAction-AllowedValues-End -->
 

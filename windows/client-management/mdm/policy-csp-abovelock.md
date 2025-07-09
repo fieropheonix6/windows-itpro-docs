@@ -1,7 +1,7 @@
 ---
 title: AboveLock Policy CSP
 description: Learn more about the AboveLock Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 06/09/2025
 ms.topic: generated-reference
 ---
 
@@ -9,6 +9,8 @@ ms.topic: generated-reference
 
 <!-- AboveLock-Begin -->
 # Policy CSP - AboveLock
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- AboveLock-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -181,6 +183,66 @@ Specifies whether to allow toast notifications above the device lock screen. Mos
 <!-- AllowToasts-Examples-End -->
 
 <!-- AllowToasts-End -->
+
+<!-- ConfigureAudioOnLockScreen-Begin -->
+## ConfigureAudioOnLockScreen
+
+<!-- ConfigureAudioOnLockScreen-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- ConfigureAudioOnLockScreen-Applicability-End -->
+
+<!-- ConfigureAudioOnLockScreen-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/AboveLock/ConfigureAudioOnLockScreen
+```
+<!-- ConfigureAudioOnLockScreen-OmaUri-End -->
+
+<!-- ConfigureAudioOnLockScreen-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy will allow the audio above lock screen to be managed by IT admins and allow apps like digital signage to play audio above lock screen without having a user signed on.
+<!-- ConfigureAudioOnLockScreen-Description-End -->
+
+<!-- ConfigureAudioOnLockScreen-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ConfigureAudioOnLockScreen-Editable-End -->
+
+<!-- ConfigureAudioOnLockScreen-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- ConfigureAudioOnLockScreen-DFProperties-End -->
+
+<!-- ConfigureAudioOnLockScreen-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | No audio playback or recording on lock screen (aside from OS defined exceptions). |
+| 1 | Audio playback allowed on lock screen. Audio recording isn't allowed. |
+| 2 | Audio playback and recording allowed on lock screen. |
+<!-- ConfigureAudioOnLockScreen-AllowedValues-End -->
+
+<!-- ConfigureAudioOnLockScreen-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | ConfigureAudioOnLockScreen |
+| Path | Audio > AT > WindowsComponents > Audio |
+| Element Name | ConfigureAudioOnLockScreen_Enum |
+<!-- ConfigureAudioOnLockScreen-GpMapping-End -->
+
+<!-- ConfigureAudioOnLockScreen-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ConfigureAudioOnLockScreen-Examples-End -->
+
+<!-- ConfigureAudioOnLockScreen-End -->
 
 <!-- AboveLock-CspMoreInfo-Begin -->
 <!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->

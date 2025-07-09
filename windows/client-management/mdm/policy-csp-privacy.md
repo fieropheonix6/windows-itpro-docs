@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy CSP
 description: Learn more about the Privacy Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 06/10/2025
 ms.topic: generated-reference
 ---
 

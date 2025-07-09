@@ -1,7 +1,7 @@
 ---
 title: Policies supported by Windows 10 Team
 description: Learn about the policies supported by Windows 10 Team.
-ms.date: 02/13/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -175,6 +175,7 @@ This article lists the policies that are applicable for the Surface Hub operatin
 - [DisableTlsParsing](defender-csp.md#configurationdisabletlsparsing)
 - [EnableConvertWarnToBlock](defender-csp.md#configurationenableconvertwarntoblock)
 - [EnableDnsSinkhole](defender-csp.md#configurationenablednssinkhole)
+- [EnableDynamicSignatureDroppedEventReporting](defender-csp.md#configurationreportingenabledynamicsignaturedroppedeventreporting)
 - [EnableFileHashComputation](defender-csp.md#configurationenablefilehashcomputation)
 - [EnableUdpReceiveOffload](defender-csp.md#configurationenableudpreceiveoffload)
 - [EnableUdpSegmentationOffload](defender-csp.md#configurationenableudpsegmentationoffload)
@@ -218,6 +219,7 @@ This article lists the policies that are applicable for the Surface Hub operatin
 - [RemoteEncryptionProtectionConfiguredState](defender-csp.md#configurationbehavioralnetworkblocksremoteencryptionprotectionremoteencryptionprotectionconfiguredstate)
 - [RemoteEncryptionProtectionExclusions](defender-csp.md#configurationbehavioralnetworkblocksremoteencryptionprotectionremoteencryptionprotectionexclusions)
 - [RemoteEncryptionProtectionMaxBlockTime](defender-csp.md#configurationbehavioralnetworkblocksremoteencryptionprotectionremoteencryptionprotectionmaxblocktime)
+- [Reporting](defender-csp.md#configurationreporting)
 - [RollbackEngine](defender-csp.md#rollbackengine)
 - [RollbackPlatform](defender-csp.md#rollbackplatform)
 - [RtpEnabled](defender-csp.md#healthrtpenabled)
@@ -384,6 +386,7 @@ This article lists the policies that are applicable for the Surface Hub operatin
 ## Start
 
 - [AlwaysShowNotificationIcon](policy-csp-start.md#alwaysshownotificationicon)
+- [HideCategoryView](policy-csp-start.md#hidecategoryview)
 - [HideRecommendedPersonalizedSites](policy-csp-start.md#hiderecommendedpersonalizedsites)
 - [StartLayout](policy-csp-start.md#startlayout)
 - [TurnOffAbbreviatedDateTimeFormat](policy-csp-start.md#turnoffabbreviateddatetimeformat)

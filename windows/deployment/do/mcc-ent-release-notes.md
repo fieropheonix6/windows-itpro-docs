@@ -46,7 +46,7 @@ This release contains improvements that can only be applied by redeploying your 
 ### Improvements to Linux-hosted cache nodes
 
 - **Connected Cache container now uses Ubuntu 24.04 Docker environment**: The Connected Cache container now runs using an Ubuntu 24.04 Docker environment (was 22.04). This change ensures that the container environment is up-to-date with the latest security patches and features.
-- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation.
+- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation. Added an intermediate certificate verification step to the installation process on both Windows-hosted and Linux-hosted cache nodes. Calls to *.prod.do.dsp must be enabled for installation to succeed.
 - **Security improvements**: Kept intentionally vague to protect previous versions of Connected Cache.
 
 ## Windows-hosted install script v2.0.0.2

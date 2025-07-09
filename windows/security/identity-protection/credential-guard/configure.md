@@ -191,29 +191,6 @@ Open the Event Viewer (`eventvwr.exe`) and go to `Windows Logs\System` and filte
   :::column-end:::
 :::row-end:::
 
-The following event indicates whether TPM is used for key protection. Path: `Applications and Services logs > Microsoft > Windows > Kernel-Boot`
-
-:::row:::
-  :::column span="1":::
-  **Event ID**
-  :::column-end:::
-  :::column span="3":::
-  **Description**
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column span="1":::
-  51 (Information)
-  :::column-end:::
-  :::column span="3":::
-  ```logging
-  VSM Master Encryption Key Provisioning. Using cached copy status: 0x0. Unsealing cached copy status: 0x1. New key generation status: 0x1. Sealing status: 0x1. TPM PCR mask: 0x0.
-  ```
-  :::column-end:::
-:::row-end:::
-
-The TPM PCR mask is only relevant when SRTM is used. If the cached Copy status is 1, SRTM was not used - typically indicating DRTM is in use - and the PCR mask should be ignored.
-
 ## Disable Credential Guard
 
 There are different options to disable Credential Guard. The option you choose depends on how Credential Guard is configured:

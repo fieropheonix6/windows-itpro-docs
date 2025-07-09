@@ -1,7 +1,7 @@
 ---
 title: eUICCs CSP
 description: Learn more about the eUICCs CSP.
-ms.date: 03/12/2025
+ms.date: 06/09/2025
 ms.topic: generated-reference
 ---
 
@@ -9,6 +9,8 @@ ms.topic: generated-reference
 
 <!-- eUICCs-Begin -->
 # eUICCs CSP
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- eUICCs-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -27,7 +29,9 @@ The following list shows the eUICCs configuration service provider nodes:
       - [{ServerName}](#euiccdownloadserversservername)
         - [AutoEnable](#euiccdownloadserversservernameautoenable)
         - [DiscoveryState](#euiccdownloadserversservernamediscoverystate)
+        - [ICCID](#euiccdownloadserversservernameiccid)
         - [IsDiscoveryServer](#euiccdownloadserversservernameisdiscoveryserver)
+        - [MaximumAttempts](#euiccdownloadserversservernamemaximumattempts)
     - [Identifier](#euiccidentifier)
     - [IsActive](#euiccisactive)
     - [Policies](#euiccpolicies)
@@ -370,6 +374,45 @@ Current state of the discovery operation for this server (Requested = 1, Executi
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-DiscoveryState-End -->
 
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Begin -->
+##### {eUICC}/DownloadServers/{ServerName}/ICCID
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Applicability-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/eUICCs/{eUICC}/DownloadServers/{ServerName}/ICCID
+```
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-OmaUri-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Description-Begin -->
+<!-- Description-Source-DDF -->
+The ICCID of the eSIM profile downloaded as a result of successfully running the eSIM bulk activation process policy.
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Description-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Editable-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `chr` (string) |
+| Access Type | Get |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-DFProperties-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Examples-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-End -->
+
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-Begin -->
 ##### {eUICC}/DownloadServers/{ServerName}/IsDiscoveryServer
 
@@ -418,6 +461,46 @@ Indicates whether the server is a discovery server or if it's used for bulk down
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-Examples-End -->
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Begin -->
+##### {eUICC}/DownloadServers/{ServerName}/MaximumAttempts
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Applicability-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/eUICCs/{eUICC}/DownloadServers/{ServerName}/MaximumAttempts
+```
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-OmaUri-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Description-Begin -->
+<!-- Description-Source-DDF -->
+How many times profile download should be attempted before giving up. A value of 0 indicates unlimited retry attempts. When a value isn't specified, it defaults to 50, which is equivalent to about a month of retry attempts.
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Description-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Editable-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Get, Replace |
+| Default Value  | 50 |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-DFProperties-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Examples-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-End -->
 
 <!-- Device-{eUICC}-Identifier-Begin -->
 ### {eUICC}/Identifier

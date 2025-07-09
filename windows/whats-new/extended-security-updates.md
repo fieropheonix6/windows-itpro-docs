@@ -8,7 +8,7 @@ author: mestew
 manager: bpardi
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 05/21/2025
+ms.date: 06/25/2025
 ms.collection:
   - highpri
   - tier2
@@ -18,7 +18,7 @@ appliesto:
 
 # Extended Security Updates (ESU) program for Windows 10
 <!-- 8280171-->
-> **Looking for consumer information?** For individuals or Windows 10 Home customers, more information about Extended Security Updates for Windows 10 is available in the frequently asked questions section of the [End of support for Windows 10](https://www.microsoft.com/windows/end-of-support) page. <!--10013381-->
+> **Looking for consumer information?** For individuals or Windows 10 Home customers, more information about Extended Security Updates for Windows 10 is available in the frequently asked questions section of the [End of support for Windows 10](https://www.microsoft.com/windows/end-of-support) page. For information on how to enroll in ESU, see [Windows 10 Consumer Extended Security Updates (ESU) program](https://support.microsoft.com/windows/33e17de9-36b3-43bb-874d-6c53d2e4bf42).<!--10013381-->
 
 The Windows 10 Extended Security Updates (ESU) program gives customers the option to receive security updates for PCs enrolled in the program. ESU is a paid program that provides individuals and organizations of all sizes with the option to extend the use of Windows 10 devices past the end of support date in a more secure manner. For more information about the Windows 10 lifecycle, see the [Windows Lifecycle FAQ](/lifecycle/faq/windows).
 
@@ -36,7 +36,7 @@ ESUs doesn't include the following items:
 - New features
 - Customer-requested nonsecurity updates
 - Design change requests
-- General support won't be provided for Windows versions past the end of support date. The Windows 10 ESU only includes support for the license activation, installation, and possible regressions of the ESU itself. To get technical support for the ESU, organizations must have an active [support plan](https://www.microsoft.com/microsoft-unified) in place. <!--9913216-->
+- General support won't be provided for Windows versions past the end of support date. The Windows 10 ESU only includes support for the license activation, installation, and possible regressions of the ESU itself. To get technical support for these issues related to the ESU, organizations must have an active [support plan](https://www.microsoft.com/microsoft-unified) in place. <!--9913216-->
 
 
 
@@ -74,7 +74,7 @@ The Extended Security Update Program for Windows 10 must be purchased by year. C
 
 ### When will the ESU offer be available for licensing?
 
-Windows 10 ESU will be available in volume licensing starting about 12 months before the end of support date of Windows 10, or late 2024.
+Windows 10 ESU licenses are available to purchase in volume licensing. However, the ESU Multiple Activation Keys displayed in the Microsoft 365 admin center volume licensing Product Details panel are not usable until the end of support date of Windows 10, which is when the defined ESU coverage period begins. For more information, see [Get the product keys for activating Extended Security Update (ESU) licenses](enable-extended-security-updates.md#get-the-product-keys-for-activating-extended-security-update-esu-licenses).
 
 ### How long can I get security updates for?
 

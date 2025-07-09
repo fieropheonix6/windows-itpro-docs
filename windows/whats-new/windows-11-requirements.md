@@ -11,7 +11,7 @@ ms.collection:
   - highpri
   - tier1
 ms.subservice: itpro-fundamentals
-ms.date: 03/13/2024
+ms.date: 06/17/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 
@@ -45,8 +45,6 @@ To install or upgrade to Windows 11, devices must meet the following minimum har
 - **Internet connection**: Internet connectivity is necessary to perform updates, and to download and use some features.
 
   - Windows 11 Home edition requires an internet connection and a Microsoft Account to complete device setup on first use.
-
-For more information, see the following Windows Insider blog post: [Update on Windows 11 minimum system requirements](https://blogs.windows.com/windows-insider/2021/06/28/update-on-windows-11-minimum-system-requirements/).
 
 For more information about tools to evaluate readiness, see [Determine eligibility](windows-11-plan.md#determine-eligibility).
 

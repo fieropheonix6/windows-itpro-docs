@@ -1,7 +1,7 @@
 ---
 title: Defender Policy CSP
 description: Learn more about the Defender Area in Policy CSP.
-ms.date: 04/04/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -41,7 +41,7 @@ This policy setting allows you to configure scans for malicious software and unw
 <!-- AllowArchiveScanning-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowArchiveScanning-Editable-End -->
 
 <!-- AllowArchiveScanning-DFProperties-Begin -->
@@ -110,7 +110,7 @@ This policy setting allows you to configure behavior monitoring.
 <!-- AllowBehaviorMonitoring-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowBehaviorMonitoring-Editable-End -->
 
 <!-- AllowBehaviorMonitoring-DFProperties-Begin -->
@@ -192,7 +192,7 @@ In Windows 10, Basic membership is no longer available, so setting the value to 
 <!-- AllowCloudProtection-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowCloudProtection-Editable-End -->
 
 <!-- AllowCloudProtection-DFProperties-Begin -->
@@ -461,7 +461,7 @@ Allows or disallows Windows Defender Intrusion Prevention functionality.
 <!-- AllowIntrusionPreventionSystem-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowIntrusionPreventionSystem-Editable-End -->
 
 <!-- AllowIntrusionPreventionSystem-DFProperties-Begin -->
@@ -516,7 +516,7 @@ This policy setting allows you to configure scanning for all downloaded files an
 <!-- AllowIOAVProtection-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowIOAVProtection-Editable-End -->
 
 <!-- AllowIOAVProtection-DFProperties-Begin -->
@@ -585,7 +585,7 @@ This policy setting allows you to configure monitoring for file and program acti
 <!-- AllowOnAccessProtection-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowOnAccessProtection-Editable-End -->
 
 <!-- AllowOnAccessProtection-DFProperties-Begin -->
@@ -650,7 +650,7 @@ Allows or disallows Windows Defender Realtime Monitoring functionality.
 <!-- AllowRealtimeMonitoring-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowRealtimeMonitoring-Editable-End -->
 
 <!-- AllowRealtimeMonitoring-DFProperties-Begin -->
@@ -713,12 +713,12 @@ Allows or disallows Windows Defender Realtime Monitoring functionality.
 
 <!-- AllowScanningNetworkFiles-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-This policy setting allows you to configure scheduled scans and on-demand (manually initiated) scans for files that are accessed over the network. It is recommended to enable this setting.
+This policy setting allows you to configure scheduled scans and on-demand (manually initiated) scans for files that are accessed over the network. It's recommended to enable this setting.
 >[!NOTE]
-> Real-time protection (on-access) scanning is not impacted by this policy.  
+> Real-time protection (on-access) scanning isn't impacted by this policy.  
 
-- If you enable this setting or do not configure this setting, network files will be scanned.
-- If you disable this setting, network files will not be scanned.
+- If you enable this setting or don't configure this setting, network files will be scanned.
+- If you disable this setting, network files won't be scanned.
 <!-- AllowScanningNetworkFiles-Editable-End -->
 
 <!-- AllowScanningNetworkFiles-DFProperties-Begin -->
@@ -783,7 +783,7 @@ Allows or disallows Windows Defender Script Scanning functionality.
 <!-- AllowScriptScanning-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowScriptScanning-Editable-End -->
 
 <!-- AllowScriptScanning-DFProperties-Begin -->
@@ -1619,7 +1619,7 @@ This policy setting allows you to configure catch-up scans for scheduled full sc
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that's initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
-- If you disable or don't configure this setting, catch-up scans for scheduled quick scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there is no scheduled scan configured, there will be no catch-up scan run.
+- If you disable or don't configure this setting, catch-up scans for scheduled quick scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there's no scheduled scan configured, there will be no catch-up scan run.
 
 - If you enable this setting, catch-up scans for scheduled quick scans will be disabled.
 <!-- DisableCatchupQuickScan-Editable-End -->
@@ -2868,7 +2868,9 @@ Valid remediation action values are:
 <!-- ThreatSeverityDefaultAction-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+>
+> - **Ignore** is the same as **Allow** in [Microsoft Defender for Endpoint Security Settings Management](/defender-endpoint/mde-security-settings-management), [Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy), and Defender Powershell module: [Set-MpPreference](/powershell/module/defender/set-mppreference).
+> - Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- ThreatSeverityDefaultAction-Editable-End -->
 
 <!-- ThreatSeverityDefaultAction-DFProperties-Begin -->

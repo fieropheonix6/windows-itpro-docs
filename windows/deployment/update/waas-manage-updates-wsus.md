@@ -15,7 +15,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus > WSUS </a>
-ms.date: 04/22/2024
+ms.date: 06/17/2025
 ---
 
 # Deploy Windows client updates using Windows Server Update Services (WSUS)
@@ -27,26 +27,22 @@ WSUS is a Windows Server role available in the Windows Server operating systems.
 
 When you choose WSUS as your source for Windows updates, you use Group Policy to point Windows client devices to the WSUS server for their updates. From there, updates are periodically downloaded to the WSUS server and managed, approved, and deployed through the WSUS administration console or Group Policy, streamlining enterprise update management. If you're currently using WSUS to manage Windows updates in your environment, you can continue to do so in Windows 11.
 
-
+> [!NOTE]
+> WSUS is deprecated and is no longer adding new features. However, it continues to be supported for production deployments, and receives security and quality updates as per the product lifecycle. For more info, see [Features removed or no longer developed in Windows Server](/windows-server/get-started/removed-deprecated-features-windows-server).
 
 ## Requirements for Windows client servicing with WSUS
 
-To be able to use WSUS to manage and deploy Windows feature updates, you must use a supported WSUS version:
-- WSUS 10.0.14393 (role in Windows Server 2016)
-- WSUS 10.0.17763 (role in Windows Server 2019)
-- WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
-- KB 3095113 and KB 3159706 (or an equivalent update) must be installed on WSUS 6.2 and 6.3.
+To be able to use WSUS to manage and deploy Windows feature updates, you must use a supported WSUS on a supported operating system version:
+- WSUS role in Windows Server 2016
+- WSUS role in Windows Server 2019
+- WSUS role in Windows Server 2022
+- WSUS role in Windows Server 2025
 
-> [!IMPORTANT]
-> Both [KB 3095113](https://support.microsoft.com/kb/3095113) and [KB 3159706](https://support.microsoft.com/kb/3159706) are included in the **Security Monthly Quality Rollup** starting in July 2017. This means you might not see KB 3095113 and KB 3159706 as installed updates since they might have been installed with a rollup. However, if you need either of these updates, we recommend installing a **Security Monthly Quality Rollup** released after **October 2017** since they contain an additional WSUS update to decrease memory utilization on WSUS's clientwebservice.
->If you have synced either of these updates prior to the security monthly quality rollup, you can experience problems. To recover from this, see [How to Delete Upgrades in WSUS](/archive/blogs/wsus/how-to-delete-upgrades-in-wsus).
-
+For more information about deploying the WSUS role, see [Windows Server Update Services (WSUS) overview](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
 
 ## WSUS scalability
 
 To use WSUS to manage all Windows updates, some organizations may need access to WSUS from a perimeter network, or they might have some other complex scenario. WSUS is highly scalable and configurable for organizations of any size or site layout. For specific information about scaling WSUS, including upstream and downstream server configuration, branch offices, WSUS load balancing, and other complex scenarios, see [Deploy Windows Server Update Services](/windows-server/administration/windows-server-update-services/deploy/deploy-windows-server-update-services).
-
-
 
 
 ## Configure automatic updates and update service location
@@ -64,7 +60,7 @@ When using WSUS to manage updates on Windows client devices, start by configurin
    ![Create a GPO in this domain example in the UI.](images/waas-wsus-fig3.png)
 
    >[!NOTE]
-   >In this example, the **Configure Automatic Updates** and **Intranet Microsoft Update Service Location** Group Policy settings are specified for the entire domain. This is not a requirement; you can target these settings to any security group by using Security Filtering or a specific OU.
+   >In this example, the **Configure Automatic Updates** and **Intranet Microsoft Update Service Location** Group Policy settings are specified for the entire domain. This isn't a requirement; you can target these settings to any security group by using Security Filtering or a specific OU.
 
 4. In the **New GPO** dialog box, name the new GPO **WSUS - Auto Updates and Intranet Update Service Location**.
 
@@ -83,10 +79,8 @@ When using WSUS to manage updates on Windows client devices, start by configurin
    ![Select Auto download and notify for install in the UI.](images/waas-wsus-fig5.png)
 
    >[!IMPORTANT]
-   > Use Regedit.exe to check that the following key is not enabled, because it can break Windows Store connectivity: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\DoNotConnectToWindowsUpdateInternetLocations
-
-   > [!NOTE]
-   > There are three other settings for automatic update download and installation dates and times. This is simply the option this example uses. For more examples of how to control automatic updates and other related policies, see [Configure Automatic Updates by Using Group Policy](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates).
+   > - Use Regedit.exe to check that the following key isn't enabled, because it can break Windows Store connectivity: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\DoNotConnectToWindowsUpdateInternetLocations
+   > - There are three other settings for automatic update download and installation dates and times. This is simply the option this example uses. For more examples of how to control automatic updates and other related policies, see [Configure Automatic Updates by Using Group Policy](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates).
 
 10. Right-click the **Specify intranet Microsoft update service location** setting, and then select **Edit**.
 
@@ -94,20 +88,15 @@ When using WSUS to manage updates on Windows client devices, start by configurin
 
 12. Under **Options**, in the **Set the intranet update service for detecting updates** and **Set the intranet statistics server** options, type `http://Your_WSUS_Server_FQDN:PortNumber`, and then select **OK**.
 
+    ![Set the intranet statistics server in the UI.](images/waas-wsus-fig6.png)
+
     >[!NOTE]
-    >The URL `http://CONTOSO-WSUS1.contoso.com:8530` in the following image is just an example. In your environment, be sure to use the server name and port number for your WSUS instance.
-
-     ![Set the intranet statistics server in the UI.](images/waas-wsus-fig6.png)
-
-     >[!NOTE]
-     >The default HTTP port for WSUS is 8530, and the default HTTP over Secure Sockets Layer (HTTPS) port is 8531. (The other options are 80 and 443; no other ports are supported.)
+    > - The URL `http://Your_WSUS_Server_FQDN:PortNumber` in the following image is just an example. In your environment, be sure to use the server name and port number for your WSUS instance.
+    > - The default HTTP port for WSUS is 8530, and the default HTTP over Secure Sockets Layer (HTTPS) port is 8531. (The other options are 80 and 443; no other ports are supported.)
 
 As Windows clients refresh their computer policies (the default Group Policy refresh setting is 90 minutes and when a computer restarts), computers start to appear in WSUS. Now that clients are communicating with the WSUS server, create the computer groups that align with your deployment rings.
 
 ## Create computer groups in the WSUS Administration Console
-
->[!NOTE]
->The following procedures use the groups from Table 1 in [Build deployment rings for Windows client updates](waas-deployment-rings-windows-10-updates.md) as examples.
 
 You can use computer groups to target a subset of devices that have specific quality and feature updates. These groups represent your deployment rings, as controlled by WSUS. You can populate the groups either manually by using the WSUS Administration Console or automatically through Group Policy. Regardless of the method you choose, you must first create the groups in the WSUS Administration Console.
 
@@ -174,7 +163,7 @@ You can now see these computers in the **Ring 3 Broad IT** computer group.
 
 ## Use Group Policy to populate deployment rings
 
-The WSUS Administration Console provides a friendly interface from which you can manage Windows 10 quality and feature updates. When you need to add many computers to their correct WSUS deployment ring, however, it can be time-consuming to do so manually in the WSUS Administration Console. For these cases, consider using Group Policy to target the correct computers, automatically adding them to the correct WSUS deployment ring based on an Active Directory security group. This process is called *client-side targeting*. Before enabling client-side targeting in Group Policy, you must configure WSUS to accept Group Policy computer assignment.
+The WSUS Administration Console provides a friendly interface from which you can manage Windows quality and feature updates. When you need to add many computers to their correct WSUS deployment ring, however, it can be time-consuming to do so manually in the WSUS Administration Console. For these cases, consider using Group Policy to target the correct computers, automatically adding them to the correct WSUS deployment ring based on an Active Directory security group. This process is called *client-side targeting*. Before enabling client-side targeting in Group Policy, you must configure WSUS to accept Group Policy computer assignment.
 
 **To configure WSUS to allow client-side targeting from Group Policy**
 
@@ -240,7 +229,7 @@ The next time the clients in the **Ring 4 Broad Business Users** security group 
 For clients that should have their feature updates approved as soon as they're available, you can configure Automatic Approval rules in WSUS.
 
 >[!NOTE]
->WSUS respects the client device's servicing branch. If you approve a feature update while it is still in one branch, such as Insider Preview, WSUS will install the update only on devices that are in that servicing branch. When Microsoft releases the build for the [General Availability Channel](waas-overview.md#general-availability-channel), the devices in that will install it. Windows Update client policies branch settings do not apply to feature updates through WSUS.
+>WSUS respects the client device's servicing branch. If you approve a feature update while it's still in one branch, such as Insider Preview, WSUS will install the update only on devices that are in that servicing branch. When Microsoft releases the build for the [General Availability Channel](waas-overview.md#general-availability-channel), the devices in that will install it. Windows Update client policies branch settings don't apply to feature updates through WSUS.
 
 
 **To configure an Automatic Approval rule for Windows client feature updates and approve them for the Ring 3 Broad IT deployment ring**
@@ -271,7 +260,7 @@ This example uses Windows 10, but the process is the same for Windows 11.
 9. In the **Automatic Approvals** dialog box, select **OK**.
 
     >[!NOTE]
-    >WSUS does not honor any existing month/week/day [deferral settings](waas-configure-wufb.md#configure-when-devices-receive-feature-updates). That said, if you're using Windows Update client policies for a computer for which WSUS is also managing updates, when WSUS approves the update, it will be installed on the computer regardless of whether you configured Group Policy to wait.
+    >WSUS doesn't honor any existing month/week/day [deferral settings](waas-configure-wufb.md#configure-when-devices-receive-feature-updates). That said, if you're using Windows Update client policies for a computer for which WSUS is also managing updates, when WSUS approves the update, it will be installed on the computer regardless of whether you configured Group Policy to wait.
 
 Now, whenever Windows client feature updates are published to WSUS, they'll automatically be approved for the **Ring 3 Broad IT** deployment ring with an installation deadline of 1 week.
 

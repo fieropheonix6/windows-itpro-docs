@@ -23,11 +23,17 @@ This article contains instructions on how to troubleshoot different issues you m
 
 This section describes known issues with the latest release of Microsoft Connected Cache for Enterprise and Education. See the [Release Notes page](mcc-ent-release-notes.md) for more details on the fixes included in the latest release.
 
+### Connected Cache Azure resource is missing from Scope selection under the "Metrics" tab
+
+You can create custom charts on the Connected Cache Azure portal by selecting the **Metrics** tab under the **Monitoring** section of the Connected Cache Azure resource. The Connected Cache Azure resource is correctly selected as the Scope by default, but if you change the selected Scope you're unable to reselect the Connected Cache Azure resource, preventing subsequent creation of custom charts.
+
+As a temporary workaround, you can navigate away from the **Metrics** tab and then return to it. The Connected Cache Azure resource is once again correctly selected as the Scope.
+
 ### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use Japanese language
 
 In the Connected Cache installation script (provisionmcconwsl.ps1), the check processing is executed until the value of the last execution code (Last Result) of the installation task becomes 0 in the following processing. However, in Japanese OS, the return value is null because "Last Result" is displayed, and an exception occurs.
 
-As a temporary workaround, the above error doesn't occur by changing the language setting of the local administrator user from Japanese to English and then executing the script.
+As a temporary workaround, you can change the language setting of the local administrator user from Japanese to English and then execute the script.
 
 ## Steps to obtain an Azure subscription ID
 
@@ -48,7 +54,7 @@ If you're encountering a validation error, check that you have filled out all re
 
 If your configuration doesn't appear to be taking effect, check that you have selected the **Save** option at the top of the configuration page in the Azure portal user interface.
 
-If you have changed the proxy configuration, you'll need to re-provision the Connected Cache software on the host machine for the proxy configuration to take effect.
+If you have changed the proxy configuration, you'll need to reprovision the Connected Cache software on the host machine for the proxy configuration to take effect.
 
 ## Troubleshooting cache nodes created during early preview
 

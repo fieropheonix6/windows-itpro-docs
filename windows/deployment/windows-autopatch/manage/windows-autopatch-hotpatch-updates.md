@@ -1,7 +1,7 @@
 ---
 title: Hotpatch updates
 description: Use Hotpatch updates to receive security updates without restarting your device
-ms.date: 04/11/2025
+ms.date: 07/04/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.collection:
 
 # Hotpatch updates
 
-Hotpatch updates are designed to reduce downtime and disruptions. Hotpatch updates are [Monthly B release security updates](/windows/deployment/update/release-cycle#monthly-security-update-release) that install and take effect without requiring you to restart the device. By minimizing the need to restart, these updates help ensure faster compliance, making it easier for organizations to maintain security while keeping workflows uninterrupted.
+With hotpatch updates, you can quickly take measures to help protect your organization from the evolving landscape of cyberattacks, while minimizing user disruptions. Hotpatch updates are [Monthly B release security updates](/windows/deployment/update/release-cycle#monthly-security-update-release) that install and take effect without requiring you to restart the device. By minimizing the need to restart, these updates help ensure faster compliance, making it easier for organizations to maintain security while keeping workflows uninterrupted.
 
 Hotpatch is an extension of Windows Update and requires Autopatch to create and deploy hotpatches to devices enrolled in the Autopatch quality update policy.
 
@@ -31,7 +31,7 @@ Hotpatch is an extension of Windows Update and requires Autopatch to create and 
 
 To benefit from Hotpatch updates, devices must meet the following prerequisites:
 
-- For licensing requirements, see [Prerequisites](../prepare/windows-autopatch-prerequisites.md)
+- One of the eligible licenses: Windows 11 Enterprise E3 or E5, Microsoft 365 F3, Windows 11 Education A3 or A5, Microsoft 365 Business Premium, or Windows 365 Enterprise  
 - Windows 11 Enterprise version 24H2 or later
 - Devices must be on the latest baseline release version to qualify for Hotpatch updates. Microsoft releases Baseline updates quarterly as standard cumulative updates. For more information on the latest schedule for these releases, see [Release notes for Hotpatch](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8?preview=true).
 - Microsoft Intune to manage hotpatch update deployment with the [Windows quality update policy with hotpatch turned on](#enroll-devices-to-receive-hotpatch-updates).
@@ -49,8 +49,8 @@ VBS must be turned on for a device to be offered Hotpatch updates. For informati
 
 ### Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)
 
-> [!IMPORTANT]
-> **Hotpatch updates on Arm 64 devices are in public preview**. It's being actively developed and might not be complete. They're made available on a "Preview" basis. You can test and use these features in production environments and scenarios and provide feedback.
+> [!NOTE]
+> **Hotpatch updates on Arm 64 devices follow the same [release cycle](#release-cycles).**
 
 This requirement only applies to Arm 64 CPU devices when using Hotpatch updates. Hotpatch updates aren't compatible with servicing CHPE OS binaries located in the `%SystemRoot%\SyChpe32` folder.
 
@@ -63,7 +63,7 @@ To disable CHPE, create and/or set the following DWORD registry key:
 Path: `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management`
 DWORD key value: HotPatchRestrictions=1
 
-You can also use the CSP DisableCHPE (available on Windows Insider Preview). For more information, see [DisableCHPE](/windows/client-management/mdm/policy-csp-system#disablechpe).
+You can also use the CSP DisableCHPE. For more information, see [DisableCHPE](/windows/client-management/mdm/policy-csp-system#disablechpe).
 
 > [!NOTE]
 > There are no plans to support hotpatch updates on Arm64 devices with CHPE enabled. Disabling CHPE is required only for Arm64 devices. AMD and Intel CPUs don’t have CHPE.
@@ -118,10 +118,11 @@ The calendar dates, eight hotpatch months, and four baseline months, planned eac
 1. Go to the **Quality updates** tab.
 1. Select **Create**, and select **Windows quality update policy**.
 1. Under the **Basics** section, enter a name for your new policy and select Next.
-1. Under the **Settings** section, set **"When available, apply without restarting the device ("Hotpatch")** to **Allow**. Then, select **Next**.
+1. Under the **Settings** section, ensure that the option **"When available, apply without restarting the device ("Hotpatch")** is set to **Allow**. Then, select **Next**.
 1. Select the appropriate Scope tags or leave as Default. Then, select **Next**.
 1. Assign the devices to the policy and select **Next**.
 1. Review the policy and select **Create**.
+2. You can also **Edit** the existing **Windows quality update policy** and set the **"When available, apply without restarting the device ("Hotpatch")** to **Allow**.
 
 These steps ensure that targeted devices, which are [eligible](#prerequisites) to receive Hotpatch updates, are configured properly. [Ineligible devices](#ineligible-devices) are offered the latest cumulative updates (LCU).
 
