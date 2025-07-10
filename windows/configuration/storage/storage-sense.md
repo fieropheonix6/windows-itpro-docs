@@ -9,16 +9,15 @@ ms.author: paoloma
 
 # Configure Storage Sense
 
-
-Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files—like temporary files, items in the recycle bin, and previous versions of Windows updates. For IT administrators, especially those managing large device fleets, configuring Storage Sense is a low-effort, high-impact way to ensure devices remain performant and up to date. When left unmanaged, low disk space can prevent critical updates from installing, degrade system performance, and lead to user frustration. By proactively configuring Storage Sense through tools like Microsoft Intune, IT admins can automate storage maintenance and reduce support overhead.
+Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files—like temporary files, items in the recycle bin, and offline content from OneDrive. For IT administrators, especially those managing large device fleets, configuring Storage Sense is a low-effort, high-impact way to ensure devices remain performant and up to date. When left unmanaged, low disk space can prevent critical updates from installing, degrade system performance, and lead to user frustration. By proactively configuring Storage Sense through policy settings, IT admins can automate storage maintenance and reduce support overhead.
 
 ## Practical scenarios
 
-In industries like Education and Frontline Work, devices with limited storage capacity are commonly deployed due to cost and portability considerations. For example, students using 64GB Windows laptops in a 1:1 device program might quickly run out of space due to cached files, downloads, and app data. Similarly, frontline workers using rugged tablets or shared shift-based devices often lack the time or permissions to manage storage manually. In both scenarios, Storage Sense can be configured to automatically clear temporary files and manage OneDrive content, ensuring devices stay responsive and updates install without disruption. This not only improves the user experience but also extends the usable life of the device.
+In sectors like education and in frontline roles across industries such as retail, healthcare, or manufacturing, devices with limited storage capacity are commonly deployed due to cost and portability considerations. For example, students using 64 GB Windows laptops in a shared device program might quickly run out of space due to cached files, downloads, and app data. Similarly, frontline workers using shared, shift-based devices often lack the time or permissions to manage storage manually. In both scenarios, Storage Sense can be configured to automatically remove unused files and optimize storage, helping ensure devices stay responsive and updates install without disruption.
 
 ## Configuration
 
-By default, Storage Sense is enabled and configured to run during storage pressure events to automatically reclaim disk space. IT administrators can customize its behavior to align with organizational policies and user requirements.
+By default, Storage Sense is enabled and set to run automatically when disk space is running low. IT administrators can customize its behavior to align with organizational policies and user requirements.
 
 The available configuration options include:
 
@@ -26,8 +25,8 @@ The available configuration options include:
 - Control cleanup of user temporary files (enable or disable).
 - Set retention thresholds for cloud-backed content: define the minimum number of days a file must remain unaccessed before it is offloaded from the local device (while remaining available in the cloud).
 - Configure cleanup of the Downloads folder: specify the minimum number of days files must remain unaccessed before deletion.
-- Configure cleanup of the Recycle Bin: set the minimum number of days before items are permanently removed.
-- Define the execution cadence for Storage Sense: choose from daily, weekly, monthly, or only when disk space is low.
+- Configure cleanup of the Recycle Bin: set how many days items remain before permanent removal.
+- Define the execution cadence for Storage Sense: choose to run Storage Sense daily, weekly, monthly, or only when disk space is low.
 
 [!INCLUDE [tab-intro](../../../includes/configure/tab-intro.md)]
 
@@ -37,12 +36,13 @@ The available configuration options include:
 
 | Category | Setting name | Value |
 |--|--|--|
-| **Storage** | Allow Storage Sense Global | Toggle to **Allow** or **Block**|
-| **Storage** | Allow Storage Sense Temporary Files Cleanup |Toggle to **Allow** or **Block**|
-| **Storage** | Config Storage Sense Cloud Content Dehydration Threshold | Specify a value in the range [0-365]|
-| **Storage** | Config Storage Sense Downloads Cleanup Threshold |Specify a value in the range [0-365]|
-| **Storage** | Config Storage Sense Recycle Bin Cleanup Threshold |Specify a value in the range [0-365]|
-| **Storage** | Config Storage Sense Global Cadence |-**1** (Daily)<br>-**7** (Weekly)<br>- **30** (Monthly)<br>-**0** (default)|
+| **Storage** | Allow Storage Sense Global | Toggle to **Allow** or **Block** |
+| **Storage** | Allow Storage Sense Temporary Files Cleanup | Toggle to **Allow** or **Block** |
+| **Storage** | Config Storage Sense Cloud Content Dehydration Threshold | Specify a value in the range **0-365** (days unaccessed before offload) |
+| **Storage** | Config Storage Sense Downloads Cleanup Threshold | Specify a value in the range **0-365** (days unaccessed before deletion) |
+| **Storage** | Config Storage Sense Recycle Bin Cleanup Threshold | Specify a value in the range **0-365** (days before permanent removal) |
+| **Storage** | Config Storage Sense Global Cadence | Choose from:<br>**1** - Daily<br>**7** - Weekly<br>**30** - Monthly<br>**0** - Only when disk space is low (default) |
+
 
 [!INCLUDE [intune-settings-catalog-2](../../../includes/configure/intune-settings-catalog-2.md)]
 
@@ -58,6 +58,60 @@ You can configure devices using the [Policy CSP][CSP-1].
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseDownloadsCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesensedownloadscleanupthreshold)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseRecycleBinCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesenserecyclebincleanupthreshold)<br>- **Data type:** Integer<br>- **Value:** `1` (Daily)<br>-`7` (Weekly)<br>- `30` (Monthly)<br>-`0` (default)|
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseGlobalCadence](/windows/client-management/mdm/policy-csp-Storage#configstoragesenseglobalcadence)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
+
+
+### Allow Storage Sense Global
+
+- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/AllowStorageSenseGlobal`
+- **Data type**: Integer
+- **Value**:
+  - `1` - Allow
+  - `0` - Block
+- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Storage#allowstoragesenseglobal
+
+
+### Allow Storage Sense Temporary Files Cleanup
+
+- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/AllowStorageSenseTemporaryFilesCleanup`
+- **Data type**: Integer
+- **Value**:
+  - `1` - Allow
+  - `0` - Block
+- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Storage#allowstoragesensetemporaryfilescleanup
+
+
+### Config Storage Sense Cloud Content Dehydration Threshold
+
+- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/ConfigStorageSenseCloudContentDehydrationThreshold`
+- **Data type**: Integer
+- **Value**: `0-365` (days unaccessed before offload)
+- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Storage#configstoragesensecloudcontentdehydrationthreshold
+
+
+### Config Storage Sense Downloads Cleanup Threshold
+
+- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/ConfigStorageSenseDownloadsCleanupThreshold`
+- **Data type**: Integer
+- **Value**: `0-365` (days unaccessed before deletion)
+- https://learn.microsoft.com/windows/client-management/mdm/prage#configstoragesensedownloadscleanupthreshold
+
+
+### Config Storage Sense Recycle Bin Cleanup Threshold
+
+- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseRecycleBinCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesenserecyclebincleanupthreshold)
+- **Data type**: Integer
+- **Value**: `0-365` (days before permanent removal)
+
+
+### Config Storage Sense Global Cadence
+
+- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseGlobalCadence](/windows/client-management/mdm/policy-csp-Storage#configstoragesenseglobalcadence)
+- **Data type**: Integer
+- **Value**:
+  - `1` - Daily
+  - `7` - Weekly
+  - `30` - Monthly
+  - `0` - Only when disk space is low (default)
 
 #### [:::image type="icon" source="../images/icons/group-policy.svg" border="false"::: **GPO**](#tab/gpo)
 
@@ -84,8 +138,7 @@ When Storage Sense is configured, users will experience automatic disk space man
 
 Here are some related topics that can help you learn more about managing disk space in Windows:
 
-- [RestrictLocalStorage](https://learn.microsoft.com/windows/client-management/mdm/sharedpc-csp#restrictlocalstorage)
--
+- [RestrictLocalStorage](/windows/client-management/mdm/sharedpc-csp#restrictlocalstorage)
 
 <!--links-->
 
