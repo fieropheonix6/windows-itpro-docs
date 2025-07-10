@@ -19,6 +19,14 @@ In industries like Education and Frontline Work, devices with limited storage ca
 
 ## Storage Sense policy setting
 
+Here are the Storage Sense policy settings you can configure:
+
+- **Allow Storage Sense Global**: Enable or disable Storage Sense globally.
+- **Allow Storage Sense Temporary Files Cleanup**: Enable or disable the cleanup of temporary files.
+- **Config Storage Sense Cloud Content Dehydration Threshold**: Specify the threshold in MB for cloud content dehydration.
+- **Config Storage Sense Downloads Cleanup Threshold**: Specify the threshold in MB for cleaning up downloads
+- **Config Storage Sense Global Cadence**: Specify the cadence in days for Storage Sense operations.
+- **Config Storage Sense Recycle Bin Cleanup Threshold**: Specify the threshold in MB for cleaning up the recycle bin.
 
 ## Configuration
 
@@ -58,7 +66,12 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Group policy path | Group policy setting | Value |
 | - | - | - |
-| **Computer Configuration\Administrative Templates\Control Panel**<br><br>Or<br><br>**User Configuration\Administrative Templates\Control Panel** | Settings Page Visibility | List of URIs to show or hide, separated by semicolons.|
+| **Computer Configuration\System\Storage Sense** | Allow Storage Sense ||
+| **Computer Configuration\System\Storage Sense** | Allow Storage Sense Temporary Files Cleanup ||
+| **Computer Configuration\System\Storage Sense** | Config Storage Sense Cloud Content Dehydration Threshold ||
+| **Computer Configuration\System\Storage Sense** | Config Storage Sense Downloads Cleanup Threshold ||
+| **Computer Configuration\System\Storage Sense** | Config Storage Sense Global Cadence ||
+| **Computer Configuration\System\Storage Sense** | Config Storage Sense Recycle Bin Cleanup Threshold ||
 
 [!INCLUDE [gpo-settings-2](../../../includes/configure/gpo-settings-2.md)]
 
@@ -66,6 +79,7 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 ## User Experience
 
+When Storage Sense is configured, users will experience automatic disk space management without needing to manually delete temporary files or manage storage. This leads to a smoother user experience, as devices remain responsive and updates can be installed without issues related to low disk space. Users may notice that temporary files are cleaned up periodically, and they will not have to worry about running out of space due to cached data or old files.
 
 ## Related topics
 
