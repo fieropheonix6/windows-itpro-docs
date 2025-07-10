@@ -17,7 +17,6 @@ The agent guides users through finding and changing settings, offering relevant 
 
 <!--The agent is designed to respect existing policy settings on the device, ensuring that it doesn't override any restrictions already in place.-->
 
-:::image type="content" source="images/settings-agent.png" alt-text="Screenshot of Settings showing the search agent." border="false":::
 
 ## Requirements
 
@@ -34,7 +33,7 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 ### Language and geography requirements
 
 > [!div class="checklist"]
-> - Language: English
+> - Language: English (US, CA, AU, GB), French (FR, CA), German (DE), Spanish (ES, MX), Japanese (JP) & Chinese (Simplified)
 > - Geography: All countries, except Canada and China
 
 ## How it works
@@ -91,7 +90,7 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 If the agent is enabled, users can access it by opening Settings and typing their question in the search box. The agent provides relevant information and recommendations based on the user's input.
 
-:::image type="content" source="images/settings-agent-example.png" alt-text="Screenshot of Settings showing the search agent with an example search." border="false":::
+:::image type="content" source="images/settings-agent.png" alt-text="Screenshot of Settings showing the search agent with an example search." border="false":::
 
 ## Microsoft's commitment to responsible AI and Privacy
 
