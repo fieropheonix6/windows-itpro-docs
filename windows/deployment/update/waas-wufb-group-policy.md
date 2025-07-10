@@ -3,7 +3,7 @@ title: Configure Windows Update client policies via Group Policy
 description: Walk through of how to configure Windows Update client policies using Group Policy to update devices.
 ms.service: windows-client
 ms.subservice: itpro-updates
-manager: aaroncz
+manager: bpardi
 ms.topic: how-to
 author: mestew
 ms.localizationpriority: medium

@@ -1,17 +1,17 @@
 ---
-title: Programmatic controls for feature updates 
+title: Programmatic controls for feature updates
 titleSuffix: Windows Autopatch
-description: Use programmatic controls to deploy feature updates to devices in your organization. 
+description: Use programmatic controls to deploy feature updates to devices in your organization.
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
 ms.author: tiaraquan
 author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - tier1
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 03/31/2025
@@ -101,7 +101,7 @@ The following truncated response displays a **Catalog ID** of  `d9049ddb-0ca8-4b
 
 ## Create a deployment
 
-When creating a deployment for a feature update, there are multiple options available to define how the deployment behaves. The deployment and monitoring settings are optional. The following [deployment settings](/graph/api/resources/windowsupdates-deploymentsettings) are defined in the example request body for deploying the Windows 11, version 22H2 feature update (**Catalog ID** of  `d9049ddb-0ca8-4bc1-bd3c-41a456ef300f`):  
+When creating a deployment for a feature update, there are multiple options available to define how the deployment behaves. The deployment and monitoring settings are optional. The following [deployment settings](/graph/api/resources/windowsupdates-deploymentsettings) are defined in the example request body for deploying the Windows 11, version 22H2 feature update (**Catalog ID** of  `d9049ddb-0ca8-4bc1-bd3c-41a456ef300f`):
 
 - Deployment [start date](/graph/api/resources/windowsupdates-schedulesettings) of February 14, 2023 at 5 AM UTC
 - [Gradual rollout](/graph/api/resources/windowsupdates-gradualrolloutsettings) at a rate of 100 devices every three days
@@ -207,7 +207,7 @@ The response body contains:
 
 To [update deployment](/graph/api/windowsupdates-deployment-update), PATCH the deployment resource by its **Deployment ID** and supply the updated settings in the request body. The following example keeps the existing gradual rollout settings that were defined when creating the deployment but changes the deployment start date to February 28, 2023 at 5 AM UTC:
 
-```msgraph-interactive  
+```msgraph-interactive
 PATCH https://graph.microsoft.com/beta/admin/windows/updates/deployments/de910e12-3456-7890-abcd-ef1234567890
 content-type: application/json
 
@@ -235,7 +235,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/deployments/de910e12-
 
 ## Add members to the deployment audience
 
-The **Audience ID**, `d39ad1ce-0123-4567-89ab-cdef01234567`, was created when the deployment was created. The **Audience ID** is used to add members to the deployment audience. After the deployment audience is updated, Windows Update starts offering the update to the devices according to the deployment settings. As long as the deployment exists and the device is in the audience, the update is offered. 
+The **Audience ID**, `d39ad1ce-0123-4567-89ab-cdef01234567`, was created when the deployment was created. The **Audience ID** is used to add members to the deployment audience. After the deployment audience is updated, Windows Update starts offering the update to the devices according to the deployment settings. As long as the deployment exists and the device is in the audience, the update is offered.
 
 The following example adds three devices to the deployment audience using the **Microsoft Entra ID** for each device:
 

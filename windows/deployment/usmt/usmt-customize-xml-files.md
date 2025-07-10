@@ -2,7 +2,7 @@
 title: Customize USMT XML Files
 description: Learn how to customize USMT XML files. Also, learn about the migration XML files that are included with USMT.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

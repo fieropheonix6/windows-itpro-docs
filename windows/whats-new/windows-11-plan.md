@@ -4,7 +4,7 @@ description: This article provides guidance to help you plan for Windows 11 in y
 ms.service: windows-client
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: high
 ms.topic: get-started
 ms.collection:

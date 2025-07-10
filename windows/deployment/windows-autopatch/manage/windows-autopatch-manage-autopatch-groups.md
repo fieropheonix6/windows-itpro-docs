@@ -1,14 +1,14 @@
 ---
 title: Manage Windows Autopatch groups
 description: This article explains how to manage Autopatch groups
-ms.date: 03/31/2025
+ms.date: 05/27/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: andredm7
 ms.collection:
   - highpri
@@ -68,6 +68,7 @@ Before you start managing Autopatch groups, ensure you meet the [Windows Autopat
     1. Edit the deferrals, deadlines, grace periods as needed
     1. Edit the deployment rings as necessary
     1. If you made changes, but want to start over, select **Reset to preset values [release schedule preset]**. The reset is dependent on which release schedule preset you selected in step 12.
+1. Select **Next: Scope tags**. Add the scope tags you want to assign for the Autopatch group. For more information on Scope tags, see [Scoped admins and Autopatch groups](../prepare/windows-autopatch-role-based-access-control.md#scoped-admins-and-autopatch-groups).
 1. Select **Review + create** to review all changes made.
 1. Once the review is done, select **Create** to save your Autopatch group.
 
@@ -90,7 +91,8 @@ Before you start managing Autopatch groups, ensure you meet the [Windows Autopat
 1. In the **Deployment rings** page, edit your deployment rings as necessary or select **Next: Update types**.
 1. In the **Update types** page, add or remove update types as necessary, or select **Next: Deployment settings**.
 1. In the **Deployment settings** page, edit the deployment settings as necessary, or select **Next: Release schedule**.
-1. In the **Release schedule** page, edit the deferral and/or deadline day as necessary. If you need to change the release schedule preset, you must create a new Autopatch group.
+1. In the **Release schedule** page, edit the deferral and/or deadline day as necessary, or select **Next: Scope tags**. If you need to change the release schedule preset, you must create a new Autopatch group.
+1. In the Scope tags page, edit the scope tags as necessary, or select **Next: Review + save**. For more information on Scope tags, see [Scoped admins and Autopatch groups](../prepare/windows-autopatch-role-based-access-control.md#scoped-admins-and-autopatch-groups).
 1. Select **Review + create** to review all changes made.
 1. Once the review is done, select **Save** to finish editing the Autopatch group.
 

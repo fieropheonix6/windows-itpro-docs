@@ -7,7 +7,7 @@ metadata:
   ms.date: 04/21/2025
   audience: itpro
   ms.localizationpriority: medium
-  manager: aaroncz
+  manager: bpardi
   author: tiaraquan
   ms.author: tiaraquan
   ms.reviwer: hathind
@@ -16,19 +16,19 @@ title: Frequently Asked Questions about Windows Autopatch
 summary: This article answers frequently asked questions about Windows Autopatch.
 sections:
   - name: General
-    questions: 
+    questions:
       - question: Is Windows 365 for Enterprise supported with Windows Autopatch?
         answer: |
           Windows Autopatch supports Windows 365 for Enterprise. Windows 365 for Business isn't supported.
       - question: Will Windows Autopatch support local domain join Windows 10?
         answer: |
-          Windows Autopatch doesn't support local (on-premises) domain join. Windows Autopatch supports [Microsoft Hybrid Entra join](/entra/identity/devices/concept-hybrid-join) or [Microsoft Entra join](/entra/identity/devices/concept-directory-join). 
+          Windows Autopatch doesn't support local (on-premises) domain join. Windows Autopatch supports [Microsoft Hybrid Entra join](/entra/identity/devices/concept-hybrid-join) or [Microsoft Entra join](/entra/identity/devices/concept-directory-join).
       - question: Will Windows Autopatch be available for state and local government customers?
         answer: |
           Windows Autopatch isn't currently supported for government cloud (GCC) customers. Although Windows 365 Enterprise is in the Azure Commercial cloud, when Windows 365 Enterprise is used with a GCC customer tenant, Autopatch is not supported.
       - question: How do I access Windows Autopatch?
-        answer: | 
-          You can access Windows Autopatch through Intune. For more information, see [Start using Windows Autopatch](../prepare/windows-autopatch-start-using-autopatch.md#use-microsoft-intune-for-windows-autopatch) and [Prerequisites](../prepare/windows-autopatch-prerequisites.md) to ensure you meet the licensing requirements. 
+        answer: |
+          You can access Windows Autopatch through Intune. For more information, see [Start using Windows Autopatch](../prepare/windows-autopatch-start-using-autopatch.md#use-microsoft-intune-for-windows-autopatch) and [Prerequisites](../prepare/windows-autopatch-prerequisites.md) to ensure you meet the licensing requirements.
   - name: Requirements
     questions:
       - question: What are the licensing requirements for Windows Autopatch?
@@ -55,8 +55,8 @@ sections:
         answer: |
           No, Windows Autopatch doesn't require any specific hardware. However, general hardware requirements for updates are still applicable. For example, to deliver Windows 11 to your Autopatch devices they must meet [specific hardware requirements](/windows/whats-new/windows-11-requirements). Windows devices must be supported by your hardware OEM.
   - name: Device registration
-    questions: 
-      - question: Who can register devices into Windows Autopatch? 
+    questions:
+      - question: Who can register devices into Windows Autopatch?
         answer: |
           If you have Business Premium, A3+, E3+ and F3 licenses, you can register devices into Windows Autopatch. For more information, see [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities).
       - question: Does Autopatch on Windows 365 Cloud PCs have any feature difference from a physical device?
@@ -77,7 +77,7 @@ sections:
   - name: Manage updates
     questions:
       - question: Who can manage updates with Windows Autopatch?
-        answer: | 
+        answer: |
           Business Premium, A3+, E3+ and F3 licenses can manage updates with Windows Autopatch. For more information, see [Features and capabilities](../overview/windows-autopatch-overview.md#features-and-capabilities).
       - question: What systems does Windows Autopatch update?
         answer: |
@@ -100,12 +100,12 @@ sections:
       - question: What is the expected behavior for turning on the Feature Update option for Autopatch groups?
         answer: |
           Starting in April 2025, default policies aren't created for new Autopatch customers. Existing customers will continue to receive support until Windows 10 reaches its End-of-Service (EOS). However, these policies won't transition to Windows 11.
-          
+
           If you created an Autopatch group before April 2025:
           - The Feature Update option is unselected by default.
           - Selecting the Feature Update option creates a feature update policy for the newly created Autopatch group. This doesn't affect the Global DSS policy.
           - The Feature Update option doesn't affect existing releases created before April 2025; these releases remain unchanged
-          
+
           If you created an Autopatch group after April 2025:
           - Selecting the Feature Update option creates a feature update policy and assigns it to all its deployment rings.
           - Global DSS policy isn't affected.
@@ -122,7 +122,7 @@ sections:
           Yes, hotpatch updates are available for Arm64 devices. For more information, see [Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)](../manage/windows-autopatch-hotpatch-updates.md#arm-64-devices-must-disable-compiled-hybrid-pe-usage-chpe-arm-64-cpu-only)).
       - question: What is the default hotpatch behavior on Windows Home or Pro devices?
         answer: |
-          Hotpatch updates aren't available to Home or Pro devices. Hotpatching requires domain admin or group policy. It's available only via Windows Autopatch update policy, which includes Windows 365 Enterprise, E3/E5, F3 and A3/A5 licenses. 
+          Hotpatch updates aren't available to Home or Pro devices. Hotpatching requires domain admin or group policy. It's available only via Windows Autopatch update policy, which includes Windows 365 Enterprise, E3/E5, F3 and A3/A5 licenses.
       - question: How do I enroll devices to receive hotpatch updates?
         answer: |
           For more information, see [Enroll devices to receive hotpatch updates](../manage/windows-autopatch-hotpatch-updates.md#enroll-devices-to-receive-hotpatch-updates).
@@ -137,13 +137,13 @@ sections:
           Devices receiving the hotpatch update have a different KB number tracking the release and a different OS version than devices receiving the standard update that requires a restart. The monthly KB release articles indicate if the KB installed is hotpatch capable and the corresponding OS version. The following Windows Update message appears “Great news! The latest security update was installed without a restart.”
       - question: What if I restart a device after receiving a hotpatch update?
         answer: |
-          The device stays on the hotpatch update KB/OS version after a restart. It won't receive any new features as part of the regular servicing track until the next quarterly cumulative baseline update. 
+          The device stays on the hotpatch update KB/OS version after a restart. It won't receive any new features as part of the regular servicing track until the next quarterly cumulative baseline update.
       - question: Do hotpatch updates only update common system binaries loaded in third-party processes or only Microsoft processes?
         answer: |
-          Hotpatch updates aren't limited to Microsoft processes. Hotpatch updates are only created for OS binaries. Any process loading OS binaries that have hotpatch updates installed are updated before the application or operating system uses the binaries. This includes common system dynamic link libraries (DLLs) like ntdll.dll. 
+          Hotpatch updates aren't limited to Microsoft processes. Hotpatch updates are only created for OS binaries. Any process loading OS binaries that have hotpatch updates installed are updated before the application or operating system uses the binaries. This includes common system dynamic link libraries (DLLs) like ntdll.dll.
       - question: How can I find out if a hotpatch update was applied to the specific DLL?
-        answer: | 
-          You can see the hotpatch modules in the memory dump. Symbols for hotpatched DLLs depend on the function that receives the update. Some code that is hotpatch-updated could be public (symbols), while other functions could be private (no symbols).  
+        answer: |
+          You can see the hotpatch modules in the memory dump. Symbols for hotpatched DLLs depend on the function that receives the update. Some code that is hotpatch-updated could be public (symbols), while other functions could be private (no symbols).
       - question: Are there kernel-mode hotpatch updates?
         answer: |
           Yes, there are kernel-mode hotpatch updates.
@@ -155,7 +155,7 @@ sections:
           Yes, you can. You can manually download the standard Windows monthly update from the Microsoft Update Catalog. In this case, the device stops receiving hotpatch updates and receives standard Windows updates until the month after the next baseline update. Since the device is still enrolled in hotpatching, the device automatically rejoins the hotpatch cadence of updates after the update is released on the baseline month.
       - question: How do hotpatch update events show up in audit logs?
         answer: |
-          Process explorer shows it loaded in memory OS ``<binary name>_hotpatch`` loaded in memory. The hotpatch update KB includes a link to the CSV file listing the update payload. 
+          Process explorer shows it loaded in memory OS ``<binary name>_hotpatch`` loaded in memory. The hotpatch update KB includes a link to the CSV file listing the update payload.
       - question: Can I get security alerts through Event Tracing for Windows (ETW) about hotpatch updates?
         answer: |
           Hotpatch events are captured in the audit log. Search for “hotpatch” in the audit log to find related errors if any were captured.

@@ -2,7 +2,7 @@
 title: Understanding Migration XML Files
 description: Learn how to modify the behavior of a basic User State Migration Tool (USMT) migration by using XML files.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

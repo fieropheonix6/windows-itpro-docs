@@ -1,7 +1,7 @@
 ---
 title: Configuration service provider preview policies
 description: Learn more about configuration service provider (CSP) policies that are available for Windows Insider Preview.
-ms.date: 05/02/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -12,6 +12,10 @@ ms.topic: generated-reference
 [!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 This article lists the policies that are applicable for Windows Insider Preview builds.
+
+## AboveLock
+
+- [ConfigureAudioOnLockScreen](policy-csp-abovelock.md#configureaudioonlockscreen)
 
 ## AppDeviceInventory
 
@@ -81,6 +85,11 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [Enabled](dmclient-csp.md#deviceproviderprovideridconfigrefreshenabled)
 - [Cadence](dmclient-csp.md#deviceproviderprovideridconfigrefreshcadence)
 - [PausePeriod](dmclient-csp.md#deviceproviderprovideridconfigrefreshpauseperiod)
+
+## eUICCs CSP
+
+- [MaximumAttempts](euiccs-csp.md#euiccdownloadserversservernamemaximumattempts)
+- [ICCID](euiccs-csp.md#euiccdownloadserversservernameiccid)
 
 ## FileSystem
 
@@ -201,10 +210,6 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 - [TouchKeyboardControllerModeAvailability](policy-csp-textinput.md#touchkeyboardcontrollermodeavailability)
 
-## Update
-
-- [AllowTemporaryEnterpriseFeatureControl](policy-csp-update.md#allowtemporaryenterprisefeaturecontrol)
-
 ## Wifi
 
 - [AllowWFAQosManagementMSCS](policy-csp-wifi.md#allowwfaqosmanagementmscs)
@@ -218,10 +223,12 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [SetMaximumStorageSpaceForRecallSnapshots](policy-csp-windowsai.md#setmaximumstoragespaceforrecallsnapshots)
 - [SetMaximumStorageDurationForRecallSnapshots](policy-csp-windowsai.md#setmaximumstoragedurationforrecallsnapshots)
 - [DisableClickToDo](policy-csp-windowsai.md#disableclicktodo)
+- [AllowRecallExport](policy-csp-windowsai.md#allowrecallexport)
 - [DisableImageCreator](policy-csp-windowsai.md#disableimagecreator)
 - [DisableCocreator](policy-csp-windowsai.md#disablecocreator)
 - [DisableGenerativeFill](policy-csp-windowsai.md#disablegenerativefill)
 - [AllowRecallEnablement](policy-csp-windowsai.md#allowrecallenablement)
+- [DisableSettingsAgent](policy-csp-windowsai.md#disablesettingsagent)
 
 ## WindowsBackupAndRestore CSP
 
@@ -249,6 +256,7 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [ProfileRegistrationTimerInSeconds](wirelessnetworkpreference-csp.md#parameterscellularparametersprofileregistrationtimerinseconds)
 - [ScreenOffDurationToTriggerNetworkDiscoveryInMinutes](wirelessnetworkpreference-csp.md#parameterscellularparametersscreenoffdurationtotriggernetworkdiscoveryinminutes)
 - [Priority](wirelessnetworkpreference-csp.md#connectionprofilesconnectionprofileidpriority)
+- [StayConnected](wirelessnetworkpreference-csp.md#connectionprofilesconnectionprofileidstayconnected)
 - [WirelessType](wirelessnetworkpreference-csp.md#connectionprofilesconnectionprofileidwirelesstype)
 - [PLMNID](wirelessnetworkpreference-csp.md#connectionprofilesconnectionprofileidcellularplmnid)
 

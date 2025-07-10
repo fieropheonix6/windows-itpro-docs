@@ -23,11 +23,17 @@ This article contains instructions on how to troubleshoot different issues you m
 
 This section describes known issues with the latest release of Microsoft Connected Cache for Enterprise and Education. See the [Release Notes page](mcc-ent-release-notes.md) for more details on the fixes included in the latest release.
 
-### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use Japanese language
+### Connected Cache Azure resource is missing from Scope selection under the "Metrics" tab
 
-In the Connected Cache installation script (provisionmcconwsl.ps1), the check processing is executed until the value of the last execution code (Last Result) of the installation task becomes 0 in the following processing. However, in Japanese OS, the return value is null because "Last Result" is displayed, and an exception occurs.
+You can create custom charts on the Connected Cache Azure portal by selecting the **Metrics** tab under the **Monitoring** section of the Connected Cache Azure resource. The Connected Cache Azure resource is correctly selected as the Scope by default, but if you change the selected Scope you're unable to reselect the Connected Cache Azure resource, preventing subsequent creation of custom charts.
 
-As a temporary workaround, the above error doesn't occur by changing the language setting of the local administrator user from Japanese to English and then executing the script.
+As a temporary workaround, you can navigate away from the **Metrics** tab and then return to it. The Connected Cache Azure resource is once again correctly selected as the Scope.
+
+### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use non-English language
+
+In the Connected Cache installation script (provisionmcconwsl.ps1), the check processing is executed until the value of the last execution code (Last Result) of the installation task becomes 0 in the following processing. However, on host machines configured to use a non-English language, the return value is null because "Last Result" is displayed, and an exception occurs.
+
+As a temporary workaround, you can change the language setting of the local administrator user to English and then execute the script. The language setting can be changed by after successful cache node installation.
 
 ## Steps to obtain an Azure subscription ID
 
@@ -48,7 +54,7 @@ If you're encountering a validation error, check that you have filled out all re
 
 If your configuration doesn't appear to be taking effect, check that you have selected the **Save** option at the top of the configuration page in the Azure portal user interface.
 
-If you have changed the proxy configuration, you'll need to re-provision the Connected Cache software on the host machine for the proxy configuration to take effect.
+If you have changed the proxy configuration, you need to reprovision the Connected Cache software on the host machine for the proxy configuration to take effect.
 
 ## Troubleshooting cache nodes created during early preview
 
@@ -148,7 +154,7 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 You can generate a support bundle with detailed diagnostic information by running the `collectMccDiagnostics.sh` script included in the installation package.
 
-For Windows host machines, you'll need to do the following:
+For Windows host machines, you must:
 
 1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
 1. Change directory to the "MccScripts" directory within the extracted Connected Cache provisioning package and verify the presence of `collectmccdiagnostics.sh`
@@ -161,7 +167,7 @@ For Windows host machines, you'll need to do the following:
 
     For example, `wsl cp /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz /mnt/c/mccwsl01/SupportBundles`
 
-For Linux host machines, you'll need to do the following:
+For Linux host machines, you must:
 
 1. Change directory to the "MccScripts" directory within the extracted Connected Cache provisioning package and verify the presence of `collectmccdiagnostics.sh`
 1. Run `collectmccdiagnostics.sh` to generate the diagnostic support bundle

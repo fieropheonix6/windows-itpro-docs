@@ -4,7 +4,7 @@ description: Upgrade to current versions of Windows from a previous version of W
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.topic: upgrade-and-migration-article
 ms.collection:

@@ -1,17 +1,17 @@
 ---
 title: Delivery Optimization data in reports
 titleSuffix: Windows Update for Business reports
-description: This article provides information about Delivery Optimization data in Windows Update for Business reports. 
+description: This article provides information about Delivery Optimization data in Windows Update for Business reports.
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: article
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
-- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 09/03/2024
 ---
 
@@ -37,7 +37,7 @@ Windows Update for Business reports uses the following Delivery Optimization ter
   - LAN (1)
   - Group (2)
   - Internet (3)
-  
+
 - **Peering 'OFF'**: Devices where DO peer-to-peer is disabled, set to one of the following modes:
   - HTTP Only (0)
   - Simple Mode (99)
@@ -139,10 +139,10 @@ The following query is used to display the Top 10 GroupIDs:
 ```kusto
 UCDOStatus  | where TimeGenerated == _SnapshotTime
 | summarize sum(BytesFromCDN) ,  sum(BytesFromGroupPeers) , sum(BytesFromPeers) , sum(BytesFromCache) ,
-DeviceCount = count_distinct(GlobalDeviceId) by GroupID | top 10 by DeviceCount desc 
+DeviceCount = count_distinct(GlobalDeviceId) by GroupID | top 10 by DeviceCount desc
 | extend TotalBytes = (sum_BytesFromPeers + sum_BytesFromGroupPeers+sum_BytesFromCDN+sum_BytesFromCache)
-| extend P2PPercentage = ((0.0 + sum_BytesFromPeers + sum_BytesFromGroupPeers)/TotalBytes ) * 100.0  
-| extend  MCCPercentage = ((0.0 + sum_BytesFromCache)/ TotalBytes) * 100.0  , 
+| extend P2PPercentage = ((0.0 + sum_BytesFromPeers + sum_BytesFromGroupPeers)/TotalBytes ) * 100.0
+| extend  MCCPercentage = ((0.0 + sum_BytesFromCache)/ TotalBytes) * 100.0  ,
  VolumeBytesFromPeers = sum_BytesFromPeers + sum_BytesFromGroupPeers
 | extend VolumeBytesFromMCC = sum_BytesFromCache , VolumeByCDN = sum_BytesFromCDN
 | project  GroupID , P2PPercentage , MCCPercentage ,  VolumeBytesFromPeers , VolumeBytesFromMCC ,VolumeByCDN , DeviceCount
@@ -164,7 +164,7 @@ There are many Microsoft [content types](waas-delivery-optimization.md#types-of-
 ## Frequency Asked Questions
 
 - **What time period does the Delivery Optimization data include?**
-Data is generated/aggregated for the last 28 days for active devices. For Delivery Optimization data to register in the report, the device must have performed some Delivery Optimization action in the 28-day rolling window. This includes device configuration information. 
+Data is generated/aggregated for the last 28 days for active devices. For Delivery Optimization data to register in the report, the device must have performed some Delivery Optimization action in the 28-day rolling window. This includes device configuration information.
 
 - **Data is showing as 'Unknown', what does that mean?**
 You may see data in the report listed as 'Unknown'. This status indicates that the Delivery Optimization DownloadMode setting is either invalid or empty.

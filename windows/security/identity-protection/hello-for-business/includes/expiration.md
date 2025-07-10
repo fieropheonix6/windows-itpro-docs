@@ -20,5 +20,5 @@ The default value is 0.
 > [!IMPORTANT]
 > PIN expiration is not supported on:
 >
-> - Devices with [Enhanced Security Settings (ESS)](/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security) enabled, since Windows Hello uses Virtualization-based Security (VBS) to isolate credentials.
+> - Devices with [Enhanced Sign-in Security (ESS)](/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security) enabled, since Windows Hello uses Virtualization-based Security (VBS) to isolate credentials.
 > - Starting with Windows 11, version 24H2, on all devices that have VBS enabled.

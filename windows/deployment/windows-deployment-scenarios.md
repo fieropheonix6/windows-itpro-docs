@@ -1,7 +1,7 @@
 ---
 title: Windows deployment scenarios
 description: Understand the different ways Windows operating system can be deployed in an organization. Explore several Windows deployment scenarios.
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 author: frankroj
 ms.service: windows-client

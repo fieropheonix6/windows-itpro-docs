@@ -8,7 +8,7 @@ ms.topic: legal
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 msreviewer: hathind
 ---
 

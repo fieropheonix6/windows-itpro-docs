@@ -4,15 +4,15 @@ description: Details on how to manage Microsoft Connected Cache for Enterprise c
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-manager: aaroncz
+manager: bpardi
 ms.author: nidos
 author: doshnid
 ms.reviewer: mstewart
 ms.collection: tier3
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>
 ms.date: 10/30/2024
 ---
 
@@ -22,7 +22,7 @@ ms.date: 10/30/2024
 
 This article outlines how to create, configure, and deploy Microsoft Connected Cache for Enterprise cache nodes using Azure CLI.
 
- 
+
 ## Prerequisites:
 1. **Install Azure CLI**: [How to install the Azure CLI](/cli/azure/install-azure-cli)
 1. **Install Connected Cache extension**: Install Connected Cache extension via the command below
@@ -94,7 +94,7 @@ To confirm cache node creation, use `az mcc ent node show`
 <br>
 
 ```azurecli-interactive
-az mcc ent node show --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg  
+az mcc ent node show --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
 ```
 
 >[!IMPORTANT]
@@ -144,11 +144,11 @@ az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-res
 
 ## Next step
 
-To deploy the cache node to a **Windows** host machine, see 
+To deploy the cache node to a **Windows** host machine, see
 >[!div class="nextstepaction"]
 >[Deploy cache node to Windows](mcc-ent-deploy-to-windows.md)
 
-To deploy the cache node to a **Linux** host machine, see 
+To deploy the cache node to a **Linux** host machine, see
 >[!div class="nextstepaction"]
 >[Deploy cache node to Linux](mcc-ent-deploy-to-linux.md)
 
@@ -190,7 +190,7 @@ az mcc ent resource create --mcc-resource-name $mccResourceName --location $reso
 #Loop through $cacheNodesToCreate iterations
 for ($cacheNodeNumber = 1; $cacheNodeNumber -le $cacheNodesToCreate; $cacheNodeNumber++) {
     $iteratedCacheNodeName = $cacheNodeName + "-" + $cacheNodeNumber
-    
+
     #Create cache node
     az mcc ent node create --cache-node-name $iteratedCacheNodeName --mcc-resource-name $mccResourceName --host-os $cacheNodeOperatingSystem --resource-group $resourceGroup
 
@@ -203,7 +203,7 @@ for ($cacheNodeNumber = 1; $cacheNodeNumber -le $cacheNodesToCreate; $cacheNodeN
         Write-Output "Waiting for cache node creation to complete...$howLong seconds"
         Start-Sleep -Seconds $waitTime
         $howLong += $waitTime
-    
+
         $cacheNodeState = $(az mcc ent node show --cache-node-name $iteratedCacheNodeName --mcc-resource-name $mccResourceName --resource-group $resourceGroup --query "cacheNodeState") | ConvertFrom-Json
     }
 

@@ -2,7 +2,7 @@
 title: Determine What to Migrate
 description: Determine migration settings for standard or customized for the User State Migration Tool (USMT).
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

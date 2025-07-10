@@ -2,7 +2,7 @@
 title: Common Migration Scenarios
 description: See how the User State Migration Tool (USMT) is used when planning hardware and/or operating system upgrades.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

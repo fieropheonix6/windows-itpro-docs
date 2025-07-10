@@ -1,7 +1,7 @@
 ---
 title: Defender CSP
 description: Learn more about the Defender CSP.
-ms.date: 03/12/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -92,6 +92,8 @@ The following list shows the Defender configuration service provider nodes:
     - [PlatformUpdatesChannel](#configurationplatformupdateschannel)
     - [QuickScanIncludeExclusions](#configurationquickscanincludeexclusions)
     - [RandomizeScheduleTaskTimes](#configurationrandomizescheduletasktimes)
+    - [Reporting](#configurationreporting)
+      - [EnableDynamicSignatureDroppedEventReporting](#configurationreportingenabledynamicsignaturedroppedeventreporting)
     - [ScanOnlyIfIdleEnabled](#configurationscanonlyifidleenabled)
     - [SchedulerRandomizationTime](#configurationschedulerrandomizationtime)
     - [ScheduleSecurityIntelligenceUpdateDay](#configurationschedulesecurityintelligenceupdateday)
@@ -2320,6 +2322,9 @@ This setting disables the gathering and send of performance telemetry from Netwo
 <!-- Device-Configuration-DisableQuicParsing-Begin -->
 ### Configuration/DisableQuicParsing
 
+> [!NOTE]
+> This policy is deprecated and may be removed in a future release.
+
 <!-- Device-Configuration-DisableQuicParsing-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
@@ -3450,6 +3455,93 @@ In Microsoft Defender Antivirus, randomize the start time of the scan to any int
 <!-- Device-Configuration-RandomizeScheduleTaskTimes-Examples-End -->
 
 <!-- Device-Configuration-RandomizeScheduleTaskTimes-End -->
+
+<!-- Device-Configuration-Reporting-Begin -->
+### Configuration/Reporting
+
+<!-- Device-Configuration-Reporting-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+<!-- Device-Configuration-Reporting-Applicability-End -->
+
+<!-- Device-Configuration-Reporting-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Defender/Configuration/Reporting
+```
+<!-- Device-Configuration-Reporting-OmaUri-End -->
+
+<!-- Device-Configuration-Reporting-Description-Begin -->
+<!-- Description-Source-Not-Found -->
+<!-- Device-Configuration-Reporting-Description-End -->
+
+<!-- Device-Configuration-Reporting-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-Configuration-Reporting-Editable-End -->
+
+<!-- Device-Configuration-Reporting-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `node` |
+| Access Type | Get |
+<!-- Device-Configuration-Reporting-DFProperties-End -->
+
+<!-- Device-Configuration-Reporting-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-Configuration-Reporting-Examples-End -->
+
+<!-- Device-Configuration-Reporting-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Begin -->
+#### Configuration/Reporting/EnableDynamicSignatureDroppedEventReporting
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Applicability-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Defender/Configuration/Reporting/EnableDynamicSignatureDroppedEventReporting
+```
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-OmaUri-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Description-Begin -->
+<!-- Description-Source-DDF -->
+This setting controls whether to report a Dynamic Security Intelligence Update dropped event. By default, such events aren't reported.
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Description-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Editable-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-DFProperties-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Dynamic Security intelligence update dropped events won't be reported. |
+| 1 | Dynamic Security intelligence update events will be reported. |
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-AllowedValues-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-Examples-End -->
+
+<!-- Device-Configuration-Reporting-EnableDynamicSignatureDroppedEventReporting-End -->
 
 <!-- Device-Configuration-ScanOnlyIfIdleEnabled-Begin -->
 ### Configuration/ScanOnlyIfIdleEnabled

@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: andredm7
 ms.collection:
   - highpri
@@ -33,12 +33,12 @@ Autopatch groups create one Windows 10 Update Ring policy for each deployment ri
 
 ## Feature update policy for Windows 10 and later
 
-If features updates are [selected as a content type for an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group), a feature update policy is created with the Microsoft Entra groups for each update ring assigned to it. This policy does the following:  
+If features updates are [selected as a content type for an Autopatch group](../manage/windows-autopatch-manage-autopatch-groups.md#create-an-autopatch-group), a feature update policy is created with the Microsoft Entra groups for each update ring assigned to it. This policy does the following:
 
 - Ensures existing devices on the target version don’t update beyond that version.
-- If new devices are added to the Autopatch group and are below your target version, the devices are updated to the target version.  
+- If new devices are added to the Autopatch group and are below your target version, the devices are updated to the target version.
 
-To achieve this outcome, the feature update policy is configured for immediate start as required.  
+To achieve this outcome, the feature update policy is configured for immediate start as required.
 
 > [!IMPORTANT]
 > To safely deploy a new feature update, Autopatch recommends using a custom Windows feature update release. The custom release allows you to choose how and when different deployment rings receive the update. Autopatch doesn't recommend updating the minimum version within an Autopatch group until your rollout is complete. Doing so initiates a rollout which starts immediately for all members of that group.<p>Once you create a custom Windows feature update release, the Autopatch group's deployment rings are unassigned from that group’s feature update policy.</p>

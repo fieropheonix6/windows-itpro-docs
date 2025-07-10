@@ -7,11 +7,11 @@ ms.subservice: autopatch
 ms.topic: troubleshooting
 ms.author: tiaraquan
 author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - tier1
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 03/31/2025

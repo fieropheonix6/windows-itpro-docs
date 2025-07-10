@@ -10,6 +10,8 @@ appliesto:
 
 # Configure education themes for Windows 11
 
+[!INCLUDE [winse-eos](../includes/winse-eos.md)]
+
 Starting in **Windows 11, version 22H2**, you can deploy education themes to your devices. The education themes are designed for students using devices in a school.
 
 :::image type="content" source="./images/win-11-se-themes-1.png" alt-text="Screenshot of Windows 11 desktop with 3 stickers" border="true":::

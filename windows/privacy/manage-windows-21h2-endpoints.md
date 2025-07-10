@@ -7,8 +7,9 @@ ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
 manager: dansimp
-ms.date: 01/18/2018
+ms.date: 05/23/2025
 ms.topic: reference
+hideEdit: true 
 ms.collection: 
 - privacy-windows
 - must-keep
@@ -91,7 +92,7 @@ The following methodology was used to derive these network endpoints:
 ||The following endpoint is used to get Microsoft Store analytics.|TLSv1.2/HTTPS/HTTP|manage.devcenter.microsoft.com|
 |Network Connection Status Indicator (NCSI)|||[Learn how to turn off traffic to all of the following endpoint(s).](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#bkmk-ncsi)|
 ||Network Connection Status Indicator (NCSI) detects Internet connectivity and corporate network connectivity status. NCSI sends a DNS request and HTTP query to this endpoint to determine if the device can communicate with the Internet. If you turn off traffic for this endpoint, NCSI won't be able to determine if the device is connected to the Internet and the network status tray icon will show a warning.|HTTPS|`www.msftconnecttest.com`|
-|Office|The following endpoints are used to connect to the Office 365 portal's shared infrastructure, including Office in a browser. For more info, see Office 365 URLs and IP address ranges. You can turn this off by removing all Microsoft Office apps and the Mail and Calendar apps. If you turn off traffic for these endpoints, users won't be able to save documents to the cloud or see their recently used documents.||[Learn how to turn off traffic to all of the following endpoint(s).](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#26-microsoft-store)|
+|Office|The following endpoints are used to connect to the Office 365 portal's shared infrastructure, including Office in a browser. For more info, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). You can turn this off by removing all Microsoft Office apps and the Mail and Calendar apps. If you turn off traffic for these endpoints, users won't be able to save documents to the cloud or see their recently used documents.||[Learn how to turn off traffic to all of the following endpoint(s).](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#26-microsoft-store)|
 |||HTTPS|www.office.com|
 |||HTTPS|blobs.officehome.msocdn.com|
 |||HTTPS|officehomeblobs.blob.core.windows.net|
@@ -138,4 +139,4 @@ To view endpoints for other versions of Windows 10 Enterprise, see:
 ## Related links
 
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
-- [Network infrastructure requirements for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
+- [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)

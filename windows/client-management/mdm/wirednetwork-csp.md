@@ -1,7 +1,7 @@
 ---
 title: WiredNetwork CSP
 description: Learn more about the WiredNetwork CSP.
-ms.date: 05/14/2025
+ms.date: 06/10/2025
 ms.topic: generated-reference
 ---
 
@@ -92,7 +92,6 @@ The profile XML must be escaped, as shown in the following examples.
 
 > [!NOTE]
 > If you need to specify other advanced conditions, such as specifying criteria for certificates that can be used by the LAN profile, you can do so by specifying this through the [EapHostConfig](/windows/win32/eaphost/eaphostconfigschema-eaphostconfig-element) portion of the LanXML ([LANProfile](/windows/win32/nativewifi/lan-profileschema-schema) > [MSM](/windows/win32/nativewifi/lan-profileschema-msm-lanprofile-element) > [security](/windows/win32/nativewifi/lan-profileschema-security-msm-element) > [OneX](/windows/win32/nativewifi/onexschema-onex-element) > EAPConfig). For more information, see [EAP configuration](./eap-configuration.md) and [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access). For an example, see [Wired Profile Samples](/windows/win32/nativewifi/wired-profile-samples).
-
 <!-- Device-LanXML-Editable-End -->
 
 <!-- Device-LanXML-DFProperties-Begin -->

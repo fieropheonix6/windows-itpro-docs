@@ -1,6 +1,6 @@
 ---
 title: Configure Windows Update client policies
-manager: aaroncz
+manager: bpardi
 description: You can use Group Policy or your mobile device management (MDM) service to configure Windows Update client policies for your devices.
 ms.service: windows-client
 author: mestew

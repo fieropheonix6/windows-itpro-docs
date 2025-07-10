@@ -3,16 +3,16 @@ title: Create, provision, and deploy the cache node
 description: Instructions for creating, provisioning, and deploying Microsoft Connected Cache for ISP on Azure portal
 ms.service: windows-client
 ms.subservice: itpro-updates
-manager: aaroncz
+manager: bpardi
 author: nidos
 ms.author: nidos
 ms.reviewer: mstewart
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a> 	
+- ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>
 ms.date: 05/23/2024
 ---
 
@@ -66,29 +66,29 @@ In the example configuration below:
 - The ASN of the Microsoft Connected Cache cache node is 65100 and the IP address is 192.168.8.99
 - iBGP peering sessions are established from the portal for ASNs 65100, 65200, and 65300.
 
-    :::image type="content" source="images/mcc-isp-bgp-route.png" alt-text="Screenshot of a table entitled BGP route information showing how each ASN corresponds to a specific IP address." lightbox="./images/mcc-isp-provision-cache-node-numbered.png":::  
+    :::image type="content" source="images/mcc-isp-bgp-route.png" alt-text="Screenshot of a table entitled BGP route information showing how each ASN corresponds to a specific IP address." lightbox="./images/mcc-isp-provision-cache-node-numbered.png":::
 
-    :::image type="content" source="images/mcc-isp-bgp-diagram.png" alt-text="A diagram that shows the relationship between the cache node and other ASNs/routers when using BGP. BGP routing allows the cache node to route to other network providers with different ASNs." lightbox="./images/mcc-isp-provision-cache-node-numbered.png":::  
+    :::image type="content" source="images/mcc-isp-bgp-diagram.png" alt-text="A diagram that shows the relationship between the cache node and other ASNs/routers when using BGP. BGP routing allows the cache node to route to other network providers with different ASNs." lightbox="./images/mcc-isp-provision-cache-node-numbered.png":::
 
 To set up and enable BGP routing for your cache node, follow the steps below:
 
 1. Navigate to **Settings** > **Cache nodes**. Select the cache node you wish to provision.
 
-    :::image type="content" source="images/mcc-isp-provision-cache-node-numbered.png" alt-text="Screenshot of the Azure portal depicting the cache node configuration page of a cache node. This screenshot shows all of the fields you can choose to configure the cache node." lightbox="./images/mcc-isp-provision-cache-node-numbered.png":::  
+    :::image type="content" source="images/mcc-isp-provision-cache-node-numbered.png" alt-text="Screenshot of the Azure portal depicting the cache node configuration page of a cache node. This screenshot shows all of the fields you can choose to configure the cache node." lightbox="./images/mcc-isp-provision-cache-node-numbered.png":::
 
-1. Enter the max allowable egress that your hardware can support.  
+1. Enter the max allowable egress that your hardware can support.
 
-1. Under **Cache storage**, specify the location of the cache drive folder to store content along with the size of the cache drives in Gigabytes.  
-**Note:** This is a **required** field. Up to nine cache drive folders are supported.  
+1. Under **Cache storage**, specify the location of the cache drive folder to store content along with the size of the cache drives in Gigabytes.
+**Note:** This is a **required** field. Up to nine cache drive folders are supported.
 
 1. Under **Routing information**, select the routing method you would like to use. For more information, see [Client routing](#client-routing).
 
-    - If you choose **Manual routing**, enter your address range/CIDR blocks.  
+    - If you choose **Manual routing**, enter your address range/CIDR blocks.
     - If you choose **BGP routing**, enter the ASN and IP addresses of the neighborship. Use your ASN, the one used to sign up for Microsoft Connected Cache. Connected Cache will be automatically assigned as the same ASN as the neighbor.
     > [!NOTE]
     > **Prefix count** and **IP Space** will stop displaying `0` when BGP is successfully established.
 
-## Deploy cache node software to server  
+## Deploy cache node software to server
 
 Once the user executes the cache server provisioning script, resources are created behind the scenes resulting in the successful cache node installation. The script takes the input of different IDs outlined below to register the server as an Azure IoT Edge device. Even though Microsoft Connected Cache scenario isn't related to IoT, Azure IoT Edge is installed for container management and communication operation purposes.
 
@@ -125,7 +125,7 @@ There are five IDs that the device provisioning script takes as input in order t
 
 :::image type="content" source="images/mcc-isp-deploy-cache-node-numbered.png" alt-text="Screenshot of the server provisioning tab within cache node configuration in Azure portal.":::
 
-1. After completing cache node provisioning, navigate to the **Server provisioning** tab. Select **Download provisioning package** to download the installation package to your server.  
+1. After completing cache node provisioning, navigate to the **Server provisioning** tab. Select **Download provisioning package** to download the installation package to your server.
 
 1. Open a terminal window in the directory where you would like to deploy your cache node and run the following command to change the access permission to the Bash script:
 

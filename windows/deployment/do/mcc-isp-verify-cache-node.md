@@ -7,10 +7,10 @@ ms.subservice: itpro-updates
 ms.topic: how-to
 ms.author: carmenf
 author: cmknox
-manager: aaroncz
+manager: bpardi
 ms.reviewer: mstewart
 ms.collection: tier3
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/mcc-isp target=_blank>Microsoft Connected Cache for ISPs</a>
 ms.date: 05/23/2024
 ---
@@ -90,7 +90,7 @@ Within Azure portal, there are many charts and graphs that are available to moni
 Within Azure portal, you're able to build your custom charts and graphs using the following available metrics:
 
 | Metric name | Description |
-|---|---|  
+|---|---|
 | **Cache Efficiency** |  Cache efficiency is defined as the total cache hit bytes divided by all bytes requested. The higher this value (0 - 100%), the more efficient the cache node is. |
 | **Healthy nodes** |  The number of cache nodes that are reporting as healthy|
 | **Unhealthy nodes**| The number of cache nodes that are reporting as unhealthy|

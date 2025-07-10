@@ -1,7 +1,7 @@
 ---
 title: WirelessNetworkPreference CSP
 description: Learn more about the WirelessNetworkPreference CSP.
-ms.date: 04/30/2025
+ms.date: 06/09/2025
 ms.topic: generated-reference
 ---
 
@@ -25,6 +25,7 @@ The following list shows the WirelessNetworkPreference configuration service pro
       - [Cellular](#connectionprofilesconnectionprofileidcellular)
         - [PLMNID](#connectionprofilesconnectionprofileidcellularplmnid)
       - [Priority](#connectionprofilesconnectionprofileidpriority)
+      - [StayConnected](#connectionprofilesconnectionprofileidstayconnected)
       - [WirelessType](#connectionprofilesconnectionprofileidwirelesstype)
   - [IsEnabled](#isenabled)
   - [Parameters](#parameters)
@@ -238,6 +239,55 @@ Priority of a policy compared to the others where 1 represents the highest prior
 <!-- Device-ConnectionProfiles-{ConnectionProfileID}-Priority-Examples-End -->
 
 <!-- Device-ConnectionProfiles-{ConnectionProfileID}-Priority-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Begin -->
+#### ConnectionProfiles/{ConnectionProfileID}/StayConnected
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Applicability-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/WirelessNetworkPreference/ConnectionProfiles/{ConnectionProfileID}/StayConnected
+```
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-OmaUri-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Description-Begin -->
+<!-- Description-Source-DDF -->
+When set to 0: Default network discovery behavior is applied. When set to 1: Once connected, the device will always stay connected to this network. This means the device won't attempt to discover or switch to other higher priority networks until it first loses connectivity to this network.
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Description-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Editable-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-DFProperties-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Default network discovery behavior. |
+| 1 | Once connected to this network, try to stay connected. |
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-AllowedValues-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-Examples-End -->
+
+<!-- Device-ConnectionProfiles-{ConnectionProfileID}-StayConnected-End -->
 
 <!-- Device-ConnectionProfiles-{ConnectionProfileID}-WirelessType-Begin -->
 #### ConnectionProfiles/{ConnectionProfileID}/WirelessType

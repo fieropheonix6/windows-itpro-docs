@@ -5,7 +5,7 @@ ms.reviewer: shendrix
 ms.service: windows-client
 ms.subservice: itpro-deploy
 author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.localizationpriority: medium
 ms.topic: troubleshooting

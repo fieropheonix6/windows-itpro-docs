@@ -15,6 +15,8 @@
       items: 
         - name: Prerequisites
           href: prepare/windows-autopatch-prerequisites.md
+        - name: Role-based access control
+          href: prepare/windows-autopatch-role-based-access-control.md
         - name: Configure your network
           href: prepare/windows-autopatch-configure-network.md
         - name: Start using Windows Autopatch

@@ -1,6 +1,6 @@
 ---
 title: Windows Update client policies
-manager: aaroncz
+manager: bpardi
 description: Learn how Windows Update client policies let you manage when devices receive updates from Windows Update.
 ms.service: windows-client
 ms.subservice: itpro-updates

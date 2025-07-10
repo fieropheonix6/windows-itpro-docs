@@ -11,6 +11,8 @@ appliesto:
 
 # Deploy policies to enable applications
 
+[!INCLUDE [winse-eos](../../includes/winse-eos.md)]
+
 Once the policies are created, you must deploy them to the Windows SE devices.\
 AppLocker policies can be deployed via Intune. This article describes how to deploy AppLocker policies to enable apps execution on Windows SE devices.
 

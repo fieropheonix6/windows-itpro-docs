@@ -1,14 +1,14 @@
 ---
 title: Windows feature updates overview
 description: This article explains how Windows feature updates are managed
-ms.date: 03/31/2025
+ms.date: 05/27/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: overview
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: andredm7
 ms.collection:
   - highpri
@@ -39,6 +39,7 @@ The release statuses are described in the following table:
 | Inactive | All the Autopatch groups within the release are assigned to a new release. As a result, the Windows feature update policies were unassigned from all phases from within the release. |<ul><li>Release can be viewed as a historical record.</li><li>Releases can't be deleted, edited, or canceled.</li></ul> |
 | Paused | All phases in the release are paused. The release remains paused until you resume it. | <ul><li>Releases with the Paused status can't be edited or canceled since the Windows feature update policy was already created for its phases.</li><li>Release can be resumed.</li></ul> |
 | Canceled | All phases in the release are canceled. | <ul><li>Releases with the Canceled status can't be edited or canceled since the Windows feature update policy wasn't created for its phases.</li><li>Canceled release can't be deleted.</li></ul> |
+| Assignment error | The release is scheduled but one or more policies aren't assigned. The user that created the release doesn't have the required permissions to assign one or more policies because the selected Autopatch group isn't in their Scoped Group. Contact the Intune administrator or Role administrator to complete steps in [Scoped admins and Autopatch groups](../prepare/windows-autopatch-role-based-access-control.md#scoped-admins-and-autopatch-groups). |
 
 #### Phase statuses
 
@@ -54,6 +55,7 @@ A phase is made of one or more [Autopatch group deployment rings](../deploy/wind
 | Inactive | All Autopatch groups within the phase are reassigned to a new release. All Windows feature update policies were unassigned from the Autopatch groups. |
 | Paused | Phase is paused. You must resume the phase. |
 | Canceled | Phase is canceled. All Autopatch groups within the phase can be used with a new release. A phase that is canceled can't be deleted. |
+| Assignment error | The phase is scheduled but the policy isn't assigned. The user that created the policy doesn't have the required permissions to assign the policy because the selected Autopatch group isn't in their Scoped Group. Contact the Intune Administrator or Role administrator to complete steps in [Scoped admins and Autopatch groups](../prepare/windows-autopatch-role-based-access-control.md#scoped-admins-and-autopatch-groups). |
 
 #### Phase policy configuration
 

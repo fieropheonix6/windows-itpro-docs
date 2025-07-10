@@ -1,14 +1,14 @@
 ---
 title: Windows quality and feature update reports overview
 description: This article details the types of reports available and info about update device eligibility, device update health, device update trends in Windows Autopatch.
-ms.date: 03/31/2025
+ms.date: 05/27/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: overview
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: adnich
 ms.collection:
   - highpri
@@ -25,6 +25,23 @@ Windows Autopatch requires, and uses Windows diagnostic data to display device u
 - Client and substate data are collected from devices only if Windows data collection data is properly configured.
 
 This data collection configuration method using Windows diagnostic data in Intune is shared across Autopatch reports. To support Autopatch reporting, you must configure the [Enable Windows diagnostic data collection settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) from devices at the **Required** or higher level.
+
+### Permissions and scope to view reports 
+
+To view Windows Update reports, you must be assigned an Intune role with the **Device Configuration** > **View reports** permission. This permission is included in the following built-in roles:
+
+- Policy and Profile Manager
+- Read Only Operator
+- Helpdesk Operator
+
+In addition, the following roles have **Reports** > **Read permissions**. This permission is included in the following built-in roles, to access Windows Autopatch reports.
+
+- Windows Autopatch Administrator
+- Windows Autopatch reader
+
+The report displays data based on device scope tags only. Therefore, Windows Update reports might include Update policies and Autopatch group information that aren't in the same scope as the device. For more information, see [role-based access control](../prepare/windows-autopatch-role-based-access-control.md) in Windows Autopatch.
+
+To ensure accurate display of reports information, ensure that the Autopatch groups, update policies are accurately assigned to the same scope as the device.
 
 ## Windows quality update reports
 

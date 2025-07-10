@@ -7,10 +7,10 @@ ms.subservice: itpro-updates
 ms.topic: reference
 ms.author: carmenf
 author: cmknox
-manager: aaroncz
+manager: bpardi
 ms.reviewer: mstewart
 ms.collection: tier3
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/mcc-isp target=_blank>Microsoft Connected Cache for ISPs</a>
 ms.date: 01/14/2025
 ---

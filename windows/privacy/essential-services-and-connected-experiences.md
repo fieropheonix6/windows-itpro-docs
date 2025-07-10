@@ -7,8 +7,9 @@ ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
 manager: dansimp
-ms.date: 06/13/2024
+ms.date: 05/23/2025
 ms.topic: reference
+hideEdit: true 
 ms.collection: 
 - privacy-windows
 - must-keep
@@ -80,7 +81,7 @@ Although enterprise admins can turn off most essential services, we recommend, w
 
 Windows ships with Microsoft Edge on Windows devices. Microsoft Edge is the default browser and is recommended for the best web browsing experience.
 
-You can find details on all of Microsoft Edge's connected experiences and essential services [here](/microsoft-edge/privacy-whitepaper). To turn off specific Microsoft Edge features, see [Microsoft Edge](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#13-microsoft-edge).
+You can find details on all of Microsoft Edge's connected experiences and essential services in the [Microsoft Edge Privacy Whitepaper](/microsoft-edge/privacy-whitepaper). To turn off specific Microsoft Edge features, see [Microsoft Edge](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#13-microsoft-edge).
 
 ## IE essential services and connected experiences
 
@@ -105,8 +106,8 @@ Internet Explorer shares many of the Windows essential services listed above. Th
 ## Related articles
 
 - [Manage connections from Windows operating system components to Microsoft services](manage-connections-from-windows-operating-system-components-to-microsoft-services.md)
-- [Connected experiences in Office](/deployoffice/privacy/connected-experiences)
-- [Essential services for Office](/deployoffice/privacy/essential-services)
+- [Connected experiences in Office](/microsoft-365-apps/privacy/connected-experiences)
+- [Essential services for Office](/microsoft-365-apps/privacy/essential-services)
 
 To view endpoints for Windows Enterprise, see:
 

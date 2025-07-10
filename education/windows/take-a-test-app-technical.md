@@ -7,6 +7,8 @@ ms.topic: reference
 
 # Take a Test app technical reference
 
+[!INCLUDE [winse-eos](../includes/winse-eos.md)]
+
 Take a Test is an application that locks down a device and displays an online assessment web page.
 
 Whether you're a teacher or IT administrator, you can configure Take a Test to meet your testing needs. For high-stakes tests, the app creates a browser-based, locked-down environment. This environment means that students taking the tests that don't have copy/paste privileges, can't access to files and applications, and are free from distractions. For simple tests and quizzes, Take a Test can be configured to use the teacher's preferred assessment website to deliver digital assessments.

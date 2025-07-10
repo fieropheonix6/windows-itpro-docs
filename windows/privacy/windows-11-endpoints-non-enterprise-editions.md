@@ -7,8 +7,9 @@ ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
 manager: dansimp
-ms.date: 10/06/2023
+ms.date: 05/23/2025 
 ms.topic: reference
+hideEdit: true 
 ms.collection: 
 - privacy-windows
 - must-keep

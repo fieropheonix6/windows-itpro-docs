@@ -1,7 +1,7 @@
 ---
 title: WirelessNetworkPreference DDF file
 description: View the XML file containing the device description framework (DDF) for the WirelessNetworkPreference configuration service provider.
-ms.date: 04/30/2025
+ms.date: 06/09/2025
 ms.topic: generated-reference
 ---
 
@@ -444,6 +444,41 @@ The following XML file contains the device description framework (DDF) for the W
             </DFType>
             <MSFT:AllowedValues ValueType="Range">
               <MSFT:Value>[1-2147483647]</MSFT:Value>
+            </MSFT:AllowedValues>
+          </DFProperties>
+        </Node>
+        <Node>
+          <NodeName>StayConnected</NodeName>
+          <DFProperties>
+            <AccessType>
+              <Add />
+              <Delete />
+              <Get />
+              <Replace />
+            </AccessType>
+            <DefaultValue>0</DefaultValue>
+            <Description>When set to 0: Default network discovery behavior is applied. When set to 1: Once connected, the device will always stay connected to this network. This means the device will not attempt to discover or switch to other higher priority networks until it first loses connectivity to this network.</Description>
+            <DFFormat>
+              <int />
+            </DFFormat>
+            <Occurrence>
+              <One />
+            </Occurrence>
+            <Scope>
+              <Dynamic />
+            </Scope>
+            <DFType>
+              <MIME />
+            </DFType>
+            <MSFT:AllowedValues ValueType="ENUM">
+              <MSFT:Enum>
+                <MSFT:Value>0</MSFT:Value>
+                <MSFT:ValueDescription>Default network discovery behavior.</MSFT:ValueDescription>
+              </MSFT:Enum>
+              <MSFT:Enum>
+                <MSFT:Value>1</MSFT:Value>
+                <MSFT:ValueDescription>Once connected to this network, try to stay connected.</MSFT:ValueDescription>
+              </MSFT:Enum>
             </MSFT:AllowedValues>
           </DFProperties>
         </Node>

@@ -3,7 +3,7 @@ title: Windows ADK for Windows scenarios for IT Pros
 description: The Windows Assessment and Deployment Kit (Windows ADK) contains tools that IT Pros can use to deploy Windows.
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.service: windows-client
 ms.localizationpriority: medium
 ms.date: 02/27/2025

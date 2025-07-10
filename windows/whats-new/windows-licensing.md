@@ -4,7 +4,7 @@ description: Learn about products and use rights available through Windows comme
 ms.subservice: itpro-security
 author: paolomatarazzo
 ms.author: paoloma
-manager: aaroncz
+manager: bpardi
 ms.collection:
 - tier2
 ms.topic: overview

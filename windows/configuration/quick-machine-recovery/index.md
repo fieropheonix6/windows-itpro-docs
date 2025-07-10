@@ -2,11 +2,12 @@
 title: Quick Machine Recovery
 description: Learn about quick machine recovery and how to configure it with the RemoteRemediation configuration service provider (CSP).
 ms.topic: how-to
-ms.date: 04/02/2025
+ms.date: 06/02/2025
 ms.author: paoloma
 author: paolomatarazzo
 appliesto:
   - "✅ <a href=\"https://learn.microsoft.com/windows-insider/flight-hub\" target=\"_blank\">Windows Insider (Beta Channel)</a>"
+  - "✅ <a href=\"https://learn.microsoft.com/windows-insider/flight-hub\" target=\"_blank\">Windows Insider (Dev Channel)</a>"
 ---
 
 # Quick machine recovery
@@ -91,6 +92,56 @@ The configuration options consist of:
 
 [!INCLUDE [tab-intro](../../../includes/configure/tab-intro.md)]
 
+# [:::image type="icon" source="../images/icons/intune.svg" border="false"::: **Intune**](#tab/intune)
+
+[!INCLUDE [intune-settings-catalog-1](../../../includes/configure/intune-settings-catalog-1.md)]
+
+| Category | Setting name |
+|--|--|
+| **Remote Remediation** | Enable Cloud Remediation |
+| **Remote Remediation** | Enable Cloud Remediation > Enable Auto Remediation |
+| **Remote Remediation** | Enable Cloud Remediation > Enable Auto Remediation > Set Time To Reboot |
+| **Remote Remediation** | Enable Cloud Remediation > Enable Auto Remediation > Set Retry Interval |
+| **Remote Remediation** | Enable Cloud Remediation > Enable Auto Remediation > Network SSID |
+| **Remote Remediation** | Enable Cloud Remediation > Enable Auto Remediation > Network Password |
+| **Remote Remediation** | Enable Cloud Remediation > Enable Auto Remediation > Network Password Encryption Type |
+| **Remote Remediation** | Enable Cloud Remediation > Enable Auto Remediation > Network Password Encryption Store |
+
+[!INCLUDE [intune-settings-catalog-2](../../../includes/configure/intune-settings-catalog-2.md)]
+
+# [:::image type="icon" source="../images/icons/csp.svg" border="false"::: **CSP**](#tab/csp)
+
+You can configure devices with the [RemoteRemediation CSP][CSP-1].
+
+### Cloud remediation configuration
+
+Enable or disable cloud remediation using the following settings:
+
+| Setting |
+|--|
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/EnableCloudRemediation`<br>- **Data type:** Boolean<br>- **Value:** `True`<br>- **Description**: When set to `True`, cloud remediation is enabled. |
+
+### Auto remediation configuration
+
+Configure the following settings to customize the auto remediation experience:
+
+| Setting |
+|--|
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/AutoRemediationSettings/EnableAutoRemediation`<br>- **Data type:** Boolean<br>- **Value:** `True`<br>- **Description**: When set to `True`, auto remediation is enabled. |
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/AutoRemediationSettings/SetTimeToReboot`<br>- **Data type:** Integer<br>- **Value:** 1-4320 (default = 180)<br>- **Description**: Configure the time to reboot (in minutes) during auto remediation. The maximum time to reboot possible is 72 hours.|
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/AutoRemediationSettings/SetRetryInterval`<br>- **Data type:** Integer<br>- **Value:** 1-4320 (default = 30)<br>- **Description**: Configure the retry interval (in minutes) during auto remediation. The retry interval shouldn't be higher than the time to reboot.|
+
+### Wi-Fi network connection configuration
+
+To configure the Wi-Fi network connection used during recovery, use the following settings:
+
+|Setting|
+|--|
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkSSID`<br>- **Data type:** string<br>- **Value:** Wi-Fi network Service Set Identifier (SSID)|
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkPassword`<br>- **Data type:** string<br>- **Value:** Wi-Fi network password|
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkPasswordEncryptionType`<br>- **Data type:** Integer<br>- **Value:** `0` = The password isn't encrypted; `1` = The password is encrypted with the MDM certificate, `2` = The password is encrypted with custom certificate. When this value is used, you must also specify the custom store name in the `NetworkPasswordEncryptionStore` node.|
+|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkPasswordEncryptionStore`<br>- **Data type:** string<br>- **Value:** When a value of `2` is contained in `NetworkPasswordEncryptionType`, specify the store name where the certificate for decrypting the Network Password is stored.|
+
 # [:::image type="icon" source="../images/icons/cmd.svg"::: **Command prompt**](#tab/cmd)
 
 To configure quick machine recovery using the command line, you must create an XML file with the desired settings and then use the `reagentc.exe` command to apply those settings.
@@ -132,38 +183,21 @@ To remove the configured recovery settings, run the following command from an el
 reagentc.exe /clearrecoverysettings
 ```
 
-# [:::image type="icon" source="../images/icons/intune.svg" border="false"::: **Intune/CSP**](#tab/intune)
+# [:::image type="icon" source="../images/icons/settings-app.svg"::: **Settings**](#tab/settings)
 
-You can configure devices using a [custom policy][INT-1] with the [RemoteRemediation CSP][CSP-1].
+Here are the steps to configure quick machine recovery from Settings:
 
-### Cloud remediation configuration
+1. Open Settings and go to **System** > **Recovery**, or use the following shortcut:
 
-Enable or disable cloud remediation using the following settings:
+    > [!div class="nextstepaction"]
+    >
+    > [Recovery](ms-settings:recovery)
 
-| Setting |
-|--|
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/EnableCloudRemediation`<br>- **Data type:** Boolean<br>- **Value:** `True`<br>- **Description**: When set to `True`, cloud remediation is enabled. |
+1. Select **Quick machine recovery**
+1. To enable quick machine recovery, turn the **Quick machine recovery** toggle to **On**
+1. Configure the retry and restart intervals as needed
 
-### Auto remediation configuration
-
-Configure the following settings to customize the auto remediation experience:
-
-| Setting |
-|--|
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/AutoRemediationSettings/EnableAutoRemediation`<br>- **Data type:** Boolean<br>- **Value:** `True`<br>- **Description**: When set to `True`, auto remediation is enabled. |
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/AutoRemediationSettings/SetTimeToReboot`<br>- **Data type:** Integer<br>- **Value:** 1-4320 (default = 180)<br>- **Description**: Configure the time to reboot (in minutes) during auto remediation. The maximum time to reboot possible is 72 hours.|
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/AutoRemediationSettings/SetRetryInterval`<br>- **Data type:** Integer<br>- **Value:** 1-4320 (default = 30)<br>- **Description**: Configure the retry interval (in minutes) during auto remediation. The retry interval shouldn't be higher than the time to reboot.|
-
-### Wi-Fi network connection configuration
-
-To configure the Wi-Fi network connection used during recovery, use the following settings:
-
-|Setting|
-|--|
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkSSID`<br>- **Data type:** string<br>- **Value:** Wi-Fi network Service Set Identifier (SSID)|
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkPassword`<br>- **Data type:** string<br>- **Value:** Wi-Fi network password|
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkPasswordEncryptionType`<br>- **Data type:** Integer<br>- **Value:** `0` = The password isn't encrypted; `1` = The password is encrypted with the MDM certificate, `2` = The password is encrypted with custom certificate. When this value is used, you must also specify the custom store name in the `NetworkPasswordEncryptionStore` node.|
-|- **OMA-URI:** `./Device/Vendor/MSFT/RemoteRemediation/CloudRemediationSettings/NetworkSettings/NetworkCredentials/NetworkPasswordEncryptionStore`<br>- **Data type:** string<br>- **Value:** When a value of `2` is contained in `NetworkPasswordEncryptionType`, specify the store name where the certificate for decrypting the Network Password is stored.|
+ :::image type="content" source="images/quick-machine-recovery-settings.png" border="false" lightbox="images/quick-machine-recovery-settings.png" alt-text="Screenshot of the Setting app - Recovery - Quick machine recovery - showing the quick machine recovery options.":::
 
 ---
 
@@ -196,7 +230,7 @@ REAGENTC.EXE: Operation Successful.
 
 :::row:::
     :::column span="3":::
-Quick machine recovery offers a *test mode*, providing a controlled, simulated environment for you to validate your configurations and the auto remediation process without triggering an actual system failure. Test mode allows you to verify that the recovery experience functions as expected before deployment to production systems.
+Quick machine recovery offers a *test mode*, providing a controlled, simulated environment to experience the auto remediation process without triggering an actual system failure. Test mode allows you to verify that the recovery experience functions as expected before deployment to production systems.
     :::column-end:::
     :::column span="1":::
 :::image type="content" source="images/quick-machine-recovery-test-mode.png" alt-text="Screenshot of the Windows boot screen where quick machine recovery is attempting to connect to the network." border="false" lightbox="images/quick-machine-recovery-test-mode.png":::

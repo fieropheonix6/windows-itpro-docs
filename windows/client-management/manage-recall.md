@@ -3,7 +3,7 @@ title: Manage Recall for Windows clients
 description: Learn how to manage Recall for commercial environments and about Recall features.
 ms.topic: how-to
 ms.subservice: windows-copilot
-ms.date: 04/24/2025
+ms.date: 06/23/2025
 ms.author: mstewart
 author: mestew
 ms.collection:
@@ -81,6 +81,8 @@ By default, Recall is removed on commercially managed devices. If you want to al
     - Storage policies apply only to Enterprise and Education editions of Windows
 - [App and website filtering policies](#app-and-website-filtering-policies)
     - App and website filtering policies apply only to Enterprise and Education editions of Windows
+- [Allow export of Recall and snapshot information](#allow-export-of-recall-and-snapshot-information)
+    - The export of Recall and snapshot information feature and its policy applies only to devices in the European Economic Area (EEA)
 
 > [!IMPORTANT]
 > The policy to manage Click to Do doesn't affect Click to Do in Recall. For more information, see [Manage Click to Do](manage-click-to-do.md). 
@@ -159,6 +161,37 @@ To filter websites from being saved in snapshots, use the **Set a list of URIs t
 | **CSP** | ./Device/Vendor/MSFT/Policy/Config/WindowsAI/[SetDenyAppListForRecall](mdm/policy-csp-windowsai.md#setdenyapplistforrecall) </br></br> ./User/Vendor/MSFT/Policy/Config/WindowsAI/[SetDenyAppListForRecall](mdm/policy-csp-windowsai.md#setdenyapplistforrecall)|
 | **Group policy** | Computer Configuration > Administrative Templates > Windows Components > Windows AI > **Set a list of apps to be filtered from snapshots for Recall** </br></br>User Configuration > Administrative Templates > Windows Components > Windows AI > **Set a list of apps to be filtered from snapshots for Recall**|
 
+## Allow export of Recall and snapshot information
+<!--9257953-->
+The Recall export experience is available in preview to Copilot + PCs through the Windows Insiders Program. For more information, see [Announcing Windows 11 Insider Preview Build 26120.4441 (Beta Channel)](https://blogs.windows.com/windows-insider/2025/06/13/announcing-windows-11-insider-preview-build-26120-4441-beta-channel/).
+
+In the European Economic Area (EEA), users can choose to [export their Recall snapshots](https://support.microsoft.com/topic/680bd134-4aaa-4bf5-8548-a8e2911c8069) if IT admins allow exporting. By default, exporting Recall and snapshot information is disabled for managed devices. Exporting allows users to share their Recall and snapshot information with third-party apps or websites that the user trusts. Exporting is optional, and users can review their snapshots at any time in Recall without needing to export. Exported information includes:
+
+- Snapshots, including snapshots that the user or Recall saved
+- Snapshot details, including information related to each snapshot such as the time and date it was saved along with associated information from opened apps
+
+The user has the following two options for exporting Recall snapshots:
+-	**Export past snapshots**: A single export of all the user's Recall snapshots from the last 7 days, last 30 days, or all of their snapshots.
+-	**Export snapshots from now on**: Starts a continuous export of snapshots from the time the user turns on this setting until they turn it off or reset Recall. Users will be reminded every 30 days that continuous export is enabled.
+
+The **Allow export of Recall and snapshot information** policy allows IT admins to determine whether users can export their own Recall and snapshot information. Exporting allows users to share their Recall and snapshot information with apps or websites. **Settings** > **Privacy & Security** > **Recall & Snapshots** > **Advanced Settings** > **Export snapshots** > **Export past snapshots** > **Export**.
+Users can also choose to continuously export their snapshots if they turn on the option to  **Export snapshots from now on** from **Settings** > **Privacy & Security** > **Recall & Snapshots** > **Advanced Settings** > **Export snapshots** > **Export**.
+
+Before starting an export, the user must authenticate with Windows Hello and they're notified that their exported snapshots are encrypted since they might contain sensitive information. The user is also notified that they'll need to provide their Recall export code if they want to allow apps or websites access to exported snapshots. The Recall export code is displayed to users during Recall setup even if this policy is set to disabled or not configured. For managed devices:
+
+- When you set this policy to enabled, users will be able to export their Recall snapshots
+- If the policy is set to disabled or not configured, users won't be able to export their Recall snapshots.
+
+> [!Important]
+> - This setting applies to devices in the European Economic Area (EEA) only. Export of Recall snapshots is a user-initiated process and is per user. IT admins or other users can't initiate an export on behalf of another.
+> - Changes to this policy take effect after device restart.
+> - For information about adding exported Recall snapshots to your application or website, see [Decrypt exported snapshots from Recall](/windows/ai/recall/decrypt-exported-snapshots).
+
+| &nbsp; | Setting  |
+|---|---|
+| **CSP** | ./Device/Vendor/MSFT/Policy/Config/WindowsAI/[AllowRecallExport](mdm/policy-csp-windowsai.md#allowrecallexport) |
+| **Group policy** | Computer Configuration > Administrative Templates > Windows Components > Windows AI > **Allow export of Recall and snapshot information** |
+
 
 ## Remote desktop connection clients filtered from snapshots
 
@@ -171,6 +204,8 @@ Snapshots won't be saved when supported remote desktop clients are used. The rem
 
 > [!Note]
 > Clients will be saved by Recall unless the client implements screen capture protection, for example [screen capture protection in Azure Virtual desktop](/azure/virtual-desktop/screen-capture-protection). Clients can control how screen capture protection is implemented and may allow some pages to be saved but not the remote session. Customers can always add filters for specific client apps. Check with the provider of your remote client software for details on their screen capture policy. For information about adding screen capture protection to a client, see the [Information for developers](#information-for-developers) section.
+
+
 
 ## Bring your own device (BYOD) considerations
 
@@ -190,6 +225,8 @@ For managed devices, IT admins have control over if they want to allow users acc
 If you're a developer and want to launch Recall, you can call the `ms-recall` protocol URI. When you call this URI, Recall opens and takes a snapshot of the screen, which is the default behavior for when Recall is launched. For more information about using Recall in your Windows app, see [Recall overview](/windows/ai/apis/recall) in the Windows AI API documentation.
 
 If your remote desktop connection doesn't support screen capture protection, then it's an easy feature to add. Windows allows applications to exclude their window from being included in screenshot. This DRM flag is set by the application as a property on its window. It's a simple feature for application developers to implement using [SetWindowDisplayAffinity function (winuser.h)](/windows/win32/api/winuser/nf-winuser-setwindowdisplayaffinity). By setting the flag `WDA_EXCLUDEFROMCAPTURE`, the window content won't show up in Recall or any other screenshot application. 
+
+If you're a developer and need information about adding exported Recall snapshots to your application or website, see [Decrypt exported snapshots from Recall](/windows/ai/recall/decrypt-exported-snapshots).
 
 ## Microsoft's commitment to responsible AI
 

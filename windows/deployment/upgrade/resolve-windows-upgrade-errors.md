@@ -1,6 +1,6 @@
 ---
 title: Resolve Windows upgrade errors - Windows IT Pro
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 description: Resolve Windows upgrade errors for ITPros. Technical information for IT professionals to help diagnose Windows setup errors.
 author: frankroj

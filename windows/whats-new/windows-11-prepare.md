@@ -4,7 +4,7 @@ description: Prepare your infrastructure and tools to deploy Windows 11.
 ms.service: windows-client
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: high
 ms.topic: concept-article
 ms.collection:

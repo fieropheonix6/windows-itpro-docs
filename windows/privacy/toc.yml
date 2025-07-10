@@ -7,9 +7,9 @@
       href: configure-windows-diagnostic-data-in-your-organization.md
     - name: Diagnostic Data Viewer
       items: 
-        - name: Diagnostic Data Viewer Overview
+        - name: Diagnostic Data Viewer overview
           href: diagnostic-data-viewer-overview.md
-        - name: Diagnostic Data Viewer for PowerShell Overview
+        - name: Diagnostic Data Viewer for PowerShell overview
           href: diagnostic-data-viewer-powershell.md
     - name: Required Windows diagnostic data events and fields
       items: 
