@@ -110,9 +110,7 @@ You can change the apps pinned to the taskbar by modifying the `<TaskbarLayout>`
 
 #### PinGeneration
 
-[!INCLUDE [cfr-setting](../includes/cfr-setting.md)]
-
-Starting with Windows 11, version 24H2 with [KB5058502][KB-1] or later, you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
+Starting with Windows 11, version 24H2 with [KB5062553][KB-1] or later, you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
 
 To use this option, add `PinGeneration="1"` to the pins you want to allow users to unpin. The value of `PinGeneration` can be any number, and it's used to identify the pin version. If the value changes, the app is pinned again during the next policy update cycle. This allows IT admins to repin an app, if needed.
 
@@ -130,7 +128,7 @@ Some tips for using `PinGeneration`:
 - For simple management, always increment the `PinGeneration` number and don't reuse numbers
 
 > [!CAUTION]
-> The `PinGeneration` option is only available starting with [Windows Insider 22635.5305 (Beta Channel)][KB-1]. Only assign this policy to such devices, otherwise the taskbar pins don't apply.
+> The `PinGeneration` option is only available starting with Windows 11, version 24H2 with [KB5062553][KB-1]. Only assign this policy to such devices, otherwise the taskbar pins don't apply.
 >
 >- With Microsoft Intune you can use [filters](/intune/intune-service/fundamentals/filters) to target only devices with the required patch
 >- With GPO you can use [WMI filters](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732796(v=ws.11)) to target only devices with the required patch
@@ -340,4 +338,4 @@ To provide feedback, open [**Feedback Hub**][FHUB] and use the category **Deskto
 [OEM-1]: /windows-hardware/customize/desktop/customize-the-windows-11-taskbar
 [WIN-1]: /windows/client-management/mdm/policy-csp-start
 [MEM-1]: /mem/intune/configuration/custom-settings-windows-10
-[KB-1]: https://support.microsoft.com/help/KB5058502
+[KB-1]: https://support.microsoft.com/topic/4652-523e69cb-051b-43c6-8376-6a76d6caeefd
