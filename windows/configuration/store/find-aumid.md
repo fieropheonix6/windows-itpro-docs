@@ -109,7 +109,7 @@ reg query HKEY_CURRENT_USER\Software\Classes\ActivatableClasses\Package /s /f Ap
 ::: zone pivot="windows-10"
 
 
-# [:::image type="icon" source="../images/icons/powershell.svg"::: **PowerShell**](#tab/ps)
+# [:::image type="icon" source="../images/icons/powershell.svg"::: **PowerShell**](#tab/ps-10)
 
 To get the names and AUMIDs for all apps that appear in the Start menu, open a Windows PowerShell command prompt and enter the following command:
 
@@ -181,7 +181,7 @@ Get-AppAUMID -AppName Word
 Get-AppAUMID
 ```
 
-# [:::image type="icon" source="../images/icons/registry.svg"::: **Registry**](#tab/registry)
+# [:::image type="icon" source="../images/icons/registry.svg"::: **Registry**](#tab/registry-10)
 
 Querying the registry can only return information about Microsoft Store apps that are installed for the current user, while the Windows PowerShell query can find information for any account on the device.
 
@@ -191,7 +191,7 @@ At a command prompt, type the following command:
 reg query HKEY_CURRENT_USER\Software\Classes\ActivatableClasses\Package /s /f AppUserModelID | find "REG_SZ"
 ```
 
-# [:::image type="icon" source="../images/icons/explorer.svg"::: **Explorer**](#tab/explorer)
+# [:::image type="icon" source="../images/icons/explorer.svg"::: **Explorer**](#tab/explorer-10)
 
 To get the names and AUMIDs for all apps installed for the current user, perform the following steps:
 
