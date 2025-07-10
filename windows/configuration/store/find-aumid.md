@@ -10,7 +10,7 @@ zone_pivot_groups: windows-versions-11-10
 # Find the Application User Model ID of an installed app
 
 Windows uses Application User Model Id (AUMID, also known as AppId) values to identify and differentiate applications for switching, launching, telemetry, and other functions.\
-AUMID are unique to each installed application, and independent of the installation path or the application's display name.
+AUMID is unique to each installed application, and independent of the installation path or the application's display name.
 
 To configure Assigned Access, which is the Configuration Service Provider (CSP) used to create a kiosk or dedicated device, you must use the AUMID of the apps installed on a device. This article describes how to find the AUMID of an installed application.
 
