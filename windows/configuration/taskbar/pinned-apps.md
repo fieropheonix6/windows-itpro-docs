@@ -27,7 +27,7 @@ Here are some considerations before you start configuring the taskbar pinned app
 - If you specify an app to be pinned that isn't provisioned for the user on the device, the pinned icon doesn't appear on the taskbar
 - The order of applications in the XML file dictates the order of pinned apps on the taskbar, from left to right. If the OS is configured to use a right-to-left language, then the taskbar order is reversed
 - By default, any pins provisioned via policy settings are restored upon the next policy update cycle, even when users unpin them
-  - Starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with KB [KB5060826][KB-2], users can unpin apps pinned via policy settings, if allowed by the policy. The pins won't be repinned during the next policy update cycle
+  - Starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with [KB5060826][KB-2], users can unpin apps pinned via policy settings, if allowed by the policy. The pins won't be repinned during the next policy update cycle
 - Applications can be pinned using the following methods:
   - Default Windows apps, pinned during the OS installation. For example: Microsoft Edge, File Explorer, and Store. These applications are pinned first (blue square)
   - Pinned manually by the user. These applications are pinned next to the default pinned apps (red circle)
@@ -110,7 +110,7 @@ You can change the apps pinned to the taskbar by modifying the `<TaskbarLayout>`
 
 #### PinGeneration
 
-Starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with KB [KB5060826][KB-2], you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
+Starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with [KB5060826][KB-2], you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
 
 To use this option, add `PinGeneration="1"` to the pins you want to allow users to unpin. The value of `PinGeneration` can be any number, and it's used to identify the pin version. If the value changes, the app is pinned again during the next policy update cycle. This allows IT admins to repin an app, if needed.
 
