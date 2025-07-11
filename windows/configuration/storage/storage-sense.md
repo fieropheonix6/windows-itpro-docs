@@ -88,8 +88,6 @@ You can configure devices using the [Policy CSP][CSP-1].
     - **Locally available cloud content**
     - **Cleanup schedules**
 
-[!INCLUDE [settings-app-1](../../../includes/configure/settings-app-1.md)]
-
 ---
 
 ## User Experience
