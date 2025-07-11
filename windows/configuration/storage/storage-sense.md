@@ -100,7 +100,7 @@ Here are some related topics that can help you learn more about managing disk sp
 
 - [Cleanmgr][WIN-1]: The command-line utility `cleanmgr.exe`, also known as *Disk Cleanup*, shares overlapping functionalities with Storage Sense and has historically served a similar purpose. Unlike cleanmgr.exe, Storage Sense is a modern, automated disk cleanup feature introduced in Windows 10 and enhanced in later versions.
 - [Shared PC feature][WIN-2]: Enables IT administrators to deliver a streamlined shared device experience. It includes capabilities such as automatic deletion of user profiles based on inactivity or disk space thresholds, and the ability to restrict access to local storage through File Explorer.
-- [FileExplorer CSP][CSP-2]: Offers additional settings to manage file access and visibility. Use [setallowedfolderlocations][CSP-3] and [setallowedstoragelocations][CSP-4] policy settings to restrict access to certain storage or folder locations in File Explorer, enhancing security and compliance in managed environments.
+- [FileExplorer CSP][CSP-2]: Offers additional settings to manage file access and visibility. Use [SetAllowedFolderLocations][CSP-3] and [SetAllowedStorageLocations][CSP-4] policy settings to restrict access to certain storage or folder locations in File Explorer, enhancing security and compliance in managed environments.
 
 <!--links-->
 
