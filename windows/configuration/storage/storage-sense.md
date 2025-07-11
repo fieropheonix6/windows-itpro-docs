@@ -98,10 +98,16 @@ When Storage Sense is configured, users will experience automatic disk space man
 
 Here are some related topics that can help you learn more about managing disk space in Windows:
 
-- [RestrictLocalStorage](/windows/client-management/mdm/sharedpc-csp#restrictlocalstorage)
+- [Cleanmgr][WIN-1]: The command-line utility `cleanmgr.exe`, also known as *Disk Cleanup*, shares overlapping functionalities with Storage Sense and has historically served a similar purpose. Unlike cleanmgr.exe, Storage Sense is a modern, automated disk cleanup feature introduced in Windows 10 and enhanced in later versions.
+- [Shared PC feature][WIN-2]: Enables IT administrators to deliver a streamlined shared device experience. It includes capabilities such as automatic deletion of user profiles based on inactivity or disk space thresholds, and the ability to restrict access to local storage through File Explorer.
+- [FileExplorer CSP][CSP-2]: Offers additional settings to manage file access and visibility. Use [setallowedfolderlocations][CSP-3] and [setallowedstoragelocations][CSP-4] policy settings to restrict access to certain storage or folder locations in File Explorer, enhancing security and compliance in managed environments.
 
 <!--links-->
 
 [CSP-1]: /windows/client-management/mdm/policy-csp-settings#pagevisibilitylist
-[M365-1]: /microsoft-365/admin/misc/organizational-messages-microsoft-365?view=o365-worldwide
+[CSP-2]: /windows/client-management/mdm/policy-csp-fileexplorer
+[CSP-3]: /windows/client-management/mdm/policy-csp-fileexplorer#setallowedfolderlocations
+[CSP-4]: /windows/client-management/mdm/policy-csp-fileexplorer#setallowedstoragelocations
 [INT-1]: /mem/intune/configuration/settings-catalog
+[WIN-1]: /windows-server/administration/windows-commands/cleanmgr
+[WIN-2]: /windows/configuration/shared-pc/shared-devices-concepts
