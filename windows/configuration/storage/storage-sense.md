@@ -9,7 +9,7 @@ ms.author: paoloma
 
 # Configure Storage Sense
 
-Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files—like temporary files, items in the recycle bin, and offline content from OneDrive. For IT administrators, especially those managing large device fleets, configuring Storage Sense is a low-effort, high-impact way to ensure devices remain performant and up to date. When left unmanaged, low disk space can prevent critical updates from installing, degrade system performance, and lead to user frustration. By proactively configuring Storage Sense through policy settings, IT admins can automate storage maintenance and reduce support overhead.
+Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files—like temporary files, items in the recycle bin, and offline content from OneDrive. For IT administrators, especially those managing large device fleets, configuring Storage Sense is a low-effort, high-impact way to ensure devices remain performant and up to date. When left unmanaged, low disk space can prevent critical updates from installing, degrade system performance, and lead to user frustration. When configuring Storage Sense through policy settings, IT admins can automate storage maintenance and reduce support overhead.
 
 ## Practical scenarios
 
@@ -23,7 +23,7 @@ The available configuration options include:
 
 - Enable or disable Storage Sense at the system level.
 - Enable or disable the cleanup of user temporary files.
-- Set retention thresholds for cloud-backed content: define the minimum number of days a file must remain unaccessed before it is offloaded from the local device (while remaining available in the cloud).
+- Set retention thresholds for cloud-backed content: define the minimum number of days a file must remain unaccessed before it's offloaded from the local device (while remaining available in the cloud).
 - Configure cleanup of the Downloads folder: specify the minimum number of days files must remain unaccessed before deletion.
 - Configure cleanup of the Recycle Bin: set how many days items remain before permanent removal.
 - Define the execution cadence for Storage Sense: choose to run Storage Sense daily, weekly, monthly, or only when disk space is low.
@@ -83,7 +83,7 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 1. Configure the following options:
 
-    - **Cleaup of temporary files**
+    - **Cleanup of temporary files**
     - **Automatic User content cleanup**
     - **Locally available cloud content**
     - **Cleanup schedules**
@@ -92,15 +92,16 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 ## User Experience
 
-When Storage Sense is configured, users will experience automatic disk space management without needing to manually delete temporary files or manage storage. This leads to a smoother user experience, as devices remain responsive and updates can be installed without issues related to low disk space. Users might notice that temporary files are cleaned up periodically, and they will not have to worry about running out of space due to cached data or old files.
+When Storage Sense is configured, automatic disk space management is executed without needing to manually delete temporary files or manage storage. This leads to a smoother user experience, as devices remain responsive and updates can be installed without issues related to low disk space. Users might notice that temporary files are cleaned up periodically, and they don't have to worry about running out of space due to cached data or old files.
 
-## Related topics
+## Related articles
 
-Here are some related topics that can help you learn more about managing disk space in Windows:
+Here are some related articles that can help you learn more about managing disk space in Windows:
 
 - [Cleanmgr][WIN-1]: The command-line utility `cleanmgr.exe`, also known as *Disk Cleanup*, shares overlapping functionalities with Storage Sense and has historically served a similar purpose. Unlike cleanmgr.exe, Storage Sense is a modern, automated disk cleanup feature introduced in Windows 10 and enhanced in later versions.
 - [Shared PC feature][WIN-2]: Enables IT administrators to deliver a streamlined shared device experience. It includes capabilities such as automatic deletion of user profiles based on inactivity or disk space thresholds, and the ability to restrict access to local storage through File Explorer.
-- [FileExplorer CSP][CSP-2]: Offers additional settings to manage file access and visibility. Use [SetAllowedFolderLocations][CSP-3] and [SetAllowedStorageLocations][CSP-4] policy settings to restrict access to certain storage or folder locations in File Explorer, enhancing security and compliance in managed environments.
+- [Delete user profiles][CSP-5]: This policy setting allows an administrator to automatically delete user profiles on system restart that haven't been used within a specified number of days.
+- [FileExplorer CSP][CSP-2]: Offers settings to manage file access and visibility. Use [SetAllowedFolderLocations][CSP-3] and [SetAllowedStorageLocations][CSP-4] policy settings to restrict access to certain storage or folder locations in File Explorer, enhancing security and compliance in managed environments.
 
 <!--links-->
 
@@ -108,6 +109,7 @@ Here are some related topics that can help you learn more about managing disk sp
 [CSP-2]: /windows/client-management/mdm/policy-csp-fileexplorer
 [CSP-3]: /windows/client-management/mdm/policy-csp-fileexplorer#setallowedfolderlocations
 [CSP-4]: /windows/client-management/mdm/policy-csp-fileexplorer#setallowedstoragelocations
+[CSP-5]: /windows/client-management/mdm/policy-csp-admx-userprofiles?WT.mc_id=Portal-Microsoft_Intune_Workflows#cleanupprofiles
 [INT-1]: /mem/intune/configuration/settings-catalog
 [WIN-1]: /windows-server/administration/windows-commands/cleanmgr
 [WIN-2]: /windows/configuration/shared-pc/shared-devices-concepts
