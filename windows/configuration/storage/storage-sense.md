@@ -22,7 +22,7 @@ By default, Storage Sense is enabled and set to run automatically when disk spac
 The available configuration options include:
 
 - Enable or disable Storage Sense at the system level.
-- Control cleanup of user temporary files (enable or disable).
+- Enable or disable the cleanup of user temporary files.
 - Set retention thresholds for cloud-backed content: define the minimum number of days a file must remain unaccessed before it is offloaded from the local device (while remaining available in the cloud).
 - Configure cleanup of the Downloads folder: specify the minimum number of days files must remain unaccessed before deletion.
 - Configure cleanup of the Recycle Bin: set how many days items remain before permanent removal.
@@ -41,8 +41,7 @@ The available configuration options include:
 | **Storage** | Config Storage Sense Cloud Content Dehydration Threshold | Specify a value in the range **0-365** (days unaccessed before offload) |
 | **Storage** | Config Storage Sense Downloads Cleanup Threshold | Specify a value in the range **0-365** (days unaccessed before deletion) |
 | **Storage** | Config Storage Sense Recycle Bin Cleanup Threshold | Specify a value in the range **0-365** (days before permanent removal) |
-| **Storage** | Config Storage Sense Global Cadence | Choose from:<br>**1** - Daily<br>**7** - Weekly<br>**30** - Monthly<br>**0** - Only when disk space is low (default) |
-
+| **Storage** | Config Storage Sense Global Cadence | Choose from:<ul><li>**0** - Only when disk space is low (default)</li><li>**1** - Daily</li><li>**7** - Weekly</li><li>**30** - Monthly</li></ul>> |
 
 [!INCLUDE [intune-settings-catalog-2](../../../includes/configure/intune-settings-catalog-2.md)]
 
@@ -52,66 +51,12 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Setting |
 |--|
-|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[AllowStorageSenseGlobal](/windows/client-management/mdm/policy-csp-Storage#allowstoragesenseglobal)<br>- **Data type:** Integer<br>- **Value:** `1` to allow; `0` to block|
+|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[AllowStorageSenseGlobal](/windows/client-management/mdm/policy-csp-Storage#allowstoragesenseglobal)<br>- **Data type:** Integer<br>- **Value:**<ul><li>`1` to allow</li><li>`0` to block</li></ul>|
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[AllowStorageSenseTemporaryFilesCleanup](/windows/client-management/mdm/policy-csp-Storage#allowstoragesensetemporaryfilescleanup)<br>- **Data type:** Integer<br>- **Value:** `1` to allow; `0` to block |
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseCloudContentDehydrationThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesensecloudcontentdehydrationthreshold)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseDownloadsCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesensedownloadscleanupthreshold)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseRecycleBinCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesenserecyclebincleanupthreshold)<br>- **Data type:** Integer<br>- **Value:** `1` (Daily)<br>-`7` (Weekly)<br>- `30` (Monthly)<br>-`0` (default)|
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseGlobalCadence](/windows/client-management/mdm/policy-csp-Storage#configstoragesenseglobalcadence)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
-
-
-### Allow Storage Sense Global
-
-- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/AllowStorageSenseGlobal`
-- **Data type**: Integer
-- **Value**:
-  - `1` - Allow
-  - `0` - Block
-- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Storage#allowstoragesenseglobal
-
-
-### Allow Storage Sense Temporary Files Cleanup
-
-- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/AllowStorageSenseTemporaryFilesCleanup`
-- **Data type**: Integer
-- **Value**:
-  - `1` - Allow
-  - `0` - Block
-- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Storage#allowstoragesensetemporaryfilescleanup
-
-
-### Config Storage Sense Cloud Content Dehydration Threshold
-
-- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/ConfigStorageSenseCloudContentDehydrationThreshold`
-- **Data type**: Integer
-- **Value**: `0-365` (days unaccessed before offload)
-- https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Storage#configstoragesensecloudcontentdehydrationthreshold
-
-
-### Config Storage Sense Downloads Cleanup Threshold
-
-- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/ConfigStorageSenseDownloadsCleanupThreshold`
-- **Data type**: Integer
-- **Value**: `0-365` (days unaccessed before deletion)
-- https://learn.microsoft.com/windows/client-management/mdm/prage#configstoragesensedownloadscleanupthreshold
-
-
-### Config Storage Sense Recycle Bin Cleanup Threshold
-
-- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseRecycleBinCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesenserecyclebincleanupthreshold)
-- **Data type**: Integer
-- **Value**: `0-365` (days before permanent removal)
-
-
-### Config Storage Sense Global Cadence
-
-- **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseGlobalCadence](/windows/client-management/mdm/policy-csp-Storage#configstoragesenseglobalcadence)
-- **Data type**: Integer
-- **Value**:
-  - `1` - Daily
-  - `7` - Weekly
-  - `30` - Monthly
-  - `0` - Only when disk space is low (default)
 
 #### [:::image type="icon" source="../images/icons/group-policy.svg" border="false"::: **GPO**](#tab/gpo)
 
