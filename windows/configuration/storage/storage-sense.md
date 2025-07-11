@@ -51,11 +51,11 @@ You can configure devices using the [Policy CSP][CSP-1].
 
 | Setting |
 |--|
-|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[AllowStorageSenseGlobal](/windows/client-management/mdm/policy-csp-Storage#allowstoragesenseglobal)<br>- **Data type:** Integer<br>- **Value:**<ul><li>`1` to allow</li><li>`0` to block</li></ul>|
-|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[AllowStorageSenseTemporaryFilesCleanup](/windows/client-management/mdm/policy-csp-Storage#allowstoragesensetemporaryfilescleanup)<br>- **Data type:** Integer<br>- **Value:** `1` to allow; `0` to block |
+|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[AllowStorageSenseGlobal](/windows/client-management/mdm/policy-csp-Storage#allowstoragesenseglobal)<br>- **Data type:** Integer<br>- **Value:**<br>&nbsp;&nbsp;`1` to allow<br>&nbsp;&nbsp;`0` to block|
+|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[AllowStorageSenseTemporaryFilesCleanup](/windows/client-management/mdm/policy-csp-Storage#allowstoragesensetemporaryfilescleanup)<br>- **Data type:** Integer<br>- **Value:** <br>&nbsp;&nbsp;`1` to allow<br>&nbsp;&nbsp;`0` to block |
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseCloudContentDehydrationThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesensecloudcontentdehydrationthreshold)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseDownloadsCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesensedownloadscleanupthreshold)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
-|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseRecycleBinCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesenserecyclebincleanupthreshold)<br>- **Data type:** Integer<br>- **Value:** `1` (Daily)<br>-`7` (Weekly)<br>- `30` (Monthly)<br>-`0` (default)|
+|- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseRecycleBinCleanupThreshold](/windows/client-management/mdm/policy-csp-Storage#configstoragesenserecyclebincleanupthreshold)<br>- **Data type:** Integer<br>&nbsp;&nbsp;- **Value:** `1` (Daily)<br>&nbsp;&nbsp;-`7` (Weekly)<br><br>&nbsp;&nbsp;- `30` (Monthly)<br>|
 |- **OMA-URI:** `./Device/Vendor/MSFT/Policy/Config/Storage/`[ConfigStorageSenseGlobalCadence](/windows/client-management/mdm/policy-csp-Storage#configstoragesenseglobalcadence)<br>- **Data type:** Integer<br>- **Value:** [0-365] |
 
 #### [:::image type="icon" source="../images/icons/group-policy.svg" border="false"::: **GPO**](#tab/gpo)
