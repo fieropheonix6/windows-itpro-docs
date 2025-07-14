@@ -52,7 +52,7 @@ Extended Security Updates for organizations and businesses on Windows 10 can be 
 - [Azure Virtual Desktop](/azure/virtual-desktop/overview)
 - [Azure virtual machines](/azure/virtual-machines/overview)
 - [Azure Dedicated Host](/azure/virtual-machines/dedicated-hosts)
-- [Azure VMware Solution](/azure/azure-vmware/introduction) (includes Citrix and Omnissa Horizon on Azure VMware Solution)
+- [Azure VMware Solution](/azure/azure-vmware/introduction) (includes [Citrix](/azure/azure-vmware/azure-vmware-solution-citrix) and [Omnissa Horizon on Azure VMware Solution](/azure/azure-vmware/azure-vmware-solution-horizon))
 - [Nutanix Cloud Clusters on Azure](/azure/baremetal-infrastructure/workloads/nc2-on-azure/about-nc2-on-azure)
 - [Azure Local](/azure/azure-local/overview) (Azure Local is the new name for Azure Stack HCI)
 - [Azure Stack Hub](/azure-stack/operator/azure-stack-overview)
