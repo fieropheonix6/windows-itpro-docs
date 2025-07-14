@@ -29,11 +29,11 @@ You can create custom charts on the Connected Cache Azure portal by selecting th
 
 As a temporary workaround, you can navigate away from the **Metrics** tab and then return to it. The Connected Cache Azure resource is once again correctly selected as the Scope.
 
-### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use Japanese language
+### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use non-English language
 
-You can create custom charts on the Connected Cache Azure portal by selecting the Metrics tab under the Monitoring section of the Connected Cache Azure resource. The Connected Cache Azure resource is correctly selected as the Scope by default, but if you change the selected Scope you're unable to reselect the Connected Cache Azure resource, preventing subsequent creation of custom charts.
+In the Connected Cache installation script (provisionmcconwsl.ps1), the check processing is executed until the value of the last execution code (Last Result) of the installation task becomes 0 in the following processing. However, on host machines configured to use a non-English language, the return value is null because "Last Result" is displayed, and an exception occurs.
 
-As a temporary workaround, you can change the language setting of the local administrator user from Japanese to English and then execute the script.
+As a temporary workaround, you can change the language setting of the local administrator user to English and then execute the script. The language setting can be changed by after successful cache node installation.
 
 
 ### Patched in latest release
@@ -110,7 +110,7 @@ To troubleshoot issues with the Connected Cache software on a Windows host machi
     Start-Process powershell.exe -Credential (Get-Credential "<Domain>\<RuntimeAccountName>") -ArgumentList '-NoExit'
     ```
 
-* **If the runtime account is a Group Managed Service Account (gMSA)**, you must use [PsExec](https://learn.microsoft.com/sysinternals/downloads/psexec) to launch a PowerShell process as the runtime account by running the following command in an elevated PowerShell window:
+* **If the runtime account is a Group Managed Service Account (gMSA)**, you must use [PsExec](/sysinternals/downloads/psexec) to launch a PowerShell process as the runtime account by running the following command in an elevated PowerShell window:
 
     ```powershell
     psexec.exe -i -u <DOMAIN\GmsaAccountName$> -p ~ powershell.exe 
@@ -241,7 +241,11 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 You can generate a support bundle with detailed diagnostic information by running the `collectMccDiagnostics.sh` script included in the installation package.
 
+<<<<<<< HEAD
 For **Windows** host machines, you need to do the following:
+=======
+For Windows host machines, you must:
+>>>>>>> e2e8828fe2eb79c64b81a244f1b30155729347d8
 
 1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
 1. Change directory to the "MccScripts" directory within the Connected Cache application's installation directory (specified by `deliveryoptimization-cli mcc-get-scripts-path`) and verify the presence of `collectmccdiagnostics.sh`
@@ -254,7 +258,11 @@ For **Windows** host machines, you need to do the following:
 
     For example, `wsl cp /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz /mnt/c/mccwsl01/SupportBundles/`
 
+<<<<<<< HEAD
 For **Linux** host machines, you need to do the following:
+=======
+For Linux host machines, you must:
+>>>>>>> e2e8828fe2eb79c64b81a244f1b30155729347d8
 
 1. Change directory to the "MccScripts" directory within the extracted Connected Cache deployment package and verify the presence of `collectmccdiagnostics.sh`
 1. Run `collectmccdiagnostics.sh` to generate the diagnostic support bundle
