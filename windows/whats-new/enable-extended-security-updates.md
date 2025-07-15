@@ -8,7 +8,7 @@ author: mestew
 manager: bpardi
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 07/02/2025
+ms.date: 07/14/2025
 ms.collection:
   - highpri
   - tier2
@@ -70,7 +70,7 @@ Some cloud and virtualization scenarios have specific considerations for enablin
       - The ESU license is valid for 30 days once issued, and the system attempts to renew it starting at day 22 to avoid service interruption.
 
 
-- **Other virtualization platforms** (such as Nutanix or Citrix): These platforms require manual ESU key activation. Contact your Microsoft account team to obtain a 5x5 key. Activation can be managed with the Volume Activation Management Tool or with a script.
+- **Other virtualization platforms** (such as Nutanix, Citrix, or Omnissa Horizon on Azure VMware Solution): These platforms require manual ESU key activation. Contact your Microsoft account team to obtain a 5x5 key. Activation can be managed with the Volume Activation Management Tool or with a script.
 
 ## Get the product keys for activating Extended Security Update (ESU) licenses
 
