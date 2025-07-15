@@ -241,11 +241,7 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 You can generate a support bundle with detailed diagnostic information by running the `collectMccDiagnostics.sh` script included in the installation package.
 
-<<<<<<< HEAD
 For **Windows** host machines, you need to do the following:
-=======
-For Windows host machines, you must:
->>>>>>> e2e8828fe2eb79c64b81a244f1b30155729347d8
 
 1. Launch a PowerShell process as the account specified as the runtime account during the Connected Cache install
 1. Change directory to the "MccScripts" directory within the Connected Cache application's installation directory (specified by `deliveryoptimization-cli mcc-get-scripts-path`) and verify the presence of `collectmccdiagnostics.sh`
@@ -258,11 +254,7 @@ For Windows host machines, you must:
 
     For example, `wsl cp /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz /mnt/c/mccwsl01/SupportBundles/`
 
-<<<<<<< HEAD
 For **Linux** host machines, you need to do the following:
-=======
-For Linux host machines, you must:
->>>>>>> e2e8828fe2eb79c64b81a244f1b30155729347d8
 
 1. Change directory to the "MccScripts" directory within the extracted Connected Cache deployment package and verify the presence of `collectmccdiagnostics.sh`
 1. Run `collectmccdiagnostics.sh` to generate the diagnostic support bundle
