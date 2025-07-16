@@ -82,7 +82,7 @@ If you bought ESU licenses, you can activate them with Multiple Activation Keys 
 3. On the [Contracts](https://go.microsoft.com/fwlink/p/?linkid=2297440) page, find the **License ID** that the ESU licenses were purchased under, select the three dots (**More actions**), then select **View product keys**. The **Product keys** details page includes contract details and a list of all keys for that contract.
 
 > [!NOTE]
-> After you purchase the ESU licenses, the MAK will appear in the [Microsoft 365 admin center](https://admin.microsoft.com). You can [activate the key and verify activation](#install-and-activate-the-esu-key) now, before it's required by the ESU updates. The first ESU update which requires the activation will be the November 2025 security update.
+> After you purchase the ESU licenses, the MAK will appear in the [Microsoft 365 admin center](https://admin.microsoft.com). You can [activate the key and verify activation](#install-and-activate-the-esu-key) now, before it's required by updates released under the ESU program. The first ESU update which requires the activation will be the November 2025 security update.
 
 ## Install and activate the ESU key
 
