@@ -8,7 +8,7 @@ author: mestew
 manager: bpardi
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 07/14/2025
+ms.date: 07/16/2025
 ms.collection:
   - highpri
   - tier2
@@ -61,8 +61,9 @@ Some cloud and virtualization scenarios have specific considerations for enablin
    - [Azure Local](/azure/azure-local/overview) (Azure Local is the new name for Azure Stack HCI)
    - [Azure Stack Hub](/azure-stack/operator/azure-stack-overview)
    - [Azure Stack Edge](/azure/databox-online/)
+   - [Windows 365](/windows-365/overview) Cloud PCs
 
-- **Windows 365 Cloud PCs**: Windows 10 devices accessing Cloud PCs via [Windows 365](/windows-365/overview) are automatically entitled to ESU for the duration of the ESU offer if the user has an active Windows 365 license assigned, provided the following conditions are met:
+- **Windows 10 devices accessing Windows 365 Cloud PCs**: Windows 10 devices accessing Cloud PCs via [Windows 365](/windows-365/overview) are automatically entitled to ESU for the duration of the ESU offer if the user has an active Windows 365 license assigned, provided the following conditions are met:
    - The Windows 10 device is either Microsoft Entra joined or Microsoft Entra hybrid joined.
       - Devices that are only Entra registered aren't eligible for commercial ESU access. Personal or BYOD devices that are not managed by the organization and are only Entra registered will not qualify for this entitlement. These devices should be enrolled via the [Consumer ESU program](https://support.microsoft.com/windows/33e17de9-36b3-43bb-874d-6c53d2e4bf42).
    - The user must sign in to the Windows 10 device using their Microsoft Entra ID account at least once every 22 days to maintain ESU access.
@@ -81,7 +82,7 @@ If you bought ESU licenses, you can activate them with Multiple Activation Keys 
 3. On the [Contracts](https://go.microsoft.com/fwlink/p/?linkid=2297440) page, find the **License ID** that the ESU licenses were purchased under, select the three dots (**More actions**), then select **View product keys**. The **Product keys** details page includes contract details and a list of all keys for that contract.
 
 > [!NOTE]
-> After you purchase the ESU licenses, the MAK will appear in the [Microsoft 365 admin center](https://admin.microsoft.com). You can activate the key now and verify that it has been activated successfully using the instructions. The first ESU update which requires the activation will be the November 2025 security update.
+> After you purchase the ESU licenses, the MAK will appear in the [Microsoft 365 admin center](https://admin.microsoft.com). You can [activate the key and verify activation](#install-and-activate-the-esu-key) now, before it's required by updates released under the ESU program. The first ESU update which requires the activation will be the November 2025 security update.
 
 ## Install and activate the ESU key
 
