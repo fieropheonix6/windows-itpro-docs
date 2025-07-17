@@ -35,9 +35,9 @@ To use Personal Data Encryption, the following prerequisites must be met:
 - Users must disable Automatic Restart Sign On (ARSO)
 
 > [!IMPORTANT]
-> If you sign in with a password or a [FIDO2 security key][ENTRA-3], you can't access Personal Data Encryption protected content.
-
+> - If you sign in with a password or a [FIDO2 security key][ENTRA-3], you can't access Personal Data Encryption protected content.
 [!INCLUDE [personal-data-encryption-pde](../../../../../includes/licensing/personal-data-encryption-pde.md)]
+> - When prerequisites aren’t satisfied, the system falls back to Data Protection API (DPAPI) mode. 
 
 ## Personal Data Encryption protection levels
 
