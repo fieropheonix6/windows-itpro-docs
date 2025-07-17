@@ -37,10 +37,10 @@ To use Personal Data Encryption, the following prerequisites must be met:
 > [!IMPORTANT]
 > If you sign in with a password or a [FIDO2 security key][ENTRA-3], you can't access Personal Data Encryption protected content.
 
-[!INCLUDE [personal-data-encryption-pde](../../../../../includes/licensing/personal-data-encryption-pde.md)]
-
 > [!NOTE]
 > When prerequisites aren't satisfied, the system falls back to [Data Protection API (DPAPI)](/dotnet/standard/security/how-to-use-data-protection)
+
+[!INCLUDE [personal-data-encryption-pde](../../../../../includes/licensing/personal-data-encryption-pde.md)]
 
 ## Personal Data Encryption protection levels
 
