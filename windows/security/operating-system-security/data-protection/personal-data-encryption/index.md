@@ -39,7 +39,7 @@ To use Personal Data Encryption, the following prerequisites must be met:
 
 [!INCLUDE [personal-data-encryption-pde](../../../../../includes/licensing/personal-data-encryption-pde.md)]
 
-`> [!NOTE]
+> [!NOTE]
 > When prerequisites aren't satisfied, the system falls back to [Data Protection API (DPAPI)](/dotnet/standard/security/how-to-use-data-protection)
 
 ## Personal Data Encryption protection levels
