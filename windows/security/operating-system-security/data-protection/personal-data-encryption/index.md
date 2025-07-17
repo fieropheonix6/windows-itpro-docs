@@ -32,11 +32,15 @@ To use Personal Data Encryption, the following prerequisites must be met:
   - Personal Data Encryption for known folders is only available on Windows 11, version 24H2 and later
 - The devices must be [Microsoft Entra joined][ENTRA-1] or [Microsoft Entra hybrid joined][ENTRA-2]. Domain-joined devices aren't supported
 - Users must sign in using [Windows Hello](../../../identity-protection/hello-for-business/index.md)
+- Users must disable [Automatic Restart Sign On (ARSO)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-)
 
 > [!IMPORTANT]
 > If you sign in with a password or a [FIDO2 security key][ENTRA-3], you can't access Personal Data Encryption protected content.
 
 [!INCLUDE [personal-data-encryption-pde](../../../../../includes/licensing/personal-data-encryption-pde.md)]
+
+> [!NOTE]
+> When prerequisites aren’t satisfied, the system falls back to Data Protection API (DPAPI) mode.
 
 ## Personal Data Encryption protection levels
 
