@@ -1,6 +1,6 @@
 ---
 title: Configure HTTPS Support for Windows
-description: Details on how to configure HTTPS support Microsoft Connected Cache for Enterprise and Education cache nodes.
+description: Details on how to configure HTTPS support Microsoft Connected Cache for Enterprise and Education cache nodes on Windows.
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
@@ -295,7 +295,7 @@ If you need to revert your MCC to HTTP-only communication, follow these steps. T
 
 ## Next steps
 
-- [HTTPS support overview](link-to-overview-doc)
-- [Troubleshooting Connected Cache](link-to-troubleshooting)
+- [HTTPS support overview](mcc-ent-https-overview.md)
+- [Troubleshooting Connected Cache](mcc-ent-troubleshooting.md)
 
----
+

@@ -30,7 +30,7 @@ To enable HTTPS delivery, administrators must generate a Certificate Signing Req
 
 Enabling HTTPS support on your Connected Cache node ensures your organization remains compatible with evolving Microsoft content delivery requirements and benefits from enhanced security and performance. Key advantages include:
 
-- **Access to Microsoft Teams content**: Microsoft Teams content is only available over HTTPS. Without HTTPS support, Connected Cache cannot cache or deliver this content, resulting in direct downloads from the cloud.
+- **Access to Microsoft Teams content**: Microsoft Teams content is only available over HTTPS. Without HTTPS support, Connected Cache can't cache or deliver this content, resulting in direct downloads from the cloud.
 
 - **Continued delivery of Intune-managed Win32 apps**: Starting November 6, 2025, Intune will enforce HTTPS-only delivery for all managed Win32 applications. Cache nodes without HTTPS support will be bypassed, and clients will fall back to CDN delivery.
 
@@ -38,13 +38,13 @@ Enabling HTTPS support on your Connected Cache node ensures your organization re
 
 - **Improved security and compliance posture**: HTTPS ensures encrypted, authenticated delivery of content, aligning with enterprise security policies and regulatory requirements. It protects against tampering, eavesdropping, and impersonation.
 
-- **Seamless fallback and dual-protocol support**: Connected Cache supports both HTTP and HTTPS delivery. If HTTPS is not configured or fails, clients will automatically fall back to CDN delivery. This dual-protocol capability ensures uninterrupted content access without impacting download performance or peer-to-peer (P2P) delivery via Delivery Optimization (DO).
+- **Seamless fallback and dual-protocol support**: Connected Cache supports both HTTP and HTTPS delivery. If HTTPS isn't configured or fails, clients will automatically fall back to CDN delivery. This dual-protocol capability ensures uninterrupted content access without impacting download performance or peer-to-peer (P2P) delivery via Delivery Optimization (DO).
 
 ## From HTTP-only to HTTPS support
 
-Previously, if a client requested content via an HTTPS URL, Connected Cache could not process the request because it did not support TLS certificate handling or listen on port 443. As a result, the client would immediately bypass the cache and retrieve the content directly from the CDN.
+Previously, if a client requested content via an HTTPS URL, Connected Cache couldn't process the request because it didn't support TLS certificate handling or listen on port 443. As a result, the client would immediately bypass the cache and retrieve the content directly from the CDN.
 
-While Connected Cache previously ensured secure delivery through mechanisms like hash validation and container hardening, these methods could not satisfy the requirements of publishers transitioning to HTTPS-only delivery. As a result, Connected Cache now supports HTTPS to maintain compatibility with evolving publisher standards and to ensure continued access to both existing and new content types.
+While Connected Cache previously ensured secure delivery through mechanisms like hash validation and container hardening, these methods couldn't satisfy the requirements of publishers transitioning to HTTPS-only delivery. As a result, Connected Cache now supports HTTPS to maintain compatibility with evolving publisher standards and to ensure continued access to both existing and new content types.
 
 > [!IMPORTANT]
 > Starting November 6, 2025, Microsoft Intune will enforce HTTPS-only delivery for all managed Win32 applications.
@@ -71,7 +71,7 @@ TLS certificates used by Microsoft Connected Cache (MCC) nodes require ongoing m
 
 ### Renew expiring certificates
 
-To renew a certificate, you do not have to regenerate your CSR (step 1). We recommend re-signing your existing CSR (step 2) and importing the resultant certificate using the import command (step 3). If your signing process can be automated, create a script that signs and imports on a regular cadence.
+To renew a certificate, you don't have to regenerate your CSR (step 1). We recommend re-signing your existing CSR (step 2) and importing the resultant certificate using the import command (step 3). If your signing process can be automated, create a script that signs and imports on a regular cadence.
 
 ### Disable HTTPS support
 
@@ -103,7 +103,7 @@ Administrators should regularly review this list to ensure certificates remain v
 
 ### Automation of certificate signing
 
-While automation might seem ideal, Connected Cache cannot yet securely perform certificate signing on behalf of the enterprise due to the following constraints:
+While automation might seem ideal, Connected Cache can't yet securely perform certificate signing on behalf of the enterprise due to the following constraints:
 
 - **Credential Management**: Automating certificate signing would require Connected Cache to store and manage credentials for accessing enterprise or public CAs. This introduces significant security risks, especially since Connected Cache runs in a containerized Linux environment.
 
@@ -127,4 +127,4 @@ To set up HTTPS support on a **Windows** host machine, see
 
 - **CLI/Proxy Guidance**: Coming soon.
 
----
+
