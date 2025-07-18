@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 06/16/2025
+ms.date: 07/07/2025
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -17,12 +17,14 @@ appliesto:
 
 This article describes how to deploy Microsoft Connected Cache for Enterprise and Education caching software to a Windows host machine.
 
-Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts), a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d), a domain user account, or a serivce account as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
+Deploying Connected Cache to a Windows host machine requires designating a [Group Managed Service Account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts), a [local user account](https://support.microsoft.com/topic/20de74e0-ac7f-3502-a866-32915af2a34d), a domain user account, or a service account as the Connected Cache runtime account. This prevents tampering with the Connected Cache container and the cached content on the host machine.
 
 > [!NOTE]
 > If you plan to designate a Group Managed Service Account (gMSA) as the Connected Cache runtime account, ensure that you're logged on to the host machine as a **domain-joined** account when following the deployment steps below.
 
 Before deploying Connected Cache to a Windows host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource](mcc-ent-create-resource-and-cache.md).
+
+For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com) to bypass the proxy's interception, otherwise the certificate chain will be broken and cache node deployment will fail.
 
 ## Steps to deploy Connected Cache node to Windows
 
@@ -59,8 +61,6 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
    >[!Note]
    > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
-1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
-
 1. In the same PowerShell window, run the deployment command that you copied from the Azure portal.
 
    >[!Note]
@@ -71,10 +71,10 @@ Before deploying Connected Cache to a Windows host machine, ensure that the host
 
 To deploy a cache node programmatically, you need to use Azure CLI to get the cache node's deployment details before running the deployment command on the host machine.
 
-1. To get the cache node's deployment details, use `az mcc ent node get-provisioning-details`.
+1. To get the cache node's deployment details, use `az mcc ent node get-deployment-details`.
 
    ```azurecli-interactive
-   az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
+   az mcc ent node get-deployment-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
    ```
 
 1. Save the resulting output. These values must be passed as parameters within the deployment command.
@@ -99,12 +99,10 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
    >[!Note]
    > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
-1. Create a $myAdminCredential PS Credential Object containing the credentials of an account that has administrative privileges on the host machine.
-
-1. Replace the values in the following deployment command before running it on the host machine.
+1. Replace the values in the following deployment command before running it on the host machine. Parameters in square brackets are optional depending on your cache node configuration.
 
    ```powershell-interactive
-   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./provisionmcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -adminCredential $myAdminCredential -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
+   Push-Location (deliveryoptimization-cli mcc-get-scripts-path); ./deploymcconwsl.ps1 -installationFolder c:\mccwsl01 -customerid <GUID> -cachenodeid <GUID> -customerkey <GUID> -registrationkey <GUID> -cacheDrives "/var/mcc,<SIZE>" -mccRunTimeAccount $User [-mccLocalAccountCredential $myLocalAccountCredential] [-rebootBypass $true] [-proxyTlsCertificatePemFileName "mycert.pem"] [-shouldUseProxy $true -proxyurl "http://proxy.example.com:8080"]
    ```
 
    >[!Note]
@@ -112,6 +110,23 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
    > For example, place the .pem file in `C:\mccwsl01\mycert.pem` and add `-proxyTlsCertificatePemFileName "mycert.pem"` to the deployment command.
 
 ---
+
+## Windows deployment command parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `-installationFolder` | The folder where the Connected Cache is installed. This can be changed to any desired path on the host machine.|
+| `-customerid` | The unique ID for your Connected Cache Azure resource. This is available in the Azure portal on the **Overview** page. |
+| `-cachenodeid` | The unique ID for your Connected Cache node. This is available in the Azure portal on the **Cache Node Management** page. |
+| `-customerkey` | The unique customer key for your Connected Cache Azure resource. This is available in the Azure portal on the **Cache Node Configuration** page. |
+| `-registrationkey` | The unique registration key for your Connected Cache node. This is available in the Azure portal on the **Cache Node Configuration** page. This registration key will be refreshed after each successful deployment attempt of this cache node. |
+| `-cacheDrives` | The amount of storage that the cache node uses. This should be formatted as `"/var/mcc,<SIZE>"`, where `<SIZE>` is the desired size of the cache node in GB. |
+| `-mccRunTimeAccount` | The account that runs the Connected Cache software. This should be a PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account. For example, `$User = "LocalMachineName\Username"` for a local user account. If you're using a Group Managed Service Account (gMSA), it should be formatted as `"Domain\Username$"`. |
+| `-mccLocalAccountCredential` | A PowerShell credential object for the Connected Cache runtime account. This is only needed if you're using a local user account, domain user account, or service account. For example, `$myLocalAccountCredential = Get-Credential`. |
+| `-rebootBypass` | If set to `$true`, the Connected Cache installation process won't check for pending reboot on the host machine. This is optional and defaults to `$false`. |
+| `-shouldUseProxy` | If set to `$true`, the deployed cache node communicates through your proxy server. This is optional and defaults to `$false`. |
+| `-proxyurl` | The URL of the proxy server for the cache node use. This is optional and only needed if you're using a proxy server. For example, `-proxyurl "http://proxy.example.com:8080"`. |
+| `-proxyTlsCertificatePemFileName` | The name of the proxy certificate file in PEM format. This is optional and only needed if you're using a TLS-inspecting proxy. For example, `-proxyTlsCertificatePemFileName "mycert.pem"`. The .pem file must be placed in the **installationFolder** path. |
 
 ## Steps to point Windows client devices at Connected Cache node
 

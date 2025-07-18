@@ -91,7 +91,6 @@ az mcc ent resource create --mcc-resource-name <mymccresource> --resource-group 
 Once the cache node state changes to **Not Configured**, you can now configure your cache node.<br>
 For more information about different cache node states, see [Cache node states](#cache-node-states).
 
-
 # [Azure CLI](#tab/cli)
 
 Use the following command to create a new cache node if you don't already have one.
@@ -223,23 +222,22 @@ To deploy cache nodes using Azure CLI, see
 
 ### Storage fields
 
-##### Cache node for Linux
+#### Linux-hosted cache node
 
 >[!Important]
 >All cache drives must have full read/write permissions set or the cache node will not function. For example, in a terminal you can run: sudo chmod 777 /path/to/cachedrivefolder.
-<br>
 
 | Field Name |Expected Value |Description|
 |---|---|---|
 |**Cache drive folder**| File path string |Up to nine drive folders accessible by the cache node can be configured for each cache node to configure cache storage. Enter the location of the folder in Ubuntu where the external physical drive is mounted. For example: /dev/sda3/. Each cache drive should have read/write permissions configured. Ensure your disks are mounted and visit Attach a data disk to a Linux VM for more information.|
-|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 50 GB.|
+|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 100 GB.|
 
 ##### Cache node for Windows
 
 | Field Name |Expected Value |Description|
 |---|---|---|
 |**Cache drive folder**| File path string /var/mcc| This is the folder path where content is cached. You can't change the folder path.|
-|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 50 GB. |
+|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 100 GB. |
 
 #### Proxy settings
 <br>

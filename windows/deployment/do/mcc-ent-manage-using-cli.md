@@ -13,17 +13,15 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>
-ms.date: 06/16/2025
+ms.date: 07/07/2025
 ---
 
 # Manage cache nodes using CLI
 
-<br>
-
 This article outlines how to create, configure, and deploy Microsoft Connected Cache for Enterprise cache nodes using Azure CLI.
 
+## Prerequisites
 
-## Prerequisites:
 1. **Install Azure CLI**: [How to install the Azure CLI](/cli/azure/install-azure-cli)
 1. **Install Connected Cache extension**: Install Connected Cache extension via the command below
 
@@ -33,22 +31,18 @@ az extension add --name mcc
 
 To learn more about installing extensions, see [Install the Connected Cache extension.](/cli/azure/azure-cli-extensions-overview#how-to-install-extensions)
 
-<br>
-<br>
-
 ### 1. Create a Resource group
 
 The first step is to create a resource group if you don't already have one.
 An Azure resource group is a logical container into which Azure resources are deployed and managed.
 
 To create a resource group, use `az group create`. You can find more details on this CLI command [here](/cli/azure/group#az-group-create).
-<br>
 
 ```azurecli-interactive
 az group create --name myrg --location westus
 ```
 
-Once the resource group is created, you'll need to create a Microsoft Connected Cache for Enterprise Azure resource.
+Once the resource group is created, you need to create a Microsoft Connected Cache for Enterprise Azure resource.
 
 ### 2. Create a Connected Cache Azure resource
 
@@ -60,15 +54,10 @@ To create a Connected Cache Azure resource, use `az mcc ent resource create`
 az mcc ent resource create --mcc-resource-name mymccresource --resource-group myrg
 ```
 
-<br>
-
 >[!IMPORTANT]
 >In the output, look for operationStatus. **operationStatus = Succeeded** indicates that our services have successfully started creating your Connected Cache resource.
 
-<br>
-
 The next step is to create a cache node under this resource.
-
 
 ### 3. Create a cache node
 
@@ -78,12 +67,8 @@ To create a cache node, use `az mcc ent node create`
 az mcc ent node create --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg --host-os <linux or windows>
 ```
 
-<br>
-
 >[!IMPORTANT]
 >In the output, look for operationStatus. **operationStatus = Succeeded** indicates that our services have successfully started creating cache node.
-
-<br>
 
 ### 4. Confirm cache node creation
 
@@ -91,20 +76,15 @@ Before you can start configuring your cache node, you need to confirm that the c
 
 To confirm cache node creation, use `az mcc ent node show`
 
-<br>
-
 ```azurecli-interactive
 az mcc ent node show --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
 ```
 
 >[!IMPORTANT]
 >In the output look for cacheNodeState. If **cacheNodeState = Not Configured**, you can continue with cache node configuration.
->If **cacheNodeState = Registration in Progress**, then the cache node is still in process of being created. Please wait for a minute or two more and run the command again.
-
-<br>
+>If **cacheNodeState = Registration in Progress**, then the cache node is still in process of being created. Wait for a minute or two more and run the command again.
 
 Once successful cache node creation is confirmed, you can proceed to configure the cache node.
-
 
 ### 5. Configure cache node
 
@@ -120,29 +100,24 @@ az mcc ent node update --cache-node-name <mycachenode> --mcc-resource-name <mymc
 Remember that the minimum size of a cache drive is 50 GB. You can specify multiple cache drives for Linux-hosted cache nodes by adding additional entries to the `--cache-drive` parameter.
 
 >[!Note]
->* For Windows-hosted cache nodes, the physical path of the cache drive <u>must</u> be **/var/mcc**.<br>
->* In the output, look for operationStatus. **operationStatus = Succeeded** indicates that our services have successfully updated the cache node. You will also see that cacheNodeState will show *Not Provisioned*. <br>
->* Please save values for <u>physicalPath, sizeInGb, proxyPort, proxyHostName</u> as these values will be needed to construct the deployment command.
-
-
-<br>
+>* For Windows-hosted cache nodes, the physical path of the cache drive must be **/var/mcc**.
+>* In the output, look for operationStatus. **operationStatus = Succeeded** indicates that our services have successfully updated the cache node. You will also see that cacheNodeState will show *Not Provisioned*.
+>* Save values for physicalPath, sizeInGb, proxyPort, and proxyHostName as these values will be needed to construct the deployment command.
 
 ### 6. Get deployment details for the cache node
 
-After successfully configuring the cache node, the next step is to deploy the cache node to a host machine. To deploy the cache node, you'll need to create a deployment command using the cache nodes unique identifiers.
+After successfully configuring the cache node, the next step is to deploy the cache node to a host machine. To deploy the cache node, you need to create a deployment command using the cache nodes unique identifiers.
 
-To get the relevant information for the deployment command, use `az mcc ent node get-provisioning-details`
+To get the relevant information for the deployment command, use `az mcc ent node get-deployment-details`
 
 ```azurecli-interactive
-az mcc ent node get-provisioning-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
+az mcc ent node get-deployment-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
 ```
 
 >[!IMPORTANT]
 >* Save the resulting values for cacheNodeId, customerKey, mccResourceId, registrationKey. These GUIDs are needed for the deployment command.
 >* In the output look for cacheNodeState. If **cacheNodeState = Not Provisioned**, you can continue with cache node deployment.
 >* If **cacheNodeState = Not Configured**, then the cache node hasn't been configured. Configure the cache node before deployment.
-
-<br>
 
 ## Next step
 
@@ -154,23 +129,9 @@ To deploy the cache node to a **Linux** host machine, see
 >[!div class="nextstepaction"]
 >[Deploy cache node to Linux](mcc-ent-deploy-to-linux.md)
 
-<br>
-
-### Example script to bulk create and configure multiple cache nodes:
+### Example script to bulk create and configure multiple cache nodes
 
 Below is a pseudocode example of how to script bulk creation and configuration of a Connected Cache Azure resource and multiple Connected Cache cache nodes:
-
-<!--# [Bash](#tab/bash)
-
-:::code language="azurecli" source="~/azure_cli_scripts/azure-cli/create-azure-resources-at-scale/bash/create-azure-resources-at-scale.sh" id="step4":::
-
-In your console output, are you missing the last row in your CSV file?  This can be caused by a missing line continuation character after the last line. Add a blank line at the end of your CSV file to fix the issue.
-
-# [PowerShell](#tab/powershell)
-
-:::code language="azurecli" source="~/azure_cli_scripts/azure-cli/create-azure-resources-at-scale/powershell/create-azure-resources-at-scale.ps1" id="step4":::
-
--->
 
 # [PowerShell](#tab/powershell)
 
@@ -213,5 +174,3 @@ for ($cacheNodeNumber = 1; $cacheNodeNumber -le $cacheNodesToCreate; $cacheNodeN
     az mcc ent node update --cache-node-name $iteratedCacheNodeName --mcc-resource-name $mccResourceName --resource-group $resourceGroup --cache-drive  "[{physical-path:/var/mcc,size-in-gb:50}]" --proxy enabled --proxy-host $proxyHost --proxy-port $proxyPort
 }
 ```
----
-

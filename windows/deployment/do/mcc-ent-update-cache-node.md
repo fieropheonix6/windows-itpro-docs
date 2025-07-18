@@ -44,6 +44,8 @@ Configuring a Connected Cache node to update as part of the `Slow` ring provides
 | Day of the week | Monday through Sunday can be selected. |
 | Time of day | Time of day is based on UTC and a 24 hour clock. |
 
+![Screenshot of a calendar showing how weeks are counted.](images/mcc-ent-update-calendar.png)
+
 ## Updating Connected Cache Linux Components
 
 As part of the Connected Cache installation process, there are several packages and kernel-level configurations that are installed and configured within the Connected Cache Linux environment to optimize delivery. If Connected Cache is deployed to a Linux host machine, these packages and configurations are made to the host machine itself. If Connected Cache is deployed to a Windows host machine, these packages and configurations are made to the Windows Subsystem for Linux (WSL) distribution.

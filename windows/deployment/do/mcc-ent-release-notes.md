@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
-ms.date: 06/16/2025
+ms.date: 07/07/2025
 ---
 
 # Release Notes for Microsoft Connected Cache for Enterprise and Education
@@ -20,29 +20,40 @@ This article contains details about the latest releases of Connected Cache. Sinc
 
 ## General Availability Release
 
-Released on **7/09/2025**
+Released on **7/16/2025**
 
-This release contains improvements that can only be applied by redeploying your cache nodes using the updated Linux-hosted installation scripts or new Connected Cache Windows application.
+This release contains improvements that can only be applied by redeploying your cache nodes using the updated Linux-hosted deployment package or the new Connected Cache Windows application.
 
 ### New Connected Cache container version
 
-- v1.2.1.2100_E
+- v1.2.1.2109_E
 
-### New Linux-hosted installation script version
+  This container version contains changes to mitigate a regression caused by an Ubuntu OS change to how user IDs are assigned. This is a breaking change that requires you to redeploy your Public Preview cache nodes using the updated Linux deployment package or the new Connected Cache Windows application.
 
-- v1.09
+### New Windows-hosted deployment package version
+
+- v0.0.23.0 [(Download here)](https://aka.ms/do-mcc-ent-windows-x64)
+
+  This is the first release of the Connected Cache Windows application, which replaces the previous bundle of installation scripts. The new application simplifies the installation of Connected Cache on Windows-hosted cache nodes.
+
+### New Linux-hosted deployment package version
+
+- v1.09 [(Download here)](https://aka.ms/MCC-Ent-InstallScript-Linux)
 
 ### New capabilities
 
-- **Connected Cache Windows application**: We're introducing a new Connected Cache Windows application that streamlines the installation of Connected Cache on Windows-hosted cache nodes. This first iteration focuses on providing autoupdate functionality for the Connected Cache scripts used to maintain the Connected Cache after installation.
-- **Configure cache nodes to support Intune and Teams content via HTTPS**: You can now configure your cache nodes to support download of Intune and Teams content via HTTPS. This allows for secure and efficient caching of content delivered through these services, improving performance and reducing bandwidth usage.
-- **Script to update Scheduled Tasks on Windows-hosted cache nodes**: A new PowerShell script is available to update the credentials used by Connected Cache Scheduled Tasks on Windows-hosted cache nodes. This script is necessary when the Connected Cache runtime account password is changed. It ensures that the Scheduled Tasks continue to run with the correct credentials, preventing potential issues with scheduled task execution.
+- **Connected Cache Windows application**: We're introducing a new Connected Cache Windows application that streamlines the installation of Connected Cache on Windows-hosted cache nodes. This first iteration focuses on providing autoupdate functionality for the files used to keep the Connected Cache operational after installation.
+- **Configure cache nodes to support Intune and Teams content via HTTPS**: You can now configure your Windows-hosted and Linux-hosted cache nodes to support download of Intune and Teams content via HTTPS. This allows for secure and efficient caching of content needed by these services, improving performance and reducing bandwidth usage.
+- **Script to update Scheduled Tasks on Windows-hosted cache nodes**: A new PowerShell script is available to update the credentials used by Connected Cache Scheduled Tasks on Windows-hosted cache nodes. This script should be run when the Connected Cache runtime account password is changed. It ensures that the Scheduled Tasks continue to run with the correct credentials, preventing potential issues with scheduled task execution.
+- **Terse summary page for Connected Cache**: A new terse summary page is available for cache nodes that use the GA container version. This page provides a quick overview of the cache node's status, performance, and configuration, making it easier to monitor and manage your cache nodes. Instructions for accessing the summary page are available in the [Connected Cache monitoring documentation](mcc-ent-monitoring.md#terse-summary-page).
 
 ### Bug fixes and upgrades
 
-- **Windows-hosted cache nodes no longer grow past their configured disk size**: Fixed a bug that caused Windows-hosted cache nodes to grow past their configured disk size, potentially leading to performance issues and storage constraints.
+- **Windows-hosted cache nodes no longer grow past their configured disk size**: Fixed a bug that caused Windows-hosted cache nodes to grow past their configured disk size, potentially leading to performance issues and storage constraints. This fix necessitates that the minimum disk size for all cache nodes is now 100 GB. If your existing cache nodes have a disk size smaller than 100 GB, you must reconfigure and redeploy them.
 - **Support for non-English locales on Windows**: Connected Cache installation on Windows now supports non-English locales, improving accessibility and usability for international customers.
 - **Support for file paths with spaces on Windows**: Fixed a bug that caused issues when file paths contained spaces during the installation of Connected Cache on Windows. This change ensures that cache nodes can be installed and configured correctly regardless of file path formatting.
+- **Removed X-FF header conflict with ZScaler**: Removed the X-Forwarded-For (X-FF) header from the HTTP requests made by the Connected Cache container in order to prevent traffic routing issues in networks using ZScaler.
+- **Renamed "Provisioning" to "Deployment"**: The term "Provisioning" has been replaced with "Deployment" in the Azure portal, public documentation, script names, and Azure CLI commands to better align with industry terminology and improve clarity for users.
 
 ## February 2025 Release
 
@@ -66,13 +77,13 @@ This release contains improvements that can only be applied by redeploying your 
 
 - **Connected Cache WSL distribution now uses Ubuntu 24.04**: The Windows Subsystem for Linux (WSL) distribution used by Connected Cache has been updated to Ubuntu 24.04 (was 22.04). This change ensures that the WSL distribution is up-to-date with the latest security patches and features.
 - **Connected Cache container now uses Ubuntu 24.04 Docker environment**: The Connected Cache container now runs using an Ubuntu 24.04 Docker environment (was 22.04). This change ensures that the container environment is up-to-date with the latest security patches and features.
-- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation.
+- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation. Added an intermediate certificate verification step to the installation process on both Windows-hosted and Linux-hosted cache nodes. Direct calls to *.prod.do.dsp must be enabled for installation to succeed.
 - **Security improvements**: Kept intentionally vague to protect previous versions of Connected Cache.
 
 ### Improvements to Linux-hosted cache nodes
 
 - **Connected Cache container now uses Ubuntu 24.04 Docker environment**: The Connected Cache container now runs using an Ubuntu 24.04 Docker environment (was 22.04). This change ensures that the container environment is up-to-date with the latest security patches and features.
-- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation.
+- **TLS-inspecting proxies no longer cause IoT Edge error during Connected Cache installation**: Fixed a bug that was causing proxy certificate path string to be improperly handled, leading to IoT Edge errors during Connected Cache installation. Added an intermediate certificate verification step to the installation process on both Windows-hosted and Linux-hosted cache nodes. Calls to *.prod.do.dsp must be enabled for installation to succeed.
 - **Security improvements**: Kept intentionally vague to protect previous versions of Connected Cache.
 
 ## Windows-hosted install script v2.0.0.2
