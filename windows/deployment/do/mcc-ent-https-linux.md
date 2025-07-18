@@ -14,180 +14,242 @@ appliesto:
 ms.date: 06/13/2025
 ---
 
-# HTTPS Support for Linux
+# Enable HTTPS support for Microsoft Connected Cache on Linux
 
-This article outlines how to configure HTTPS support your Microsoft Connected Cache for Enterprise and Education cache nodes.
+This article provides step-by-step instructions for enabling HTTPS support on Microsoft Connected Cache for Enterprise nodes running on Linux.
 
-## Install latest deployment package
+## Prerequisites
 
-If you don't have an active Connected Cache node, create one by following these instructions [Link text](http://ask.fm). When you install Connected Cache, your deployment package will have the new Installer.
+Before enabling HTTPS functionality, ensure your cache node has been migrated to support HTTPS.
 
-If you are using an existing cache node, you will need to reinstall the deployment package on your cache node. Skip the create and configure step, complete deployment instructions.
+1. In Azure portal, under **Cache Node Management**, find the cache node you wish to enable HTTPS on.
+2. Verify that the node has been migrated by checking that "Yes" appears in the **Migrated** column.
+3. If not migrated, select the cache node, navigate to the **Deployment** tab, and follow the instructions to redeploy Connected Cache.
 
 ## Generate a Certificate Signing Request (CSR)
 
- 1. On your Linux host, open a terminal and navigate to the Installer directory
- 2. Add the correct permissions to the given bash script, ./generateCsr.sh
- 3. Input required parameters for ./generateCsr.sh and then run the script. Parameter usage and examples in the table on the next page.
+1. Open a terminal and navigate to the folder containing the extracted deployment package.
 
-    - If you miss a required parameter, the script should alert you which parameters you missed
-    - To test optional parameters not included in the given script, run the script with "-h" appended.
-    - If you encounter errors, locate the GenerateCSR.log file with the folder specified in the script output. The output line starts with "You can find logs here: …"
+2. Add execute permissions to the CSR generation script:
+
+   ```bash
+   sudo chmod +x ./generateCsr.sh
+   ```
+
+3. Configure the parameters for `generateCsr.sh` and run the script with your specific values.
   
-    ### Generate CSR script parameters
+   ### Parameters for generateCsr.sh
 
-    #### Required parameters
-
-    **`-algo` / `--algorithm`** *(Required)*  
-    Certificate algorithm options: `RSA`, `EC`, `ED25519`, `ED448`
-
-    **`-keySizeOrCurve` / `--keySizeOrCurve`** *(Required for RSA/EC)*  
-    - For RSA: Key size like `2048`, `3072`, `4096`
-    - For EC: Curve name like `prime256v1`, `secp384r1`
-
-    **`-csrName` / `--csrName`** *(Required)*  
-    Name for the generated CSR file
-
-    #### Subject parameters
-
-    **`-subjectCommonName` / `--subjectCommonName`** *(Required)*  
-    Common name for the certificate  
-    Examples: `"localhost"`, `"example.com"`
-
-    **`-subjectCountry` / `--subjectCountry`** *(Optional)*  
-    Two-letter country code  
-    Examples: `"US"`, `"CA"`, `"GB"`
-
-    **`-subjectState` / `--subjectState`** *(Optional)*  
-    State or province  
-    Examples: `"WA"`, `"TX"`, `"Ontario"`
-
-    **`-subjectOrg` / `--subjectOrg`** *(Optional)*  
-    Organization name  
-    Examples: `"MyOrg"`, `"ACME Corp"`
-
-    #### Subject Alternative Name (SAN) parameters (At least one required)
-
-    **`-sanDns` / `--sanDns`**  
-    DNS names (comma-separated)  
-    Example: `"localhost,example.com"`
-
-    **`-sanIp` / `--sanIp`**  
-    IP addresses (comma-separated)  
-    Example: `"127.0.0.1,192.168.1.100"`
-
-    **`-sanUri` / `--sanUri`**  
-    URIs (comma-separated)  
-    Example: `"https://example.com, http://localhost"`
-
-    **`-sanEmail` / `--sanEmail`**  
-    Email addresses (comma-separated)  
-    Example: `"admin@example.com,user@domain.com"`
-
-    **`-sanRid` / `--sanRid`**  
-    Registered IDs (comma-separated)
-
-    **`-sanDirName` / `--sanDirName`**  
-    Directory names (comma-separated)
-
-    **`-sanOtherName` / `--sanOtherName`**  
-    Other names (comma-separated)
-
-    #### Guidance (not required)
-
-    **`-h` / `--help`**  
-    Show help message and exit
-
-    ### Examples
-
-    **Full subject with multiple components:**
+    **Basic Syntax**
 
     ```bash
-    ./generateCsr.sh \
-      -algo RSA \
-      -keySizeOrCurve 2048 \
-      -csrName myservercsr \
-      -subjectCountry "US" \
-      -subjectState "WA" \
-      -subjectOrg "MyOrg" \
-      -subjectCommonName "localhost" \
-      -sanDns "localhost,example.com" \
-      -sanIp "127.0.0.1,192.168.1.100"
+    ./generateCsr.sh [Required Parameters] [Subject Parameters] [SAN Parameters]
     ```
 
-    **Minimal subject with CN only**
+    **Required Parameters**
 
-    ```bash
-    ./generateCsr.sh \
-      -algo EC \
-      -keySizeOrCurve prime256v1 \
-      -csrName webapp \
-      -subjectCommonName "webapp.company.com" \
-      -sanDns "webapp.company.com,api.company.com"
-    ```
+    | Parameter | Type | Description |
+    |-----------|------|-------------|
+    | `-algo` | String | Certificate algorithm: `RSA`, `EC`, `ED25519`, or `ED448` |
+    | `-keySizeOrCurve` | String | For RSA: key size (`2048`, `3072`, `4096`). For EC: curve name (`prime256v1`, `secp384r1`) |
+    | `-csrName` | String | Name for the generated CSR file |
 
- 4. Once the CSR Generation Process is completed, find the CSR in your Certificates folder (location is specified at the end of the script output)
+    **Subject Parameters**
 
-    - Output line starts with "CSR file created at: …"
-    - This folder should be in your Install directory under “…\Certificates\certs”
+    | Parameter | Required | Description | Example |
+    |-----------|----------|-------------|---------|
+    | `-subjectCommonName` | Yes | Common name for the certificate | `"localhost"`, `"example.com"` |
+    | `-subjectCountry` | No | Two-letter country code | `"US"`, `"CA"`, `"GB"` |
+    | `-subjectState` | No | State or province | `"WA"`, `"TX"`, `"Ontario"` |
+    | `-subjectOrg` | No | Organization name | `"MyCompany"`, `"ACME Corp"` |
 
- 5. Copy the CSR to the machine that you are using to sign it
+    **Subject Alternative Names (choose at least one)**
+
+    | Parameter | Description | Example |
+    |-----------|-------------|---------|
+    | `-sanDns` | DNS names (comma-separated) | `"localhost,example.com,api.example.com"` |
+    | `-sanIp` | IP addresses (comma-separated) | `"127.0.0.1,192.168.1.100"` |
+    | `-sanUri` | URIs (comma-separated) | `"https://example.com,http://localhost"` |
+    | `-sanEmail` | Email addresses (comma-separated) | `"admin@example.com,user@domain.com"` |
+    | `-sanRid` | Registered IDs (comma-separated) | |
+    | `-sanDirName` | Directory names (comma-separated) | |
+    | `-sanOtherName` | Other names (comma-separated) | |
+
+   ### Subject Alternative Name (SAN) considerations
+
+    When configuring SAN options, consider how your clients are configured to reach MCC. The certificate on the MCC node must match the exact hostname or IP address used by the client.
+
+    - If clients are configured to connect via IP address, your certificate must include that IP in the SAN.
+    - If clients use a DNS name, the SAN must include that DNS name.
+
+   ### Examples
+
+    **Full Subject with Multiple Components**
+
+      ```bash
+      ./generateCsr.sh \
+        -algo RSA \
+        -keySizeOrCurve 2048 \
+        -csrName "myservercsr" \
+        -subjectCountry "US" \
+        -subjectState "WA" \
+        -subjectOrg "MyOrg" \
+        -subjectCommonName "localhost" \
+        -sanDns "localhost,example.com" \
+        -sanIp "127.0.0.1,192.168.1.100"
+      ```
+
+    **Minimal Subject with CN Only**
+
+      ```bash
+      ./generateCsr.sh \
+        -algo EC \
+        -keySizeOrCurve prime256v1 \
+        -csrName "webapp" \
+        -subjectCommonName "webapp.company.com" \
+        -sanDns "webapp.company.com,api.company.com"
+      ```
+
+    **RSA Certificate with Email SAN**
+
+      ```bash
+      ./generateCsr.sh \
+        -algo RSA \
+        -keySizeOrCurve 3072 \
+        -csrName "emailcert" \
+        -subjectCommonName "John Doe" \
+        -subjectOrg "ACME Corporation" \
+        -sanEmail "john.doe@acme.com,admin@acme.com"
+      ```
+
+4. Validate that the CSR generation process completed successfully.
+
+   If you encounter errors, locate the timestamped `generateCSR.log` file in the folder specified in the script output. Look for the output line that starts with "You can find logs here: ..."
+
+5. Locate the generated CSR file in your **Certificates folder** and transfer it if necessary.
+
+   The CSR file location is specified in the script output, starting with "CSR file created at: ..."
 
 ## Sign the CSR
 
- 1. Select a public or enterprise Certificate Authority (CA) to use for signing the CSR. The CA signature must match a root certificate in the client’s trusted root store.
-    - Common Public CAs to use: DigiCert, Let's Encrypt
- 2. Submit your CSR to the CA of your choice and save the resultant signed certificate
-    - Signing requirements: .crt file type and X509 format
- 3. Move your signed certificate to the Certificates folder
-    - In your Install directory, place under "…\Certificates\certs\"
+1. Select a public or enterprise Certificate Authority (CA) to sign the CSR.
 
-## Import signed TLS certificate
+   > [!IMPORTANT]
+   > The CA signature must match a root certificate in the client's trusted root store.
 
- 1. On your Linux host, open a terminal and navigate to the location of the WSL Installer
- 2. Add the correct permissions to the given bash script, ./importCert.sh
+   Most customers utilize their enterprise PKI infrastructure for this process. If you need to use a public CA, consider these resources:
+   - [DigiCert Certificate Utility](https://www.digicert.com/kb/util/import-code-signing-certificate-digicert-utility.htm)
+   - [Let's Encrypt CSR Process](https://community.letsencrypt.org/t/how-to-obtain-a-ssl-certificate-from-lets-encrypt-with-a-csr/15942)
 
-    ### Parameters
+2. Submit your CSR to your chosen CA and save the signed certificate.
 
-      **`-certName` / `--certName`** *(Required)*  
-      The complete filename of your signed TLS certificate  
-            Examples: `"myTlsCert.crt"`, `"server.crt"`, `"webapp-cert"`  
-            *Note: Include or omit the .crt extension - both work*
+   The certificate must meet these requirements:
+   - **File type**: .crt
+   - **Format**: X.509
 
-    ### Example
+   If your CA doesn't support .crt files:
+   1. Request a Base64-encoded .cer or .pem file
+   2. Convert to .crt by renaming the file extension or using OpenSSL
 
-      ```bash
-      ./importCert.sh -certName myTlsCert.crt
-      ```
+3. Move your signed certificate to the **Certificates folder** on your cache node (the same folder where you found your generated CSR).
 
- 3. Input the parameters and then run the script
+## Import signed certificate
 
-## Validation
+1. Open a terminal and navigate to the location of the MCC installer.
 
-Once the import process completes, test HTTP and HTTPS content download using the following commands:
+2. Add execute permissions to the certificate import script:
 
-```bash
-# Test HTTPS
-curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
-    
-# Test HTTPS
-curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
-```
+   ```bash
+   sudo chmod +x ./importCert.sh
+   ```
 
-## Monitor TLS certificate
+3. Configure the parameters and run the script with your specific values.
 
-Ability to monitor the  status (active/inactive, expiry date) of your TLS Certificate will soon be available in the Azure portal.
+   ### Parameters for importCert.sh
 
-## Disable TLS certificate
+    **Basic Syntax**
 
-1. On your Linux host, open a command line window and navigate to the location of the WSL Installer
-2. Add the correct permissions to the given bash script, ./disableTLS.sh, then run the script
-3. Test HTTPS content download using the following commands:
+    ```bash
+    ./importCert.sh [Required Parameters]
+    ```
 
-```bash
-# Test HTTPS
-curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
-    
-# Test HTTPS
-curl -v -o /dev/null "https://localhost/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
-```
+    **Required Parameters**
+
+    | Parameter | Type | Description |
+    |-----------|------|-------------|
+    | `-certName` | String | Complete filename of your signed TLS certificate (with or without .crt extension) |
+
+    **Example**
+
+    ```bash
+    ./importCert.sh -certName "myTlsCert.crt"
+    ```
+
+4. Validate that the import process completed successfully.
+
+   If you encounter errors, locate the timestamped `importCert.log` file in the folder specified in the script output. Look for the output line that starts with "You can find logs here: ..."
+
+### Test HTTPS content retrieval
+
+1. Configure port forwarding and open port 443 on your firewall.
+
+2. Test HTTP and HTTPS content downloads.
+
+   > [!NOTE]
+   > Based on the subject/SAN parameters you configured, determine how you want to connect to the test server. The certificate must match the exact hostname or IP address used by the client.
+
+   Run the following curl commands to test both protocols:
+
+   **HTTPS Test**
+
+   ```bash
+   curl -v -o /dev/null "https://[insert-connection-option]/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+   ```
+
+   **HTTP Test**
+
+   ```bash
+   curl -v -o /dev/null "http://[insert-connection-option]/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+   ```
+
+   **Troubleshooting**
+
+   If you encounter issues during download testing:
+
+   - Use `-v -k -o /dev/null` with curl to check if your certificate can be validated
+   - Use `-v --ssl-no-revoke -o /dev/null` with curl to check if your signing CA has an inaccessible revocation check
+
+## Disable HTTPS support
+
+If you need to revert your MCC to HTTP-only communication, follow these steps. This process won't delete anything in the **Certificates folder**, including CSR files, certificates, and logs.
+
+1. On your Linux host, open a terminal and navigate to the folder containing the extracted deployment package.
+
+2. Add execute permissions to the TLS disable script:
+
+   ```bash
+   sudo chmod +x ./disableTls.sh
+   ```
+
+3. Run the disable script (no parameters required):
+
+   ```bash
+   ./disableTls.sh
+   ```
+
+4. Test HTTP and HTTPS content downloads to confirm the configuration.
+
+   After disabling HTTPS, HTTP requests should work while HTTPS requests should fail:
+
+   ```bash
+   curl -v -o /dev/null "https://[insert-connection-option]/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+   
+   curl -v -o /dev/null "http://[insert-connection-option]/ee344de8-d177-4720-86c1-a076581766f9/070a8fd4-79a7-42c8-b7c8-9883253bb01a/c7b1b825-88b2-4e66-9b15-ff5fe0374bc6.appxbundle.bin" --include -H "host:swda01-mscdn.manage.microsoft.com"
+   ```
+
+## Next steps
+
+- [HTTPS support overview](link-to-overview-doc)
+- [Troubleshooting Connected Cache](link-to-troubleshooting)
+
+---
