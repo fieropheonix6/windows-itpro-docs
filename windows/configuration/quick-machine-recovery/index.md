@@ -11,7 +11,7 @@ appliesto:
 
 # Quick machine recovery
 
-Starting in Windows 11, version 24H2, quick machine recovery is a feature that enables the recovery of Windows devices when they encounter critical errors that prevent them from booting. This feature can automatically search for remediations in the cloud and recover from widespread boot failures, significantly reducing the burden on IT administrators when multiple devices are affected.
+Starting in Windows 11, version 24H2 with [KB5062660][KB-1], quick machine recovery is a feature that enables the recovery of Windows devices when they encounter critical errors that prevent them from booting. This feature can automatically search for remediations in the cloud and recover from widespread boot failures, significantly reducing the burden on IT administrators when multiple devices are affected.
 
 Building on the foundation of [Startup Repair][SMC-1], quick machine recovery uses a secure and connected [Windows Recovery Environment][SMC-2] to scan Windows Update for remediation options. This allows devices to be recovered without requiring manual intervention.
 
@@ -274,3 +274,4 @@ To provide feedback for quick machine recovery, open [**Feedback Hub**][FHUB] an
 [FHUB]: feedback-hub://?tabid=2&newFeedback=true&feedbackType=1
 [CSP-1]: /windows/client-management/mdm/remoteremediation-csp
 [INT-1]: /mem/intune/configuration/settings-catalog
+[KB-1]: https://support.microsoft.com/help/5062660
