@@ -264,6 +264,10 @@ If it shows the **edgeAgent** and **edgeHub** containers but doesn't show **MCC*
 
 You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
+>[!NOTE]
+> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run "chmod 777 -R /cachedrivepath" and then restart the MCC container "sudo iotedge restart MCC"
+> Otherwise the redeployed node will be up and running, but requests for content will fail.
+
 ## Generating cache node diagnostic support bundle
 
 You can generate a support bundle with detailed diagnostic information by running the `collectMccDiagnostics.sh` script included in the installation package.

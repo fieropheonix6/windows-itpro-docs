@@ -35,6 +35,10 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
 1. Set access permissions to allow the `deploynmcc.sh` script within the deployment package directory to execute.
 1. Run the deployment command on the host machine.
 
+>[!NOTE]
+> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run "chmod 777 -R /cachedrivepath" and then restart the MCC container "sudo iotedge restart MCC"
+> Otherwise the redeployed node will be up and running, but requests for content will fail.
+
 # [Azure CLI](#tab/cli)
 
 To deploy a cache node programmatically, you need to use Azure CLI to get the cache node's deployment details and then run the deployment command on the host machine.
