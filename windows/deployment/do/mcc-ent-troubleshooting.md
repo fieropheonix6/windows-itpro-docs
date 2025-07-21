@@ -293,6 +293,10 @@ For **Linux** host machines, you need to do the following:
 
     For example, "Successfully zipped package, please send file created at /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz"
 
+## Troubleshooting HTTPS configuration
+
+If your Certificate Authority (CA) is only able to generate signed certificates in .pem or .cer formats, you can change the file extension of the certificate file to .crt if the file is in Base64 encoding.
+
 ## Troubleshooting cache node monitoring
 
 Connected Cache node status and performance can be [monitored using the Azure portal user interface](mcc-ent-monitoring.md).
