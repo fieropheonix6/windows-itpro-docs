@@ -242,6 +242,16 @@ netsh interface portproxy add v4tov4 listenport=443 listenaddress=0.0.0.0 connec
 netsh interface portproxy add v4tov4 listenport=5000 listenaddress=0.0.0.0 connectport=5000 connectaddress=$ipAddress
 ```
 
+You'll also need to ensure that the host machine's firewall allows inbound traffic on ports 443 and 5000. You can do this by running the following commands in an elevated PowerShell window:
+
+```powershell
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "443"
+
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Outbound -Action Allow -Protocol TCP -LocalPort "443"
+
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (MCC SUMMARY)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "5000"
+```
+
 ## Troubleshooting cache node deployment to Linux host machine
 
 [Deploying a Connected Cache node to a Linux host machine](mcc-ent-deploy-to-linux.md) involves running a series of Bash scripts contained within the Linux deployment package.
