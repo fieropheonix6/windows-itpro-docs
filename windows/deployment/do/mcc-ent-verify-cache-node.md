@@ -20,6 +20,8 @@ This article describes how to verify that a Microsoft Connected Cache for Enterp
 
 These steps should be taken after deploying Connected Cache software to a [Windows](mcc-ent-deploy-to-windows.md) or [Linux](mcc-ent-deploy-to-linux.md) host machine.
 
+If you're deploying Connected Cache to an environment with a network proxy, follow step 1 and 2 and verify that these calls don't get blocked by your network proxy.
+
 ## Steps to verify functionality of Connected Cache node
 
 1. To verify that the Connected Cache container on the host machine is running and reachable, run the following command from the host machine:
