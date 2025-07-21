@@ -10,7 +10,7 @@ manager: naengler
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>
-ms.date: 06/16/2025
+ms.date: 07/20/2025
 ---
 
 # Microsoft Connected Cache for Enterprise and Education Requirements
@@ -30,7 +30,7 @@ This article details the requirements and recommended specifications for using M
     * [Windows Enterprise E3 or E5](/windows/whats-new/windows-licensing#windows-11-enterprise), included in [Microsoft 365 F3, E3, or E5](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing?msockid=32c407b43d5968050f2b13443c746916)
     * Windows Education A3 or A5, included in [Microsoft 365 A3 or A5](https://www.microsoft.com/education/products/microsoft-365?msockid=32c407b43d5968050f2b13443c746916#Education-plans)
 
-    Note that there's no limit to the number of licensed machines that can concurrently download from a Connected Cache node.
+    There's no limit to the number of licensed machines that can concurrently download from a Connected Cache node.
 
 ## Cache node host machine requirements
 
@@ -39,8 +39,13 @@ This article details the requirements and recommended specifications for using M
 - Any previous installations of Connected Cache must be [uninstalled](mcc-ent-uninstall-cache-node.md) from the host machine before installing the latest version of Connected Cache.
 - [These listed endpoints](delivery-optimization-endpoints.md) must be reachable by the host machine.
 - The host machine must have no other services / applications utilizing port 80 (for example, Configuration Manager or a distribution point).
+- To avoid impact to non Connected Cache workloads, the host machine shouldn't have any Azure IoT Edge modules already installed.
 - The host machine must have at least 4 GB of free memory.
 - The host machine must have at least 100 GB of free disk space.
+- The host machine must allow inbound/outbound traffic on port 80 and 443. Inbound is used for receiving content requests, and outbound is used for downloading and caching requested content.
+
+    >[!NOTE]
+    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is autocreated during the cache node deployment process and cleaned up during cache node uninstall.
 
 ### Additional requirements for Windows host machines
 
