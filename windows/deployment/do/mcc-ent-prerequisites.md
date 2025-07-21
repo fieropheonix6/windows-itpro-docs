@@ -42,6 +42,10 @@ This article details the requirements and recommended specifications for using M
 - To avoid impact to non-MCC workloads, the host machine should not have any Azure IoT Edge modules already installed.
 - The host machine must have at least 4 GB of free memory.
 - The host machine must have at least 100 GB of free disk space.
+- The host machine must allow inbound/outbound traffic on port 80 and 443. Inbound is used for receiving content requests, and outbound is used for downloading and caching requested content.
+
+    >[!NOTE]
+    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is auto-created during the cache node deployment process and cleaned up during cache node uninstall.
 
 ### Additional requirements for Windows host machines
 
