@@ -35,7 +35,7 @@ This article describes how to uninstall Microsoft Connected Cache for Enterprise
    .\uninstallmcconwsl.ps1 -RunTimeAccountName "DOMAIN\ServiceAccountName$"
    ```
 
-This script will remove the Connected Cache container, IoT Edge, and all related components from the host machine.
+This script will remove the Connected Cache container, IoT Edge, and all related components from the host machine. To avoid impact to non-MCC workloads, don't deploy MCC to host machines with any Azure IoT Edge modules already installed.
 
 This will also unregister the Connected Cache application from the host machine, stopping it from receiving further updates.
 
@@ -59,3 +59,5 @@ The `uninstallmcc.sh` script within the deployment package uninstalls the Connec
 - Connected Cache container
 - Moby CLI
 - Moby engine
+
+To avoid impact to non-MCC workloads, don't deploy MCC to host machines with any Azure IoT Edge modules already installed.

@@ -39,6 +39,7 @@ This article details the requirements and recommended specifications for using M
 - Any previous installations of Connected Cache must be [uninstalled](mcc-ent-uninstall-cache-node.md) from the host machine before installing the latest version of Connected Cache.
 - [These listed endpoints](delivery-optimization-endpoints.md) must be reachable by the host machine.
 - The host machine must have no other services / applications utilizing port 80 (for example, Configuration Manager or a distribution point).
+- To avoid impact to non-MCC workloads, the host machine should not have any Azure IoT Edge modules already installed.
 - The host machine must have at least 4 GB of free memory.
 - The host machine must have at least 100 GB of free disk space.
 
