@@ -257,7 +257,7 @@ To simulate the quick machine recovery experience, use the following commands fr
     >
     >   1. Retry the quick machine recovery simulation starting from step 1
 
-## Verify Remediation (if applicable)
+## Verify remediation
 
 If a relevant remediation is applied to the device, it appears under **Settings** > **Windows Update** > **[Update history](ms-settings:windowsupdate-history)**, listed within the **Quality updates** section.
 
