@@ -29,13 +29,6 @@ You can create custom charts on the Connected Cache Azure portal by selecting th
 
 As a temporary workaround, you can navigate away from the **Metrics** tab and then return to it. The Connected Cache Azure resource is once again correctly selected as the Scope.
 
-### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use non-English language
-
-In the Connected Cache installation script (provisionmcconwsl.ps1), the check processing is executed until the value of the last execution code (Last Result) of the installation task becomes 0 in the following processing. However, on host machines configured to use a non-English language, the return value is null because "Last Result" is displayed, and an exception occurs.
-
-As a temporary workaround, you can change the language setting of the local administrator user to English and then execute the script. The language setting can be changed by after successful cache node installation.
-
-
 ### Patched in latest release
 
 [GA release: 7/16/2025](mcc-ent-release-notes.md)
