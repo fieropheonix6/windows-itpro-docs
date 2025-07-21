@@ -239,6 +239,9 @@ Contains the type of security the client uses when connecting to the wireless ne
 |WPA-Enterprise| The wireless network is protected using Wi-Fi Protected Access-Enterprise.|
 |WPA2-Personal| The wireless network is protected using Wi-Fi Protected Access 2, which typically uses a pre-shared key.|
 |WPA2-Enterprise| The wireless network is protected using Wi-Fi Protected Access 2-Enterprise.|
+|WPA3-Personal| The wireless network is protected using Wi-Fi Protected Access 3, which typically uses a pre-shared key.|
+|WPA3-Enterprise| The wireless network is protected using Wi-Fi Protected Access 3-Enterprise.|
+|WPA3-Enterprise-192| The wireless network is protected using Wi-Fi Protected Access 3-Enterprise 192 bit.|
 
 For example:
 
