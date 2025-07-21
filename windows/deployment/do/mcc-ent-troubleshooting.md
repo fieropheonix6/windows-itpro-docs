@@ -29,6 +29,14 @@ You can create custom charts on the Connected Cache Azure portal by selecting th
 
 As a temporary workaround, you can navigate away from the **Metrics** tab and then return to it. The Connected Cache Azure resource is once again correctly selected as the Scope.
 
+### importCert.ps1 limitations
+
+The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script does not currently support Windows Server 2022 or using a gMSA as the Connected Cache runtime account.
+
+### Connected Cache Windows installer application limitations
+
+The Connected Cache Windows installer application is a MSIX package that is used to deploy Connected Cache to Windows host machines. The installer application does not currently support Windows Server Core.
+
 ### Patched in latest release
 
 [GA release: 7/16/2025](mcc-ent-release-notes.md)
