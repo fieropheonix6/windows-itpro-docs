@@ -225,6 +225,23 @@ If you don't see any port forwarding rules for port 80 to 0.0.0.0, you can run t
 
 You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the Connected Cache application's installation directory (`C:\mccwsl01` by default).
 
+### Missing WSL port forwarding rules (443, 5000)
+
+In order to successfully configure your Windows-hosted cache nodes to support HTTPS, you must create a port forwarding rule to forward traffic from port 443 on the host machine to port 443 on the WSL2 distribution that hosts the Connected Cache container.
+
+In order to remote access your Windows-hosted cache node's Terse Summary page, you must create a port forwarding rule to forward traffic from port 5000 on the host machine to port 5000 on the WSL2 distribution that hosts the Connected Cache container.
+
+You can create these port forwarding rules by running the following commands in an elevated PowerShell window after completing cache node deployment.
+
+```powershell
+$ipFilePath = Join-Path ([System.Environment]::GetEnvironmentVariable("MCC_INSTALLATION_FOLDER", "Machine")) "wslIp.txt"
+
+$ipAddress = (Get-Content $ipFilePath | Select-Object -First 1).Trim()
+
+netsh interface portproxy add v4tov4 listenport=443 listenaddress=0.0.0.0 connectport=443 connectaddress=$ipAddress
+netsh interface portproxy add v4tov4 listenport=5000 listenaddress=0.0.0.0 connectport=5000 connectaddress=$ipAddress
+```
+
 ## Troubleshooting cache node deployment to Linux host machine
 
 [Deploying a Connected Cache node to a Linux host machine](mcc-ent-deploy-to-linux.md) involves running a series of Bash scripts contained within the Linux deployment package.
