@@ -14,7 +14,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for ISPs</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>
 - ✅ <a href=https://learn.microsoft.com/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache target=_blank>Connected Cache on a Configuration Manager distribution point</a>
-ms.date: 04/15/2025
+ms.date: 07/20/2025
 ---
 
 # Microsoft Connected Cache content and services endpoints
