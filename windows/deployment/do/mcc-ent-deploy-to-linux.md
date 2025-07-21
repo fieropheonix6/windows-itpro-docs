@@ -36,7 +36,7 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
 1. Run the deployment command on the host machine.
 
 >[!NOTE]
-> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run "chmod 777 -R /cachedrivepath" and then restart the MCC container "sudo iotedge restart MCC"
+> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run `chmod 777 -R /cachedrivepath` and then restart the Connected Cache container `sudo iotedge restart MCC`.
 > Otherwise the redeployed node will be up and running, but requests for content will fail.
 
 # [Azure CLI](#tab/cli)
