@@ -54,7 +54,7 @@ These packages and kernel-level configuration may need to be updated for several
 
 ### Package Version Updates
 
-The following packages are updated as part of MCC lifecycle operations.
+The following packages are updated as part of Connected Cache lifecycle operations.
 
 #### Azure IoT Edge and Identity Service Versions
 
@@ -68,7 +68,7 @@ Azure IoT Edge uses Moby-based Docker components (`moby-engine`, `moby-cli`) for
 
 The Microsoft Connected Cache installation modifies kernel-level configurations for performance tuning and updates to these configurations may be required to ensure efficient, performant delivery of content to your network.
 
-The following kernel parameters are commonly tuned on MCC Linux hosts to optimize network performance and container behavior:
+The following kernel parameters are commonly tuned on Connected Cache Linux hosts to optimize network performance and container behavior:
 
 * net.ipv4.tcp_congestion_control
 * net.core.default_qdisc
