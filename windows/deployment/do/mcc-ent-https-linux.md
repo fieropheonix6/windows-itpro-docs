@@ -77,7 +77,7 @@ Before enabling HTTPS functionality, ensure your cache node has been migrated to
 
    ### Subject Alternative Name (SAN) considerations
 
-    When configuring SAN options, consider how your clients are configured to reach MCC. The certificate on the MCC node must match the exact hostname or IP address used by the client.
+    When configuring SAN options, consider how your clients are configured to reach MCC. The certificate on the Connected Cache node must match the exact hostname or IP address used by the client.
 
     - If clients are configured to connect via IP address, your certificate must include that IP in the SAN.
     - If clients use a DNS name, the SAN must include that DNS name.
@@ -155,7 +155,7 @@ Before enabling HTTPS functionality, ensure your cache node has been migrated to
 
 ## Import signed certificate
 
-1. Open a terminal and navigate to the location of the MCC installer.
+1. Open a terminal and navigate to the location of the Connected Cache installer.
 
 2. Add execute permissions to the certificate import script:
 
@@ -221,7 +221,7 @@ Before enabling HTTPS functionality, ensure your cache node has been migrated to
 
 ## Disable HTTPS support
 
-If you need to revert your MCC to HTTP-only communication, follow these steps. This process won't delete anything in the **Certificates folder**, including CSR files, certificates, and logs.
+If you need to revert your Connected Cache to HTTP-only communication, follow these steps. This process won't delete anything in the **Certificates folder**, including CSR files, certificates, and logs.
 
 1. On your Linux host, open a terminal and navigate to the folder containing the extracted deployment package.
 

@@ -92,8 +92,8 @@ Once the cache node has been successfully installed on the Windows host machine,
 You can expect to see the following types of log files:
 
 1. **WSL_Mcc_Monitor_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Monitor_Task" scheduled task that is responsible for ensuring that the Connected Cache continues running.
-1. **WSL_Mcc_UserUninstall_Transcript**: This log file records the output of the "uninstallmcconwsl.ps1" script that the user can run to uninstall MCC software from the host machine.
-1. **WSL_Mcc_Uninstall_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Uninstall_Task" scheduled task that is responsible for uninstalling the MCC software from the host machine when called by the "uninstallmcconwsl.ps1" script.
+1. **WSL_Mcc_UserUninstall_Transcript**: This log file records the output of the "uninstallmcconwsl.ps1" script that the user can run to uninstall Connected Cache software from the host machine.
+1. **WSL_Mcc_Uninstall_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Uninstall_Task" scheduled task that is responsible for uninstalling the Connected Cache software from the host machine when called by the "uninstallmcconwsl.ps1" script.
 
 ### Lauching a PowerShell process as the Connected Cache runtime account
 
@@ -133,7 +133,7 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 As part of the installation process on Windows host machines, Connected Cache will attempt to register itself with the Delivery Optimization service by calling a registration endpoint `geomcc.prod.do.dsp.mp.microsoft.com`. This call originates from within the WSL2 distribution that hosts the Connected Cache container, and must be successful for the cache node to be installed.
 
-To troubleshoot the connection, you can try running the following commands from an elevated PowerShell window as the MCC runtime account.
+To troubleshoot the connection, you can try running the following commands from an elevated PowerShell window as the Connected Cache runtime account.
 
 First, access the WSL2 distribution that hosts the Connected Cache container:
 
@@ -161,7 +161,7 @@ curl -v https://geomcc.prod.do.dsp.mp.microsoft.com
 
 ### MCC_Install_Task scheduled task fails to run
 
-Connected Cache installation on Windows host machines relies on the "MCC_Install_Task" scheduled task to perform installation actions as the designated MCC runtime account. If this task fails to run, it may be due to one of the following reasons.
+Connected Cache installation on Windows host machines relies on the "MCC_Install_Task" scheduled task to perform installation actions as the designated Connected Cache runtime account. If this task fails to run, it may be due to one of the following reasons.
 
 #### Group Policy Object conflicts with Scheduled Task registration
 
@@ -169,7 +169,7 @@ Enabling the Group Policy Object: [Network access: Do not allow storage of passw
 
 #### MCC runtime account doesn't have permissions to log on as batch job
 
-Ensure that you have granted the MCC runtime account the "Log on as a batch job" permission. This permission is required for the MCC runtime account to run scheduled tasks.
+Ensure that you have granted the Connected Cache runtime account the "Log on as a batch job" permission. This permission is required for the Connected Cache runtime account to run scheduled tasks.
 
 #### Enterprise security policy prevents execution of PowerShell scripts
 
