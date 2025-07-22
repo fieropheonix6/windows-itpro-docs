@@ -90,6 +90,8 @@ If you created cache nodes during public preview, the **Migrated** column helps 
 | No | The cache node was created and deployed _before_ GA launch, and you must follow the required steps to migrate it to the GA release. |
 | N/A | The cache node was created and deployed _after_ GA launch and is already using the GA release. |
 
+To migrate your cache nodes to the GA release, you must redeploy them using the [latest Linux-hosted deployment package](https://aka.ms/mcc-ent-linux-deploy-scripts) or the [latest Connected Cache Windows application](https://aka.ms/do-mcc-ent-windows-x64).
+
 ## Advanced Monitoring
 
 ### Customizable Azure portal charts
