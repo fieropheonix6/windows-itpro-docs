@@ -12,6 +12,7 @@ ms.topic: reference
 ms.collection: 
 - privacy-windows
 - must-keep
+- trust-pod
 ---
 
 # Manage connections from Windows 10 and Windows 11 operating system components to Microsoft services using Microsoft Intune MDM Server
