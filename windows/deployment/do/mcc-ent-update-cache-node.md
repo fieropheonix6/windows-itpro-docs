@@ -40,7 +40,7 @@ Configuring a Connected Cache node to update as part of the `Slow` ring provides
 
 | Setting | Description |
 | --- | --- |
-| Week of the month | 1st to 4th week can be selected. There are three to four months in a year that could have a fifth week. If there's a fifth week, the update could be applied during that fifth week if the day of the week falls near the last day of the month.|
+| Week of the month | 2nd or 3rd week can be selected. Reference the example calendar below for how weeks are counted. |
 | Day of the week | Monday through Sunday can be selected. |
 | Time of day | Time of day is based on UTC and a 24 hour clock. |
 
