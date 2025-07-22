@@ -92,6 +92,10 @@ If you created cache nodes during public preview, the **Migrated** column helps 
 
 To migrate your cache nodes to the GA release, you must redeploy them using the [latest Linux-hosted deployment package](https://aka.ms/mcc-ent-linux-deploy-scripts) or the [latest Connected Cache Windows application](https://aka.ms/do-mcc-ent-windows-x64).
 
+>[!NOTE]
+> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run `chmod 777 -R /cachedrivepath` and then restart the Connected Cache container `sudo iotedge restart MCC`.
+> Otherwise the redeployed node will be up and running, but requests for content will fail.
+
 ## Advanced Monitoring
 
 ### Customizable Azure portal charts
