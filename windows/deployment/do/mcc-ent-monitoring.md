@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 03/19/2025
+ms.date: 07/22/2025
 ---
 
 # Monitor cache node usage
@@ -118,10 +118,12 @@ Some example scenarios where you would want to set up a custom alert:
 When your cache node is up and running, you can access a web-based summary page that provides a terse overview of the cache node's status and performance. This page is accessible at the following URL.
 
 ```HTML
-https://localhost:5000/details?apiKey=DOINC_Microsoft_Internal__D0508632-1B4D-431C-9EF3-49285AF4DC1F
+https://localhost:5000/details?apiKey=[YourConnectedCacheCustomerId]__D0508632-1B4D-431C-9EF3-49285AF4DC1F
 ```
 
-This page is only accessible from the host machine where the Connected Cache node is deployed.
+You'll need to replace `[YourConnectedCacheCustomerId]` with your Connected Cache customer ID, which can be found in the Azure portal under the **Cache Node Management** tab. By default, this page is only accessible from the host machine where the Connected Cache node is deployed.
+
+To remotely access the terse summary page, you need to create a firewall rule to allow inbound traffic on port 5000. If the cache node is deployed to a Windows host machine, you also need to port forward the host machine's port 5000 to the Windows Subsystem for Linux (WSL) distribution. [Learn more](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
 
 ## Client device metrics
 
