@@ -28,7 +28,7 @@ This release contains improvements that can only be applied by redeploying your 
 
 - v2.0.0.2112_E
 
-  This container version contains changes to mitigate a regression caused by an Ubuntu OS change to how user IDs are assigned. This is a breaking change that requires you to migrate your Public Preview cache nodes to the GA release by re-deploying them using the updated Linux deployment package or the new Connected Cache Windows application. You can use the Azure Portal to check the GA migration status of your Public Preview cache nodes. [Learn more](mcc-ent-monitoring.md#ga-migration-status).
+  This container version contains changes to mitigate a regression caused by an Ubuntu OS change to how user IDs are assigned. This is a breaking change that requires you to migrate your Public Preview cache nodes to the GA release by redeploying them using the updated Linux deployment package or the new Connected Cache Windows application. You can use the Azure portal to check the GA migration status of your Public Preview cache nodes. [Learn more](mcc-ent-monitoring.md#ga-migration-status).
 
 ### New Windows-hosted deployment package version
 
