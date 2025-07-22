@@ -78,10 +78,10 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
    ```
 
 1. Save the resulting output. These values must be passed as parameters within the deployment command.
-1. Download the [Connected Cache Windows application](https://aka.ms/MCC-Ent-InstallScript-WSL) to your host machine and run the following command to install it:
+1. Download and install the Connected Cache Windows application to your host machine by running the following command in an elevated PowerShell window:
 
    ```powershell-interactive
-   Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
+   Add-AppxPackage "https://aka.ms/do-mcc-ent-windows-x64"
    ```
 
 1. You can verify that the Connected Cache app has been installed by running the following command:
