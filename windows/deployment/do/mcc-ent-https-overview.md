@@ -1,5 +1,5 @@
 ---
-title: HTTPS Support for MCC Overview
+title: HTTPS Support for Microsoft Connected Cache Overview
 description: Details on how to configure HTTPS support Microsoft Connected Cache for Enterprise and Education cache nodes.
 ms.service: windows-client
 ms.subservice: itpro-updates
@@ -75,7 +75,7 @@ To renew a certificate, you don't have to regenerate your CSR (step 1). We recom
 
 ### Disable HTTPS support
 
-If HTTPS delivery is no longer required or a certificate is revoked, run the provided disable script on the MCC host machine.
+If HTTPS delivery is no longer required or a certificate is revoked, run the provided disable script on the Connected Cache host machine.
 
 The script will remove HTTPS configuration on the container, but it will not delete the certificate, key pair, or CSR from the cache node.
 
@@ -92,14 +92,14 @@ This policy aligns with Microsoft's internal security and privacy standards and 
 
 ### Monitor certificate status
 
-MCC provides visibility into all active and inactive TLS certificates via the Azure portal. Each certificate entry includes:
+Connected Cache provides visibility into all active and inactive TLS certificates via the Azure portal. Each certificate entry includes:
 
 - Domain name
 - Issuing Certificate Authority (CA)
 - Issue and expiration dates
 - Thumbprint ID
 
-Administrators should regularly review this list to ensure certificates remain valid and trusted. MCC will surface alerts when a certificate is approaching expiration.
+Administrators should regularly review this list to ensure certificates remain valid and trusted. Connected Cache will surface alerts when a certificate is approaching expiration.
 
 ### Automation of certificate signing
 
@@ -107,7 +107,7 @@ While automation might seem ideal, Connected Cache can't yet securely perform ce
 
 - **Credential Management**: Automating certificate signing would require Connected Cache to store and manage credentials for accessing enterprise or public CAs. This introduces significant security risks, especially since Connected Cache runs in a containerized Linux environment.
 
-- **Diverse Enterprise PKI Models**: Enterprises use a wide range of CA configurations, including on-premises, cloud-based, and hybrid models. Automating signing would require MCC to support all variations, which is impractical and error-prone.
+- **Diverse Enterprise PKI Models**: Enterprises use a wide range of CA configurations, including on-premises, cloud-based, and hybrid models. Automating signing would require Connected Cache to support all variations, which is impractical and error-prone.
 
 - **Security Principle of Least Privilege**: Delegating signing to the IT administrator ensures that only authorized personnel can approve and distribute certificates, reducing the attack surface.
 

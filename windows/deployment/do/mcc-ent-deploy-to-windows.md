@@ -59,7 +59,7 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
    * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`. For domain user and service accounts, `$User` should be formatted as `"Domain\Username"`. For local user, domain user, and service accounts you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
-   > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
+   > You'll need to apply a local security policy to permit the Connected Cache runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
 1. In the same PowerShell window, run the deployment command that you copied from the Azure portal.
 
@@ -97,7 +97,7 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
    * For local user accounts, `$User` PowerShell variable should be formatted as `"LocalMachineName\Username"`. For domain user and service accounts, `$User` should be formatted as `"Domain\Username"`. For local user, domain user, and service accounts you'll also need to create a [PSCredential Object](/dotnet/api/system.management.automation.pscredential) named `$myLocalAccountCredential`.
 
    >[!Note]
-   > You'll need to apply a local security policy to permit the MCC runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
+   > You'll need to apply a local security policy to permit the Connected Cache runtime account to `Log on as a batch job`. Make sure to save your runtime account information, as you'll need it for troubleshooting and uninstallation.
 
 1. Replace the values in the following deployment command before running it on the host machine. Parameters in square brackets are optional depending on your cache node configuration.
 
