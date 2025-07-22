@@ -1,7 +1,7 @@
 ---
 title: InternetExplorer Policy CSP
 description: Learn more about the InternetExplorer Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -2146,7 +2146,7 @@ If the Windows Update for the next version of Microsoft Edge* or Microsoft Edge 
 3 = Microsoft Edge Dev version 77 or later
 4 = Microsoft Edge Canary version 77 or later.
 
-- For more information about the Windows update for the next version of Microsoft Edge including how to disable it, see< https://go.microsoft.com/fwlink/?linkid=2102115>. This update applies only to Windows 10 version 1709 and higher.
+- For more information about the Windows update for the next version of Microsoft Edge including how to disable it, see <https://go.microsoft.com/fwlink/?linkid=2102115> This update applies only to Windows 10 version 1709 and higher.
 <!-- ConfigureEdgeRedirectChannel-Description-End -->
 
 <!-- ConfigureEdgeRedirectChannel-Editable-Begin -->
@@ -8009,7 +8009,7 @@ Related policies:
 - Send all intranet sites to Internet Explorer ('SendIntranetToInternetExplorer')
 - Send all sites not included in the Enterprise Mode Site List to Microsoft Edge ('RestrictIE')
 
-For more info about how to use this policy together with other related policies to create the optimal configuration for your organization, see< https://go.microsoft.com/fwlink/?linkid=2094210>.
+For more info about how to use this policy together with other related policies to create the optimal configuration for your organization, see <https://go.microsoft.com/fwlink/?linkid=2094210>
 <!-- KeepIntranetSitesInInternetExplorer-Description-End -->
 
 <!-- KeepIntranetSitesInInternetExplorer-Editable-Begin -->

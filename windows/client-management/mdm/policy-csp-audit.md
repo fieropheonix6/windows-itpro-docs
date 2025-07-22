@@ -1,7 +1,7 @@
 ---
 title: Audit Policy CSP
 description: Learn more about the Audit Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -2320,8 +2320,7 @@ Volume: High on a file server or domain controller because of SYSVOL network acc
 
 <!-- ObjectAccess_AuditFileSystem-Description-Begin -->
 <!-- Description-Source-DDF -->
-This policy setting allows you to audit user attempts to access file system objects. A security audit event is generated only for objects that have system access control lists (SACL) specified, and only if the type of access requested, such as Write, Read, or Modify and the account making the request match the settings in the SACL. For more information about enabling object access auditing, see< https://go.microsoft.com/fwlink/?LinkId=122083>.
-
+This policy setting allows you to audit user attempts to access file system objects. A security audit event is generated only for objects that have system access control lists (SACL) specified, and only if the type of access requested, such as Write, Read, or Modify and the account making the request match the settings in the SACL. For more information about enabling object access auditing, see <https://go.microsoft.com/fwlink/?LinkId=122083>
 - If you configure this policy setting, an audit event is generated each time an account accesses a file system object with a matching SACL. Success audits record successful attempts and Failure audits record unsuccessful attempts.
 
 - If you don't configure this policy setting, no audit event is generated when an account accesses a file system object with a matching SACL.

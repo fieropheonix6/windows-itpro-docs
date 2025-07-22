@@ -1,7 +1,7 @@
 ---
 title: WindowsAI Policy CSP
 description: Learn more about the WindowsAI Area in Policy CSP.
-ms.date: 06/30/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- AllowRecallEnablement-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- AllowRecallEnablement-Applicability-End -->
 
 <!-- AllowRecallEnablement-OmaUri-Begin -->
@@ -159,7 +159,7 @@ Before starting an export, the user must authenticate with Windows Hello and the
 <!-- DisableAIDataAnalysis-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- DisableAIDataAnalysis-Applicability-End -->
 
 <!-- DisableAIDataAnalysis-OmaUri-Begin -->
@@ -294,7 +294,7 @@ Click to Do lets people take action on content on their screens. When activated,
 <!-- DisableCocreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later |
 <!-- DisableCocreator-Applicability-End -->
 
 <!-- DisableCocreator-OmaUri-Begin -->
@@ -356,7 +356,7 @@ This policy setting allows you to control whether Cocreator functionality is dis
 <!-- DisableGenerativeFill-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later |
 <!-- DisableGenerativeFill-Applicability-End -->
 
 <!-- DisableGenerativeFill-OmaUri-Begin -->
@@ -418,7 +418,7 @@ This policy setting allows you to control whether generative fill functionality 
 <!-- DisableImageCreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later |
 <!-- DisableImageCreator-Applicability-End -->
 
 <!-- DisableImageCreator-OmaUri-Begin -->
@@ -595,7 +595,7 @@ The property value is the Application User Model ID (AUMID) for the target appli
 <!-- SetDenyAppListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetDenyAppListForRecall-Applicability-End -->
 
 <!-- SetDenyAppListForRecall-OmaUri-Begin -->
@@ -664,7 +664,7 @@ For example: `code.exe;Microsoft.WindowsNotepad_8wekyb3d8bbwe!App;ms-teams.exe`
 <!-- SetDenyUriListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetDenyUriListForRecall-Applicability-End -->
 
 <!-- SetDenyUriListForRecall-OmaUri-Begin -->
@@ -729,7 +729,7 @@ Adding `https://www.WoodgroveBank.com` to the list would also filter `https://Ac
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageDurationForRecallSnapshots-OmaUri-Begin -->
@@ -805,7 +805,7 @@ Snapshots aren't deleted until the maximum storage allocation for Recall is reac
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageSpaceForRecallSnapshots-OmaUri-Begin -->

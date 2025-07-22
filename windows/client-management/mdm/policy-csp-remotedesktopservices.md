@@ -1,7 +1,7 @@
 ---
 title: RemoteDesktopServices Policy CSP
 description: Learn more about the RemoteDesktopServices Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -743,7 +743,7 @@ If the status is set to Not Configured, unsecured communication is allowed.
 <!-- TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2400] and later <br> ✅ [10.0.25398.827] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.2898] and later <br> ✅ Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22621.3374] and later <br> ✅ Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22631.3374] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2400] and later <br> ✅ [10.0.25398.827] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.2898] and later <br> ✅ Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22621.3374] and later <br> ✅ Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22631.3374] and later |
 <!-- TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME-Applicability-End -->
 
 <!-- TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME-OmaUri-Begin -->
