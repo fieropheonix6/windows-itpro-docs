@@ -117,6 +117,9 @@ sections:
       - question: How many users can enroll for Windows Hello for Business on a single Windows device?
         answer: |
           The maximum number of supported enrollments on a single device is 10. This lets 10 users each enroll their face and up to 10 fingerprints. For devices with more than 10 users, or for users that sign-in to many devices (for example, a support technician), it's recommended the use of FIDO2 security keys.
+      - question: How many additional X.509 certificates can be imported or enrolled into an existing Windows Hello for Business enrollment?
+        answer: |
+          The maximum number of certificates in a Windows Hello for Business container is 30. This limit includes the initial key and certificate created when the user enrolled for Windows Hello for Business.
       - question: I have extended Active Directory to Microsoft Entra ID. Can I use the on-premises deployment model?
         answer: |
           No. If your organization is using Microsoft cloud services, then you must use a hybrid deployment model. On-premises deployments are exclusive to organizations who need more time before moving to the cloud and exclusively use Active Directory.
