@@ -31,7 +31,7 @@ As a temporary workaround, you can navigate away from the **Metrics** tab and th
 
 ### importCert.ps1 limitations
 
-The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script does not currently support Windows Server 2022 or using a gMSA as the Connected Cache runtime account.
+The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script does not currently support cache nodes deployed to Windows Server 2022 with a gMSA Connected Cache runtime account.
 
 ### Connected Cache Windows installer application limitations
 
