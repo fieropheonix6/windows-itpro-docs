@@ -32,7 +32,7 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
     >[!Note]
     >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted deployment package directory and add `proxytlscertificatepath="/path/to/pem/file"` to the deployment command.
 
-1. Set access permissions to allow the `deploynmcc.sh` script within the deployment package directory to execute.
+1. Set access permissions to allow the `deploymcc.sh` script within the deployment package directory to execute.
 1. Run the deployment command on the host machine.
 
 >[!NOTE]
