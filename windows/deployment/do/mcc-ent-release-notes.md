@@ -38,7 +38,7 @@ This release contains improvements that can only be applied by redeploying your 
 
 ### New Linux-hosted deployment package version
 
-- v1.09 [(Download here)](https://aka.ms/MCC-Ent-InstallScript-Linux)
+- v1.09 [(Download here)](https://aka.ms/mcc-ent-linux-deploy-scripts)
 
 ### New capabilities
 
