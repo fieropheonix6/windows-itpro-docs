@@ -3,7 +3,7 @@ title: Manage Recall for Windows clients
 description: Learn how to manage Recall for commercial environments and about Recall features.
 ms.topic: how-to
 ms.subservice: windows-copilot
-ms.date: 06/23/2025
+ms.date: 07/22/2025
 ms.author: mstewart
 author: mestew
 ms.collection:
@@ -163,7 +163,6 @@ To filter websites from being saved in snapshots, use the **Set a list of URIs t
 
 ## Allow export of Recall and snapshot information
 <!--9257953-->
-The Recall export experience is available in preview to Copilot + PCs through the Windows Insiders Program. For more information, see [Announcing Windows 11 Insider Preview Build 26120.4441 (Beta Channel)](https://blogs.windows.com/windows-insider/2025/06/13/announcing-windows-11-insider-preview-build-26120-4441-beta-channel/).
 
 In the European Economic Area (EEA), users can choose to [export their Recall snapshots](https://support.microsoft.com/topic/680bd134-4aaa-4bf5-8548-a8e2911c8069) if IT admins allow exporting. By default, exporting Recall and snapshot information is disabled for managed devices. Exporting allows users to share their Recall and snapshot information with third-party apps or websites that the user trusts. Exporting is optional, and users can review their snapshots at any time in Recall without needing to export. Exported information includes:
 
