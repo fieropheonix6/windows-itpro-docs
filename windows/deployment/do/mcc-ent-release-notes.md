@@ -20,19 +20,19 @@ This article contains details about the latest releases of Connected Cache. Sinc
 
 ## General Availability Release
 
-Released on **7/16/2025**
+Released on **7/23/2025**
 
 This release contains improvements that can only be applied by redeploying your cache nodes using the updated Linux-hosted deployment package or the new Connected Cache Windows application.
 
 ### New Connected Cache container version
 
-- v1.2.1.2109_E
+- v2.0.0.2112_E
 
   This container version contains changes to mitigate a regression caused by an Ubuntu OS change to how user IDs are assigned. This is a breaking change that requires you to redeploy your Public Preview cache nodes using the updated Linux deployment package or the new Connected Cache Windows application.
 
 ### New Windows-hosted deployment package version
 
-- v0.0.23.0 [(Download here)](https://aka.ms/do-mcc-ent-windows-x64)
+- v1.0.24.0 [(Download here)](https://aka.ms/do-mcc-ent-windows-x64)
 
   This is the first release of the Connected Cache Windows application, which replaces the previous bundle of installation scripts. The new application simplifies the installation of Connected Cache on Windows-hosted cache nodes.
 
