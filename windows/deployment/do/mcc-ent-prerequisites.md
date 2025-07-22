@@ -53,6 +53,32 @@ This article details the requirements and recommended specifications for using M
     * Windows 11 must have [OS Build 22631.3296](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b) or later
     * Windows Server 2022 must have [OS Build 20348.2227](https://support.microsoft.com/topic/january-9-2024-kb5034129-os-build-20348-2227-6958a36f-efaf-4ef5-a576-c5931072a89a) or later
 - The Windows host machine must support nested virtualization. Ensure that any security settings that may restrict nested virtualization aren't enabled, such as ["Trusted launch" in Azure VMs](/azure/virtual-machines/trusted-launch-portal).
+- The Windows host machine must have Hyper-V PowerShell Management Tools installed during the deployment process. These components aren't necessary for a deployed cache node to operate, and can be removed after successful deployment.
+
+    **Enable Hyper-V Management Tools on Windows 11:**
+
+    ```powershell
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell -All
+    ```
+
+    **Install Hyper-V Management Tools on Windows Server:**
+
+    ```powershell
+    Install-WindowsFeature -Name Hyper-V -IncludeManagementTools
+    ```
+
+    **Disable Hyper-V Management Tools on Windows 11:**
+
+    ```powershell
+    Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+    ```
+
+    **Uninstall Hyper-V Management Tools on Windows Server:**
+
+    ```powershell
+    Uninstall-WindowsFeature -Name Hyper-V
+    ```
+
 - The Windows host machine must have [WSL 2 installed](/windows/wsl/install#install-wsl-command). You can install this on Windows 11 and Windows Server 2025 by logging on as a local administrator and running the following command in an elevated PowerShell window:
 
     ```powershell
