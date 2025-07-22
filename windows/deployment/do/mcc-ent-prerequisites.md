@@ -39,13 +39,13 @@ This article details the requirements and recommended specifications for using M
 - Any previous installations of Connected Cache must be [uninstalled](mcc-ent-uninstall-cache-node.md) from the host machine before installing the latest version of Connected Cache.
 - [These listed endpoints](delivery-optimization-endpoints.md) must be reachable by the host machine.
 - The host machine must have no other services / applications utilizing port 80 (for example, Configuration Manager or a distribution point).
-- To avoid impact to non Connected Cache workloads, the host machine shouldn't have any Azure IoT Edge modules already installed.
+- To avoid impact to non-Connected Cache workloads, the host machine shouldn't have any Azure IoT Edge modules already installed.
 - The host machine must have at least 4 GB of free memory.
 - The host machine must have at least 100 GB of free disk space.
 - The host machine must allow inbound/outbound traffic on port 80 and 443. Inbound is used for receiving content requests, and outbound is used for downloading and caching requested content.
 
     >[!NOTE]
-    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is autocreated during the cache node deployment process and cleaned up during cache node uninstall.
+    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is autocreated during the cache node deployment process and cleaned up during cache node uninstall. [Learn more](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
 
 ### Additional requirements for Windows host machines
 
