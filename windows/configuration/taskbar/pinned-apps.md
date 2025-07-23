@@ -300,6 +300,15 @@ After the taskbar layout is applied, users must sign out and sign in again to ge
 - By default, any pins provisioned via policy settings are restored upon the next policy update cycle, even when users unpin them
 - Pins defined with the `PinGeneration` attribute can be unpinned from the taskbar, and aren't repinned during the next policy update cycle
 
+:::row:::
+:::column span="1":::
+:::image type="icon" source="../images/icons/insider.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> [!NOTE]
+> Starting with Windows 11 Insider Preview Build [26200.XYZ (Dev Channel)][INS-1] and [26120.XYZ (Beta Channel)][INS-2] taskbar pin configurations deployed via policy are applied instantly, without requiring the user to sign out and sign back in.
+:::column-end:::
+:::row-end:::
 ::: zone-end
 
 ### OS install and upgrade experience
@@ -340,3 +349,5 @@ To provide feedback, open [**Feedback Hub**][FHUB] and use the category **Deskto
 [MEM-1]: /mem/intune/configuration/custom-settings-windows-10
 [KB-1]: https://support.microsoft.com/topic/e31ba7c2-ff65-4863-a462-a66e30840b1a
 [KB-2]: https://support.microsoft.com/topic/65d38dd2-e149-4462-9699-e2482f60b16b
+[INS-1]: https://blogs.windows.com/windows-insider/2025/07/14/announcing-windows-11-insider-preview-build-26200-5702-dev-channel/
+[INS-2]: https://blogs.windows.com/windows-insider/2025/07/14/announcing-windows-11-insider-preview-build-26200-5702-dev-channel/
