@@ -1,7 +1,7 @@
 ---
 title: PassportForWork CSP
 description: Learn more about the PassportForWork CSP.
-ms.date: 04/30/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -164,7 +164,7 @@ Root node for policies.
 <!-- Device-{TenantId}-Policies-DisablePostLogonProvisioning-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2402] and later <br> ✅ Windows 10, version 2004 [10.0.19041.4239] and later <br> ✅ Windows 11, version 21H2 with [KB5036894](https://support.microsoft.com/help/5036894) [10.0.22000.2899] and later <br> ✅ Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22621.3374] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2402] and later <br> ✅ Windows 10, version 2004 [10.0.19041.4239] and later <br> ✅ Windows 11, version 21H2 with [KB5036894](https://support.microsoft.com/help/5036894) [10.0.22000.2899] and later <br> ✅ Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22621.3374] and later |
 <!-- Device-{TenantId}-Policies-DisablePostLogonProvisioning-Applicability-End -->
 
 <!-- Device-{TenantId}-Policies-DisablePostLogonProvisioning-OmaUri-Begin -->

@@ -1,7 +1,7 @@
 ---
 title: WiredNetwork CSP
 description: Learn more about the WiredNetwork CSP.
-ms.date: 06/10/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -220,7 +220,4 @@ The following example shows how to add a wired network profile that authenticate
 
 ## Related articles
 
-- [Wired profile samples](/windows/win32/nativewifi/wired-profile-samples)
-- [Configuration service provider reference](configuration-service-provider-reference.md)
-- [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
-- [Configure EAP profiles and settings in Windows](/windows-server/networking/technologies/extensible-authentication-protocol/configure-eap-profiles)
+[Configuration service provider reference](configuration-service-provider-reference.md)
