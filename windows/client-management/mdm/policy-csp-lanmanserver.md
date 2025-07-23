@@ -1,7 +1,7 @@
 ---
 title: LanmanServer Policy CSP
 description: Learn more about the LanmanServer Area in Policy CSP.
-ms.date: 04/21/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- AuditClientDoesNotSupportEncryption-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- AuditClientDoesNotSupportEncryption-Applicability-End -->
 
 <!-- AuditClientDoesNotSupportEncryption-OmaUri-Begin -->
@@ -89,7 +89,7 @@ This policy controls whether the SMB server will log the event when the SMB clie
 <!-- AuditClientDoesNotSupportSigning-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- AuditClientDoesNotSupportSigning-Applicability-End -->
 
 <!-- AuditClientDoesNotSupportSigning-OmaUri-Begin -->
@@ -154,7 +154,7 @@ If you enable this policy setting, the SMB server will log the event when the SM
 <!-- AuditInsecureGuestLogon-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- AuditInsecureGuestLogon-Applicability-End -->
 
 <!-- AuditInsecureGuestLogon-OmaUri-Begin -->
@@ -221,7 +221,7 @@ This policy controls whether the SMB server will enable the audit event when the
 <!-- AuthRateLimiterDelayInMs-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- AuthRateLimiterDelayInMs-Applicability-End -->
 
 <!-- AuthRateLimiterDelayInMs-OmaUri-Begin -->
@@ -279,7 +279,7 @@ This policy controls whether the SMB server will use a default value in millisec
 <!-- EnableAuthRateLimiter-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- EnableAuthRateLimiter-Applicability-End -->
 
 <!-- EnableAuthRateLimiter-OmaUri-Begin -->
@@ -346,7 +346,7 @@ This policy controls whether the SMB server will enable or disable the authentic
 <!-- EnableMailslots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- EnableMailslots-Applicability-End -->
 
 <!-- EnableMailslots-OmaUri-Begin -->
@@ -416,7 +416,7 @@ This policy controls whether the SMB server will enable or disable remote mailsl
 <!-- MaxSmb2Dialect-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- MaxSmb2Dialect-Applicability-End -->
 
 <!-- MaxSmb2Dialect-OmaUri-Begin -->
@@ -484,7 +484,7 @@ This policy controls the maximum version of SMB protocol.
 <!-- MinSmb2Dialect-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- MinSmb2Dialect-Applicability-End -->
 
 <!-- MinSmb2Dialect-OmaUri-Begin -->

@@ -1,7 +1,7 @@
 ---
 title: UserRights Policy CSP
 description: Learn more about the UserRights Area in Policy CSP.
-ms.date: 04/30/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -1015,16 +1015,15 @@ This user right determines which users are prevented from accessing a computer o
 <!-- DenyLocalLogOn-OmaUri-End -->
 
 <!-- DenyLocalLogOn-Description-Begin -->
-<!-- Description-Source-DDF -->
-This security setting determines which users are prevented from logging on to the computer.
-
-> [!NOTE]
-> This security setting doesn't apply to the System, Local Service, or Network Service accounts.
+<!-- Description-Source-Manual-Forced -->
 <!-- DenyLocalLogOn-Description-End -->
 
 <!-- DenyLocalLogOn-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-<!-- KNOWN ISSUE: DenyLocalLogOn policy section from DDF has strings for 'Deny log on as a service'-->
+This security setting determines which users are prevented from logging on to the computer.
+
+> [!NOTE]
+> This security setting doesn't apply to the System, Local Service, or Network Service accounts.
 <!-- DenyLocalLogOn-Editable-End -->
 
 <!-- DenyLocalLogOn-DFProperties-Begin -->

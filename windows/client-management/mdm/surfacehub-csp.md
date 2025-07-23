@@ -1,7 +1,7 @@
 ---
 title: SurfaceHub CSP
 description: Learn more about the SurfaceHub CSP.
-ms.date: 03/12/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -360,7 +360,7 @@ Possible error values:
 <!-- Device-DeviceAccount-ExchangeModernAuthEnabled-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 with [KB4598291](https://support.microsoft.com/help/4598291) [10.0.19041.789] and later <br> ✅ Windows 10, version 20H2 with [KB4598291](https://support.microsoft.com/help/4598291) [10.0.19042.789] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 with [KB4598291](https://support.microsoft.com/help/4598291) [10.0.19041.789] and later <br> ✅ Windows 10, version 20H2 with [KB4598291](https://support.microsoft.com/help/4598291) [10.0.19042.789] and later |
 <!-- Device-DeviceAccount-ExchangeModernAuthEnabled-Applicability-End -->
 
 <!-- Device-DeviceAccount-ExchangeModernAuthEnabled-OmaUri-Begin -->
