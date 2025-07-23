@@ -63,7 +63,7 @@ To establish a secure HTTPS connection, Connected Cache must present a valid TLS
 
 - **Enterprise Compatibility**: Many organizations already manage their own PKI infrastructure. The CSR model allows IT administrators to sign certificates using their existing trusted CAs, ensuring seamless integration with enterprise security policies.
 
-- **Avoiding Private Key Exposure**: By generating the key pair on the cache node and never exporting the private key, the CSR model ensures that sensitive cryptographic material remains secure and local to the cache node.ate key, the CSR model ensures that sensitive cryptographic material remains secure and local to the cache node.
+- **Avoiding Private Key Exposure**: By generating the key pair on the cache node and never exporting the private key, the CSR model ensures that sensitive cryptographic material remains secure and local to the cache node.
 
 ## TLS certificate maintenance
 
