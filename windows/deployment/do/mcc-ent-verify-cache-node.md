@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 07/20/2025
+ms.date: 07/23/2025
 appliesto: 
 - ✅ Windows-hosted Connected Cache cache nodes
 - ✅ Linux-hosted Connected Cache cache nodes
