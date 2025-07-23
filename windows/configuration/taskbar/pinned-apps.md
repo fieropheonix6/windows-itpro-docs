@@ -302,7 +302,7 @@ After the taskbar layout is applied, users must sign out and sign in again to ge
 
 :::row:::
 :::column span="1":::
-:::image type="icon" source="../images/icons/insider.svg" border="false":::
+:::image type="icon" source="../images/insider.png" border="false":::
 :::column-end:::
 :::column span="3":::
 > [!NOTE]
