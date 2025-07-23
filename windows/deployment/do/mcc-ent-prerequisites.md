@@ -10,7 +10,7 @@ manager: naengler
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>
-ms.date: 07/20/2025
+ms.date: 07/23/2025
 ---
 
 # Microsoft Connected Cache for Enterprise and Education Requirements
@@ -39,13 +39,13 @@ This article details the requirements and recommended specifications for using M
 - Any previous installations of Connected Cache must be [uninstalled](mcc-ent-uninstall-cache-node.md) from the host machine before installing the latest version of Connected Cache.
 - [These listed endpoints](delivery-optimization-endpoints.md) must be reachable by the host machine.
 - The host machine must have no other services / applications utilizing port 80 (for example, Configuration Manager or a distribution point).
-- To avoid impact to non Connected Cache workloads, the host machine shouldn't have any Azure IoT Edge modules already installed.
+- To avoid impact to non-Connected Cache workloads, the host machine shouldn't have any Azure IoT Edge modules already installed.
 - The host machine must have at least 4 GB of free memory.
 - The host machine must have at least 100 GB of free disk space.
 - The host machine must allow inbound/outbound traffic on port 80 and 443. Inbound is used for receiving content requests, and outbound is used for downloading and caching requested content.
 
     >[!NOTE]
-    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is autocreated during the cache node deployment process and cleaned up during cache node uninstall.
+    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is autocreated during the cache node deployment process and cleaned up during cache node uninstall. For more information, see [Missing WSL port forwarding rules (443, 5000)](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
 
 ### Additional requirements for Windows host machines
 
@@ -53,6 +53,32 @@ This article details the requirements and recommended specifications for using M
     * Windows 11 must have [OS Build 22631.3296](https://support.microsoft.com/topic/march-12-2024-kb5035853-os-builds-22621-3296-and-22631-3296-a69ac07f-e893-4d16-bbe1-554b7d9dd39b) or later
     * Windows Server 2022 must have [OS Build 20348.2227](https://support.microsoft.com/topic/january-9-2024-kb5034129-os-build-20348-2227-6958a36f-efaf-4ef5-a576-c5931072a89a) or later
 - The Windows host machine must support nested virtualization. Ensure that any security settings that may restrict nested virtualization aren't enabled, such as ["Trusted launch" in Azure VMs](/azure/virtual-machines/trusted-launch-portal).
+- The Windows host machine must have Hyper-V PowerShell Management Tools installed during the deployment process. These components aren't necessary for a deployed cache node to operate, and can be removed after successful deployment.
+
+    **Enable Hyper-V Management Tools on Windows 11:**
+
+    ```powershell
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell -All
+    ```
+
+    **Install Hyper-V Management Tools on Windows Server:**
+
+    ```powershell
+    Install-WindowsFeature -Name Hyper-V -IncludeManagementTools
+    ```
+
+    **Disable Hyper-V Management Tools on Windows 11:**
+
+    ```powershell
+    Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+    ```
+
+    **Uninstall Hyper-V Management Tools on Windows Server:**
+
+    ```powershell
+    Uninstall-WindowsFeature -Name Hyper-V
+    ```
+
 - The Windows host machine must have [WSL 2 installed](/windows/wsl/install#install-wsl-command). You can install this on Windows 11 and Windows Server 2025 by logging on as a local administrator and running the following command in an elevated PowerShell window:
 
     ```powershell

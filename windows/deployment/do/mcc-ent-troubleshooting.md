@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 07/20/2025
+ms.date: 07/23/2025
 ---
 
 
@@ -31,7 +31,7 @@ As a temporary workaround, you can navigate away from the **Metrics** tab and th
 
 ### importCert.ps1 limitations
 
-The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script does not currently support Windows Server 2022 or using a gMSA as the Connected Cache runtime account.
+The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script does not currently support cache nodes deployed to Windows Server 2022 with a gMSA Connected Cache runtime account.
 
 ### Connected Cache Windows installer application limitations
 

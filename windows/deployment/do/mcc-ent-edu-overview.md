@@ -12,7 +12,7 @@ ms.collection: tier3
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
-ms.date: 06/17/2025
+ms.date: 07/23/2025
 ---
 
 # Microsoft Connected Cache for Enterprise and Education Overview

@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
-ms.date: 07/07/2025
+ms.date: 07/23/2025
 ---
 
 # Release Notes for Microsoft Connected Cache for Enterprise and Education
@@ -20,25 +20,25 @@ This article contains details about the latest releases of Connected Cache. Sinc
 
 ## General Availability Release
 
-Released on **7/16/2025**
+Released on **7/23/2025**
 
 This release contains improvements that can only be applied by redeploying your cache nodes using the updated Linux-hosted deployment package or the new Connected Cache Windows application.
 
 ### New Connected Cache container version
 
-- v1.2.1.2109_E
+- v2.0.0.2112_E
 
-  This container version contains changes to mitigate a regression caused by an Ubuntu OS change to how user IDs are assigned. This is a breaking change that requires you to redeploy your Public Preview cache nodes using the updated Linux deployment package or the new Connected Cache Windows application.
+  This container version contains changes to mitigate a regression caused by an Ubuntu OS change to how user IDs are assigned. This is a breaking change that requires you to migrate your Public Preview cache nodes to the GA release by redeploying them using the updated Linux deployment package or the new Connected Cache Windows application. You can use the Azure portal to check the GA migration status of your Public Preview cache nodes. For more information, see [GA migration status](mcc-ent-monitoring.md#ga-migration-status).
 
 ### New Windows-hosted deployment package version
 
-- v0.0.23.0 [(Download here)](https://aka.ms/do-mcc-ent-windows-x64)
+- v1.0.24.0 [(Download here)](https://aka.ms/do-mcc-ent-windows-x64)
 
   This is the first release of the Connected Cache Windows application, which replaces the previous bundle of installation scripts. The new application simplifies the installation of Connected Cache on Windows-hosted cache nodes.
 
 ### New Linux-hosted deployment package version
 
-- v1.09 [(Download here)](https://aka.ms/MCC-Ent-InstallScript-Linux)
+- v1.09 [(Download here)](https://aka.ms/mcc-ent-linux-deploy-scripts)
 
 ### New capabilities
 

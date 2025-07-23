@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 07/20/2025
+ms.date: 07/23/2025
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -31,10 +31,10 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
 # [Azure portal](#tab/portal)
 
 1. Within the Azure portal, navigate to the **Deployment** tab of your cache node and copy the deployment command.
-1. Download the Connected Cache Windows application to your host machine using the option at the top of the Cache Node Configuration page and run the following command to install it:
+1. Download and install the Connected Cache Windows application to your host machine by running the following command in an elevated PowerShell window:
 
    ```powershell-interactive
-   Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
+   Add-AppxPackage "https://aka.ms/do-mcc-ent-windows-x64"
    ```
 
 1. You can verify that the Connected Cache app has been installed by running the following command:
@@ -49,7 +49,7 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
    deliveryoptimization-cli mcc-get-scripts-path
    ```
 
-   This command should return a path to the Connected Cache scripts directory, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts won't be updateable if they're moved to a different path.
+   This command should return a path to the Connected Cache **scripts directory**, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts won't be updateable if they're moved to a different path.
 
 1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
 
@@ -78,10 +78,10 @@ To deploy a cache node programmatically, you need to use Azure CLI to get the ca
    ```
 
 1. Save the resulting output. These values must be passed as parameters within the deployment command.
-1. Download the [Connected Cache Windows application](https://aka.ms/MCC-Ent-InstallScript-WSL) to your host machine and run the following command to install it:
+1. Download and install the Connected Cache Windows application to your host machine by running the following command in an elevated PowerShell window:
 
    ```powershell-interactive
-   Add-AppxPackage -Path "C:\Path\To\MicrosoftConnectedCacheApp.msixbundle"
+   Add-AppxPackage "https://aka.ms/do-mcc-ent-windows-x64"
    ```
 
 1. You can verify that the Connected Cache app has been installed by running the following command:
