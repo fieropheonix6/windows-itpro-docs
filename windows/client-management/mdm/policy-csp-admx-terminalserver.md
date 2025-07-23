@@ -1,7 +1,7 @@
 ---
 title: ADMX_TerminalServer Policy CSP
 description: Learn more about the ADMX_TerminalServer Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -2941,7 +2941,7 @@ This policy setting determines whether a user will be prompted on the client com
 <!-- Description-Source-ADMX -->
 This policy setting specifies the default connection URL for RemoteApp and Desktop Connections. In addition to the capabilities that are common to all connections, the default connection URL allows document file types to be associated with RemoteApp programs.
 
-The default connection URL must be configured in the form of< https://contoso.com/rdweb/Feed/webfeed.aspx>.
+The default connection URL must be configured in the form of <https://contoso.com/rdweb/Feed/webfeed.aspx>
 
 - If you enable this policy setting, the specified URL is configured as the default connection URL for the user and replaces any existing connection URL. The user can't change the default connection URL. The user's default logon credentials are used when setting up the default connection URL.
 

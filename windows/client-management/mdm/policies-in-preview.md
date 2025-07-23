@@ -1,7 +1,7 @@
 ---
 title: Configuration service provider preview policies
 description: Learn more about configuration service provider (CSP) policies that are available for Windows Insider Preview.
-ms.date: 06/30/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -52,11 +52,6 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [Abandoned](declaredconfiguration-csp.md#hostcompletedocumentsdocidpropertiesabandoned)
 - [ConflictResolution](declaredconfiguration-csp.md#managementserviceconfigurationconflictresolution)
 
-## DeliveryOptimization
-
-- [DODisallowCacheServerDownloadsOnVPN](policy-csp-deliveryoptimization.md#dodisallowcacheserverdownloadsonvpn)
-- [DOVpnKeywords](policy-csp-deliveryoptimization.md#dovpnkeywords)
-
 ## DeviceGuard
 
 - [MachineIdentityIsolation](policy-csp-deviceguard.md#machineidentityisolation)
@@ -82,9 +77,6 @@ This article lists the policies that are applicable for Windows Insider Preview 
 ## DMClient CSP
 
 - [DiscoveryEndpoint](dmclient-csp.md#deviceproviderprovideridlinkedenrollmentdiscoveryendpoint)
-- [Enabled](dmclient-csp.md#deviceproviderprovideridconfigrefreshenabled)
-- [Cadence](dmclient-csp.md#deviceproviderprovideridconfigrefreshcadence)
-- [PausePeriod](dmclient-csp.md#deviceproviderprovideridconfigrefreshpauseperiod)
 
 ## eUICCs CSP
 
@@ -93,13 +85,7 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 ## FileSystem
 
-- [EnableDevDrive](policy-csp-filesystem.md#enabledevdrive)
-- [DevDriveAttachPolicy](policy-csp-filesystem.md#devdriveattachpolicy)
 - [ClfsAuthenticationChecking](policy-csp-filesystem.md#clfsauthenticationchecking)
-
-## HealthAttestation CSP
-
-- [AttestErrorMessage](healthattestation-csp.md#attesterrormessage)
 
 ## HumanPresence
 
@@ -121,32 +107,8 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [StartInstallation](language-pack-management-csp.md#installlanguage-idstartinstallation)
 - [SystemPreferredUILanguages](language-pack-management-csp.md#languagesettingssystempreferreduilanguages)
 
-## LanmanServer
-
-- [AuditClientDoesNotSupportEncryption](policy-csp-lanmanserver.md#auditclientdoesnotsupportencryption)
-- [AuditClientDoesNotSupportSigning](policy-csp-lanmanserver.md#auditclientdoesnotsupportsigning)
-- [AuditInsecureGuestLogon](policy-csp-lanmanserver.md#auditinsecureguestlogon)
-- [AuthRateLimiterDelayInMs](policy-csp-lanmanserver.md#authratelimiterdelayinms)
-- [EnableAuthRateLimiter](policy-csp-lanmanserver.md#enableauthratelimiter)
-- [EnableMailslots](policy-csp-lanmanserver.md#enablemailslots)
-- [MaxSmb2Dialect](policy-csp-lanmanserver.md#maxsmb2dialect)
-- [MinSmb2Dialect](policy-csp-lanmanserver.md#minsmb2dialect)
-
-## LanmanWorkstation
-
-- [AuditInsecureGuestLogon](policy-csp-lanmanworkstation.md#auditinsecureguestlogon)
-- [AuditServerDoesNotSupportEncryption](policy-csp-lanmanworkstation.md#auditserverdoesnotsupportencryption)
-- [AuditServerDoesNotSupportSigning](policy-csp-lanmanworkstation.md#auditserverdoesnotsupportsigning)
-- [EnableMailslots](policy-csp-lanmanworkstation.md#enablemailslots)
-- [MaxSmb2Dialect](policy-csp-lanmanworkstation.md#maxsmb2dialect)
-- [MinSmb2Dialect](policy-csp-lanmanworkstation.md#minsmb2dialect)
-- [RequireEncryption](policy-csp-lanmanworkstation.md#requireencryption)
-
 ## LocalPoliciesSecurityOptions
 
-- [InteractiveLogon_NumberOfPreviousLogonsToCache](policy-csp-localpoliciessecurityoptions.md#interactivelogon_numberofpreviouslogonstocache)
-- [NetworkAccess_RemotelyAccessibleRegistryPaths](policy-csp-localpoliciessecurityoptions.md#networkaccess_remotelyaccessibleregistrypaths)
-- [NetworkAccess_RemotelyAccessibleRegistryPathsAndSubpaths](policy-csp-localpoliciessecurityoptions.md#networkaccess_remotelyaccessibleregistrypathsandsubpaths)
 - [UserAccountControl_BehaviorOfTheElevationPromptForAdministratorProtection](policy-csp-localpoliciessecurityoptions.md#useraccountcontrol_behavioroftheelevationpromptforadministratorprotection)
 - [UserAccountControl_TypeOfAdminApprovalMode](policy-csp-localpoliciessecurityoptions.md#useraccountcontrol_typeofadminapprovalmode)
 
@@ -162,10 +124,6 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [DisableWidgetsOnLockScreen](policy-csp-newsandinterests.md#disablewidgetsonlockscreen)
 - [DisableWidgetsBoard](policy-csp-newsandinterests.md#disablewidgetsboard)
 
-## PassportForWork CSP
-
-- [DisablePostLogonProvisioning](passportforwork-csp.md#devicetenantidpoliciesdisablepostlogonprovisioning)
-
 ## Power
 
 - [EnableEnergySaver](policy-csp-power.md#enableenergysaver)
@@ -173,10 +131,6 @@ This article lists the policies that are applicable for Windows Insider Preview 
 ## Printers
 
 - [ConfigureIppTlsCertificatePolicy](policy-csp-printers.md#configureipptlscertificatepolicy)
-
-## RemoteDesktopServices
-
-- [TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME](policy-csp-remotedesktopservices.md#ts_server_remoteapp_use_shellappruntime)
 
 ## RemoteRemediation CSP
 
@@ -198,14 +152,6 @@ This article lists the policies that are applicable for Windows Insider Preview 
 - [AlwaysShowNotificationIcon](policy-csp-start.md#alwaysshownotificationicon)
 - [TurnOffAbbreviatedDateTimeFormat](policy-csp-start.md#turnoffabbreviateddatetimeformat)
 
-## SurfaceHub CSP
-
-- [ExchangeModernAuthEnabled](surfacehub-csp.md#deviceaccountexchangemodernauthenabled)
-
-## System
-
-- [DisableCHPE](policy-csp-system.md#disablechpe)
-
 ## TextInput
 
 - [TouchKeyboardControllerModeAvailability](policy-csp-textinput.md#touchkeyboardcontrollermodeavailability)
@@ -217,17 +163,8 @@ This article lists the policies that are applicable for Windows Insider Preview 
 
 ## WindowsAI
 
-- [DisableAIDataAnalysis](policy-csp-windowsai.md#disableaidataanalysis)
-- [SetDenyAppListForRecall](policy-csp-windowsai.md#setdenyapplistforrecall)
-- [SetDenyUriListForRecall](policy-csp-windowsai.md#setdenyurilistforrecall)
-- [SetMaximumStorageSpaceForRecallSnapshots](policy-csp-windowsai.md#setmaximumstoragespaceforrecallsnapshots)
-- [SetMaximumStorageDurationForRecallSnapshots](policy-csp-windowsai.md#setmaximumstoragedurationforrecallsnapshots)
 - [DisableClickToDo](policy-csp-windowsai.md#disableclicktodo)
 - [AllowRecallExport](policy-csp-windowsai.md#allowrecallexport)
-- [DisableImageCreator](policy-csp-windowsai.md#disableimagecreator)
-- [DisableCocreator](policy-csp-windowsai.md#disablecocreator)
-- [DisableGenerativeFill](policy-csp-windowsai.md#disablegenerativefill)
-- [AllowRecallEnablement](policy-csp-windowsai.md#allowrecallenablement)
 - [DisableSettingsAgent](policy-csp-windowsai.md#disablesettingsagent)
 
 ## WindowsBackupAndRestore CSP
