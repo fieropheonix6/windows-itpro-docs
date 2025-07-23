@@ -127,7 +127,7 @@ https://localhost:5000/details?apiKey=[YourConnectedCacheCustomerId]__D0508632-1
 
 You'll need to replace `[YourConnectedCacheCustomerId]` with your Connected Cache customer ID, which can be found in the Azure portal under the **Cache Node Management** tab. By default, this page is only accessible from the host machine where the Connected Cache node is deployed.
 
-To remotely access the terse summary page, you need to create a firewall rule to allow inbound traffic on port 5000. If the cache node is deployed to a Windows host machine, you also need to port forward the host machine's port 5000 to the Windows Subsystem for Linux (WSL) distribution. [Learn more](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
+To remotely access the terse summary page, you need to create a firewall rule to allow inbound traffic on port 5000. If the cache node is deployed to a Windows host machine, you also need to port forward the host machine's port 5000 to the Windows Subsystem for Linux (WSL) distribution. For more information, see [Missing WSL port forwarding rules (443, 5000)](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
 
 ## Client device metrics
 

@@ -45,7 +45,7 @@ This article details the requirements and recommended specifications for using M
 - The host machine must allow inbound/outbound traffic on port 80 and 443. Inbound is used for receiving content requests, and outbound is used for downloading and caching requested content.
 
     >[!NOTE]
-    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is autocreated during the cache node deployment process and cleaned up during cache node uninstall. [Learn more](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
+    > If the host machine is behind a firewall, ensure that the firewall rules allow inbound and outbound traffic on port 443. A port 80 firewall rule is autocreated during the cache node deployment process and cleaned up during cache node uninstall. For more information, see [Missing WSL port forwarding rules (443, 5000)](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
 
 ### Additional requirements for Windows host machines
 
