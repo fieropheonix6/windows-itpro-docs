@@ -25,7 +25,7 @@ Microsoft Connected Cache is a software-only caching solution that delivers Micr
 
 Both products are created and managed in the Azure portal.
 
-## Microsoft Connected Cache for ISPs (preview)
+## Microsoft Connected Cache for Internet Service Providers (preview)
 
 > [!NOTE]
 > Microsoft Connected Cache for Internet Service Providers is now in public preview. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/). To onboard, follow the instructions in the [Operator sign up and service onboarding](mcc-isp-signup.md) article.
