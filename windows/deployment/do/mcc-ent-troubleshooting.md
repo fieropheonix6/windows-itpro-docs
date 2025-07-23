@@ -35,7 +35,7 @@ The `importCert.ps1` script is used to import certificates into the Windows cert
 
 ### Connected Cache Windows installer application limitations
 
-The Connected Cache Windows installer application is a MSIX package that is used to deploy Connected Cache to Windows host machines. The installer application does not currently support Windows Server Core.
+The Connected Cache Windows installer application is an MSIX package that is used to deploy Connected Cache to Windows host machines. The installer application does not currently support Windows Server Core.
 
 ### Patched in latest release
 

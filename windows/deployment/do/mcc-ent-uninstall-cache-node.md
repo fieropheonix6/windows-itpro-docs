@@ -20,7 +20,7 @@ This article describes how to uninstall Microsoft Connected Cache for Enterprise
 
 ## Steps to uninstall Connected Cache from a Windows host machine
 
-1. Launch a PowerShell window *as administrator* and navigate to the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`
+1. Launch a PowerShell window *as administrator* and navigate to the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`.
 1. Run the `uninstallmcconwsl.ps1` script, passing in the runtime account credentials you designated during cache node deployment.
 
     **For Local User Accounts:**
