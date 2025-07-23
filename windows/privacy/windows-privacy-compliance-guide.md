@@ -14,6 +14,7 @@ ms.collection:
 - essentials-compliance
 - privacy-windows
 - must-keep
+- trust-pod
 ---
 
 # Windows Privacy Compliance:<br/>A Guide for IT and Compliance Professionals
