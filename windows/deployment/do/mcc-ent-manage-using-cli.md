@@ -108,7 +108,7 @@ Remember that the minimum size of a cache drive is 50 GB. You can specify multip
 
 After successfully configuring the cache node, the next step is to deploy the cache node to a host machine. To deploy the cache node, you need to create a deployment command using the cache nodes unique identifiers.
 
-To get the relevant information for the deployment command, use `az mcc ent node get-deployment-details`
+To get the relevant information for the deployment command, use `az mcc ent node get-deployment-details`.
 
 ```azurecli-interactive
 az mcc ent node get-deployment-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg
