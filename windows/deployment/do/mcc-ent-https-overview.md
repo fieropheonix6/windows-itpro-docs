@@ -47,7 +47,7 @@ Previously, if a client requested content via an HTTPS URL, Connected Cache coul
 While Connected Cache previously ensured secure delivery through mechanisms like hash validation and container hardening, these methods couldn't satisfy the requirements of publishers transitioning to HTTPS-only delivery. As a result, Connected Cache now supports HTTPS to maintain compatibility with evolving publisher standards and to ensure continued access to both existing and new content types.
 
 > [!IMPORTANT]
-> Starting November 6, 2025, Microsoft Intune will enforce HTTPS-only delivery for all managed Win32 applications.
+> Microsoft Intune will soon enforce (date TBD) HTTPS-only delivery for all managed Win32 applications.
 >
 > To continue Connected Cache for Intune content delivery, all Intune customers must complete the HTTPS setup on their cache nodes before this date.
 >
