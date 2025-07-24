@@ -1,7 +1,7 @@
 ---
 title: ADMX_sam Policy CSP
 description: Learn more about the ADMX_sam Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -57,7 +57,7 @@ A reboot isn't required for changes to this setting to take effect.
 
 Note to avoid unexpected disruptions this setting shouldn't be set to Block until appropriate mitigations have been performed, for example patching of vulnerable TPMs.
 
-More information is available at< https://go.microsoft.com/fwlink/?linkid=2116430>.
+More information is available at <https://go.microsoft.com/fwlink/?linkid=2116430>
 <!-- SamNGCKeyROCAValidation-Description-End -->
 
 <!-- SamNGCKeyROCAValidation-Editable-Begin -->

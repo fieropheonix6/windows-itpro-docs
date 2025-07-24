@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a> 
-ms.date: 06/16/2025
+ms.date: 07/23/2025
 ---
 
 # Uninstall Connected Cache software from a host machine
@@ -20,7 +20,7 @@ This article describes how to uninstall Microsoft Connected Cache for Enterprise
 
 ## Steps to uninstall Connected Cache from a Windows host machine
 
-1. Launch a PowerShell window *as administrator* and navigate to the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`
+1. Launch a PowerShell window *as administrator* and navigate to the directory returned by `$(deliveryoptimization-cli mcc-get-scripts-path)`.
 1. Run the `uninstallmcconwsl.ps1` script, passing in the runtime account credentials you designated during cache node deployment.
 
     **For Local User Accounts:**
@@ -35,7 +35,7 @@ This article describes how to uninstall Microsoft Connected Cache for Enterprise
    .\uninstallmcconwsl.ps1 -RunTimeAccountName "DOMAIN\ServiceAccountName$"
    ```
 
-This script will remove the Connected Cache container, IoT Edge, and all related components from the host machine.
+This script will remove the Connected Cache container, IoT Edge, and all related components from the host machine. To avoid impact to non Connected Cache workloads, don't deploy Connected Cache to host machines with any Azure IoT Edge modules already installed.
 
 This will also unregister the Connected Cache application from the host machine, stopping it from receiving further updates.
 
@@ -59,3 +59,5 @@ The `uninstallmcc.sh` script within the deployment package uninstalls the Connec
 - Connected Cache container
 - Moby CLI
 - Moby engine
+
+To avoid impact to non Connected Cache workloads, don't deploy Connected Cache to host machines with any Azure IoT Edge modules already installed.

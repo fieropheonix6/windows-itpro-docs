@@ -13,6 +13,7 @@ hideEdit: true
 ms.collection: 
 - privacy-windows
 - must-keep
+- trust-pod
 ---
 # Windows 11 connection endpoints for non-Enterprise editions
 

@@ -13,7 +13,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>
-ms.date: 07/07/2025
+ms.date: 07/23/2025
 ---
 
 # Manage cache nodes using CLI
@@ -108,7 +108,7 @@ Remember that the minimum size of a cache drive is 50 GB. You can specify multip
 
 After successfully configuring the cache node, the next step is to deploy the cache node to a host machine. To deploy the cache node, you need to create a deployment command using the cache nodes unique identifiers.
 
-To get the relevant information for the deployment command, use `az mcc ent node get-deployment-details`
+To get the relevant information for the deployment command, use `az mcc ent node get-deployment-details`.
 
 ```azurecli-interactive
 az mcc ent node get-deployment-details --cache-node-name mycachenode --mcc-resource-name mymccresource --resource-group myrg

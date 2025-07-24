@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 10/30/2024
+ms.date: 07/23/2025
 appliesto: 
 - ✅ Windows-hosted Connected Cache cache nodes
 - ✅ Linux-hosted Connected Cache cache nodes
@@ -19,6 +19,8 @@ appliesto:
 This article describes how to verify that a Microsoft Connected Cache for Enterprise and Education cache node is functioning correctly.
 
 These steps should be taken after deploying Connected Cache software to a [Windows](mcc-ent-deploy-to-windows.md) or [Linux](mcc-ent-deploy-to-linux.md) host machine.
+
+If you're deploying Connected Cache to an environment with a network proxy, follow step 1 and 2 and verify that these calls don't get blocked by your network proxy.
 
 ## Steps to verify functionality of Connected Cache node
 

@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 07/07/2025
+ms.date: 07/23/2025
 appliesto: 
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -19,7 +19,7 @@ This article describes how to deploy Microsoft Connected Cache for Enterprise an
 
 Before deploying Connected Cache to a Linux host machine, ensure that the host machine meets all [requirements](mcc-ent-prerequisites.md), and that you have [created and configured your Connected Cache Azure resource and cache node](mcc-ent-create-resource-and-cache.md).
 
-For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your devices. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com) to bypass the proxy's interception, otherwise the certificate chain will be broken and cache node deployment will fail.
+For Connected Cache deployment to succeed, you must allow direct calls to the Delivery Optimization service from your Connected Cache host machines. When using a TLS-inspecting proxy, you must configure your proxy/host machine to allow calls to and from the Delivery Optimization service (*.prod.do.dsp.mp.microsoft.com) to bypass the proxy's interception, otherwise the certificate chain will be broken and cache node deployment and operation will fail.
 
 ## Steps to deploy Connected Cache cache node to Linux
 
@@ -32,8 +32,12 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
     >[!Note]
     >* If you're deploying your cache node to a host machine that uses a TLS-inspecting proxy (e.g. ZScaler), ensure that you've [configured the proxy settings](mcc-ent-create-resource-and-cache.md#proxy-settings) for your cache node, then place the proxy certificate file (.pem) in the extracted deployment package directory and add `proxytlscertificatepath="/path/to/pem/file"` to the deployment command.
 
-1. Set access permissions to allow the `deploynmcc.sh` script within the deployment package directory to execute.
+1. Set access permissions to allow the `deploymcc.sh` script within the deployment package directory to execute.
 1. Run the deployment command on the host machine.
+
+>[!NOTE]
+> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run `chmod 777 -R /cachedrivepath` and then restart the Connected Cache container `sudo iotedge restart MCC`.
+> Otherwise the redeployed node will be up and running, but requests for content will fail.
 
 # [Azure CLI](#tab/cli)
 

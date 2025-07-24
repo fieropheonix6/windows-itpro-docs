@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 07/07/2025
+ms.date: 07/23/2025
 ---
 
 
@@ -29,12 +29,13 @@ You can create custom charts on the Connected Cache Azure portal by selecting th
 
 As a temporary workaround, you can navigate away from the **Metrics** tab and then return to it. The Connected Cache Azure resource is once again correctly selected as the Scope.
 
-### Script provisionmcconwsl.ps1 fails when executed on a Windows 11 host machine configured to use non-English language
+### importCert.ps1 limitations
 
-In the Connected Cache installation script (provisionmcconwsl.ps1), the check processing is executed until the value of the last execution code (Last Result) of the installation task becomes 0 in the following processing. However, on host machines configured to use a non-English language, the return value is null because "Last Result" is displayed, and an exception occurs.
+The `importCert.ps1` script is used to import certificates into the Windows certificate store as part of the HTTPS configuration process for Windows-hosted cache nodes. This script does not currently support cache nodes deployed to Windows Server 2022 with a gMSA Connected Cache runtime account.
 
-As a temporary workaround, you can change the language setting of the local administrator user to English and then execute the script. The language setting can be changed by after successful cache node installation.
+### Connected Cache Windows installer application limitations
 
+The Connected Cache Windows installer application is an MSIX package that is used to deploy Connected Cache to Windows host machines. The installer application does not currently support Windows Server Core.
 
 ### Patched in latest release
 
@@ -91,8 +92,8 @@ Once the cache node has been successfully installed on the Windows host machine,
 You can expect to see the following types of log files:
 
 1. **WSL_Mcc_Monitor_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Monitor_Task" scheduled task that is responsible for ensuring that the Connected Cache continues running.
-1. **WSL_Mcc_UserUninstall_Transcript**: This log file records the output of the "uninstallmcconwsl.ps1" script that the user can run to uninstall MCC software from the host machine.
-1. **WSL_Mcc_Uninstall_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Uninstall_Task" scheduled task that is responsible for uninstalling the MCC software from the host machine when called by the "uninstallmcconwsl.ps1" script.
+1. **WSL_Mcc_UserUninstall_Transcript**: This log file records the output of the "uninstallmcconwsl.ps1" script that the user can run to uninstall Connected Cache software from the host machine.
+1. **WSL_Mcc_Uninstall_FromRegisteredTask_Transcript**: This log file records the output of the "MCC_Uninstall_Task" scheduled task that is responsible for uninstalling the Connected Cache software from the host machine when called by the "uninstallmcconwsl.ps1" script.
 
 ### Lauching a PowerShell process as the Connected Cache runtime account
 
@@ -132,7 +133,7 @@ You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
 
 As part of the installation process on Windows host machines, Connected Cache will attempt to register itself with the Delivery Optimization service by calling a registration endpoint `geomcc.prod.do.dsp.mp.microsoft.com`. This call originates from within the WSL2 distribution that hosts the Connected Cache container, and must be successful for the cache node to be installed.
 
-To troubleshoot the connection, you can try running the following commands from an elevated PowerShell window as the MCC runtime account.
+To troubleshoot the connection, you can try running the following commands from an elevated PowerShell window as the Connected Cache runtime account.
 
 First, access the WSL2 distribution that hosts the Connected Cache container:
 
@@ -160,7 +161,7 @@ curl -v https://geomcc.prod.do.dsp.mp.microsoft.com
 
 ### MCC_Install_Task scheduled task fails to run
 
-Connected Cache installation on Windows host machines relies on the "MCC_Install_Task" scheduled task to perform installation actions as the designated MCC runtime account. If this task fails to run, it may be due to one of the following reasons.
+Connected Cache installation on Windows host machines relies on the "MCC_Install_Task" scheduled task to perform installation actions as the designated Connected Cache runtime account. If this task fails to run, it may be due to one of the following reasons.
 
 #### Group Policy Object conflicts with Scheduled Task registration
 
@@ -168,7 +169,7 @@ Enabling the Group Policy Object: [Network access: Do not allow storage of passw
 
 #### MCC runtime account doesn't have permissions to log on as batch job
 
-Ensure that you have granted the MCC runtime account the "Log on as a batch job" permission. This permission is required for the MCC runtime account to run scheduled tasks.
+Ensure that you have granted the Connected Cache runtime account the "Log on as a batch job" permission. This permission is required for the Connected Cache runtime account to run scheduled tasks.
 
 #### Enterprise security policy prevents execution of PowerShell scripts
 
@@ -225,6 +226,33 @@ If you don't see any port forwarding rules for port 80 to 0.0.0.0, you can run t
 
 You can retrieve the WSL IP Address from the `wslip.txt` file that should be present in the Connected Cache application's installation directory (`C:\mccwsl01` by default).
 
+### Missing WSL port forwarding rules (443, 5000)
+
+In order to successfully configure your Windows-hosted cache nodes to support HTTPS, you must create a port forwarding rule to forward traffic from port 443 on the host machine to port 443 on the WSL2 distribution that hosts the Connected Cache container.
+
+In order to remote access your Windows-hosted cache node's Terse Summary page, you must create a port forwarding rule to forward traffic from port 5000 on the host machine to port 5000 on the WSL2 distribution that hosts the Connected Cache container.
+
+You can create these port forwarding rules by running the following commands in an elevated PowerShell window after completing cache node deployment.
+
+```powershell
+$ipFilePath = Join-Path ([System.Environment]::GetEnvironmentVariable("MCC_INSTALLATION_FOLDER", "Machine")) "wslIp.txt"
+
+$ipAddress = (Get-Content $ipFilePath | Select-Object -First 1).Trim()
+
+netsh interface portproxy add v4tov4 listenport=443 listenaddress=0.0.0.0 connectport=443 connectaddress=$ipAddress
+netsh interface portproxy add v4tov4 listenport=5000 listenaddress=0.0.0.0 connectport=5000 connectaddress=$ipAddress
+```
+
+You'll also need to ensure that the host machine's firewall allows inbound traffic on ports 443 and 5000. You can do this by running the following commands in an elevated PowerShell window:
+
+```powershell
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "443"
+
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Outbound -Action Allow -Protocol TCP -LocalPort "443"
+
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (MCC SUMMARY)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "5000"
+```
+
 ## Troubleshooting cache node deployment to Linux host machine
 
 [Deploying a Connected Cache node to a Linux host machine](mcc-ent-deploy-to-linux.md) involves running a series of Bash scripts contained within the Linux deployment package.
@@ -236,6 +264,10 @@ Once the Connected Cache software has been successfully deployed to the Linux ho
 If it shows the **edgeAgent** and **edgeHub** containers but doesn't show **MCC**, you can view the status of the IoT Edge security manager using `sudo iotedge system logs -- -f`.
 
 You can also reboot the IoT Edge runtime using `sudo systemctl restart iotedge`.
+
+>[!NOTE]
+> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run `chmod 777 -R /cachedrivepath` and then restart the Connected Cache container `sudo iotedge restart MCC`.
+> Otherwise the redeployed node will be up and running, but requests for content will fail.
 
 ## Generating cache node diagnostic support bundle
 
@@ -261,6 +293,10 @@ For **Linux** host machines, you need to do the following:
 1. Once the script completes, note the console output describing the location of the diagnostic support bundle
 
     For example, "Successfully zipped package, please send file created at /etc/mccdiagnostics/support_bundle_2024_12_03__11_05_39__AM.tar.gz"
+
+## Troubleshooting HTTPS configuration
+
+If your Certificate Authority (CA) is only able to generate signed certificates in .pem or .cer formats, you can change the file extension of the certificate file to .crt if the file is in Base64 encoding.
 
 ## Troubleshooting cache node monitoring
 

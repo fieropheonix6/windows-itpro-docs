@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a> 
-ms.date: 06/17/2025
+ms.date: 07/23/2025
 ---
 # Configure container update frequency for Microsoft Connected Cache for Enterprise and Education
 
@@ -40,7 +40,7 @@ Configuring a Connected Cache node to update as part of the `Slow` ring provides
 
 | Setting | Description |
 | --- | --- |
-| Week of the month | 1st to 4th week can be selected. There are three to four months in a year that could have a fifth week. If there's a fifth week, the update could be applied during that fifth week if the day of the week falls near the last day of the month.|
+| Week of the month | 2nd or 3rd week can be selected. Reference the example calendar below for how weeks are counted. |
 | Day of the week | Monday through Sunday can be selected. |
 | Time of day | Time of day is based on UTC and a 24 hour clock. |
 
@@ -54,7 +54,7 @@ These packages and kernel-level configuration may need to be updated for several
 
 ### Package Version Updates
 
-The following packages are updated as part of MCC lifecycle operations.
+The following packages are updated as part of Connected Cache lifecycle operations.
 
 #### Azure IoT Edge and Identity Service Versions
 
@@ -68,7 +68,7 @@ Azure IoT Edge uses Moby-based Docker components (`moby-engine`, `moby-cli`) for
 
 The Microsoft Connected Cache installation modifies kernel-level configurations for performance tuning and updates to these configurations may be required to ensure efficient, performant delivery of content to your network.
 
-The following kernel parameters are commonly tuned on MCC Linux hosts to optimize network performance and container behavior:
+The following kernel parameters are commonly tuned on Connected Cache Linux hosts to optimize network performance and container behavior:
 
 * net.ipv4.tcp_congestion_control
 * net.core.default_qdisc
