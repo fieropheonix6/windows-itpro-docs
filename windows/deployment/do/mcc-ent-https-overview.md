@@ -47,7 +47,7 @@ Previously, if a client requested content via an HTTPS URL, Connected Cache coul
 While Connected Cache previously ensured secure delivery through mechanisms like hash validation and container hardening, these methods couldn't satisfy the requirements of publishers transitioning to HTTPS-only delivery. As a result, Connected Cache now supports HTTPS to maintain compatibility with evolving publisher standards and to ensure continued access to both existing and new content types.
 
 > [!IMPORTANT]
-> Starting November 6, 2025, Microsoft Intune will enforce HTTPS-only delivery for all managed Win32 applications.
+> Microsoft Intune will soon enforce (date TBD) HTTPS-only delivery for all managed Win32 applications.
 >
 > To continue Connected Cache for Intune content delivery, all Intune customers must complete the HTTPS setup on their cache nodes before this date.
 >
@@ -63,7 +63,7 @@ To establish a secure HTTPS connection, Connected Cache must present a valid TLS
 
 - **Enterprise Compatibility**: Many organizations already manage their own PKI infrastructure. The CSR model allows IT administrators to sign certificates using their existing trusted CAs, ensuring seamless integration with enterprise security policies.
 
-- **Avoiding Private Key Exposure**: By generating the key pair on the cache node and never exporting the private key, the CSR model ensures that sensitive cryptographic material remains secure and local to the cache node.ate key, the CSR model ensures that sensitive cryptographic material remains secure and local to the cache node.
+- **Avoiding Private Key Exposure**: By generating the key pair on the cache node and never exporting the private key, the CSR model ensures that sensitive cryptographic material remains secure and local to the cache node.
 
 ## TLS certificate maintenance
 
