@@ -306,7 +306,7 @@ After the taskbar layout is applied, users must sign out and sign in again to ge
 :::column-end:::
 :::column span="3":::
 > [!NOTE]
-> Starting with Windows 11 Insider Preview Build [26200.XYZ (Dev Channel)][INS-1] and [26120.XYZ (Beta Channel)][INS-2] taskbar pin configurations deployed via policy are applied instantly, without requiring the user to sign out and sign back in.
+> Starting with Windows 11 Insider Preview Build [26200.XYZ (Dev Channel)][INS-1] and [26120.XYZ (Beta Channel)][INS-2], taskbar pin configurations deployed via policy are applied instantly, without requiring the user to sign out and sign back in.
 :::column-end:::
 :::row-end:::
 ::: zone-end
