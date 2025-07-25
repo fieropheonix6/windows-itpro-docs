@@ -1,7 +1,7 @@
 ---
 title: WiFi CSP
 description: Learn more about the WiFi CSP.
-ms.date: 06/10/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -918,7 +918,4 @@ The following example shows how to remove a network with SSID `MyNetwork` and no
 
 ## Related articles
 
-- [Wireless profile samples](/windows/win32/nativewifi/wireless-profile-samples)
-- [Configuration service provider reference](configuration-service-provider-reference.md)
-- [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
-- [Configure EAP profiles and settings in Windows](/windows-server/networking/technologies/extensible-authentication-protocol/configure-eap-profiles)
+[Configuration service provider reference](configuration-service-provider-reference.md)

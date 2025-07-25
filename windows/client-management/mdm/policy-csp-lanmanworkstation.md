@@ -1,7 +1,7 @@
 ---
 title: LanmanWorkstation Policy CSP
 description: Learn more about the LanmanWorkstation Area in Policy CSP.
-ms.date: 04/04/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- AuditInsecureGuestLogon-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- AuditInsecureGuestLogon-Applicability-End -->
 
 <!-- AuditInsecureGuestLogon-OmaUri-Begin -->
@@ -89,7 +89,7 @@ This policy controls whether the SMB client will enable the audit event when the
 <!-- AuditServerDoesNotSupportEncryption-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- AuditServerDoesNotSupportEncryption-Applicability-End -->
 
 <!-- AuditServerDoesNotSupportEncryption-OmaUri-Begin -->
@@ -156,7 +156,7 @@ This policy controls whether the SMB client will enable the audit event when the
 <!-- AuditServerDoesNotSupportSigning-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- AuditServerDoesNotSupportSigning-Applicability-End -->
 
 <!-- AuditServerDoesNotSupportSigning-OmaUri-Begin -->
@@ -294,7 +294,7 @@ Insecure guest logons are used by file servers to allow unauthenticated access t
 <!-- EnableMailslots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- EnableMailslots-Applicability-End -->
 
 <!-- EnableMailslots-OmaUri-Begin -->
@@ -361,7 +361,7 @@ This policy controls whether the SMB client will enable or disable remote mailsl
 <!-- MaxSmb2Dialect-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- MaxSmb2Dialect-Applicability-End -->
 
 <!-- MaxSmb2Dialect-OmaUri-Begin -->
@@ -429,7 +429,7 @@ This policy controls the maximum version of SMB protocol.
 <!-- MinSmb2Dialect-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- MinSmb2Dialect-Applicability-End -->
 
 <!-- MinSmb2Dialect-OmaUri-Begin -->
@@ -497,7 +497,7 @@ This policy controls the minimum version of SMB protocol.
 <!-- RequireEncryption-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100.3613] and later |
 <!-- RequireEncryption-Applicability-End -->
 
 <!-- RequireEncryption-OmaUri-Begin -->

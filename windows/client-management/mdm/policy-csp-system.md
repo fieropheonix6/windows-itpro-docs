@@ -1,7 +1,7 @@
 ---
 title: System Policy CSP
 description: Learn more about the System Area in Policy CSP.
-ms.date: 06/16/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -107,8 +107,7 @@ This policy is only supported up to Windows 10, Version 1703. Please use 'Manage
 <!-- Description-Source-ADMX -->
 This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
 
-AllowCommercialDataPipeline configures a Microsoft Entra joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at< https://go.microsoft.com/fwlink/?linkid=2185086>.
-
+AllowCommercialDataPipeline configures a Microsoft Entra joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at <https://go.microsoft.com/fwlink/?linkid=2185086>
 To enable this behavior:
 
 1. Enable this policy setting
@@ -187,8 +186,7 @@ See the documentation at <https://go.microsoft.com/fwlink/?linkid=2011107> for i
 <!-- Description-Source-ADMX -->
 This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
 
-This policy setting, in combination with the Allow Telemetry and Configure the Commercial ID, enables organizations to configure the device so that Microsoft is the processor for Windows diagnostic data collected from the device, subject to the Product Terms at< https://go.microsoft.com/fwlink/?linkid=2185086>.
-
+This policy setting, in combination with the Allow Telemetry and Configure the Commercial ID, enables organizations to configure the device so that Microsoft is the processor for Windows diagnostic data collected from the device, subject to the Product Terms at <https://go.microsoft.com/fwlink/?linkid=2185086>
 To enable this behavior:
 
 1. Enable this policy setting
@@ -568,7 +566,7 @@ Specifies whether to allow app access to the Location service. Most restricted v
 <!-- AllowMicrosoftManagedDesktopProcessing-Description-Begin -->
 <!-- Description-Source-DDF -->
 This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
-This policy setting configures a Microsoft Entra joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at< https://go.microsoft.com/fwlink/?linkid=2185086>.
+This policy setting configures a Microsoft Entra joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at <https://go.microsoft.com/fwlink/?linkid=2185086>
 For customers who enroll into the Microsoft Managed Desktop service, enabling this policy is required to allow Microsoft to process data for operational and analytic needs. See <https://go.microsoft.com/fwlink/?linkid=2184944> for more information.
 hen these policies are configured, Windows diagnostic data collected from the device will be subject to Microsoft processor commitments.
 This setting has no effect on devices unless they're properly enrolled in Microsoft Managed Desktop. If you disable this policy setting, devices may not appear in Microsoft Managed Desktop.
@@ -751,8 +749,7 @@ If you disable or don't configure this policy setting, the device will send requ
 <!-- Description-Source-ADMX -->
 This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
 
-This policy setting, in combination with the Allow Telemetry and Configure the Commercial ID, enables organizations to configure the device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at< https://go.microsoft.com/fwlink/?linkid=2185086>.
-
+This policy setting, in combination with the Allow Telemetry and Configure the Commercial ID, enables organizations to configure the device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at <https://go.microsoft.com/fwlink/?linkid=2185086>
 To enable this behavior:
 
 1. Enable this policy setting
@@ -878,8 +875,7 @@ Specifies whether to allow the user to factory reset the device by using control
 <!-- Description-Source-ADMX -->
 This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
 
-This policy setting configures a Microsoft Entra joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at< https://go.microsoft.com/fwlink/?linkid=2185086>.
-
+This policy setting configures a Microsoft Entra joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at <https://go.microsoft.com/fwlink/?linkid=2185086>
 To enable this behavior:
 
 1. Enable this policy setting
@@ -1203,7 +1199,7 @@ If you don't configure this policy setting, or you set it to "Enable diagnostic 
 <!-- DisableCHPE-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055523](https://support.microsoft.com/help/5055523) [10.0.26100.3775] and later
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055523](https://support.microsoft.com/help/5055523) [10.0.26100.3775] and later |
 <!-- DisableCHPE-Applicability-End -->
 
 <!-- DisableCHPE-OmaUri-Begin -->
@@ -2051,7 +2047,7 @@ To enable the behavior described above, complete the following steps:
 1. Enable the "Limit Dump Collection" policy
 1. Enable the "Limit Diagnostic Log Collection" policy.
 
-When these policies are configured, Microsoft will collect only required diagnostic data and the events required by Desktop Analytics, which can be viewed at< https://go.microsoft.com/fwlink/?linkid=2116020>.
+When these policies are configured, Microsoft will collect only required diagnostic data and the events required by Desktop Analytics, which can be viewed at <https://go.microsoft.com/fwlink/?linkid=2116020>
 
 If you disable or don't configure this policy setting, diagnostic data collection is determined by the "Allow Diagnostic Data" policy setting or by the end user from the Settings app.
 <!-- LimitEnhancedDiagnosticDataWindowsAnalytics-Description-End -->

@@ -1,7 +1,7 @@
 ---
 title: ADMX_W32Time Policy CSP
 description: Learn more about the ADMX_W32Time Area in Policy CSP.
-ms.date: 03/12/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -37,7 +37,7 @@ This policy setting allows you to specify Clock discipline and General values fo
 
 - If this policy setting is enabled, W32time Service on target machines use the settings provided here. Otherwise, the service on target machines use locally configured settings values.
 
-For more details on individual parameters, combinations of parameter values as well as definitions of flags, see< https://go.microsoft.com/fwlink/?linkid=847809>.
+For more details on individual parameters, combinations of parameter values as well as definitions of flags, see <https://go.microsoft.com/fwlink/?linkid=847809>
 
 FrequencyCorrectRate.
 
