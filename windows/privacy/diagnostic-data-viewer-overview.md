@@ -7,7 +7,7 @@ ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
 manager: dansimp
-ms.date: 05/30/2025
+ms.date: 07/29/2025
 ms.topic: how-to
 hideEdit: true
 ms.collection: 
@@ -124,7 +124,7 @@ To turn off data viewing, do the following steps:
 
 ## Modifying the size of your data history
 
-By default, the Diagnostic Data Viewer shows you up to 1 GB or 30 days of data (whichever comes first) for Windows diagnostic data. Once either the time or space limit is reached, the data is incrementally dropped with the oldest data points dropped first.
+By default, the Diagnostic Data Viewer shows you up to 1 GB or 30 days of data (whichever comes first) for Windows diagnostic data. While the exact volume varies by user, the average device generates approximately 6 MB of Windows diagnostic data per day. Once either the time or space limit is reached, the data is incrementally dropped with the oldest data points dropped first.
 
 > [!Important]
 > If you have [diagnostic data viewing enabled](#view-microsoft-365-apps-or-microsoft-office-diagnostic-data) for Microsoft 365 Apps or Microsoft Office, their data history is fixed at 1 GB and cannot be modified.
