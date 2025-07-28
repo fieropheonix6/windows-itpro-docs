@@ -7,7 +7,7 @@ ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
 manager: dansimp
-ms.date: 05/30/2025
+ms.date: 07/29/2025
 ms.topic: how-to
 hideEdit: true
 ms.collection: 
@@ -145,7 +145,7 @@ The principle of least privileged access guides access to Windows diagnostic dat
 
 ### Retention
 
-Microsoft believes in and practices data minimization. We strive to gather only the info we need and to store it only for as long as it’s needed to provide a service or for analysis. For more information on how long data is retained, see the section named **Our retention of personal data** in the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement#mainOurretentionofpersonaldatamodule).
+Microsoft believes in and practices data minimization. We strive to gather only the info we need and to store it only for as long as it’s needed to provide a service or for analysis. Some Windows diagnostic data is stored for up to 28 days. However, other Windows diagnostic data may be retained longer, particularly when the information is used to keep the device secure, up to date, and working as expected. You can view and delete your diagnostic data at any time through Windows Settings or the Microsoft Privacy Dashboard as described in the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement).
 
 ## Diagnostic data settings
 
