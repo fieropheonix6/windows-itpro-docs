@@ -18,6 +18,11 @@ ms.collection:
 
 # Required service data for Windows
 
+**Applies to**
+
+- Windows 11, version 21H2 and later
+- Windows 10, version 1903 and later
+
 Windows collects and processes personal data to deliver cloud-service-backed features of Windows known as [connected experiences](essential-services-and-connected-experiences.md). The data collected includes Windows required service data—data that is necessary to operate the service and deliver the expected connected experience. Windows must send required service data to the associated cloud service so that the feature can function. A connected experience may also collect Windows diagnostic data to keep the feature secure, up to date, and performing as expected, and the collection of such data is subject to the [Windows diagnostic data consent](configure-windows-diagnostic-data-in-your-organization.md).  
 
 ## Types of Windows connected experiences  
@@ -36,7 +41,7 @@ For essential services, administrators have controls to turn some of them off. F
 
 The connected experiences that you enable and use will influence the volume of data sent from your device.  
 
-Microsoft is committed to maintaining your rights to access your customer data. For more information on accessing and porting your Windows required service data promoted to Account Data, refer to the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement#mainhowtoaccesscontrolyourdatamodule). To help maintain the security, integrity, and resiliency of Windows and protect customer data, certain types of information may not be eligible for export. This includes data related to the design or operation of Windows’ cloud infrastructure, particularly where such information relates to cybersecurity practices or detection capabilities. These limitations are intended to support a secure and trusted environment for all Windows customers.  
+Microsoft is committed to maintaining your rights to access your customer data. For more information on accessing and porting your Windows required service data promoted to Account Data, refer to the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement#mainhowtoaccesscontrolyourdatamodule). To help maintain the security, integrity, and resiliency of Windows and protect customer data, certain types of information may not be eligible for export. This includes data related to the design or operation of the Windows cloud infrastructure, particularly where such information relates to cybersecurity practices or detection capabilities. These limitations are intended to support a secure and trusted environment for all Windows customers.  
 
 Windows required service data is separate from required or optional Windows diagnostic data, which relates to information about your Windows device. Therefore, the privacy settings you choose for Windows required or optional diagnostic data don't affect whether Windows required service data is sent to Microsoft.
 
