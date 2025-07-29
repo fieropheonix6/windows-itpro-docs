@@ -1,7 +1,7 @@
 ---
 title: WindowsSandbox Policy CSP
 description: Learn more about the WindowsSandbox Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -20,7 +20,7 @@ ms.topic: generated-reference
 <!-- AllowAudioInput-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowAudioInput-Applicability-End -->
 
 <!-- AllowAudioInput-OmaUri-Begin -->
@@ -93,7 +93,7 @@ Note that there may be security implications of exposing host audio input to the
 <!-- AllowClipboardRedirection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowClipboardRedirection-Applicability-End -->
 
 <!-- AllowClipboardRedirection-OmaUri-Begin -->
@@ -164,7 +164,7 @@ This policy setting enables or disables clipboard sharing with the sandbox.
 <!-- AllowMappedFolders-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllowMappedFolders-Applicability-End -->
 
 <!-- AllowMappedFolders-OmaUri-Begin -->
@@ -237,7 +237,7 @@ Note that there may be security implications of exposing folders from the host i
 <!-- AllowNetworking-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowNetworking-Applicability-End -->
 
 <!-- AllowNetworking-OmaUri-Begin -->
@@ -310,7 +310,7 @@ Note that enabling networking can expose untrusted applications to the internal 
 <!-- AllowPrinterRedirection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowPrinterRedirection-Applicability-End -->
 
 <!-- AllowPrinterRedirection-OmaUri-Begin -->
@@ -381,7 +381,7 @@ This policy setting enables or disables printer sharing from the host into the S
 <!-- AllowVGPU-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowVGPU-Applicability-End -->
 
 <!-- AllowVGPU-OmaUri-Begin -->
@@ -454,7 +454,7 @@ Note that enabling virtualized GPU can potentially increase the attack surface o
 <!-- AllowVideoInput-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041.4950] and later <br> ✅ Windows 10, version 20H2 [10.0.19042.4950] and later <br> ✅ Windows 10, version 21H1 [10.0.19043.4950] and later <br> ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowVideoInput-Applicability-End -->
 
 <!-- AllowVideoInput-OmaUri-Begin -->
@@ -527,7 +527,7 @@ Note that there may be security implications of exposing host video input to the
 <!-- AllowWriteToMappedFolders-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- AllowWriteToMappedFolders-Applicability-End -->
 
 <!-- AllowWriteToMappedFolders-OmaUri-Begin -->

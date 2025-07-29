@@ -9,6 +9,8 @@ appliesto:
 
 # Troubleshoot app deployment issues in Windows SE
 
+[!INCLUDE [winse-eos](../../includes/winse-eos.md)]
+
 The following table lists common app deployment issues on Windows 11 SE, and options to resolve them:
 
 | **Problem** | **Potential solution** |

@@ -5,7 +5,7 @@ ms.author: kaushika
 author: kaushika-msft
 manager: cshepard
 ms.reviewer: nganguly
-ms.date: 03/29/2024
+ms.date: 05/14/2025
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: activation

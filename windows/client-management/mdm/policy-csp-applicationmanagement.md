@@ -1,7 +1,7 @@
 ---
 title: ApplicationManagement Policy CSP
 description: Learn more about the ApplicationManagement Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 04/04/2025
 ms.topic: generated-reference
 ---
 
@@ -24,7 +24,7 @@ ms.topic: generated-reference
 <!-- AllowAllTrustedApps-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowAllTrustedApps-Applicability-End -->
 
 <!-- AllowAllTrustedApps-OmaUri-Begin -->
@@ -92,7 +92,7 @@ This policy setting allows you to manage the installation of trusted line-of-bus
 <!-- AllowAppStoreAutoUpdate-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowAppStoreAutoUpdate-Applicability-End -->
 
 <!-- AllowAppStoreAutoUpdate-OmaUri-Begin -->
@@ -156,7 +156,7 @@ Specifies whether automatic update of apps from Microsoft Store are allowed. Mos
 <!-- AllowAutomaticAppArchiving-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowAutomaticAppArchiving-Applicability-End -->
 
 <!-- AllowAutomaticAppArchiving-OmaUri-Begin -->
@@ -226,7 +226,7 @@ This policy setting controls whether the system can archive infrequently used ap
 <!-- AllowDeveloperUnlock-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowDeveloperUnlock-Applicability-End -->
 
 <!-- AllowDeveloperUnlock-OmaUri-Begin -->
@@ -294,7 +294,7 @@ Allows or denies development of Microsoft Store applications and installing them
 <!-- AllowedNonAdminPackageFamilyNameRules-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- AllowedNonAdminPackageFamilyNameRules-Applicability-End -->
 
 <!-- AllowedNonAdminPackageFamilyNameRules-OmaUri-Begin -->
@@ -344,7 +344,7 @@ Allows or denies development of Microsoft Store applications and installing them
 <!-- AllowGameDVR-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowGameDVR-Applicability-End -->
 
 <!-- AllowGameDVR-OmaUri-Begin -->
@@ -413,7 +413,7 @@ If the setting is enabled or not configured, then Recording and Broadcasting (st
 <!-- AllowSharedUserAppData-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowSharedUserAppData-Applicability-End -->
 
 <!-- AllowSharedUserAppData-OmaUri-Begin -->
@@ -574,7 +574,7 @@ This policy is deprecated.
 <!-- BlockNonAdminUserInstall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
 <!-- BlockNonAdminUserInstall-Applicability-End -->
 
 <!-- BlockNonAdminUserInstall-OmaUri-Begin -->
@@ -635,13 +635,61 @@ Manages non-Administrator users' ability to install Windows app packages.
 
 <!-- BlockNonAdminUserInstall-End -->
 
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Begin -->
+## ConfigureMSIXAuthenticationAuthorizedDomains
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Applicability-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/ConfigureMSIXAuthenticationAuthorizedDomains
+```
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-OmaUri-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Description-Begin -->
+<!-- Description-Source-DDF -->
+Defines a regular expression in ECMA Script. When performing a streaming MSIX install, if this regular expression matches the domain name (uppercased) then the user's EntraID OAuth token will be attached to the request.
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Description-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Editable-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `chr` (string) |
+| Access Type | Add, Delete, Get, Replace |
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-DFProperties-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | ConfigureMSIXAuthenticationAuthorizedDomains |
+| Path | AppxPackageManager > AT > WindowsComponents > AppxDeployment |
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-GpMapping-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-Examples-End -->
+
+<!-- ConfigureMSIXAuthenticationAuthorizedDomains-End -->
+
 <!-- DisableStoreOriginatedApps-Begin -->
 ## DisableStoreOriginatedApps
 
 <!-- DisableStoreOriginatedApps-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- DisableStoreOriginatedApps-Applicability-End -->
 
 <!-- DisableStoreOriginatedApps-OmaUri-Begin -->
@@ -704,7 +752,7 @@ Disable turns off the launch of all apps from the Microsoft Store that came pre-
 <!-- LaunchAppAfterLogOn-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- LaunchAppAfterLogOn-Applicability-End -->
 
 <!-- LaunchAppAfterLogOn-OmaUri-Begin -->
@@ -757,7 +805,7 @@ For this policy to work, the Windows apps need to declare in their manifest that
 <!-- MSIAllowUserControlOverInstall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- MSIAllowUserControlOverInstall-Applicability-End -->
 
 <!-- MSIAllowUserControlOverInstall-OmaUri-Begin -->
@@ -828,7 +876,7 @@ This policy setting is designed for less restrictive environments. It can be use
 <!-- MSIAlwaysInstallWithElevatedPrivileges-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- MSIAlwaysInstallWithElevatedPrivileges-Applicability-End -->
 
 <!-- MSIAlwaysInstallWithElevatedPrivileges-OmaUri-Begin -->
@@ -905,7 +953,7 @@ This policy setting directs Windows Installer to use elevated permissions when i
 <!-- RequirePrivateStoreOnly-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- RequirePrivateStoreOnly-Applicability-End -->
 
 <!-- RequirePrivateStoreOnly-OmaUri-Begin -->
@@ -976,7 +1024,7 @@ Denies access to the retail catalog in the Microsoft Store, but displays the pri
 <!-- RestrictAppDataToSystemVolume-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- RestrictAppDataToSystemVolume-Applicability-End -->
 
 <!-- RestrictAppDataToSystemVolume-OmaUri-Begin -->
@@ -1043,7 +1091,7 @@ Prevent users' app data from moving to another location when an app is moved or 
 <!-- RestrictAppToSystemVolume-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- RestrictAppToSystemVolume-Applicability-End -->
 
 <!-- RestrictAppToSystemVolume-OmaUri-Begin -->
@@ -1110,7 +1158,7 @@ This policy setting allows you to manage installing Windows apps on additional v
 <!-- ScheduleForceRestartForUpdateFailures-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- ScheduleForceRestartForUpdateFailures-Applicability-End -->
 
 <!-- ScheduleForceRestartForUpdateFailures-OmaUri-Begin -->

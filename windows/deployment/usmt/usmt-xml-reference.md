@@ -2,7 +2,7 @@
 title: USMT XML Reference
 description: Learn about working with and customizing the migration XML files using User State Migration Tool (USMT) XML Reference for Windows.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: hathind
 ms.collection:
   - highpri
@@ -37,20 +37,20 @@ With this feature, IT admins can view:
 
 Alerts are raised when devices report policy conflicts. Autopatch policies are assigned to Autopatch groups. Devices that are members of Autopatch groups are expected to receive only Windows Autopatch policies.
 
-Once you resolve the conflict, it can take effect on the device at the next Intune sync. This view is refreshed every 24 hours. It can take up to 72 hours after the conflict is resolved for the view to be updated.  
+Once you resolve the conflict, it can take effect on the device at the next Intune sync. This view is refreshed every 24 hours. It can take up to 72 hours after the conflict is resolved for the view to be updated.
 
 > [!NOTE]
 > This view only includes policy conflicts between Microsoft Intune policies. This view doesn't include policy issues caused by other configurations, for example, group policy settings, registry settings that are changed by scripts and prevent Windows Autopatch from deploying updates.<p>When Windows Autopatch detects Intune based policies are missing or modified, this information is displayed with detailed recommended actions, and described in [Policy health and remediation](../monitor/windows-autopatch-policy-health-and-remediation.md).</p><p>To ensure devices remain healthy and not affected by group policies, see [Post-device registration readiness checks](../deploy/windows-autopatch-post-reg-readiness-checks.md#details-about-the-post-device-registration-readiness-checks).</p>
 
 ## Policy conflict view
 
-This view includes the list of Windows Autopatch policies ([Expected policies](#policy-conflict-view-alert-details)) that are assigned to various Windows Autopatch groups that include devices. When the Expected policy can't be successfully assigned to one or more devices, because of an equivalent setting in another Intune policy targeting the device, the conflict is detected, and reported as a [Conflicting policy](#policy-conflict-view-alert-details).  
+This view includes the list of Windows Autopatch policies ([Expected policies](#policy-conflict-view-alert-details)) that are assigned to various Windows Autopatch groups that include devices. When the Expected policy can't be successfully assigned to one or more devices, because of an equivalent setting in another Intune policy targeting the device, the conflict is detected, and reported as a [Conflicting policy](#policy-conflict-view-alert-details).
 
-If the Expected policy conflicts with multiple Intune policies, each conflict is displayed in different lines in the Policy conflict view.  
+If the Expected policy conflicts with multiple Intune policies, each conflict is displayed in different lines in the Policy conflict view.
 
 **To view all policies conflicting with the Expected policies:**
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Devices** > **Managed updates** > **Windows Updates** > **Monitor** > **Policy health**.
 3. In the **Policy conflicts** tab, the list of expected policies and conflicting policies is displayed.
 4. Select **View alert** and review the details of the **Recommended action** and alert details.
@@ -70,7 +70,7 @@ All alerts displayed in this flyout include the following details. You must revi
 
 ## Affected devices view
 
-This view includes the list of devices with policy conflicts with the [Expected policy](#policy-conflict-view-alert-details). It's possible for devices to have multiple conflicting policies, due to their membership in various groups.  
+This view includes the list of devices with policy conflicts with the [Expected policy](#policy-conflict-view-alert-details). It's possible for devices to have multiple conflicting policies, due to their membership in various groups.
 
 You can navigate to this view from the Affected devices column link in the [Policy conflicts view](#policy-conflict-view), or directly from Policy health blade. This page displays a filtered device list, when navigating from the Policy conflicts view. Affected devices only include devices that have a successful Intune sync status in the last 28 days.
 

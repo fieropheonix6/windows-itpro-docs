@@ -12,6 +12,8 @@ ms.collection:
 
 # Windows 11 SE Overview
 
+[!INCLUDE [winse-eos](../includes/winse-eos.md)]
+
 Windows 11 SE is an edition of Windows designed for education. Windows SE runs on web-first devices that use essential education apps, and it comes with Microsoft Office 365 preinstalled (subscription sold separately).
 
 For education customers seeking cost-effective devices, Microsoft Windows 11 SE is a great choice. Windows 11 SE includes the following benefits:

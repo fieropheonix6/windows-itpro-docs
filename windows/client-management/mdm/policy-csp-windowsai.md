@@ -1,7 +1,7 @@
 ---
 title: WindowsAI Policy CSP
 description: Learn more about the WindowsAI Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- AllowRecallEnablement-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- AllowRecallEnablement-Applicability-End -->
 
 <!-- AllowRecallEnablement-OmaUri-Begin -->
@@ -85,13 +85,81 @@ This policy setting allows you to determine whether the Recall optional componen
 
 <!-- AllowRecallEnablement-End -->
 
+<!-- AllowRecallExport-Begin -->
+## AllowRecallExport
+
+<!-- AllowRecallExport-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- AllowRecallExport-Applicability-End -->
+
+<!-- AllowRecallExport-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/WindowsAI/AllowRecallExport
+```
+<!-- AllowRecallExport-OmaUri-End -->
+
+<!-- AllowRecallExport-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy allows you to determine whether users can export their own Recall and snapshot information. Exporting allows users to share their Recall and snapshot information with trusted apps or websites. Users can export from Settings > Privacy & security > Recall & snapshots > Advanced settings > Export snapshots > Export past snapshots > Export.
+
+Users can also choose to continuously export their snapshots if they turn on the option to Export snapshots from now on from Settings > Privacy & security > Recall & snapshots > Advanced settings > Export snapshots > Export.
+
+Before starting an export, the user must authenticate with Windows Hello and they're notified that their exported snapshots are encrypted since they might contain sensitive information. The user is also notified that they'll need to provide their Recall export code if they want to allow apps or websites access to exported snapshots. The Recall export code is displayed to users during Recall setup even if this policy is set to disabled or not configured. For managed devices:
+- When you set this policy to enabled, users will be able to export Recall and snapshot information.
+- If the policy is set to disabled or not configured, users won't be able to export their Recall and snapshot information.
+
+> [!IMPORTANT]
+> - This setting applies to devices in the European Economic Area (EEA) only. Export of Recall and snapshot information is a user-initiated process and is per user. IT admins or other users can't initiate an export on behalf of another.
+> - Changes to this policy take effect after device restart.
+<!-- AllowRecallExport-Description-End -->
+
+<!-- AllowRecallExport-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- AllowRecallExport-Editable-End -->
+
+<!-- AllowRecallExport-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- AllowRecallExport-DFProperties-End -->
+
+<!-- AllowRecallExport-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Deny export of Recall and snapshots information. |
+| 1 | Allow export of Recall and snapshot information. |
+<!-- AllowRecallExport-AllowedValues-End -->
+
+<!-- AllowRecallExport-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | AllowRecallExport |
+| Path | WindowsAI > AT > WindowsComponents > WindowsAI |
+<!-- AllowRecallExport-GpMapping-End -->
+
+<!-- AllowRecallExport-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- AllowRecallExport-Examples-End -->
+
+<!-- AllowRecallExport-End -->
+
 <!-- DisableAIDataAnalysis-Begin -->
 ## DisableAIDataAnalysis
 
 <!-- DisableAIDataAnalysis-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- DisableAIDataAnalysis-Applicability-End -->
 
 <!-- DisableAIDataAnalysis-OmaUri-Begin -->
@@ -158,13 +226,75 @@ If you set this policy to disabled, end users will have a choice to save snapsho
 
 <!-- DisableAIDataAnalysis-End -->
 
+<!-- DisableClickToDo-Begin -->
+## DisableClickToDo
+
+<!-- DisableClickToDo-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- DisableClickToDo-Applicability-End -->
+
+<!-- DisableClickToDo-OmaUri-Begin -->
+```User
+./User/Vendor/MSFT/Policy/Config/WindowsAI/DisableClickToDo
+```
+
+```Device
+./Device/Vendor/MSFT/Policy/Config/WindowsAI/DisableClickToDo
+```
+<!-- DisableClickToDo-OmaUri-End -->
+
+<!-- DisableClickToDo-Description-Begin -->
+<!-- Description-Source-DDF -->
+Click to Do lets people take action on content on their screens. When activated, it takes a screenshot of their screen and analyzes it to present actions. Click to Do ends when they exit it, and it can't take screenshots while closed. Screenshot analysis is always performed locally on their device. By default, Click to Do is enabled for users. This policy setting allows you to determine whether Click to Do is available for users on their device. When the policy is enabled, the Click to Do component and entry points won't be available to users. When the policy is disabled, users will have Click to Do available on their device.
+<!-- DisableClickToDo-Description-End -->
+
+<!-- DisableClickToDo-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- DisableClickToDo-Editable-End -->
+
+<!-- DisableClickToDo-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- DisableClickToDo-DFProperties-End -->
+
+<!-- DisableClickToDo-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Click to Do is enabled. |
+| 1 | Click to Do is disabled. |
+<!-- DisableClickToDo-AllowedValues-End -->
+
+<!-- DisableClickToDo-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | DisableClickToDo |
+| Path | WindowsAI > AT > WindowsComponents > WindowsAI |
+<!-- DisableClickToDo-GpMapping-End -->
+
+<!-- DisableClickToDo-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- DisableClickToDo-Examples-End -->
+
+<!-- DisableClickToDo-End -->
+
 <!-- DisableCocreator-Begin -->
 ## DisableCocreator
 
 <!-- DisableCocreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later |
 <!-- DisableCocreator-Applicability-End -->
 
 <!-- DisableCocreator-OmaUri-Begin -->
@@ -226,7 +356,7 @@ This policy setting allows you to control whether Cocreator functionality is dis
 <!-- DisableGenerativeFill-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later |
 <!-- DisableGenerativeFill-Applicability-End -->
 
 <!-- DisableGenerativeFill-OmaUri-Begin -->
@@ -288,7 +418,7 @@ This policy setting allows you to control whether generative fill functionality 
 <!-- DisableImageCreator-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621.4870] and later <br> ✅ Windows 11, version 24H2 [10.0.26100.3360] and later |
 <!-- DisableImageCreator-Applicability-End -->
 
 <!-- DisableImageCreator-OmaUri-Begin -->
@@ -344,13 +474,71 @@ This policy setting allows you to control whether Image Creator functionality is
 
 <!-- DisableImageCreator-End -->
 
+<!-- DisableSettingsAgent-Begin -->
+## DisableSettingsAgent
+
+<!-- DisableSettingsAgent-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- DisableSettingsAgent-Applicability-End -->
+
+<!-- DisableSettingsAgent-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/Policy/Config/WindowsAI/DisableSettingsAgent
+```
+<!-- DisableSettingsAgent-OmaUri-End -->
+
+<!-- DisableSettingsAgent-Description-Begin -->
+<!-- Description-Source-DDF -->
+This policy setting allows you to determine whether Settings Agentic search experience is available for users on their device. When the policy is enabled, the agentic experience won't be available, limiting search results to statically indexed searches and semantic searches. When the policy is disabled, users will have Settings Agent search experience available on their device.
+<!-- DisableSettingsAgent-Description-End -->
+
+<!-- DisableSettingsAgent-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- DisableSettingsAgent-Editable-End -->
+
+<!-- DisableSettingsAgent-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Delete, Get, Replace |
+| Default Value  | 0 |
+<!-- DisableSettingsAgent-DFProperties-End -->
+
+<!-- DisableSettingsAgent-AllowedValues-Begin -->
+**Allowed values**:
+
+| Value | Description |
+|:--|:--|
+| 0 (Default) | Settings Agentic search experience is enabled. |
+| 1 | Settings Agentic search experience isn't enabled. |
+<!-- DisableSettingsAgent-AllowedValues-End -->
+
+<!-- DisableSettingsAgent-GpMapping-Begin -->
+**Group policy mapping**:
+
+| Name | Value |
+|:--|:--|
+| Name | DisableSettingsAgent |
+| Path | WindowsAI > AT > WindowsComponents > WindowsAI |
+<!-- DisableSettingsAgent-GpMapping-End -->
+
+<!-- DisableSettingsAgent-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- DisableSettingsAgent-Examples-End -->
+
+<!-- DisableSettingsAgent-End -->
+
 <!-- SetCopilotHardwareKey-Begin -->
 ## SetCopilotHardwareKey
 
 <!-- SetCopilotHardwareKey-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5044380](https://support.microsoft.com/help/5044380) [10.0.22621.4391] and later |
+| ❌ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 with [KB5044380](https://support.microsoft.com/help/5044380) [10.0.22621.4391] and later |
 <!-- SetCopilotHardwareKey-Applicability-End -->
 
 <!-- SetCopilotHardwareKey-OmaUri-Begin -->
@@ -370,6 +558,7 @@ This policy setting determines which app opens when the user presses the Copilot
 
 <!-- SetCopilotHardwareKey-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+The property value is the Application User Model ID (AUMID) for the target application. For example: the Microsoft 365 Copilot app is `Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe!Microsoft.MicrosoftOfficeHub`. For more information, see [Find the application user model ID of an installed app](/windows/configuration/store/find-aumid?tabs=ps%2Cexplorer&pivots=windows-11).
 <!-- SetCopilotHardwareKey-Editable-End -->
 
 <!-- SetCopilotHardwareKey-DFProperties-Begin -->
@@ -406,7 +595,7 @@ This policy setting determines which app opens when the user presses the Copilot
 <!-- SetDenyAppListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetDenyAppListForRecall-Applicability-End -->
 
 <!-- SetDenyAppListForRecall-OmaUri-Begin -->
@@ -475,7 +664,7 @@ For example: `code.exe;Microsoft.WindowsNotepad_8wekyb3d8bbwe!App;ms-teams.exe`
 <!-- SetDenyUriListForRecall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetDenyUriListForRecall-Applicability-End -->
 
 <!-- SetDenyUriListForRecall-OmaUri-Begin -->
@@ -540,7 +729,7 @@ Adding `https://www.WoodgroveBank.com` to the list would also filter `https://Ac
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetMaximumStorageDurationForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageDurationForRecallSnapshots-OmaUri-Begin -->
@@ -616,7 +805,7 @@ Snapshots aren't deleted until the maximum storage allocation for Recall is reac
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 with [KB5055627](https://support.microsoft.com/help/5055627) [10.0.26100.3915] and later |
 <!-- SetMaximumStorageSpaceForRecallSnapshots-Applicability-End -->
 
 <!-- SetMaximumStorageSpaceForRecallSnapshots-OmaUri-Begin -->
@@ -697,7 +886,7 @@ When this setting isn't configured, the OS configures the storage allocation for
 <!-- TurnOffWindowsCopilot-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 21H2 [10.0.19044.3758] and later <br> ✅ Windows 10, version 22H2 with [KB5032278](https://support.microsoft.com/help/5032278) [10.0.19045.3758] and later <br> ✅ Windows 11, version 22H2 with [KB5030310](https://support.microsoft.com/help/5030310) [10.0.22621.2361] and later <br> ✅ Windows 11, version 23H2 [10.0.22631] and later |
+| ❌ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 21H2 [10.0.19044.3758] and later <br> ✅ Windows 10, version 22H2 with [KB5032278](https://support.microsoft.com/help/5032278) [10.0.19045.3758] and later <br> ✅ Windows 11, version 22H2 with [KB5030310](https://support.microsoft.com/help/5030310) [10.0.22621.2361] and later <br> ✅ Windows 11, version 23H2 [10.0.22631] and later |
 <!-- TurnOffWindowsCopilot-Applicability-End -->
 
 <!-- TurnOffWindowsCopilot-OmaUri-Begin -->

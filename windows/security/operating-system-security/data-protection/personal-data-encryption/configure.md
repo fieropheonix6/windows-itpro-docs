@@ -1,8 +1,8 @@
 ---
-title: Personal Data Encryption settings and configuration
-description: Learn about the available options to configure Personal Data Encryption (Personal Data Encryption) and how to configure them via Microsoft Intune or Configuration Service Providers (CSP).
+title: Personal Data Encryption Settings and Configuration
+description: Learn about the available options to configure Personal Data Encryption and how to configure them via Microsoft Intune or Configuration Service Providers (CSP).
 ms.topic: how-to
-ms.date: 09/24/2024
+ms.date: 03/12/2025
 ---
 
 # Personal Data Encryption settings and configuration
@@ -10,9 +10,9 @@ ms.date: 09/24/2024
 This article describes the Personal Data Encryption settings and how to configure them via Microsoft Intune or Configuration Service Providers (CSP).
 
 > [!NOTE]
-> Personal Data Encryption can be configured using MDM policies. The content to be protected by Personal Data Encryption can be specified using [Personal Data Encryption APIs](/uwp/api/windows.security.dataprotection.userdataprotectionmanager). There is no user interface in Windows to either enable Personal Data Encryption or protect content using Personal Data Encryption.
+> Personal Data Encryption can be configured using CSP policies. The content to be protected by Personal Data Encryption can be specified using Personal Data Encryption for known folders and [Personal Data Encryption APIs](/uwp/api/windows.security.dataprotection.userdataprotectionmanager).
 >
-> The Personal Data Encryption APIs can be used to create custom applications and scripts to specify which content to protect and at what level to protect the content. Additionally, the Personal Data Encryption APIs can't be used to protect content until the Personal Data Encryption policy has been enabled.
+> The Personal Data Encryption APIs can be used to create custom applications and scripts to specify which content to protect and at what level to protect the content. Additionally, the Personal Data Encryption APIs can't be used to protect content until the Personal Data Encryption policy is enabled.
 
 ## Personal Data Encryption settings
 
@@ -22,6 +22,16 @@ The following table lists the required settings to enable Personal Data Encrypti
 |-|-|
 |Enable Personal Data Encryption|Personal Data Encryption isn't enabled by default. Before Personal Data Encryption can be used, you must enable it.|
 |Sign-in and lock last interactive user automatically after a restart| Winlogon automatic restart sign-on (ARSO) isn't supported for use with Personal Data Encryption. To use Personal Data Encryption, ARSO must be disabled.|
+
+## Personal Data Encryption for known folders settings
+
+The following table lists the settings to configure Personal Data Encryption for known folders.
+
+| Setting name | Description |
+|-|-|
+|Protect Desktop|Enable Personal Data Encryption on the Desktop folder.|
+|Protect Documents|Enable Personal Data Encryption on the Documents folder.|
+|Protect Pictures|Enable Personal Data Encryption on the Pictures folder.|
 
 ## Personal Data Encryption hardening recommendations
 
@@ -55,7 +65,10 @@ Assign the policy to a group that contains as members the devices or users that 
 
 | Category | Setting name | Value |
 |--|--|--|
-|**PDE**|Enable Personal Data Encryption (User)|Enable Personal Data Encryption|
+|**Personal Data Encryption**|Enable Personal Data Encryption (User)|Enable Personal Data Encryption|
+|**Personal Data Encryption**|Protect Desktop (User)|Enable protection for the Desktop folder|
+|**Personal Data Encryption**|Protect Documents (User)|Enable protection for the Documents folder|
+|**Personal Data Encryption**|Protect Pictures (User)|Enable protection for the Pictures folder|
 |**Administrative Templates > Windows Components > Windows Logon Options**|Sign-in and lock last interactive user automatically after a restart|Disabled|
 |**Memory Dump**|Allow Live Dump|Block|
 |**Memory Dump**|Allow Crash Dump|Block|
@@ -68,7 +81,7 @@ Assign the policy to a group that contains as members the devices or users that 
 > [!TIP]
 > Use the following Graph call to automatically create the settings catalog policy in your tenant without assignments nor scope tags.
 >
-> When using this call, authenticate to your tenant in the Graph Explorer window. If it's the first time using Graph Explorer, you may need to authorize the application to access your tenant or to modify the existing permissions. This graph call requires *DeviceManagementConfiguration.ReadWrite.All* permissions.
+> When using this call, authenticate to your tenant in the Graph Explorer window. If it's the first time using Graph Explorer, you might need to authorize the application to access your tenant or to modify the existing permissions. This graph call requires *DeviceManagementConfiguration.ReadWrite.All* permissions.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
@@ -84,12 +97,26 @@ Alternatively, you can configure devices using the [Policy CSP][CSP-1] and [Pers
 |OMA-URI|Format|Value|
 |-|-|-|
 |`./User/Vendor/MSFT/PDE/EnablePersonalDataEncryption`|int|`1`|
+|`./User/Vendor/MSFT/PDE/ProtectFolders/ProtectDesktop`|int|`1`|
+|`./User/Vendor/MSFT/PDE/ProtectFolders/ProtectDocuments`|int|`1`|
+|`./User/Vendor/MSFT/PDE/ProtectFolders/ProtectPictures`|int|`1`|
 |`./Device/Vendor/MSFT/Policy/Config/WindowsLogon/AllowAutomaticRestartSignOn`|string|`<disabled/>`|
 |`./Device/Vendor/MSFT/Policy/Config/MemoryDump/AllowCrashDump`| int| `0`|
 |`./Device/Vendor/MSFT/Policy/Config/MemoryDump/AllowLiveDump` |int| `0`|
 |`./Device/Vendor/MSFT/Policy/Config/ErrorReporting/DisableWindowsErrorReporting`|string|`<enabled/>`|
 |`./Device/Vendor/MSFT/Policy/Config/Power/AllowHibernate` |int| `0`|
 |`./Device/Vendor/MSFT/Policy/Config/ADMX_CredentialProviders/AllowDomainDelayLock`|string|`<disabled/>`|
+
+## User experience
+
+When Personal Data Encryption is enabled, the user experience is as follows:
+
+- Access to Personal Data Encryption protected content is only possible when users sign in using Windows Hello (biometrics or PIN). If users sign in without Windows Hello, they can't open encrypted content
+- If a user attempts to sign in without Windows Hello, a message appears on the sign in screen indicating that to access encrypted content the user must sign in with Windows Hello
+    :::image type="content" source="images/pde-sign-in.png" lightbox="images/pde-sign-in.png" alt-text="Screenshot of the sign in screen. If a user attempts to sign in with a password, a message indicates that the files protected by Personal Data Encryption aren't accessible." border="false":::
+- The data protected by Personal Data Encryption has a padlock on the file or folder's icon. The padlock icon is displayed in File Explorer and on the desktop
+    :::image type="content" source="images/pde-protection.png" alt-text="Screenshot of File Explorer with some files protected by Personal Data Encryption, displaying a padlock." border="false":::
+
 
 ## Disable Personal Data Encryption
 
@@ -112,7 +139,7 @@ Assign the policy to a group that contains as members the devices or users that 
 
 | Category | Setting name | Value |
 |--|--|--|
-|**PDE**|**Enable Personal Data Encryption (User)**|Disable Personal Data Encryption|
+|**Personal Data Encryption**|**Enable Personal Data Encryption (User)**|Disable Personal Data Encryption|
 
 [!INCLUDE [intune-settings-catalog-2](../../../../../includes/configure/intune-settings-catalog-2.md)]
 
@@ -126,7 +153,7 @@ You can disable Personal Data Encryption with CSP using the following setting:
 
 ## Decrypt encrypted content
 
-Disabling Personal Data Encryption doesn't decrypt any Personal Data Encryption protected content. It only prevents the Personal Data Encryption API from being able to protect any additional content. Pprotected files can be manually decrypted using the following steps:
+When you disable Personal Data Encryption, the content encrypted using Personal Data Encryption for known folders is automatically decrypted. However, the content encrypted using Personal Data Encryption APIs isn't decrypted automatically. To decrypt this content, follow these steps:
 
 1. Open the properties of the file
 1. Under the **General** tab, select **Advanced...**
@@ -153,7 +180,7 @@ To decrypt files on a device using `cipher.exe`:
   ```
 
 > [!IMPORTANT]
-> Once a user selects to manually decrypt a file, the user won't be able to manually protect the file again using Personal Data Encryption.
+> Once a user selects to manually decrypt a file, the user can't manually protect the file again using Personal Data Encryption.
 
 ## Next steps
 

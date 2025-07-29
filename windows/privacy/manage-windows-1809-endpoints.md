@@ -6,9 +6,14 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
-ms.date: 01/18/2018
+manager: dansimp
+ms.date: 05/23/2025
 ms.topic: reference
+hideEdit: true 
+ms.collection: 
+- privacy-windows
+- must-keep
+- trust-pod
 ---
 
 # Manage connection endpoints for Windows 10 Enterprise, version 1809
@@ -36,7 +41,7 @@ We used the following methodology to derive these network endpoints:
 3. Use globally accepted network protocol analyzer/capturing tools and log all background egress traffic.
 4. Compile reports on traffic going to public IP addresses.
 5. The test virtual machine was logged in using a local account and wasn't joined to a domain or Azure Active Directory.
-6. All traffic was captured in our lab using an IPV4 network.  Therefore no IPV6 traffic is reported here.
+6. All traffic was captured in our lab using an IPV4 network. Therefore no IPV6 traffic is reported here.
 
 > [!NOTE]
 > Microsoft uses global load balancers that can appear in network trace-routes. For example, an endpoint for *.akadns.net might be used to load balance requests to an Azure datacenter, which can change over time.
@@ -310,7 +315,7 @@ If you [turn off traffic for this endpoint](manage-connections-from-windows-oper
 
 ## Office
 
-The following endpoints are used to connect to the Microsoft 365 admin center's shared infrastructure, including Office. For more info, see [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US#BKMK_Portal-identity).
+The following endpoints are used to connect to the Microsoft 365 admin center's shared infrastructure, including Office. For more info, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 You can turn this off by removing all Microsoft Office apps and the Mail and Calendar apps.
 If you turn off traffic for these endpoints, users won't be able to save documents to the cloud or see their recently used documents.
 
@@ -324,7 +329,7 @@ If you turn off traffic for these endpoints, users won't be able to save documen
 |   | HTTPS | `nexusrules.officeapps.live.com` |
 |   | HTTPS | `officeclient.microsoft.com` |
 
-The following endpoint is used to connect to the Microsoft 365 admin center's shared infrastructure, including Office. For more info, see [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US#BKMK_Portal-identity).
+The following endpoint is used to connect to the Microsoft 365 admin center's shared infrastructure, including Office. For more info, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 You can turn this off by removing all Microsoft Office apps and the Mail and Calendar apps.
 If you turn off traffic for these endpoints, users won't be able to save documents to the cloud or see their recently used documents.
 
@@ -354,7 +359,7 @@ If you [turn off traffic for this endpoint](manage-connections-from-windows-oper
 |:--------------:|:--------:|:------------|
 | onedrive | HTTP \ HTTPS   | `g.live.com/1rewlive5skydrive/ODSUProduction` |
 
-The following endpoint is used by OneDrive for Business to download and verify app updates. For more info, see [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
+The following endpoint is used by OneDrive for Business to download and verify app updates. For more info, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 To turn off traffic for this endpoint, uninstall OneDrive for Business. In this case, your device won't be able to get OneDrive for Business app updates.
 
 | Source process | Protocol | Destination |
@@ -397,7 +402,7 @@ The following endpoint is used to retrieve Skype configuration values. To turn o
 ## Windows Defender
 
 The following endpoint is used for Windows Defender when Cloud-based Protection is enabled.
-If you [turn off traffic for this endpoint](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#bkmk-defender), the device won't use Cloud-based Protection. For a detailed list of Microsoft Defender Antivirus cloud service connections, see [Allow connections to the Microsoft Defender Antivirus cloud service](/microsoft-365/security/defender-endpoint/configure-network-connections-microsoft-defender-antivirus#allow-connections-to-the-microsoft-defender-antivirus-cloud-service).
+If you [turn off traffic for this endpoint](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#bkmk-defender), the device won't use Cloud-based Protection. For a detailed list of Microsoft Defender Antivirus cloud service connections, see [Allow connections to the Microsoft Defender Antivirus cloud service](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus#allow-connections-to-the-microsoft-defender-antivirus-cloud-service).
 
 | Source process | Protocol | Destination |
 |:--------------:|:--------:|:------------|
@@ -459,8 +464,8 @@ If you [turn off traffic for these endpoints](manage-connections-from-windows-op
 | svchost | HTTPS   | `*.delivery.mp.microsoft.com`  |
 
 These are dependent on enabling:
-- [Device authentication](manage-windows-1809-endpoints.md#device-authentication)
-- [Microsoft account](manage-windows-1809-endpoints.md#microsoft-account)
+- [Device authentication](#device-authentication)
+- [Microsoft account](#microsoft-account)
 
 The following endpoint is used for content regulation.
 If you [turn off traffic for this endpoint](manage-connections-from-windows-operating-system-components-to-microsoft-services.md#bkmk-wu), the Windows Update Agent will be unable to contact the endpoint, and fallback behavior will be used. This may result in content being either incorrectly downloaded or not downloaded at all.
@@ -489,5 +494,5 @@ To view endpoints for other versions of Windows 10 Enterprise, see:
 
 ## Related links
 
-- [Office 365 URLs and IP address ranges](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US)
-- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
+- [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
+- [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)

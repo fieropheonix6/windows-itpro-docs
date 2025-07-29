@@ -1,7 +1,7 @@
 ---
 title: EventLogService Policy CSP
 description: Learn more about the EventLogService Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- ControlEventLogBehavior-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- ControlEventLogBehavior-Applicability-End -->
 
 <!-- ControlEventLogBehavior-OmaUri-Begin -->
@@ -84,7 +84,7 @@ This policy setting controls Event Log behavior when the log file reaches its ma
 <!-- SpecifyMaximumFileSizeApplicationLog-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- SpecifyMaximumFileSizeApplicationLog-Applicability-End -->
 
 <!-- SpecifyMaximumFileSizeApplicationLog-OmaUri-Begin -->
@@ -142,7 +142,7 @@ This policy setting specifies the maximum size of the log file in kilobytes.
 <!-- SpecifyMaximumFileSizeSecurityLog-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- SpecifyMaximumFileSizeSecurityLog-Applicability-End -->
 
 <!-- SpecifyMaximumFileSizeSecurityLog-OmaUri-Begin -->
@@ -200,7 +200,7 @@ This policy setting specifies the maximum size of the log file in kilobytes.
 <!-- SpecifyMaximumFileSizeSystemLog-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- SpecifyMaximumFileSizeSystemLog-Applicability-End -->
 
 <!-- SpecifyMaximumFileSizeSystemLog-OmaUri-Begin -->

@@ -59,7 +59,7 @@ WCD supports the following scenarios for IT administrators:
 Windows Configuration Designer provides the following simple provisioning scenarios:
 
 - [Instructions for the desktop wizard](provision-pcs-for-initial-deployment.md)
-- [Instructions for the kiosk wizard](../assigned-access/overview.md)
+- [Instructions for the kiosk wizard](../assigned-access/index.md)
 - [Instructions for the HoloLens wizard](/hololens/hololens-provisioning#provisioning-package-hololens-wizard)
 - [Instructions for the Surface Hub wizard](/surface-hub/provisioning-packages-for-surface-hub)
 

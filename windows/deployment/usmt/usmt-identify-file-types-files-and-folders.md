@@ -2,7 +2,7 @@
 title: Identify File Types, Files, and Folders
 description: Identify the file types, files, folders, and settings that need to be migrated when planning the migration.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

@@ -6,9 +6,14 @@ ms.subservice: itpro-privacy
 ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
-manager: laurawi
-ms.date: 10/06/2023
+manager: dansimp
+ms.date: 05/23/2025
 ms.topic: reference
+hideEdit: true 
+ms.collection: 
+- privacy-windows
+- must-keep
+- trust-pod
 ---
 
 # Manage connection endpoints for Windows 11 Enterprise
@@ -182,4 +187,4 @@ To view endpoints for non-Enterprise Windows 11 editions, see [Windows 11 connec
 ## Related links
 
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
-- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
+- [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)

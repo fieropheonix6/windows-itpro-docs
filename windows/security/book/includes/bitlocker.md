@@ -9,7 +9,7 @@ ms.topic: include
 
 BitLocker is a data protection feature that integrates with the operating system to address the threats of data theft or exposure from lost, stolen, or improperly decommissioned devices. It uses the AES algorithm in XTS or CBC mode with 128-bit or 256-bit key lengths to encrypt data on the volume. During the initial setup, when BitLocker is enabled during OOBE and the user signs into their Microsoft account for the first time, BitLocker automatically saves its recovery password to the Microsoft account for retrieval if needed. Users also have the option to export the recovery password if they manually enable BitLocker. Recovery key content can be saved to cloud storage on OneDrive or Azure<sup>[\[4\]](../conclusion.md#footnote4)</sup>.
 
-For organizations, BitLocker can be managed via group policy or with a device management solution like Microsoft Intune<sup>[\[3\]](../conclusion.md#footnote3)</sup>. It provides encryption for the OS, fixed data, and removable data drives (BitLocker To Go), using technologies such as Hardware Security Test Interface (HSTI), Modern Standby, UEFI Secure Boot, and TPM.
+For organizations, BitLocker can be managed via group policy or with a device management solution like Microsoft Intune<sup>[\[4\]](../conclusion.md#footnote4)</sup>. It provides encryption for the OS, fixed data, and removable data drives (BitLocker To Go), using technologies such as Hardware Security Test Interface (HSTI), Modern Standby, UEFI Secure Boot, and TPM.
 
 [!INCLUDE [new-24h2](new-24h2.md)]
 

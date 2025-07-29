@@ -1,7 +1,7 @@
 ---
 title: Defender Policy CSP
 description: Learn more about the Defender Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -20,7 +20,7 @@ ms.topic: generated-reference
 <!-- AllowArchiveScanning-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowArchiveScanning-Applicability-End -->
 
 <!-- AllowArchiveScanning-OmaUri-Begin -->
@@ -41,7 +41,7 @@ This policy setting allows you to configure scans for malicious software and unw
 <!-- AllowArchiveScanning-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowArchiveScanning-Editable-End -->
 
 <!-- AllowArchiveScanning-DFProperties-Begin -->
@@ -89,7 +89,7 @@ This policy setting allows you to configure scans for malicious software and unw
 <!-- AllowBehaviorMonitoring-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowBehaviorMonitoring-Applicability-End -->
 
 <!-- AllowBehaviorMonitoring-OmaUri-Begin -->
@@ -110,7 +110,7 @@ This policy setting allows you to configure behavior monitoring.
 <!-- AllowBehaviorMonitoring-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowBehaviorMonitoring-Editable-End -->
 
 <!-- AllowBehaviorMonitoring-DFProperties-Begin -->
@@ -158,7 +158,7 @@ This policy setting allows you to configure behavior monitoring.
 <!-- AllowCloudProtection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowCloudProtection-Applicability-End -->
 
 <!-- AllowCloudProtection-OmaUri-Begin -->
@@ -192,7 +192,7 @@ In Windows 10, Basic membership is no longer available, so setting the value to 
 <!-- AllowCloudProtection-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowCloudProtection-Editable-End -->
 
 <!-- AllowCloudProtection-DFProperties-Begin -->
@@ -240,7 +240,7 @@ In Windows 10, Basic membership is no longer available, so setting the value to 
 <!-- AllowEmailScanning-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowEmailScanning-Applicability-End -->
 
 <!-- AllowEmailScanning-OmaUri-Begin -->
@@ -307,7 +307,7 @@ This policy setting allows you to configure e-mail scanning. When e-mail scannin
 <!-- AllowFullScanOnMappedNetworkDrives-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowFullScanOnMappedNetworkDrives-Applicability-End -->
 
 <!-- AllowFullScanOnMappedNetworkDrives-OmaUri-Begin -->
@@ -374,7 +374,7 @@ This policy setting allows you to configure scanning mapped network drives.
 <!-- AllowFullScanRemovableDriveScanning-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowFullScanRemovableDriveScanning-Applicability-End -->
 
 <!-- AllowFullScanRemovableDriveScanning-OmaUri-Begin -->
@@ -444,7 +444,7 @@ This policy setting allows you to manage whether or not to scan for malicious so
 <!-- AllowIntrusionPreventionSystem-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowIntrusionPreventionSystem-Applicability-End -->
 
 <!-- AllowIntrusionPreventionSystem-OmaUri-Begin -->
@@ -461,7 +461,7 @@ Allows or disallows Windows Defender Intrusion Prevention functionality.
 <!-- AllowIntrusionPreventionSystem-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowIntrusionPreventionSystem-Editable-End -->
 
 <!-- AllowIntrusionPreventionSystem-DFProperties-Begin -->
@@ -495,7 +495,7 @@ Allows or disallows Windows Defender Intrusion Prevention functionality.
 <!-- AllowIOAVProtection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowIOAVProtection-Applicability-End -->
 
 <!-- AllowIOAVProtection-OmaUri-Begin -->
@@ -516,7 +516,7 @@ This policy setting allows you to configure scanning for all downloaded files an
 <!-- AllowIOAVProtection-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowIOAVProtection-Editable-End -->
 
 <!-- AllowIOAVProtection-DFProperties-Begin -->
@@ -564,7 +564,7 @@ This policy setting allows you to configure scanning for all downloaded files an
 <!-- AllowOnAccessProtection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowOnAccessProtection-Applicability-End -->
 
 <!-- AllowOnAccessProtection-OmaUri-Begin -->
@@ -585,7 +585,7 @@ This policy setting allows you to configure monitoring for file and program acti
 <!-- AllowOnAccessProtection-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowOnAccessProtection-Editable-End -->
 
 <!-- AllowOnAccessProtection-DFProperties-Begin -->
@@ -633,7 +633,7 @@ This policy setting allows you to configure monitoring for file and program acti
 <!-- AllowRealtimeMonitoring-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowRealtimeMonitoring-Applicability-End -->
 
 <!-- AllowRealtimeMonitoring-OmaUri-Begin -->
@@ -650,7 +650,7 @@ Allows or disallows Windows Defender Realtime Monitoring functionality.
 <!-- AllowRealtimeMonitoring-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowRealtimeMonitoring-Editable-End -->
 
 <!-- AllowRealtimeMonitoring-DFProperties-Begin -->
@@ -698,7 +698,7 @@ Allows or disallows Windows Defender Realtime Monitoring functionality.
 <!-- AllowScanningNetworkFiles-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowScanningNetworkFiles-Applicability-End -->
 
 <!-- AllowScanningNetworkFiles-OmaUri-Begin -->
@@ -713,12 +713,12 @@ Allows or disallows Windows Defender Realtime Monitoring functionality.
 
 <!-- AllowScanningNetworkFiles-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-This policy setting allows you to configure scheduled scans and on-demand (manually initiated) scans for files that are accessed over the network. It is recommended to enable this setting.
+This policy setting allows you to configure scheduled scans and on-demand (manually initiated) scans for files that are accessed over the network. It's recommended to enable this setting.
 >[!NOTE]
-> Real-time protection (on-access) scanning is not impacted by this policy.  
+> Real-time protection (on-access) scanning isn't impacted by this policy.  
 
-- If you enable this setting or do not configure this setting, network files will be scanned.
-- If you disable this setting, network files will not be scanned.
+- If you enable this setting or don't configure this setting, network files will be scanned.
+- If you disable this setting, network files won't be scanned.
 <!-- AllowScanningNetworkFiles-Editable-End -->
 
 <!-- AllowScanningNetworkFiles-DFProperties-Begin -->
@@ -728,7 +728,7 @@ This policy setting allows you to configure scheduled scans and on-demand (manua
 |:--|:--|
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
-| Default Value  | 0 |
+| Default Value  | 1 |
 <!-- AllowScanningNetworkFiles-DFProperties-End -->
 
 <!-- AllowScanningNetworkFiles-AllowedValues-Begin -->
@@ -736,8 +736,8 @@ This policy setting allows you to configure scheduled scans and on-demand (manua
 
 | Value | Description |
 |:--|:--|
-| 0 (Default) | Not allowed. Turns off scanning of network files. |
-| 1 | Allowed. Scans network files. |
+| 0 | Not allowed. Turns off scanning of network files. |
+| 1 (Default) | Allowed. Scans network files. |
 <!-- AllowScanningNetworkFiles-AllowedValues-End -->
 
 <!-- AllowScanningNetworkFiles-GpMapping-Begin -->
@@ -766,7 +766,7 @@ This policy setting allows you to configure scheduled scans and on-demand (manua
 <!-- AllowScriptScanning-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowScriptScanning-Applicability-End -->
 
 <!-- AllowScriptScanning-OmaUri-Begin -->
@@ -783,7 +783,7 @@ Allows or disallows Windows Defender Script Scanning functionality.
 <!-- AllowScriptScanning-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+> Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- AllowScriptScanning-Editable-End -->
 
 <!-- AllowScriptScanning-DFProperties-Begin -->
@@ -817,7 +817,7 @@ Allows or disallows Windows Defender Script Scanning functionality.
 <!-- AllowUserUIAccess-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowUserUIAccess-Applicability-End -->
 
 <!-- AllowUserUIAccess-OmaUri-Begin -->
@@ -882,7 +882,7 @@ If you enable this setting AM UI won't be available to users.
 <!-- AttackSurfaceReductionOnlyExclusions-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- AttackSurfaceReductionOnlyExclusions-Applicability-End -->
 
 <!-- AttackSurfaceReductionOnlyExclusions-OmaUri-Begin -->
@@ -955,7 +955,7 @@ You can configure ASR rules in the Configure Attack Surface Reduction rules GP s
 <!-- AttackSurfaceReductionRules-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- AttackSurfaceReductionRules-Applicability-End -->
 
 <!-- AttackSurfaceReductionRules-OmaUri-Begin -->
@@ -1054,7 +1054,7 @@ You can exclude folders or files in the "Exclude files and paths from Attack Sur
 <!-- AvgCPULoadFactor-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AvgCPULoadFactor-Applicability-End -->
 
 <!-- AvgCPULoadFactor-OmaUri-Begin -->
@@ -1119,7 +1119,7 @@ This policy setting allows you to configure the maximum percentage CPU utilizati
 <!-- CheckForSignaturesBeforeRunningScan-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- CheckForSignaturesBeforeRunningScan-Applicability-End -->
 
 <!-- CheckForSignaturesBeforeRunningScan-OmaUri-Begin -->
@@ -1187,7 +1187,7 @@ This setting applies to scheduled scans, but it has no effect on scans initiated
 <!-- CloudBlockLevel-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- CloudBlockLevel-Applicability-End -->
 
 <!-- CloudBlockLevel-OmaUri-Begin -->
@@ -1265,7 +1265,7 @@ Possible options are:
 <!-- CloudExtendedTimeout-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- CloudExtendedTimeout-Applicability-End -->
 
 <!-- CloudExtendedTimeout-OmaUri-Begin -->
@@ -1327,7 +1327,7 @@ For example, if the desired timeout is 60 seconds, specify 50 seconds in this se
 <!-- ControlledFolderAccessAllowedApplications-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- ControlledFolderAccessAllowedApplications-Applicability-End -->
 
 <!-- ControlledFolderAccessAllowedApplications-OmaUri-Begin -->
@@ -1401,7 +1401,7 @@ Default system folders are automatically guarded, but you can add folders in the
 <!-- ControlledFolderAccessProtectedFolders-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- ControlledFolderAccessProtectedFolders-Applicability-End -->
 
 <!-- ControlledFolderAccessProtectedFolders-OmaUri-Begin -->
@@ -1477,7 +1477,7 @@ Microsoft Defender Antivirus automatically determines which applications can be 
 <!-- DaysToRetainCleanedMalware-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- DaysToRetainCleanedMalware-Applicability-End -->
 
 <!-- DaysToRetainCleanedMalware-OmaUri-Begin -->
@@ -1536,7 +1536,7 @@ This policy setting defines the number of days items should be kept in the Quara
 <!-- DisableCatchupFullScan-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- DisableCatchupFullScan-Applicability-End -->
 
 <!-- DisableCatchupFullScan-OmaUri-Begin -->
@@ -1602,7 +1602,7 @@ This policy setting allows you to configure catch-up scans for scheduled full sc
 <!-- DisableCatchupQuickScan-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- DisableCatchupQuickScan-Applicability-End -->
 
 <!-- DisableCatchupQuickScan-OmaUri-Begin -->
@@ -1619,7 +1619,7 @@ This policy setting allows you to configure catch-up scans for scheduled full sc
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that's initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
-- If you disable or don't configure this setting, catch-up scans for scheduled quick scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there is no scheduled scan configured, there will be no catch-up scan run.
+- If you disable or don't configure this setting, catch-up scans for scheduled quick scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time the computer powers on or resumes from sleep or hibernation. If there's no scheduled scan configured, there will be no catch-up scan run.
 
 - If you enable this setting, catch-up scans for scheduled quick scans will be disabled.
 <!-- DisableCatchupQuickScan-Editable-End -->
@@ -1668,7 +1668,7 @@ This policy setting allows you to configure catch-up scans for scheduled quick s
 <!-- EnableControlledFolderAccess-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- EnableControlledFolderAccess-Applicability-End -->
 
 <!-- EnableControlledFolderAccess-OmaUri-Begin -->
@@ -1799,7 +1799,7 @@ Same as Disabled.
 <!-- EnableLowCPUPriority-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- EnableLowCPUPriority-Applicability-End -->
 
 <!-- EnableLowCPUPriority-OmaUri-Begin -->
@@ -1865,7 +1865,7 @@ This policy setting allows you to enable or disable low CPU priority for schedul
 <!-- EnableNetworkProtection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- EnableNetworkProtection-Applicability-End -->
 
 <!-- EnableNetworkProtection-OmaUri-Begin -->
@@ -1943,7 +1943,7 @@ Same as Disabled.
 <!-- ExcludedExtensions-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- ExcludedExtensions-Applicability-End -->
 
 <!-- ExcludedExtensions-OmaUri-Begin -->
@@ -1999,7 +1999,7 @@ Allows an administrator to specify a list of file type extensions to ignore duri
 <!-- ExcludedPaths-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- ExcludedPaths-Applicability-End -->
 
 <!-- ExcludedPaths-OmaUri-Begin -->
@@ -2055,7 +2055,7 @@ Allows an administrator to specify a list of directory paths to ignore during a 
 <!-- ExcludedProcesses-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- ExcludedProcesses-Applicability-End -->
 
 <!-- ExcludedProcesses-OmaUri-Begin -->
@@ -2114,7 +2114,7 @@ Allows an administrator to specify a list of files opened by processes to ignore
 <!-- PUAProtection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- PUAProtection-Applicability-End -->
 
 <!-- PUAProtection-OmaUri-Begin -->
@@ -2193,7 +2193,7 @@ Same as Disabled.
 <!-- RealTimeScanDirection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- RealTimeScanDirection-Applicability-End -->
 
 <!-- RealTimeScanDirection-OmaUri-Begin -->
@@ -2271,7 +2271,7 @@ Any other value, or if the value doesn't exist, resolves to the default (0).
 <!-- ScanParameter-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- ScanParameter-Applicability-End -->
 
 <!-- ScanParameter-OmaUri-Begin -->
@@ -2341,7 +2341,7 @@ This policy setting allows you to specify the scan type to use during a schedule
 <!-- ScheduleQuickScanTime-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- ScheduleQuickScanTime-Applicability-End -->
 
 <!-- ScheduleQuickScanTime-OmaUri-Begin -->
@@ -2400,7 +2400,7 @@ This policy setting allows you to specify the time of day at which to perform a 
 <!-- ScheduleScanDay-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- ScheduleScanDay-Applicability-End -->
 
 <!-- ScheduleScanDay-OmaUri-Begin -->
@@ -2478,7 +2478,7 @@ This setting can be configured with the following ordinal number values:
 <!-- ScheduleScanTime-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- ScheduleScanTime-Applicability-End -->
 
 <!-- ScheduleScanTime-OmaUri-Begin -->
@@ -2537,7 +2537,7 @@ This policy setting allows you to specify the time of day at which to perform a 
 <!-- SecurityIntelligenceLocation-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- SecurityIntelligenceLocation-Applicability-End -->
 
 <!-- SecurityIntelligenceLocation-OmaUri-Begin -->
@@ -2592,7 +2592,7 @@ If you disable or don't configure this setting, security intelligence will be re
 <!-- SignatureUpdateFallbackOrder-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- SignatureUpdateFallbackOrder-Applicability-End -->
 
 <!-- SignatureUpdateFallbackOrder-OmaUri-Begin -->
@@ -2652,7 +2652,7 @@ For Example: `{ InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }`
 <!-- SignatureUpdateFileSharesSources-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1809 [10.0.17763] and later |
 <!-- SignatureUpdateFileSharesSources-Applicability-End -->
 
 <!-- SignatureUpdateFileSharesSources-OmaUri-Begin -->
@@ -2710,7 +2710,7 @@ This policy setting allows you to configure UNC file share sources for downloadi
 <!-- SignatureUpdateInterval-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- SignatureUpdateInterval-Applicability-End -->
 
 <!-- SignatureUpdateInterval-OmaUri-Begin -->
@@ -2769,7 +2769,7 @@ This policy setting allows you to specify an interval at which to check for secu
 <!-- SubmitSamplesConsent-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- SubmitSamplesConsent-Applicability-End -->
 
 <!-- SubmitSamplesConsent-OmaUri-Begin -->
@@ -2838,7 +2838,7 @@ Possible options are:
 <!-- ThreatSeverityDefaultAction-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- ThreatSeverityDefaultAction-Applicability-End -->
 
 <!-- ThreatSeverityDefaultAction-OmaUri-Begin -->
@@ -2868,7 +2868,9 @@ Valid remediation action values are:
 <!-- ThreatSeverityDefaultAction-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
 > [!NOTE]
-> Changes to this setting are not applied when [tamper protection][TAMPER-1] is enabled.
+>
+> - **Ignore** is the same as **Allow** in [Microsoft Defender for Endpoint Security Settings Management](/defender-endpoint/mde-security-settings-management), [Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy), and Defender Powershell module: [Set-MpPreference](/powershell/module/defender/set-mppreference).
+> - Changes to this setting aren't applied when [tamper protection][TAMPER-1] is enabled.
 <!-- ThreatSeverityDefaultAction-Editable-End -->
 
 <!-- ThreatSeverityDefaultAction-DFProperties-Begin -->

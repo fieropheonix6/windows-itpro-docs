@@ -1,7 +1,7 @@
 ---
 title: Personal Data Encryption CSP
 description: Learn more about the Personal Data Encryption CSP.
-ms.date: 02/13/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -36,7 +36,7 @@ The following list shows the Personal Data Encryption configuration service prov
 <!-- User-EnablePersonalDataEncryption-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- User-EnablePersonalDataEncryption-Applicability-End -->
 
 <!-- User-EnablePersonalDataEncryption-OmaUri-Begin -->
@@ -85,7 +85,7 @@ The [UserDataProtectionManager Class](/uwp/api/windows.security.dataprotection.u
 <!-- User-ProtectFolders-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- User-ProtectFolders-Applicability-End -->
 
 <!-- User-ProtectFolders-OmaUri-Begin -->
@@ -123,7 +123,7 @@ The [UserDataProtectionManager Class](/uwp/api/windows.security.dataprotection.u
 <!-- User-ProtectFolders-ProtectDesktop-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- User-ProtectFolders-ProtectDesktop-Applicability-End -->
 
 <!-- User-ProtectFolders-ProtectDesktop-OmaUri-Begin -->
@@ -172,7 +172,7 @@ Allows the Admin to enable Personal Data Encryption on Desktop folder. Set to '1
 <!-- User-ProtectFolders-ProtectDocuments-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- User-ProtectFolders-ProtectDocuments-Applicability-End -->
 
 <!-- User-ProtectFolders-ProtectDocuments-OmaUri-Begin -->
@@ -221,7 +221,7 @@ Allows the Admin to enable Personal Data Encryption on Documents folder. Set to 
 <!-- User-ProtectFolders-ProtectPictures-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- User-ProtectFolders-ProtectPictures-Applicability-End -->
 
 <!-- User-ProtectFolders-ProtectPictures-OmaUri-Begin -->
@@ -270,7 +270,7 @@ Allows the Admin to enable Personal Data Encryption on Pictures folder. Set to '
 <!-- User-Status-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- User-Status-Applicability-End -->
 
 <!-- User-Status-OmaUri-Begin -->
@@ -312,7 +312,7 @@ Reports the current status of Personal Data Encryption for the user.
 <!-- User-Status-FolderProtectionStatus-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- User-Status-FolderProtectionStatus-Applicability-End -->
 
 <!-- User-Status-FolderProtectionStatus-OmaUri-Begin -->
@@ -362,7 +362,7 @@ This node reports folder protection status for a user.
 <!-- User-Status-FoldersProtected-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- User-Status-FoldersProtected-Applicability-End -->
 
 <!-- User-Status-FoldersProtected-OmaUri-Begin -->
@@ -401,7 +401,7 @@ This node reports all folders (full path to each folder) that have been protecte
 <!-- User-Status-PersonalDataEncryptionStatus-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
+| ❌ Device <br> ✅ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- User-Status-PersonalDataEncryptionStatus-Applicability-End -->
 
 <!-- User-Status-PersonalDataEncryptionStatus-OmaUri-Begin -->

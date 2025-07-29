@@ -6,7 +6,7 @@ ms.subservice: itpro-updates
 ms.topic: article
 author: cmknox
 ms.author: carmenf
-manager: aaroncz
+manager: bpardi
 ms.reviewer: mstewart
 ms.collection:
   - tier3

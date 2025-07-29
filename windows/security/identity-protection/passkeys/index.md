@@ -1,10 +1,10 @@
 ---
-title: Support for passkeys in Windows
+title: Support for Passkeys in Windows
 description: Learn about passkeys and how to use them on Windows devices.
 ms.collection:
 - tier1
 ms.topic: overview
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
@@ -41,9 +41,12 @@ Passkeys have several advantages over passwords, including their ease of use and
 
 By default, Windows offers to save the passkey locally on the **Windows device**, in which case the passkey is protected by Windows Hello (biometrics and PIN). You can also choose to save the passkey in one of the following locations:
 
-- **iPhone, iPad or Android device**: the passkey is saved on a phone or tablet, protected by the device's biometrics, if offered by the device. This option requires you to scan a QR code with your phone or tablet, which must be in proximity of the Windows device
-- **Linked device**: the passkey is saved on a phone or tablet, protected by the device's biometrics, if offered by the device. This option requires the linked device to be in proximity of the Windows device, and it's only supported for Android devices
-- **Security key**: the passkey is saved to a FIDO2 security key, protected by the key's unlock mechanism (for example, biometrics or PIN)
+- **iPhone, iPad or Android device**: the passkey is saved on a phone or tablet, protected by the device's biometrics, if offered by the device. This option requires you to scan a QR code with your phone or tablet, which must be in proximity of the Windows device.
+- **Linked device**: the passkey is saved on a phone or tablet, protected by the device's biometrics, if offered by the device. This option requires the linked device to be in proximity of the Windows device, and it's only supported for Android devices.
+- **Security key**: the passkey is saved to a FIDO2 security key, protected by the key's unlock mechanism (for example, biometrics or PIN).
+
+>[!NOTE]
+>Currently, Microsoft Entra ID passkeys can't be stored on Windows devices. To learn more, see [Passkey authentication matrix with Microsoft Entra ID](/entra/identity/authentication/concept-fido2-compatibility).
 
 Pick one of the following options to learn how to save a passkey, based on where you want to store it.
 
@@ -388,7 +391,7 @@ To provide feedback for passkeys, open [**Feedback Hub**][FHUB] and use the cate
 
 [CSP-1]: /windows/client-management/mdm/policy-csp-bluetooth#allowadvertising
 [CSP-2]: /windows/client-management/mdm/policy-csp-bluetooth#allowdiscoverablemode
-[CSP-3]: /windows/client-management/mdm/policy-csp-bluetooth#allowprepairing
+[CSP-3]: /windows/client-management/mdm/policy-csp-bluetooth#allowpreparing
 [CSP-4]: /windows/client-management/mdm/policy-csp-bluetooth#allowpromptedproximalconnections
 [CSP-5]: /windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist
 [CSP-6]: /windows/client-management/mdm/policy-csp-deviceinstallation#preventinstallationofmatchingdeviceids

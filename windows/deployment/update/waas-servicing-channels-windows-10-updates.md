@@ -6,22 +6,22 @@ ms.subservice: itpro-updates
 ms.topic: how-to
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
-- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>	
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 ms.date: 12/31/2017
 ---
 
 # Assign devices to servicing channels for Windows updates
 
-> **Looking for consumer information?** See [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq) 
+> **Looking for consumer information?** See [Windows Update: FAQ](https://support.microsoft.com/help/12373/windows-update-faq)
 
 >[!TIP]
 >If you're not familiar with the servicing or release channels, read [Servicing Channels](waas-overview.md#servicing-channels) first.
 
-The General Availability Channel is the default servicing channel for all Windows 10 and Windows 11 devices except devices with the LTSC edition installed. The following table shows the servicing channels available to each edition. 
+The General Availability Channel is the default servicing channel for all Windows 10 and Windows 11 devices except devices with the LTSC edition installed. The following table shows the servicing channels available to each edition.
 
 | Edition | General Availability Channel | Long-Term Servicing Channel | Insider Program |
 | --- | --- | --- | --- |

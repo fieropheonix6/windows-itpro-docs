@@ -2,7 +2,7 @@
 title: General Conventions
 description: Learn about general XML guidelines and how to use XML helper functions in the XML Elements library to change migration behavior.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

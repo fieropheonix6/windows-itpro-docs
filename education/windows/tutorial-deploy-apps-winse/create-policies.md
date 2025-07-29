@@ -9,6 +9,8 @@ appliesto:
 
 # Create policies to enable applications
 
+[!INCLUDE [winse-eos](../../includes/winse-eos.md)]
+
 :::row:::
    :::column span="":::
     <a href="deploy-apps.md"><img src="images/phase-1-off.svg" alt="Icon representing the first phase."/></a><br>

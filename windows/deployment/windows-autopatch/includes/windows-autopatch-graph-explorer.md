@@ -1,7 +1,7 @@
 ---
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: include
@@ -28,6 +28,6 @@ For this article, you'll use Graph Explorer to make requests to the [Microsoft G
    1. Enter the request into the URL field. The version will populate automatically based on the URL.
    1. If you need to modify the request body, edit the **Request body** tab.
    1. Select the **Run query** button. The results will appear in the **Response** window.
-  
+
    > [!TIP]
    > When reviewing [Microsoft Graph documentation](/graph/), you may notice example requests usually list `content-type: application/json`. Specifying `content-type` typically isn't required for Graph Explorer, but you can add it to the request by selecting the **Headers** tab and adding the `content-type` to the **Request headers** field as the **Key** and `application/json` as the **Value**.

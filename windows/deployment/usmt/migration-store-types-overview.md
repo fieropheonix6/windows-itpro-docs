@@ -2,7 +2,7 @@
 title: Migration Store Types Overview
 description: Learn about the migration store types and how to determine which migration store type best suits the organization's needs.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

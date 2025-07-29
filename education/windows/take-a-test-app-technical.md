@@ -1,11 +1,13 @@
 ---
-title: Take a Test app technical reference
+title: Take a Test App Technical Reference
 description: List of policies and settings applied by the Take a Test app.
-ms.date: 09/06/2024
+ms.date: 04/07/2025
 ms.topic: reference
 ---
 
 # Take a Test app technical reference
+
+[!INCLUDE [winse-eos](../includes/winse-eos.md)]
 
 Take a Test is an application that locks down a device and displays an online assessment web page.
 

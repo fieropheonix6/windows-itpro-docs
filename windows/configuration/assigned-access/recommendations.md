@@ -1,8 +1,8 @@
 ---
-title: Assigned Access recommendations
+title: Assigned Access Recommendations
 description: Learn about the recommended kiosk and restricted user experience configuration options.
 ms.topic: best-practice
-ms.date: 10/31/2024
+ms.date: 3/7/2025
 ---
 
 # Assigned Access recommendations
@@ -20,7 +20,7 @@ Consider enabling *automatic sign-in* for your kiosk device. When the device res
 You can configure the Assigned Access and Shell Launcher XML files with an account to sign-in automatically. For more information, review the articles:
 
 - [Create an Assigned Access configuration XML file](configuration-file.md)
-- [Create a Shell Launcher configuration file](shell-launcher/configuration-file.md)
+- [Create a Shell Launcher configuration file](../shell-launcher/configuration-file.md)
 
 Alternatively, you can edit the Registry to have an account sign in automatically:
 

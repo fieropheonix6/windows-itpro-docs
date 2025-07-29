@@ -13,7 +13,7 @@ Intune works with Microsoft Entra ID to manage security features and processes, 
 
 Organizations can cut costs while securing and managing remote devices through the cloud in compliance with company policies<sup>[\[11\]](../conclusion.md#footnote11)</sup>. For example, organizations can save time and money by provisioning preconfigured devices to remote employees using Windows Autopilot.
 
-Windows 11 enables IT professionals to move to the cloud while consistently enforcing security policies. Windows 11 provides expanded support for group policy administrative templates (ADMX-backed policies) in cloud-native device management solutions like Microsoft Intune, enabling IT professionals to easily apply the same security policies to both on-premises and remote devices.
+Windows 11 enables IT professionals to move to the cloud while consistently enforcing security policies. Windows 11 provides expanded support for group policy administrative templates (ADMX-backed policies) in cloud-native device management solutions like Microsoft Intune<sup>[\[4\]](../conclusion.md#footnote4)</sup>, enabling IT professionals to easily apply the same security policies to both on-premises and remote devices.
 
 Customers have asked for App Control for Business (previously called *Windows Defender Application Control*) to support manage installer for a long time. Now it's possible to enable allowlisting of Win32 apps to proactively reduce the number of malware infections.
 

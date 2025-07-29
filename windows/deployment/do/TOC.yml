@@ -45,10 +45,18 @@
           href: mcc-ent-create-resource-and-cache.md
         - name: Deploy Connected Cache nodes to host machines
           items:
-          - name: Deploy Connected Cache to Linux
-            href: mcc-ent-deploy-to-linux.md
           - name: Deploy Connected Cache to Windows
             href: mcc-ent-deploy-to-windows.md
+          - name: Deploy Connected Cache to Linux
+            href: mcc-ent-deploy-to-linux.md          
+        - name: Configure cache nodes to use HTTPS
+          items:
+          - name: HTTPS Support Overview
+            href: mcc-ent-https-overview.md
+          - name: Configure HTTPS on Windows
+            href: mcc-ent-https-windows.md
+          - name: Configure HTTPS on Linux
+            href: mcc-ent-https-linux.md
         - name: Use Azure CLI to manage Connected Cache
           href: mcc-ent-manage-using-cli.md 
         - name: Verify Connected Cache node functionality
@@ -61,8 +69,10 @@
           href: mcc-ent-uninstall-cache-node.md     
       - name: Resources
         items:
-        - name: Frequent Asked Questions
+        - name: Frequently Asked Questions
           href: mcc-ent-faq.yml
+        - name: Connected Cache secure content delivery
+          href: mcc-ent-secure-content-delivery.md
         - name: Troubleshooting
           href: mcc-ent-troubleshooting.md
         - name: Microsoft Connected Cache for Enterprise and Education early preview

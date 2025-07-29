@@ -1,7 +1,7 @@
 ---
 title: DeviceHealthMonitoring Policy CSP
 description: Learn more about the DeviceHealthMonitoring Area in Policy CSP.
-ms.date: 02/14/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -20,7 +20,7 @@ ms.topic: generated-reference
 <!-- AllowDeviceHealthMonitoring-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- AllowDeviceHealthMonitoring-Applicability-End -->
 
 <!-- AllowDeviceHealthMonitoring-OmaUri-Begin -->
@@ -70,7 +70,7 @@ DeviceHealthMonitoring is an opt-in health monitoring connection between the dev
 <!-- ConfigDeviceHealthMonitoringScope-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- ConfigDeviceHealthMonitoringScope-Applicability-End -->
 
 <!-- ConfigDeviceHealthMonitoringScope-OmaUri-Begin -->
@@ -111,7 +111,7 @@ This policy is applicable only if the [AllowDeviceHealthMonitoring](#allowdevice
 <!-- ConfigDeviceHealthMonitoringServiceInstance-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- ConfigDeviceHealthMonitoringServiceInstance-Applicability-End -->
 
 <!-- ConfigDeviceHealthMonitoringServiceInstance-OmaUri-Begin -->
@@ -151,7 +151,7 @@ If the device isn't opted-in to the DeviceHealthMonitoring service via the Allow
 <!-- ConfigDeviceHealthMonitoringUploadDestination-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- ConfigDeviceHealthMonitoringUploadDestination-Applicability-End -->
 
 <!-- ConfigDeviceHealthMonitoringUploadDestination-OmaUri-Begin -->

@@ -6,7 +6,7 @@ ms.subservice: itpro-updates
 ms.topic: how-to
 author: mestew
 ms.author: mstewart
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - highpri
   - tier2
@@ -61,6 +61,9 @@ By default, active hours are from 8 AM to 5 PM on PCs. Users can manually change
 
 You can also specify the max active hours range. The specified range is counted from the active hours start time.
 
+> [!Note]
+>  The max active hours length for Windows 10, version 1607 and Windows Server 2016 is 12.  Later versions support max active hours length of 18 hours.
+
 ### Configure active hours with group policy
 
 To configure active hours using group policy, go to **Computer Configuration\Administrative Templates\Windows Components\Windows Update** and open the **Turn off auto-restart for updates during active hours** policy setting. When the policy is enabled, you can set the start and end times for active hours.
@@ -74,6 +77,7 @@ To configure active hours, MDM uses the following settings in the [Update Policy
 - [ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#activehoursstart)
 - [ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#activehoursend)
 - [ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-update#activehoursmaxrange)
+
 
 ### Configure active hours through the Windows registry
 
@@ -228,6 +232,7 @@ There are three different registry combinations for controlling restart behavior
 
 - [Overview of Windows as a service](waas-overview.md)
 - [Configure Delivery Optimization for Windows updates](../do/waas-delivery-optimization.md)
-- [Configure Windows Update for Business](waas-configure-wufb.md)
-- [Walkthrough: use group policy to configure Windows Update for Business](waas-wufb-group-policy.md)
+- [Configure Windows Update client policies](waas-configure-wufb.md)
+- [Walkthrough: use group policy to configure Windows Update client policies](waas-wufb-group-policy.md)
 - [Manage Windows software updates in Microsoft Intune](/mem/intune/protect/windows-update-for-business-configure)
+

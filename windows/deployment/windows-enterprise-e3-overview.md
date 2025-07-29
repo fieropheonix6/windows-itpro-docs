@@ -4,15 +4,15 @@ description: Describes Windows Enterprise E3, an offering that delivers, by subs
 ms.service: windows-client
 ms.subservice: activation
 ms.localizationpriority: medium
-ms.date: 02/13/2024
+ms.date: 05/14/2025
 ms.author: kaushika
 author: kaushika-msft
 manager: cshepard
 ms.reviewer: nganguly
 ms.topic: concept-article
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
-  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
+- ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+- ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Windows Enterprise E3 in CSP

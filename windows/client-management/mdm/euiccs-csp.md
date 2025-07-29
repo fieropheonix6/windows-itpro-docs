@@ -1,7 +1,7 @@
 ---
 title: eUICCs CSP
 description: Learn more about the eUICCs CSP.
-ms.date: 02/13/2025
+ms.date: 06/09/2025
 ms.topic: generated-reference
 ---
 
@@ -9,6 +9,8 @@ ms.topic: generated-reference
 
 <!-- eUICCs-Begin -->
 # eUICCs CSP
+
+[!INCLUDE [Windows Insider tip](includes/mdm-insider-csp-note.md)]
 
 <!-- eUICCs-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
@@ -27,7 +29,9 @@ The following list shows the eUICCs configuration service provider nodes:
       - [{ServerName}](#euiccdownloadserversservername)
         - [AutoEnable](#euiccdownloadserversservernameautoenable)
         - [DiscoveryState](#euiccdownloadserversservernamediscoverystate)
+        - [ICCID](#euiccdownloadserversservernameiccid)
         - [IsDiscoveryServer](#euiccdownloadserversservernameisdiscoveryserver)
+        - [MaximumAttempts](#euiccdownloadserversservernamemaximumattempts)
     - [Identifier](#euiccidentifier)
     - [IsActive](#euiccisactive)
     - [Policies](#euiccpolicies)
@@ -51,7 +55,7 @@ The following list shows the eUICCs configuration service provider nodes:
 <!-- Device-{eUICC}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Applicability-End -->
 
 <!-- Device-{eUICC}-OmaUri-Begin -->
@@ -91,7 +95,7 @@ Represents information associated with an eUICC. There is one subtree for each k
 <!-- Device-{eUICC}-Actions-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Actions-Applicability-End -->
 
 <!-- Device-{eUICC}-Actions-OmaUri-Begin -->
@@ -130,7 +134,7 @@ Actions that can be performed on the eUICC as a whole.
 <!-- Device-{eUICC}-Actions-ResetToFactoryState-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Actions-ResetToFactoryState-Applicability-End -->
 
 <!-- Device-{eUICC}-Actions-ResetToFactoryState-OmaUri-Begin -->
@@ -169,7 +173,7 @@ This triggers an eUICC Memory Reset, which erases all the eSIM profiles in the e
 <!-- Device-{eUICC}-Actions-Status-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Actions-Status-Applicability-End -->
 
 <!-- Device-{eUICC}-Actions-Status-OmaUri-Begin -->
@@ -209,7 +213,7 @@ Status of most recent operation, as an HRESULT. S_OK indicates success, S_FALSE 
 <!-- Device-{eUICC}-DownloadServers-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- Device-{eUICC}-DownloadServers-Applicability-End -->
 
 <!-- Device-{eUICC}-DownloadServers-OmaUri-Begin -->
@@ -248,7 +252,7 @@ Represents servers used for bulk provisioning and eSIM discovery.
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-Applicability-End -->
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-OmaUri-Begin -->
@@ -288,7 +292,7 @@ Node representing a bulk download/discovery server. The node name is the fully q
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-AutoEnable-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-AutoEnable-Applicability-End -->
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-AutoEnable-OmaUri-Begin -->
@@ -336,7 +340,7 @@ Indicates whether the discovered profile must be enabled automatically after ins
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-DiscoveryState-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-DiscoveryState-Applicability-End -->
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-DiscoveryState-OmaUri-Begin -->
@@ -370,13 +374,52 @@ Current state of the discovery operation for this server (Requested = 1, Executi
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-DiscoveryState-End -->
 
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Begin -->
+##### {eUICC}/DownloadServers/{ServerName}/ICCID
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Applicability-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/eUICCs/{eUICC}/DownloadServers/{ServerName}/ICCID
+```
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-OmaUri-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Description-Begin -->
+<!-- Description-Source-DDF -->
+The ICCID of the eSIM profile downloaded as a result of successfully running the eSIM bulk activation process policy.
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Description-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Editable-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `chr` (string) |
+| Access Type | Get |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-DFProperties-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-Examples-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-ICCID-End -->
+
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-Begin -->
 ##### {eUICC}/DownloadServers/{ServerName}/IsDiscoveryServer
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-Applicability-End -->
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-OmaUri-Begin -->
@@ -419,13 +462,53 @@ Indicates whether the server is a discovery server or if it's used for bulk down
 
 <!-- Device-{eUICC}-DownloadServers-{ServerName}-IsDiscoveryServer-End -->
 
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Begin -->
+##### {eUICC}/DownloadServers/{ServerName}/MaximumAttempts
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Applicability-Begin -->
+| Scope | Editions | Applicable OS |
+|:--|:--|:--|
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Applicability-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-OmaUri-Begin -->
+```Device
+./Device/Vendor/MSFT/eUICCs/{eUICC}/DownloadServers/{ServerName}/MaximumAttempts
+```
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-OmaUri-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Description-Begin -->
+<!-- Description-Source-DDF -->
+How many times profile download should be attempted before giving up. A value of 0 indicates unlimited retry attempts. When a value isn't specified, it defaults to 50, which is equivalent to about a month of retry attempts.
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Description-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Editable-Begin -->
+<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Editable-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-DFProperties-Begin -->
+**Description framework properties**:
+
+| Property name | Property value |
+|:--|:--|
+| Format | `int` |
+| Access Type | Add, Get, Replace |
+| Default Value  | 50 |
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-DFProperties-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Examples-Begin -->
+<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-Examples-End -->
+
+<!-- Device-{eUICC}-DownloadServers-{ServerName}-MaximumAttempts-End -->
+
 <!-- Device-{eUICC}-Identifier-Begin -->
 ### {eUICC}/Identifier
 
 <!-- Device-{eUICC}-Identifier-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Identifier-Applicability-End -->
 
 <!-- Device-{eUICC}-Identifier-OmaUri-Begin -->
@@ -465,7 +548,7 @@ Identifies an eUICC in an implementation-specific manner, for example, this iden
 <!-- Device-{eUICC}-IsActive-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-IsActive-Applicability-End -->
 
 <!-- Device-{eUICC}-IsActive-OmaUri-Begin -->
@@ -504,7 +587,7 @@ Indicates whether this eUICC is physically present and active. Updated only by t
 <!-- Device-{eUICC}-Policies-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Policies-Applicability-End -->
 
 <!-- Device-{eUICC}-Policies-OmaUri-Begin -->
@@ -543,7 +626,7 @@ Device policies associated with the eUICC as a whole (not per-profile).
 <!-- Device-{eUICC}-Policies-LocalUIEnabled-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Policies-LocalUIEnabled-Applicability-End -->
 
 <!-- Device-{eUICC}-Policies-LocalUIEnabled-OmaUri-Begin -->
@@ -592,7 +675,7 @@ Determines whether or not the user can make changes to the eSIM through the user
 <!-- Device-{eUICC}-PPR1Allowed-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-PPR1Allowed-Applicability-End -->
 
 <!-- Device-{eUICC}-PPR1Allowed-OmaUri-Begin -->
@@ -631,7 +714,7 @@ Indicates whether the download of a profile with Profile Policy Rule 1 (PPR1) is
 <!-- Device-{eUICC}-PPR1AlreadySet-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-PPR1AlreadySet-Applicability-End -->
 
 <!-- Device-{eUICC}-PPR1AlreadySet-OmaUri-Begin -->
@@ -670,7 +753,7 @@ Indicates whether the eUICC has already a profile with Profile Policy Rule 1 (PP
 <!-- Device-{eUICC}-Profiles-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-OmaUri-Begin -->
@@ -709,7 +792,7 @@ Represents all enterprise-owned eSIM profiles.
 <!-- Device-{eUICC}-Profiles-{ICCID}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-OmaUri-Begin -->
@@ -749,7 +832,7 @@ Node representing an enterprise-owned eSIM profile. The node name is the ICCID o
 <!-- Device-{eUICC}-Profiles-{ICCID}-ErrorDetail-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-ErrorDetail-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-ErrorDetail-OmaUri-Begin -->
@@ -789,7 +872,7 @@ Detailed error if the profile download and install procedure failed (None = 0, C
 <!-- Device-{eUICC}-Profiles-{ICCID}-IsEnabled-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-IsEnabled-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-IsEnabled-OmaUri-Begin -->
@@ -837,7 +920,7 @@ Indicates whether this eSIM profile is enabled. Can be set by both the MDM and t
 <!-- Device-{eUICC}-Profiles-{ICCID}-MatchingID-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-MatchingID-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-MatchingID-OmaUri-Begin -->
@@ -877,7 +960,7 @@ Matching ID (activation code token) for eSIM profile download. Must be set by th
 <!-- Device-{eUICC}-Profiles-{ICCID}-PPR1Set-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-PPR1Set-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-PPR1Set-OmaUri-Begin -->
@@ -916,7 +999,7 @@ Profile Policy Rule 1 (PPR1) indicates whether disabling of this profile isn't a
 <!-- Device-{eUICC}-Profiles-{ICCID}-PPR2Set-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-PPR2Set-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-PPR2Set-OmaUri-Begin -->
@@ -955,7 +1038,7 @@ Profile Policy Rule 2 (PPR2) indicates whether deletion of this profile isn't al
 <!-- Device-{eUICC}-Profiles-{ICCID}-ServerName-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-ServerName-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-ServerName-OmaUri-Begin -->
@@ -994,7 +1077,7 @@ Fully qualified domain name of the server that can download this eSIM profile. M
 <!-- Device-{eUICC}-Profiles-{ICCID}-State-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- Device-{eUICC}-Profiles-{ICCID}-State-Applicability-End -->
 
 <!-- Device-{eUICC}-Profiles-{ICCID}-State-OmaUri-Begin -->

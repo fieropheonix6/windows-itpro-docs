@@ -1,14 +1,14 @@
 ---
 title: Windows quality and feature update reports overview
 description: This article details the types of reports available and info about update device eligibility, device update health, device update trends in Windows Autopatch.
-ms.date: 03/03/2025
+ms.date: 05/27/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: overview
 ms.localizationpriority: medium
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.reviewer: adnich
 ms.collection:
   - highpri
@@ -16,8 +16,6 @@ ms.collection:
 ---
 
 # Windows quality and feature update reports overview
-
-[!INCLUDE [windows-autopatch-enterprise-e3-f3-licenses](../includes/windows-autopatch-enterprise-e3-f3-licenses.md)]
 
 ## Prerequisites
 
@@ -27,6 +25,23 @@ Windows Autopatch requires, and uses Windows diagnostic data to display device u
 - Client and substate data are collected from devices only if Windows data collection data is properly configured.
 
 This data collection configuration method using Windows diagnostic data in Intune is shared across Autopatch reports. To support Autopatch reporting, you must configure the [Enable Windows diagnostic data collection settings](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) from devices at the **Required** or higher level.
+
+### Permissions and scope to view reports 
+
+To view Windows Update reports, you must be assigned an Intune role with the **Device Configuration** > **View reports** permission. This permission is included in the following built-in roles:
+
+- Policy and Profile Manager
+- Read Only Operator
+- Helpdesk Operator
+
+In addition, the following roles have **Reports** > **Read permissions**. This permission is included in the following built-in roles, to access Windows Autopatch reports.
+
+- Windows Autopatch Administrator
+- Windows Autopatch reader
+
+The report displays data based on device scope tags only. Therefore, Windows Update reports might include Update policies and Autopatch group information that aren't in the same scope as the device. For more information, see [role-based access control](../prepare/windows-autopatch-role-based-access-control.md) in Windows Autopatch.
+
+To ensure accurate display of reports information, ensure that the Autopatch groups, update policies are accurately assigned to the same scope as the device.
 
 ## Windows quality update reports
 
@@ -72,7 +87,9 @@ Users with the following permissions can access the reports:
 
 ## About data latency
 
-The data source for these reports is Windows [diagnostic data](../overview/windows-autopatch-privacy.md#microsoft-windows-1011-diagnostic-data). The data typically uploads from enrolled devices once per day. Then, the data is processed in batches before being made available in Windows Autopatch. The maximum end-to-end latency is approximately four hours.
+The data source for these reports is Windows [diagnostic data](../overview/windows-autopatch-privacy.md#microsoft-windows-1011-diagnostic-data) and Microsoft Intune.The data typically uploads from enrolled devices every hour. Then, the data is processed in batches before being made available in Windows Autopatch. The maximum end-to-end latency is approximately four hours.
+
+
 
 ## Windows quality and feature update statuses
 
@@ -102,7 +119,7 @@ Up to date devices are devices that meet all of the following prerequisites:
 | Sub status | Description |
 | ----- | ----- |
 | In Progress | Devices are currently installing the latest [quality update](../operate/windows-autopatch-groups-windows-quality-update-overview.md#release-schedule) or [feature update](../operate/windows-autopatch-groups-windows-feature-update-overview.md#default-release) deployed through the Windows Autopatch release schedule. |
-| Paused | Devices that are currently paused due to a Windows Autopatch or customer-initiated pause. For more information, see pausing and resuming a [Windows quality update](../operate/windows-autopatch-groups-windows-quality-update-overview.md#pause-and-resume-a-release) or [Windows feature update](../operate/windows-autopatch-windows-feature-update-overview.md#pause-and-resume-a-release). |
+| Paused | Devices that are currently paused due to a customer-initiated pause. For more information, see pausing and resuming a [Windows quality update](../operate/windows-autopatch-groups-windows-quality-update-overview.md#pause-and-resume-a-release) or [Windows feature update](../operate/windows-autopatch-windows-feature-update-overview.md#pause-and-resume-a-release). |
 
 ### Not up to Date devices
 

@@ -1,20 +1,20 @@
 ---
 title: Programmatic controls for drivers and firmware
-titleSuffix: Windows Autopatch 
+titleSuffix: Windows Autopatch
 description: Use programmatic controls to deploy driver and firmware updates to devices.
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
 author: tiaraquan
 ms.author: tiaraquan
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - tier1
 ms.localizationpriority: medium
-appliesto: 
+appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-ms.date: 09/24/2024
+ms.date: 03/31/2025
 ---
 
 # Programmatic controls for drivers and firmware updates
@@ -87,7 +87,7 @@ To create a policy without any deployment settings, in the request body specify 
    ```msgraph-interactive
    POST https://graph.microsoft.com/beta/admin/windows/updates/updatePolicies
    content-type: application/json
-   
+
    {
      "audience": {
        "id": "d39ad1ce-0123-4567-89ab-cdef01234567"
@@ -129,7 +129,7 @@ To create a policy with additional settings, in the request body:
    ```msgraph-interactive
    POST https://graph.microsoft.com/beta/admin/windows/updates/updatePolicies
    content-type: application/json
-      
+
    {
      "@odata.type": "#microsoft.graph.windowsUpdates.updatePolicy",
      "audience": {
@@ -193,7 +193,7 @@ Once Windows Autopatch has scan results from devices, the applicability for driv
 - The **Microsoft Entra ID** of the devices it's applicable to
 - Information describing the update such as the name and version.
 
-To display [applicable content](/graph/api/resources/windowsupdates-applicablecontent), run a query using the  **Audience ID**, for example `d39ad1ce-0123-4567-89ab-cdef01234567`:  
+To display [applicable content](/graph/api/resources/windowsupdates-applicablecontent), run a query using the  **Audience ID**, for example `d39ad1ce-0123-4567-89ab-cdef01234567`:
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/windows/updates/deploymentAudiences/d39ad1ce-0123-4567-89ab-cdef01234567/applicableContent
@@ -202,7 +202,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/deploymentAudiences/d
 The following truncated response displays:
 
   - An **Microsoft Entra ID** of `01234567-89ab-cdef-0123-456789abcdef`
-  - The **Catalog ID** of `5d6dede684ba5c4a731d62d9c9c2a99db12c5e6015e9f8ad00f3e9387c7f399c`  
+  - The **Catalog ID** of `5d6dede684ba5c4a731d62d9c9c2a99db12c5e6015e9f8ad00f3e9387c7f399c`
 
       ```json
       "matchedDevices": [

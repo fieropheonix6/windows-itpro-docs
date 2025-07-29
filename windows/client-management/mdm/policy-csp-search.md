@@ -1,7 +1,7 @@
 ---
 title: Search Policy CSP
 description: Learn more about the Search Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -20,7 +20,7 @@ ms.topic: generated-reference
 <!-- AllowCloudSearch-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1709 [10.0.16299] and later |
 <!-- AllowCloudSearch-Applicability-End -->
 
 <!-- AllowCloudSearch-OmaUri-Begin -->
@@ -83,7 +83,7 @@ Allow search and Cortana to search cloud sources like OneDrive and SharePoint.
 <!-- AllowCortanaInAAD-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- AllowCortanaInAAD-Applicability-End -->
 
 <!-- AllowCortanaInAAD-OmaUri-Begin -->
@@ -146,7 +146,7 @@ Allow the Cortana opt-in page during windows setup out of the box experience.
 <!-- AllowFindMyFiles-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- AllowFindMyFiles-Applicability-End -->
 
 <!-- AllowFindMyFiles-OmaUri-Begin -->
@@ -206,7 +206,7 @@ This policy controls whether the user can configure search to *Find My Files* mo
 <!-- AllowIndexingEncryptedStoresOrItems-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowIndexingEncryptedStoresOrItems-Applicability-End -->
 
 <!-- AllowIndexingEncryptedStoresOrItems-OmaUri-Begin -->
@@ -285,7 +285,7 @@ The most restrictive value is `0` to not allow indexing of encrypted items.
 <!-- AllowSearchHighlights-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 20H2 with [KB5011543](https://support.microsoft.com/help/5011543) [10.0.19042.1620] and later <br> ✅ Windows 10, version 21H1 with [KB5011543](https://support.microsoft.com/help/5011543) [10.0.19043.1620] and later <br> ✅ Windows 10, version 21H2 with [KB5011543](https://support.microsoft.com/help/5011543) [10.0.19044.1620] and later <br> ✅ Windows 11, version 21H2 with [KB5023774](https://support.microsoft.com/help/5023774) [10.0.22000.1761] and later <br> ✅ Windows 11, version 22H2 [10.0.22621] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 20H2 with [KB5011543](https://support.microsoft.com/help/5011543) [10.0.19042.1620] and later <br> ✅ Windows 10, version 21H1 with [KB5011543](https://support.microsoft.com/help/5011543) [10.0.19043.1620] and later <br> ✅ Windows 10, version 21H2 with [KB5011543](https://support.microsoft.com/help/5011543) [10.0.19044.1620] and later <br> ✅ Windows 11, version 21H2 with [KB5023774](https://support.microsoft.com/help/5023774) [10.0.22000.1761] and later <br> ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- AllowSearchHighlights-Applicability-End -->
 
 <!-- AllowSearchHighlights-OmaUri-Begin -->
@@ -347,7 +347,7 @@ Disabling this setting turns off search highlights in the start menu search box 
 <!-- AllowSearchToUseLocation-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowSearchToUseLocation-Applicability-End -->
 
 <!-- AllowSearchToUseLocation-OmaUri-Begin -->
@@ -414,7 +414,7 @@ The most restrictive value is `0` to not allow search to use location.
 <!-- AllowStoringImagesFromVisionSearch-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowStoringImagesFromVisionSearch-Applicability-End -->
 
 <!-- AllowStoringImagesFromVisionSearch-OmaUri-Begin -->
@@ -463,7 +463,7 @@ This policy has been deprecated.
 <!-- AllowUsingDiacritics-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowUsingDiacritics-Applicability-End -->
 
 <!-- AllowUsingDiacritics-OmaUri-Begin -->
@@ -537,7 +537,7 @@ The most restrictive value is `0` to not allow the use of diacritics.
 <!-- AllowWindowsIndexer-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowWindowsIndexer-Applicability-End -->
 
 <!-- AllowWindowsIndexer-OmaUri-Begin -->
@@ -578,7 +578,7 @@ Allow Windows indexer. Value type is integer.
 <!-- AlwaysUseAutoLangDetection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AlwaysUseAutoLangDetection-Applicability-End -->
 
 <!-- AlwaysUseAutoLangDetection-OmaUri-Begin -->
@@ -647,7 +647,7 @@ The most restrictive value is `0` to now allow automatic language detection.
 <!-- ConfigureSearchOnTaskbarMode-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ConfigureSearchOnTaskbarMode-Applicability-End -->
 
 <!-- ConfigureSearchOnTaskbarMode-OmaUri-Begin -->
@@ -722,7 +722,7 @@ This policy setting allows you to configure search on the taskbar.
 <!-- DisableBackoff-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- DisableBackoff-Applicability-End -->
 
 <!-- DisableBackoff-OmaUri-Begin -->
@@ -785,7 +785,7 @@ If enabled, the search indexer backoff feature will be disabled. Indexing will c
 <!-- DisableRemovableDriveIndexing-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- DisableRemovableDriveIndexing-Applicability-End -->
 
 <!-- DisableRemovableDriveIndexing-OmaUri-Begin -->
@@ -852,7 +852,7 @@ This policy setting configures whether or not locations on removable drives can 
 <!-- DisableSearch-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- DisableSearch-Applicability-End -->
 
 <!-- DisableSearch-OmaUri-Begin -->
@@ -918,7 +918,7 @@ This policy setting configures whether or not locations on removable drives can 
 <!-- DoNotUseWebResults-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ❌ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- DoNotUseWebResults-Applicability-End -->
 
 <!-- DoNotUseWebResults-OmaUri-Begin -->
@@ -987,7 +987,7 @@ This policy setting allows you to control whether or not Search can perform quer
 <!-- PreventIndexingLowDiskSpaceMB-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- PreventIndexingLowDiskSpaceMB-Applicability-End -->
 
 <!-- PreventIndexingLowDiskSpaceMB-OmaUri-Begin -->
@@ -1049,7 +1049,7 @@ Enabling this policy prevents indexing from continuing after less than the speci
 <!-- PreventRemoteQueries-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- PreventRemoteQueries-Applicability-End -->
 
 <!-- PreventRemoteQueries-OmaUri-Begin -->

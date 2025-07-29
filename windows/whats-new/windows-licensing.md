@@ -4,7 +4,7 @@ description: Learn about products and use rights available through Windows comme
 ms.subservice: itpro-security
 author: paolomatarazzo
 ms.author: paoloma
-manager: aaroncz
+manager: bpardi
 ms.collection:
 - tier2
 ms.topic: overview
@@ -187,7 +187,7 @@ To learn more about Windows 11 Enterprise E3 and E5 licensing, download the [Win
 [EXT-1]: https://www.microsoft.com/licensing/terms/productoffering/WindowsDesktopOperatingSystem/EAEAS
 [EXT-2]: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-release-health-now-available-in-the-microsoft-365-admin/ba-p/2235908
 [EXT-3]: https://windows.com/enterprise
-[EXT-4]: https://www.microsoft.com/licensing/product-licensing/products.aspx
+[EXT-4]: https://www.microsoft.com/licensing/product-licensing/windows
 [EXT-5]: https://www.microsoft.com/licensing
 [EXT-6]: https://aka.ms/WindowsLicensingGuide
 [MDOP-1]: /microsoft-desktop-optimization-pack

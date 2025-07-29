@@ -1,7 +1,7 @@
 ---
 title: RemoteDesktopServices Policy CSP
 description: Learn more about the RemoteDesktopServices Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -24,7 +24,7 @@ ms.topic: generated-reference
 <!-- AllowUsersToConnectRemotely-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- AllowUsersToConnectRemotely-Applicability-End -->
 
 <!-- AllowUsersToConnectRemotely-OmaUri-Begin -->
@@ -89,7 +89,7 @@ You can limit the number of users who can connect simultaneously by configuring 
 <!-- ClientConnectionEncryptionLevel-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- ClientConnectionEncryptionLevel-Applicability-End -->
 
 <!-- ClientConnectionEncryptionLevel-OmaUri-Begin -->
@@ -157,7 +157,7 @@ FIPS compliance can be configured through the System cryptography. Use FIPS comp
 <!-- DisconnectOnLockLegacyAuthn-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2461] and later <br> ✅ [10.0.25398.887] and later <br> ✅ Windows 10, version 2004 [10.0.19041.4474] and later <br> ✅ Windows 11, version 21H2 with [KB5037770](https://support.microsoft.com/help/5037770) [10.0.22000.2960] and later <br> ✅ Windows 11, version 22H2 with [KB5037771](https://support.microsoft.com/help/5037771) [10.0.22621.3593] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2461] and later <br> ✅ [10.0.25398.887] and later <br> ✅ Windows 10, version 2004 [10.0.19041.4474] and later <br> ✅ Windows 11, version 21H2 with [KB5037770](https://support.microsoft.com/help/5037770) [10.0.22000.2960] and later <br> ✅ Windows 11, version 22H2 with [KB5037771](https://support.microsoft.com/help/5037771) [10.0.22621.3593] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- DisconnectOnLockLegacyAuthn-Applicability-End -->
 
 <!-- DisconnectOnLockLegacyAuthn-OmaUri-Begin -->
@@ -218,7 +218,7 @@ This policy applies only when using legacy authentication to authenticate to the
 <!-- DisconnectOnLockMicrosoftIdentityAuthn-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2461] and later <br> ✅ [10.0.25398.887] and later <br> ✅ Windows 10, version 2004 [10.0.19041.4474] and later <br> ✅ Windows 11, version 21H2 with [KB5037770](https://support.microsoft.com/help/5037770) [10.0.22000.2960] and later <br> ✅ Windows 11, version 22H2 with [KB5037771](https://support.microsoft.com/help/5037771) [10.0.22621.3593] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2461] and later <br> ✅ [10.0.25398.887] and later <br> ✅ Windows 10, version 2004 [10.0.19041.4474] and later <br> ✅ Windows 11, version 21H2 with [KB5037770](https://support.microsoft.com/help/5037770) [10.0.22000.2960] and later <br> ✅ Windows 11, version 22H2 with [KB5037771](https://support.microsoft.com/help/5037771) [10.0.22621.3593] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- DisconnectOnLockMicrosoftIdentityAuthn-Applicability-End -->
 
 <!-- DisconnectOnLockMicrosoftIdentityAuthn-OmaUri-Begin -->
@@ -279,7 +279,7 @@ This policy applies only when using an identity provider that uses the Microsoft
 <!-- DoNotAllowDriveRedirection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- DoNotAllowDriveRedirection-Applicability-End -->
 
 <!-- DoNotAllowDriveRedirection-OmaUri-Begin -->
@@ -342,7 +342,7 @@ By default, an RD Session Host server maps client drives automatically upon conn
 <!-- DoNotAllowPasswordSaving-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- DoNotAllowPasswordSaving-Applicability-End -->
 
 <!-- DoNotAllowPasswordSaving-OmaUri-Begin -->
@@ -401,7 +401,7 @@ Controls whether passwords can be saved on this computer from Remote Desktop Con
 <!-- DoNotAllowWebAuthnRedirection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 22H2 [10.0.22621] and later |
 <!-- DoNotAllowWebAuthnRedirection-Applicability-End -->
 
 <!-- DoNotAllowWebAuthnRedirection-OmaUri-Begin -->
@@ -462,7 +462,7 @@ By default, Remote Desktop allows redirection of WebAuthn requests.
 <!-- LimitClientToServerClipboardRedirection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2523] and later <br> ✅ [10.0.25398.946] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.3014] and later <br> ✅ Windows 11, version 22H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22621.3672] and later <br> ✅ Windows 11, version 23H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22631.3672] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2523] and later <br> ✅ [10.0.25398.946] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.3014] and later <br> ✅ Windows 11, version 22H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22621.3672] and later <br> ✅ Windows 11, version 23H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22631.3672] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- LimitClientToServerClipboardRedirection-Applicability-End -->
 
 <!-- LimitClientToServerClipboardRedirection-OmaUri-Begin -->
@@ -537,7 +537,7 @@ This policy setting allows you to restrict clipboard data transfers from client 
 <!-- LimitServerToClientClipboardRedirection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2523] and later <br> ✅ [10.0.25398.946] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.3014] and later <br> ✅ Windows 11, version 22H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22621.3672] and later <br> ✅ Windows 11, version 23H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22631.3672] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2523] and later <br> ✅ [10.0.25398.946] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.3014] and later <br> ✅ Windows 11, version 22H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22621.3672] and later <br> ✅ Windows 11, version 23H2 with [KB5037853](https://support.microsoft.com/help/5037853) [10.0.22631.3672] and later <br> ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- LimitServerToClientClipboardRedirection-Applicability-End -->
 
 <!-- LimitServerToClientClipboardRedirection-OmaUri-Begin -->
@@ -612,7 +612,7 @@ This policy setting allows you to restrict clipboard data transfers from server 
 <!-- PromptForPasswordUponConnection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- PromptForPasswordUponConnection-Applicability-End -->
 
 <!-- PromptForPasswordUponConnection-OmaUri-Begin -->
@@ -677,7 +677,7 @@ By default, Remote Desktop Services allows users to automatically log on by ente
 <!-- RequireSecureRPCCommunication-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- RequireSecureRPCCommunication-Applicability-End -->
 
 <!-- RequireSecureRPCCommunication-OmaUri-Begin -->
@@ -743,7 +743,7 @@ If the status is set to Not Configured, unsecured communication is allowed.
 <!-- TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2400] and later <br> ✅ [10.0.25398.827] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.2898] and later <br> ✅ Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22621.3374] and later <br> ✅ Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22631.3374] and later <br> ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ [10.0.20348.2400] and later <br> ✅ [10.0.25398.827] and later <br> ✅ Windows 11, version 21H2 [10.0.22000.2898] and later <br> ✅ Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22621.3374] and later <br> ✅ Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/help/5035942) [10.0.22631.3374] and later |
 <!-- TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME-Applicability-End -->
 
 <!-- TS_SERVER_REMOTEAPP_USE_SHELLAPPRUNTIME-OmaUri-Begin -->

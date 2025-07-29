@@ -1,7 +1,7 @@
 ---
 title: ApplicationControl CSP
 description: Learn more about the ApplicationControl CSP.
-ms.date: 02/13/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -49,7 +49,7 @@ The following list shows the ApplicationControl configuration service provider n
 <!-- Device-Policies-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-Applicability-End -->
 
 <!-- Device-Policies-OmaUri-Begin -->
@@ -89,7 +89,7 @@ Each policy is identified by their globally unique identifier (GUID).
 <!-- Device-Policies-{Policy GUID}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-OmaUri-Begin -->
@@ -130,7 +130,7 @@ Each Policy GUID node contains a Policy node and a corresponding PolicyInfo node
 <!-- Device-Policies-{Policy GUID}-Policy-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-Policy-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-Policy-OmaUri-Begin -->
@@ -170,7 +170,7 @@ Default value is empty.
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-OmaUri-Begin -->
@@ -209,7 +209,7 @@ Information Describing the Policy indicated by the GUID.
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-BasePolicyId-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-BasePolicyId-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-BasePolicyId-OmaUri-Begin -->
@@ -248,7 +248,7 @@ The BasePolicyId of the Policy Indicated by the Policy GUID.
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-FriendlyName-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-FriendlyName-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-FriendlyName-OmaUri-Begin -->
@@ -287,7 +287,7 @@ The FriendlyName of the Policy Indicated by the Policy GUID.
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsAuthorized-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsAuthorized-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsAuthorized-OmaUri-Begin -->
@@ -330,7 +330,7 @@ Supported values are as follows:
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsBasePolicy-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsBasePolicy-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsBasePolicy-OmaUri-Begin -->
@@ -369,7 +369,7 @@ TRUE/FALSE if the Policy is a Base Policy versus a Supplemental Policy.
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsDeployed-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsDeployed-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsDeployed-OmaUri-Begin -->
@@ -412,7 +412,7 @@ Supported values are as follows:
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsEffective-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsEffective-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsEffective-OmaUri-Begin -->
@@ -455,7 +455,7 @@ Supported values are as follows:
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsSystemPolicy-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsSystemPolicy-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-IsSystemPolicy-OmaUri-Begin -->
@@ -494,7 +494,7 @@ TRUE/FALSE if the Policy is a System Policy, that's a policy managed by Microsof
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-PolicyOptions-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-PolicyOptions-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-PolicyOptions-OmaUri-Begin -->
@@ -533,7 +533,7 @@ The PolicyOptions of the Policy Indicated by the Policy GUID.
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Status-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Status-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Status-OmaUri-Begin -->
@@ -573,7 +573,7 @@ Default value is 0, which indicates that the policy status is `OK`.
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Version-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Version-Applicability-End -->
 
 <!-- Device-Policies-{Policy GUID}-PolicyInfo-Version-OmaUri-Begin -->
@@ -612,7 +612,7 @@ Version of the Policy indicated by the GUID, as a string. When parsing use a uin
 <!-- Device-Tokens-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Tokens-Applicability-End -->
 
 <!-- Device-Tokens-OmaUri-Begin -->
@@ -651,7 +651,7 @@ Beginning of a Subtree that contains all tokens.
 <!-- Device-Tokens-{ID}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Tokens-{ID}-Applicability-End -->
 
 <!-- Device-Tokens-{ID}-OmaUri-Begin -->
@@ -691,7 +691,7 @@ Arbitrary ID used to differentiate tokens.
 <!-- Device-Tokens-{ID}-Token-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Tokens-{ID}-Token-Applicability-End -->
 
 <!-- Device-Tokens-{ID}-Token-OmaUri-Begin -->
@@ -730,7 +730,7 @@ The token binary encoded as base64. Supported value is a binary file, obtained f
 <!-- Device-Tokens-{ID}-TokenInfo-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Tokens-{ID}-TokenInfo-Applicability-End -->
 
 <!-- Device-Tokens-{ID}-TokenInfo-OmaUri-Begin -->
@@ -769,7 +769,7 @@ Information Describing the Token indicated by the corresponding ID.
 <!-- Device-Tokens-{ID}-TokenInfo-Status-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Tokens-{ID}-TokenInfo-Status-Applicability-End -->
 
 <!-- Device-Tokens-{ID}-TokenInfo-Status-OmaUri-Begin -->
@@ -808,7 +808,7 @@ The Current Status of the Token Indicated by the Token ID.
 <!-- Device-Tokens-{ID}-TokenInfo-Type-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- Device-Tokens-{ID}-TokenInfo-Type-Applicability-End -->
 
 <!-- Device-Tokens-{ID}-TokenInfo-Type-OmaUri-Begin -->

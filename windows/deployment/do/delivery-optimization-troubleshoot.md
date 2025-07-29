@@ -7,7 +7,7 @@ ms.topic: how-to
 author: cmknox
 ms.author: carmenf
 ms.reviewer: mstewart
-manager: aaroncz
+manager: bpardi
 ms.collection:
   - tier3
   - essentials-get-started

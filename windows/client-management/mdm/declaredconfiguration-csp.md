@@ -1,7 +1,7 @@
 ---
 title: DeclaredConfiguration CSP
 description: Learn more about the DeclaredConfiguration CSP.
-ms.date: 02/14/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -56,7 +56,7 @@ The following list shows the DeclaredConfiguration configuration service provide
 <!-- Device-Host-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Applicability-End -->
 
 <!-- Device-Host-OmaUri-Begin -->
@@ -95,7 +95,7 @@ The Host internal node indicates that the target of the configuration request or
 <!-- Device-Host-Complete-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Applicability-End -->
 
 <!-- Device-Host-Complete-OmaUri-Begin -->
@@ -135,7 +135,7 @@ The server to client flow of the **Complete** request is the same as an **Invent
 <!-- Device-Host-Complete-Documents-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Documents-Applicability-End -->
 
 <!-- Device-Host-Complete-Documents-OmaUri-Begin -->
@@ -174,7 +174,7 @@ The Documents node indicates that the configuration is in the form of a document
 <!-- Device-Host-Complete-Documents-{DocID}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Documents-{DocID}-Applicability-End -->
 
 <!-- Device-Host-Complete-Documents-{DocID}-OmaUri-Begin -->
@@ -215,7 +215,7 @@ Uniquely identifies the configuration document. No other document can have this 
 <!-- Device-Host-Complete-Documents-{DocID}-Document-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Documents-{DocID}-Document-Applicability-End -->
 
 <!-- Device-Host-Complete-Documents-{DocID}-Document-OmaUri-Begin -->
@@ -254,7 +254,7 @@ The Document node's value is an XML based document containing a collection of se
 <!-- Device-Host-Complete-Documents-{DocID}-Properties-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Documents-{DocID}-Properties-Applicability-End -->
 
 <!-- Device-Host-Complete-Documents-{DocID}-Properties-OmaUri-Begin -->
@@ -293,7 +293,7 @@ The Properties node encapsulates the list of properties that apply to the specif
 <!-- Device-Host-Complete-Documents-{DocID}-Properties-Abandoned-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Documents-{DocID}-Properties-Abandoned-Applicability-End -->
 
 <!-- Device-Host-Complete-Documents-{DocID}-Properties-Abandoned-OmaUri-Begin -->
@@ -342,7 +342,7 @@ The Abandoned node allows the OMA-DM server to indicate that the document is no 
 <!-- Device-Host-Complete-Results-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Results-Applicability-End -->
 
 <!-- Device-Host-Complete-Results-OmaUri-Begin -->
@@ -381,7 +381,7 @@ The Results node indicates that this is part of the URI path that will return an
 <!-- Device-Host-Complete-Results-{DocID}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Results-{DocID}-Applicability-End -->
 
 <!-- Device-Host-Complete-Results-{DocID}-OmaUri-Begin -->
@@ -421,7 +421,7 @@ Uniquely identifies the configuration document in which results of the configura
 <!-- Device-Host-Complete-Results-{DocID}-Document-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Complete-Results-{DocID}-Document-Applicability-End -->
 
 <!-- Device-Host-Complete-Results-{DocID}-Document-OmaUri-Begin -->
@@ -460,7 +460,7 @@ The Document node's value is an XML based document containing a collection of se
 <!-- Device-Host-Inventory-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Inventory-Applicability-End -->
 
 <!-- Device-Host-Inventory-OmaUri-Begin -->
@@ -500,7 +500,7 @@ The server to client flow of the **Inventory** request is the same as the **Comp
 <!-- Device-Host-Inventory-Documents-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Inventory-Documents-Applicability-End -->
 
 <!-- Device-Host-Inventory-Documents-OmaUri-Begin -->
@@ -539,7 +539,7 @@ The Documents node indicates that the inventory request is in the form of a docu
 <!-- Device-Host-Inventory-Documents-{DocID}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Inventory-Documents-{DocID}-Applicability-End -->
 
 <!-- Device-Host-Inventory-Documents-{DocID}-OmaUri-Begin -->
@@ -580,7 +580,7 @@ Uniquely identifies the inventory document. No other document can have this id. 
 <!-- Device-Host-Inventory-Documents-{DocID}-Document-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Inventory-Documents-{DocID}-Document-Applicability-End -->
 
 <!-- Device-Host-Inventory-Documents-{DocID}-Document-OmaUri-Begin -->
@@ -619,7 +619,7 @@ The Document node's value is an XML based document containing a collection of se
 <!-- Device-Host-Inventory-Results-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Inventory-Results-Applicability-End -->
 
 <!-- Device-Host-Inventory-Results-OmaUri-Begin -->
@@ -658,7 +658,7 @@ The Results node indicates that this is part of the URI path that will return an
 <!-- Device-Host-Inventory-Results-{DocID}-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Inventory-Results-{DocID}-Applicability-End -->
 
 <!-- Device-Host-Inventory-Results-{DocID}-OmaUri-Begin -->
@@ -698,7 +698,7 @@ Uniquely identifies the inventory document. No other document can have this id. 
 <!-- Device-Host-Inventory-Results-{DocID}-Document-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-Host-Inventory-Results-{DocID}-Document-Applicability-End -->
 
 <!-- Device-Host-Inventory-Results-{DocID}-Document-OmaUri-Begin -->
@@ -737,7 +737,7 @@ The Document node's value is an XML based document containing a collection of se
 <!-- Device-ManagementServiceConfiguration-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-ManagementServiceConfiguration-Applicability-End -->
 
 <!-- Device-ManagementServiceConfiguration-OmaUri-Begin -->
@@ -776,7 +776,7 @@ The ManagementServiceConfiguration node that's used to control certain Windows D
 <!-- Device-ManagementServiceConfiguration-ConflictResolution-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- Device-ManagementServiceConfiguration-ConflictResolution-Applicability-End -->
 
 <!-- Device-ManagementServiceConfiguration-ConflictResolution-OmaUri-Begin -->

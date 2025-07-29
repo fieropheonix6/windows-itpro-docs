@@ -11,22 +11,25 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 10/30/2024
+ms.date: 07/23/2025
 ---
 
 # Create Microsoft Connected Cache Azure resource and cache nodes
 
-This article outlines how to create and configure your Microsoft Connected Cache for Enterprise and Education cache nodes. The creation and configuration of your cache node takes place in Azure. The deployment of your cache node requires downloading and running an OS-specific provisioning package on your host machine.
+This article outlines how to create and configure your Microsoft Connected Cache for Enterprise and Education cache nodes. The creation and configuration of your cache node takes place in Azure. The deployment of your cache node requires downloading and using an OS-specific deployment package on your host machine.
 
 ## Prerequisites
 
-1. **Azure Pay-As-You-Go subscription**: Microsoft Connected Cache is a free-of-charge service hosted in Azure. You'll need a pay-as-you-go Azure subscription in order to onboard to our service. To create a subscription, go to [pay-as-you-go subscription page](https://azure.microsoft.com/offers/ms-azr-0003p/).
+1. **Azure Pay-As-You-Go subscription**: Microsoft Connected Cache is a free-of-charge service hosted in Azure. You need a pay-as-you-go Azure subscription in order to onboard to our service. To create a subscription, go to [pay-as-you-go subscription page](https://azure.microsoft.com/offers/ms-azr-0003p/).
 2. **Hardware to host Connected Cache**: The recommended configuration serves approximately 35,000 managed devices, downloading a 2-GB payload in 24-hour timeframe at a sustained rate of 6.5 Gbps.
 
 For more information on sizing and OS requirements, see [the prerequisites for using Connected Cache](mcc-ent-prerequisites.md).
 
 
 ## Create Connected Cache Azure resource
+
+> [!Note]
+> Resource move isn't currently supported for Connected Cache Azure resources. If you need to move your Connected Cache Azure resource, you can consider deleting the existing resource and creating another one in a different location.
 
 # [Azure portal](#tab/portal)
 
@@ -56,7 +59,7 @@ For more information on sizing and OS requirements, see [the prerequisites for u
 
     * Run [az version](/cli/azure/reference-index#az-version) to find the version and dependent libraries that are installed. To upgrade to the latest version, run [az upgrade](/cli/azure/reference-index#az-upgrade).
 
-    * Install Azure CLI extension **mcc** by following the instructions [here](/cli/azure/azure-cli-extensions-overview#how-to-install-extensions).
+    * Install Azure CLI extension `mcc` by following the instructions [here](/cli/azure/azure-cli-extensions-overview#how-to-install-extensions). 
 
     * Resource group under which a Connected Cache resource can be created. Use the [az group create](/cli/azure/group#az-group-create) command to create a new Resource group if you don't already have one.
 
@@ -80,7 +83,7 @@ az mcc ent resource create --mcc-resource-name <mymccresource> --resource-group 
   1. Open Azure portal and navigate to the Microsoft Connected Cache for Enterprise resource that you created.<br>
   1. Under Cache Node Management, select **Cache Nodes** then **Create Cache Node**.<br>
   
-  1. Provide a name for your cache node and select the host OS you plan to deploy the cache node on, then select **Create**. Note, cache node names have to be unique under the Microsoft Connected Cache resource.
+  1. Provide a name for your cache node and select the host OS you plan to deploy the cache node on, then select **Create**. Note that cache node names have to be unique under the Microsoft Connected Cache resource.
   <!--
     :::image type="content" source="images/mcc-isp-provision-cache-node-numbered.png" alt-text="Screenshot of the Azure portal depicting the cache node configuration page of a cache node. This screenshot shows all of the fields you can choose to configure the cache node." lightbox="./images/mcc-isp-provision-cache-node-numbered.png":::  
     -->
@@ -88,16 +91,15 @@ az mcc ent resource create --mcc-resource-name <mymccresource> --resource-group 
 Once the cache node state changes to **Not Configured**, you can now configure your cache node.<br>
 For more information about different cache node states, see [Cache node states](#cache-node-states).
 
-
 # [Azure CLI](#tab/cli)
 
 Use the following command to create a new cache node if you don't already have one.
 
 Replace the following placeholders with your own information:
-* *\<resource-group>*: Name of existing resource group in your subscription.
-* *\<mcc-resource-name>*: Name of the Microsoft Connected Cache for Enterprise resource.
-* *\<cache-node-name>*: A name for your Microsoft Connected Cache node.
-* *\<host-os>*: The OS on which cache node will be provisioned.
+* *\<resource-group>*: The name of the existing resource group in your subscription.
+* *\<mcc-resource-name>*: The name of the Microsoft Connected Cache for Enterprise Azure resource.
+* *\<cache-node-name>*: The desired name for your Microsoft Connected Cache node.
+* *\<host-os>*: The host machine operating system on which the cache node will be deployed.
   Accepted values: `windows`, `linux`
 
 ```azurecli-interactive
@@ -111,7 +113,7 @@ az mcc ent node create --cache-node-name <mycachenode> --mcc-resource-name <mymc
 >```azurecli-interactive
 >az mcc ent node show --cache-node-name <mycachenode> --mcc-resource-name <mymccresource> --resource-group <myrg>  
 >```
->In the output look for **cacheNodeState**. If ***cacheNodeState = Not Configured***, you can continue with cache node configuration.
+>In the output, look for **cacheNodeState**. If ***cacheNodeState = Not Configured***, you can continue with cache node configuration.
 >If ***cacheNodeState = Registration in Progress***, then the cache node is still in process of being created. Wait a couple of minutes and run the command again.
 >To know more about different cache node state, see [Cache node states](#cache-node-states).
 
@@ -138,7 +140,7 @@ Replace the following placeholders with your own information:
 * *\<size-in-gb>*: The size of cache drive. Must be at least 50 Gb.
 * *\<proxy>*: If proxy needs to be enabled or not.<br>
   Accepted values: `enabled`, `disabled`<br>
-  Proxy should be set to enabled if the cache node will need to pass through a network proxy to download content. The provided proxy will also be used during deployment of the Connected Cache cache node to your host machine.
+  Proxy should be set to enabled if the cache node needs to pass through a network proxy to download content. The provided proxy will also be used during deployment of the Connected Cache cache node to your host machine.
 * *\<proxy-host>*: The proxy host name or ip address. Required if proxy is set to enabled.
 * *\<proxy-port>*: Proxy port number. Required if proxy is set to enabled.
 * *\<auto-update-ring>*: Update ring the cache node should have.<br>
@@ -171,7 +173,7 @@ Replace the following placeholders with your own information:
 * *\<size-in-gb>*: The size of cache drive. Must be at least 50 Gb.
 * *\<proxy>*: If proxy needs to be enabled or not.<br>
   Accepted values: `enabled`, `disabled`<br>
-  Proxy should be set to enabled if the cache node will need to pass through a network proxy to download content. The provided proxy will also be used during deployment of the Connected Cache cache node to your host machine.
+  Proxy should be set to enabled if the cache node needs to pass through a network proxy to download content. The provided proxy will also be used during deployment of the Connected Cache cache node to your host machine.
 * *\<proxy-host>*: The proxy host name or ip address. Required if proxy is set to enabled.
 * *\<proxy-port>*: Proxy port number. Required if proxy is set to enabled.
 * *\<auto-update-ring>*: Update ring the cache node should have.<br>
@@ -215,37 +217,36 @@ To deploy cache nodes using Azure CLI, see
 
 | Field Name |Expected Value |Description|
 |---|---|---|
-|**Cache node name** | Alphanumeric string that contains no spaces| The name of the cache node. You may choose names based on location such as "Seattle-1". This name must be unique and can't be changed later |
+|**Cache node name** | Alphanumeric string that contains no spaces| The name of the cache node. You can choose names based on location such as "Seattle-1". This name must be unique and can't be changed later. |
 |**Host OS** | Linux or Windows| This is the operating system of the host machine that the cache node will be deployed to.|
 
 ### Storage fields
 
-##### Cache node for Linux
+#### Linux-hosted cache node
 
 >[!Important]
->All cache drives must have full read/write permissions set or the cache node will not function. For example, in a terminal you can run: sudo chmod 777 /path/to/cachedrivefolder
-<br>
+>All cache drives must have full read/write permissions set or the cache node will not function. For example, in a terminal you can run: sudo chmod 777 /path/to/cachedrivefolder.
 
 | Field Name |Expected Value |Description|
 |---|---|---|
 |**Cache drive folder**| File path string |Up to nine drive folders accessible by the cache node can be configured for each cache node to configure cache storage. Enter the location of the folder in Ubuntu where the external physical drive is mounted. For example: /dev/sda3/. Each cache drive should have read/write permissions configured. Ensure your disks are mounted and visit Attach a data disk to a Linux VM for more information.|
-|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 50 GB.|
+|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 100 GB.|
 
 ##### Cache node for Windows
 
 | Field Name |Expected Value |Description|
 |---|---|---|
 |**Cache drive folder**| File path string /var/mcc| This is the folder path where content is cached. You can't change the folder path.|
-|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 50 GB. |
+|**Cache drive size in gigabytes**| Integer in GB| Set the size of each drive configured for the cache node. Minimum cache drive size is 100 GB. |
 
 #### Proxy settings
 <br>
-You can choose to enable or disable proxy settings on your cache node. Proxy should be set to enabled if the cache node will need to pass through a network proxy to download content. The provided proxy will also be used during deployment of the Connected Cache node to your host machine.
+You can choose to enable or disable proxy settings on your cache node. Proxy should be set to enabled if the cache node needs to pass through a network proxy to download content. The provided proxy will also be used during deployment of the Connected Cache node to your host machine.
 
 <br>
 
 >[!IMPORTANT]
->Enabling or disabling the proxy settings after your cache node has been deployed will require running the provisioning script on the host machine again. This will ensure that proxy changes are in effect on the cache node. 
+>Enabling or disabling the proxy settings of a deployed cache node will require redeployment to the host machine before the proxy changes take effect.
 
 | Field Name	|Expected Value	 |Description|
 |---|---|---|
@@ -343,7 +344,7 @@ az mcc ent node delete --cache-node-name <mycachenode> --mcc-resource-name <mymc
 |Operation in progress| An operation is being done on the cache node|
 |Registration in progress| Cache node is being registered|
 |Not configured| Cache node is ready to be configured|
-|Not provisioned| Cache node is ready to be provisioned on host machine|
+|Not provisioned| Cache node is ready to be deployed to the host machine|
 |Healthy| Cache node phoning home|
 |Unhealthy| Cache node has stopped phoning home|
-|Never phoned home| Cache node has provisioned but has never phoned home|
+|Never phoned home| Cache node has been deployed but has never phoned home|

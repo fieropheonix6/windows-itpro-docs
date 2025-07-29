@@ -2,7 +2,7 @@
 title: UsmtUtils Syntax
 description: Learn about the syntax for the utilities available in User State Migration Tool (USMT) through the command-line interface.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

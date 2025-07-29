@@ -9,6 +9,8 @@ appliesto:
 
 # Important considerations before deploying apps with Managed Installer
 
+[!INCLUDE [winse-eos](../../includes/winse-eos.md)]
+
 This article describes important aspects to consider before deploying apps with managed installer.
 
 ## Existing apps deployed in Intune

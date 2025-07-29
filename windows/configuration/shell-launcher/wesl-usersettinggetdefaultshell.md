@@ -1,7 +1,7 @@
 ---
 title: WESL_UserSetting.GetDefaultShell
 description: WESL_UserSetting.GetDefaultShell
-ms.date: 02/25/2025
+ms.date: 3/7/2025
 ms.topic: reference
 ---
 
@@ -13,7 +13,7 @@ This method retrieves the default Shell Launcher configuration.
 
 ## Syntax
 
-```powershell
+```mof
 [Static] uint32 GetDefaultShell (
     [Out, Required] string Shell,
     [Out, Required] sint32 DefaultAction
@@ -22,9 +22,9 @@ This method retrieves the default Shell Launcher configuration.
 
 ## Parameters
 
-**Shell**</br>\[out, required\] The application or executable that Shell Launcher starts as the shell.
+**Shell**<br/>\[out, required\] The application or executable that Shell Launcher starts as the shell.
 
-**DefaultAction**</br>\[out, required\] The default action Shell Launcher takes when the shell application exits.
+**DefaultAction**<br/>\[out, required\] The default action Shell Launcher takes when the shell application exits.
 
 The possible actions are defined in the following table:
 

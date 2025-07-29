@@ -9,7 +9,7 @@ ms.service: windows-client
 ms.subservice: activation
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 11/14/2023
+ms.date: 05/14/2025
 ---
 
 # Configure VDA for Windows subscription activation

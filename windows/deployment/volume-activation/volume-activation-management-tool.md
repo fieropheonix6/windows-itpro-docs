@@ -7,7 +7,7 @@ manager: cshepard
 ms.reviewer: nganguly
 ms.service: windows-client
 ms.subservice: activation
-ms.date: 03/29/2024
+ms.date: 05/14/2025
 ms.topic: overview
 ---
 

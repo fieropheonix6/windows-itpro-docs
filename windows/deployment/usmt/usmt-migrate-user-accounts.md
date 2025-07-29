@@ -2,7 +2,7 @@
 title: Migrate User Accounts
 description: Learn how to migrate user accounts and how to specify which users to include and exclude by using the User options on the command line.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

@@ -2,7 +2,7 @@
 title: What does USMT migrate
 description: Learn how User State Migration Tool (USMT) is designed so that an IT engineer can precisely define migrations using the USMT .xml scripting language.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj

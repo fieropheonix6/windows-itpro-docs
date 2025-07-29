@@ -1,6 +1,6 @@
 ---
 title: What's new in Windows 11 Enterprise long-term servicing channel (LTSC) 2024
-manager: aaroncz
+manager: bpardi
 ms.author: mstewart
 description: New and updated IT Pro content about new features in Windows 11 Enterprise long-term servicing channel (LTSC) 2024.
 ms.service: windows-client

@@ -5,18 +5,11 @@ ms.date: 09/18/2023
 ms.topic: include
 ---
 
-<!--## Windows edition and licensing requirements-->
+### Windows edition requirements
 
-## Windows edition requirements
+The following list contains the Windows editions that support Assigned Access:
 
-The following table lists the Windows editions that support Assigned Access:
-
-|Edition|Assigned Access support|
-|:---|:---:|
-|Education|✅|
-|Enterprise |✅|
-|Enterprise LTSC|✅|
-|IoT Enterprise | ✅|
-|IoT Enterprise LTSC|✅|
-|Pro Education|✅|
-|Pro|✅|
+✅ Pro\
+✅ Enterprise / Enterprise LTSC\
+✅ Education\
+✅ IoT Enterprise / IoT Enterprise LTSC

@@ -1,7 +1,7 @@
 ---
 title: TimeLanguageSettings Policy CSP
 description: Learn more about the TimeLanguageSettings Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -72,7 +72,7 @@ This policy is deprecated.
 <!-- BlockCleanupOfUnusedPreinstalledLangPacks-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- BlockCleanupOfUnusedPreinstalledLangPacks-Applicability-End -->
 
 <!-- BlockCleanupOfUnusedPreinstalledLangPacks-OmaUri-Begin -->
@@ -139,7 +139,7 @@ This policy setting controls whether the LPRemove task will run to clean up lang
 <!-- ConfigureTimeZone-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1903 [10.0.18362] and later |
 <!-- ConfigureTimeZone-Applicability-End -->
 
 <!-- ConfigureTimeZone-OmaUri-Begin -->
@@ -180,7 +180,7 @@ Specifies the time zone to be applied to the device. This is the standard Window
 <!-- MachineUILanguageOverwrite-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- MachineUILanguageOverwrite-Applicability-End -->
 
 <!-- MachineUILanguageOverwrite-OmaUri-Begin -->
@@ -247,7 +247,7 @@ This policy setting controls which UI language is used for computers with more t
 <!-- RestrictLanguagePacksAndFeaturesInstall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ✅ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- RestrictLanguagePacksAndFeaturesInstall-Applicability-End -->
 
 <!-- RestrictLanguagePacksAndFeaturesInstall-OmaUri-Begin -->

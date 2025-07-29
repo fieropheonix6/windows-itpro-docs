@@ -1,7 +1,7 @@
 ---
 title: WESL_UserSetting
 description: WESL_UserSetting
-ms.date: 02/25/2025
+ms.date: 3/7/2025
 ms.topic: reference
 ---
 
@@ -13,7 +13,7 @@ This class configures which application Shell Launcher starts based on the secur
 
 ## Syntax
 
-```powershell
+```mof
 class WESL_UserSetting {
     [read, write, Required] string Sid;
     [read, write, Required] string Shell;
@@ -76,10 +76,10 @@ The following tables list any methods and properties that belong to this class.
 | Property | Data&nbsp;type | Qualifiers | Description |
 |----------|----------------|------------|-------------|
 | **Sid** | string | [read, write, required] | User or group SID. |
-| **shell** | string | [read, write, required] | The application to start as the shell.</br>The **shell** property can be a filename in the *Path* environment variable, or it can contain a fully qualified path to the application. You can also use environment variables in the path.</br>Any spaces in the **shell** property must be part of a quote-delimited string. |
+| **shell** | string | [read, write, required] | The application to start as the shell.<br/>The **shell** property can be a filename in the *Path* environment variable, or it can contain a fully qualified path to the application. You can also use environment variables in the path.<br/>Any spaces in the **shell** property must be part of a quote-delimited string. |
 | **CustomReturnCodes** | Sint32[] |[read, write] | An array of custom return codes that can be returned by the shell. |
-| **CustomReturnCodesAction** | Sint32[] | [read, write] | An array of custom return code actions that determine what action Shell Launcher takes when the shell exits. The custom actions map to the array of **CustomReturnCodes**.</br>The possible actions are:</br>0 - Restart the shell.</br>1 - Restart the device.</br>2 - Shut down the device.</br>3 - Do nothing. |
-| **DefaultAction** | Sint32 | [read, write] | The default action Shell Launcher takes when the shell exits.</br>The possible actions are defined as follows:</br>0 - Restart the shell.</br>1 - Restart the device.</br>2 - Shut down the device.</br>3 - Do nothing. |
+| **CustomReturnCodesAction** | Sint32[] | [read, write] | An array of custom return code actions that determine what action Shell Launcher takes when the shell exits. The custom actions map to the array of **CustomReturnCodes**.<br/>The possible actions are:<br/>0 - Restart the shell.<br/>1 - Restart the device.<br/>2 - Shut down the device.<br/>3 - Do nothing. |
+| **DefaultAction** | Sint32 | [read, write] | The default action Shell Launcher takes when the shell exits.<br/>The possible actions are defined as follows:<br/>0 - Restart the shell.<br/>1 - Restart the device.<br/>2 - Shut down the device.<br/>3 - Do nothing. |
 
 ### Remarks
 

@@ -1,7 +1,7 @@
 ---
 title: TextInput Policy CSP
 description: Learn more about the TextInput Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 03/12/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- AllowHardwareKeyboardTextSuggestions-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- AllowHardwareKeyboardTextSuggestions-Applicability-End -->
 
 <!-- AllowHardwareKeyboardTextSuggestions-OmaUri-Begin -->
@@ -71,7 +71,7 @@ Placeholder only. Don't use in production environment.
 <!-- AllowIMELogging-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowIMELogging-Applicability-End -->
 
 <!-- AllowIMELogging-OmaUri-Begin -->
@@ -120,7 +120,7 @@ Allows the user to turn on and off the logging for incorrect conversion and savi
 <!-- AllowIMENetworkAccess-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowIMENetworkAccess-Applicability-End -->
 
 <!-- AllowIMENetworkAccess-OmaUri-Begin -->
@@ -169,7 +169,7 @@ Allows the user to turn on Open Extended Dictionary, Internet search integration
 <!-- AllowInputPanel-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowInputPanel-Applicability-End -->
 
 <!-- AllowInputPanel-OmaUri-Begin -->
@@ -218,7 +218,7 @@ Allows the IT admin to disable the touch/handwriting keyboard on Windows. Most r
 <!-- AllowJapaneseIMESurrogatePairCharacters-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowJapaneseIMESurrogatePairCharacters-Applicability-End -->
 
 <!-- AllowJapaneseIMESurrogatePairCharacters-OmaUri-Begin -->
@@ -267,7 +267,7 @@ Allows the Japanese IME surrogate pair characters. Most restricted value is 0.
 <!-- AllowJapaneseIVSCharacters-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowJapaneseIVSCharacters-Applicability-End -->
 
 <!-- AllowJapaneseIVSCharacters-OmaUri-Begin -->
@@ -316,7 +316,7 @@ Allows Japanese Ideographic Variation Sequence (IVS) characters. Most restricted
 <!-- AllowJapaneseNonPublishingStandardGlyph-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowJapaneseNonPublishingStandardGlyph-Applicability-End -->
 
 <!-- AllowJapaneseNonPublishingStandardGlyph-OmaUri-Begin -->
@@ -365,7 +365,7 @@ Allows the Japanese non-publishing standard glyph. Most restricted value is 0.
 <!-- AllowJapaneseUserDictionary-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- AllowJapaneseUserDictionary-Applicability-End -->
 
 <!-- AllowJapaneseUserDictionary-OmaUri-Begin -->
@@ -414,7 +414,7 @@ Allows the Japanese user dictionary. Most restricted value is 0.
 <!-- AllowKeyboardTextSuggestions-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1703 [10.0.15063] and later |
 <!-- AllowKeyboardTextSuggestions-Applicability-End -->
 
 <!-- AllowKeyboardTextSuggestions-OmaUri-Begin -->
@@ -468,7 +468,7 @@ To validate that text prediction is disabled on Windows 10 for desktop, do the f
 <!-- AllowLanguageFeaturesUninstall-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowLanguageFeaturesUninstall-Applicability-End -->
 
 <!-- AllowLanguageFeaturesUninstall-OmaUri-Begin -->
@@ -531,7 +531,7 @@ When this policy setting is enabled, some language features (such as handwriting
 <!-- AllowLinguisticDataCollection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1607 [10.0.14393] and later |
 <!-- AllowLinguisticDataCollection-Applicability-End -->
 
 <!-- AllowLinguisticDataCollection-OmaUri-Begin -->
@@ -594,7 +594,7 @@ This policy setting controls the ability to send inking and typing data to Micro
 <!-- AllowTextInputSuggestionUpdate-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- AllowTextInputSuggestionUpdate-Applicability-End -->
 
 <!-- AllowTextInputSuggestionUpdate-OmaUri-Begin -->
@@ -643,7 +643,7 @@ Allows the user to turn on or off the automatic downloading of newer versions of
 <!-- ConfigureJapaneseIMEVersion-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
 <!-- ConfigureJapaneseIMEVersion-Applicability-End -->
 
 <!-- ConfigureJapaneseIMEVersion-OmaUri-Begin -->
@@ -718,7 +718,7 @@ This Policy setting applies only to Microsoft Japanese IME.
 <!-- ConfigureKoreanIMEVersion-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- ConfigureKoreanIMEVersion-Applicability-End -->
 
 <!-- ConfigureKoreanIMEVersion-OmaUri-Begin -->
@@ -784,7 +784,7 @@ This Policy setting applies only to Microsoft Korean IME.
 <!-- ConfigureSimplifiedChineseIMEVersion-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
 <!-- ConfigureSimplifiedChineseIMEVersion-Applicability-End -->
 
 <!-- ConfigureSimplifiedChineseIMEVersion-OmaUri-Begin -->
@@ -859,7 +859,7 @@ This Policy setting applies only to Microsoft Simplified Chinese IME.
 <!-- ConfigureTraditionalChineseIMEVersion-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 2004 [10.0.19041] and later |
 <!-- ConfigureTraditionalChineseIMEVersion-Applicability-End -->
 
 <!-- ConfigureTraditionalChineseIMEVersion-OmaUri-Begin -->
@@ -934,7 +934,7 @@ This Policy setting applies only to Microsoft Traditional Chinese IME.
 <!-- EnableTouchKeyboardAutoInvokeInDesktopMode-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- EnableTouchKeyboardAutoInvokeInDesktopMode-Applicability-End -->
 
 <!-- EnableTouchKeyboardAutoInvokeInDesktopMode-OmaUri-Begin -->
@@ -984,7 +984,7 @@ This policy allows the IT admin to control whether the touch keyboard should sho
 <!-- ExcludeJapaneseIMEExceptJIS0208-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- ExcludeJapaneseIMEExceptJIS0208-Applicability-End -->
 
 <!-- ExcludeJapaneseIMEExceptJIS0208-OmaUri-Begin -->
@@ -1033,7 +1033,7 @@ Allows the users to restrict character code range of conversion by setting the c
 <!-- ExcludeJapaneseIMEExceptJIS0208andEUDC-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- ExcludeJapaneseIMEExceptJIS0208andEUDC-Applicability-End -->
 
 <!-- ExcludeJapaneseIMEExceptJIS0208andEUDC-OmaUri-Begin -->
@@ -1082,7 +1082,7 @@ Allows the users to restrict character code range of conversion by setting the c
 <!-- ExcludeJapaneseIMEExceptShiftJIS-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1507 [10.0.10240] and later |
 <!-- ExcludeJapaneseIMEExceptShiftJIS-Applicability-End -->
 
 <!-- ExcludeJapaneseIMEExceptShiftJIS-OmaUri-Begin -->
@@ -1131,7 +1131,7 @@ Allows the users to restrict character code range of conversion by setting the c
 <!-- ForceTouchKeyboardDockedState-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- ForceTouchKeyboardDockedState-Applicability-End -->
 
 <!-- ForceTouchKeyboardDockedState-OmaUri-Begin -->
@@ -1181,7 +1181,7 @@ Specifies the touch keyboard is always docked. When this policy is set to enable
 <!-- TouchKeyboardControllerModeAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
 <!-- TouchKeyboardControllerModeAvailability-Applicability-End -->
 
 <!-- TouchKeyboardControllerModeAvailability-OmaUri-Begin -->
@@ -1231,7 +1231,7 @@ Specifies whether the controller keyboard mode is enabled or disabled for the to
 <!-- TouchKeyboardDictationButtonAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- TouchKeyboardDictationButtonAvailability-Applicability-End -->
 
 <!-- TouchKeyboardDictationButtonAvailability-OmaUri-Begin -->
@@ -1281,7 +1281,7 @@ Specifies whether the dictation input button is enabled or disabled for the touc
 <!-- TouchKeyboardEmojiButtonAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- TouchKeyboardEmojiButtonAvailability-Applicability-End -->
 
 <!-- TouchKeyboardEmojiButtonAvailability-OmaUri-Begin -->
@@ -1331,7 +1331,7 @@ Specifies whether the emoji button is enabled or disabled for the touch keyboard
 <!-- TouchKeyboardFullModeAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- TouchKeyboardFullModeAvailability-Applicability-End -->
 
 <!-- TouchKeyboardFullModeAvailability-OmaUri-Begin -->
@@ -1381,7 +1381,7 @@ Specifies whether the full keyboard mode is enabled or disabled for the touch ke
 <!-- TouchKeyboardHandwritingModeAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- TouchKeyboardHandwritingModeAvailability-Applicability-End -->
 
 <!-- TouchKeyboardHandwritingModeAvailability-OmaUri-Begin -->
@@ -1431,7 +1431,7 @@ Specifies whether the handwriting input panel is enabled or disabled. When this 
 <!-- TouchKeyboardNarrowModeAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- TouchKeyboardNarrowModeAvailability-Applicability-End -->
 
 <!-- TouchKeyboardNarrowModeAvailability-OmaUri-Begin -->
@@ -1481,7 +1481,7 @@ Specifies whether the narrow keyboard mode is enabled or disabled for the touch 
 <!-- TouchKeyboardSplitModeAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- TouchKeyboardSplitModeAvailability-Applicability-End -->
 
 <!-- TouchKeyboardSplitModeAvailability-OmaUri-Begin -->
@@ -1531,7 +1531,7 @@ Specifies whether the split keyboard mode is enabled or disabled for the touch k
 <!-- TouchKeyboardWideModeAvailability-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 10, version 1803 [10.0.17134] and later |
 <!-- TouchKeyboardWideModeAvailability-Applicability-End -->
 
 <!-- TouchKeyboardWideModeAvailability-OmaUri-Begin -->

@@ -1,7 +1,7 @@
 ---
 title: HumanPresence Policy CSP
 description: Learn more about the HumanPresence Area in Policy CSP.
-ms.date: 02/13/2025
+ms.date: 06/30/2025
 ms.topic: generated-reference
 ---
 
@@ -22,7 +22,7 @@ ms.topic: generated-reference
 <!-- ForceAllowDimWhenExternalDisplayConnected-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ForceAllowDimWhenExternalDisplayConnected-Applicability-End -->
 
 <!-- ForceAllowDimWhenExternalDisplayConnected-OmaUri-Begin -->
@@ -86,7 +86,7 @@ Determines whether Allow Adaptive Dimming When Battery Saver On checkbox is forc
 <!-- ForceAllowLockWhenExternalDisplayConnected-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ForceAllowLockWhenExternalDisplayConnected-Applicability-End -->
 
 <!-- ForceAllowLockWhenExternalDisplayConnected-OmaUri-Begin -->
@@ -150,7 +150,7 @@ Determines whether Allow Lock on Leave When Battery Saver On checkbox is forced 
 <!-- ForceAllowWakeWhenExternalDisplayConnected-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ForceAllowWakeWhenExternalDisplayConnected-Applicability-End -->
 
 <!-- ForceAllowWakeWhenExternalDisplayConnected-OmaUri-Begin -->
@@ -214,7 +214,7 @@ Determines whether Allow Wake on Approach When External Display Connected checkb
 <!-- ForceDisableWakeWhenBatterySaverOn-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 24H2 [10.0.26100] and later |
 <!-- ForceDisableWakeWhenBatterySaverOn-Applicability-End -->
 
 <!-- ForceDisableWakeWhenBatterySaverOn-OmaUri-Begin -->
@@ -278,7 +278,7 @@ Determines whether Disable Wake on Approach When Battery Saver On checkbox is fo
 <!-- ForceInstantDim-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- ForceInstantDim-Applicability-End -->
 
 <!-- ForceInstantDim-OmaUri-Begin -->
@@ -342,7 +342,7 @@ This is a power saving feature that prolongs battery charge.
 <!-- ForceInstantLock-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- ForceInstantLock-Applicability-End -->
 
 <!-- ForceInstantLock-OmaUri-Begin -->
@@ -406,7 +406,7 @@ Determines whether Lock on Leave is forced on/off by the MDM policy. The user wo
 <!-- ForceInstantWake-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- ForceInstantWake-Applicability-End -->
 
 <!-- ForceInstantWake-OmaUri-Begin -->
@@ -470,7 +470,7 @@ Determines whether Wake On Arrival is forced on/off by the MDM policy. The user 
 <!-- ForceLockTimeout-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows 11, version 21H2 [10.0.22000] and later |
 <!-- ForceLockTimeout-Applicability-End -->
 
 <!-- ForceLockTimeout-OmaUri-Begin -->
@@ -529,31 +529,31 @@ Determines the timeout for Lock on Leave forced by the MDM policy. The user will
 
 <!-- ForceLockTimeout-End -->
 
-<!-- ForcePrivacyScreen-Begin -->
-## ForcePrivacyScreen
+<!-- ForceOnlookerDetection-Begin -->
+## ForceOnlookerDetection
 
-<!-- ForcePrivacyScreen-Applicability-Begin -->
+<!-- ForceOnlookerDetection-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
-<!-- ForcePrivacyScreen-Applicability-End -->
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- ForceOnlookerDetection-Applicability-End -->
 
-<!-- ForcePrivacyScreen-OmaUri-Begin -->
+<!-- ForceOnlookerDetection-OmaUri-Begin -->
 ```Device
-./Device/Vendor/MSFT/Policy/Config/HumanPresence/ForcePrivacyScreen
+./Device/Vendor/MSFT/Policy/Config/HumanPresence/ForceOnlookerDetection
 ```
-<!-- ForcePrivacyScreen-OmaUri-End -->
+<!-- ForceOnlookerDetection-OmaUri-End -->
 
-<!-- ForcePrivacyScreen-Description-Begin -->
+<!-- ForceOnlookerDetection-Description-Begin -->
 <!-- Description-Source-DDF -->
 Determines whether detect when other people are looking at my screen is forced on/off by the MDM policy. The user won't be able to change this setting and the UI will be greyed out.
-<!-- ForcePrivacyScreen-Description-End -->
+<!-- ForceOnlookerDetection-Description-End -->
 
-<!-- ForcePrivacyScreen-Editable-Begin -->
+<!-- ForceOnlookerDetection-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-<!-- ForcePrivacyScreen-Editable-End -->
+<!-- ForceOnlookerDetection-Editable-End -->
 
-<!-- ForcePrivacyScreen-DFProperties-Begin -->
+<!-- ForceOnlookerDetection-DFProperties-Begin -->
 **Description framework properties**:
 
 | Property name | Property value |
@@ -561,9 +561,9 @@ Determines whether detect when other people are looking at my screen is forced o
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
 | Default Value  | 0 |
-<!-- ForcePrivacyScreen-DFProperties-End -->
+<!-- ForceOnlookerDetection-DFProperties-End -->
 
-<!-- ForcePrivacyScreen-AllowedValues-Begin -->
+<!-- ForceOnlookerDetection-AllowedValues-Begin -->
 **Allowed values**:
 
 | Value | Description |
@@ -571,48 +571,48 @@ Determines whether detect when other people are looking at my screen is forced o
 | 2 | ForcedOff. |
 | 1 | ForcedOn. |
 | 0 (Default) | DefaultToUserChoice. |
-<!-- ForcePrivacyScreen-AllowedValues-End -->
+<!-- ForceOnlookerDetection-AllowedValues-End -->
 
-<!-- ForcePrivacyScreen-GpMapping-Begin -->
+<!-- ForceOnlookerDetection-GpMapping-Begin -->
 **Group policy mapping**:
 
 | Name | Value |
 |:--|:--|
-| Name | ForcePrivacyScreen |
+| Name | ForceOnlookerDetection |
 | Path | Sensors > AT > WindowsComponents > HumanPresence |
-<!-- ForcePrivacyScreen-GpMapping-End -->
+<!-- ForceOnlookerDetection-GpMapping-End -->
 
-<!-- ForcePrivacyScreen-Examples-Begin -->
+<!-- ForceOnlookerDetection-Examples-Begin -->
 <!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
-<!-- ForcePrivacyScreen-Examples-End -->
+<!-- ForceOnlookerDetection-Examples-End -->
 
-<!-- ForcePrivacyScreen-End -->
+<!-- ForceOnlookerDetection-End -->
 
-<!-- ForcePrivacyScreenDim-Begin -->
-## ForcePrivacyScreenDim
+<!-- ForceOnlookerDetectionAction-Begin -->
+## ForceOnlookerDetectionAction
 
-<!-- ForcePrivacyScreenDim-Applicability-Begin -->
+<!-- ForceOnlookerDetectionAction-Applicability-Begin -->
 | Scope | Editions | Applicable OS |
 |:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
-<!-- ForcePrivacyScreenDim-Applicability-End -->
+| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
+<!-- ForceOnlookerDetectionAction-Applicability-End -->
 
-<!-- ForcePrivacyScreenDim-OmaUri-Begin -->
+<!-- ForceOnlookerDetectionAction-OmaUri-Begin -->
 ```Device
-./Device/Vendor/MSFT/Policy/Config/HumanPresence/ForcePrivacyScreenDim
+./Device/Vendor/MSFT/Policy/Config/HumanPresence/ForceOnlookerDetectionAction
 ```
-<!-- ForcePrivacyScreenDim-OmaUri-End -->
+<!-- ForceOnlookerDetectionAction-OmaUri-End -->
 
-<!-- ForcePrivacyScreenDim-Description-Begin -->
+<!-- ForceOnlookerDetectionAction-Description-Begin -->
 <!-- Description-Source-DDF -->
-Determines whether dim the screen when other people are looking at my screen checkbox is forced checked/unchecked by the MDM policy. The user won't be able to change this setting and the checkbox in the UI will be greyed out.
-<!-- ForcePrivacyScreenDim-Description-End -->
+Determines whether the Onlooker Detection action is forced by the MDM policy. The user won't be able to change this setting and the toggle in the UI will be greyed out.
+<!-- ForceOnlookerDetectionAction-Description-End -->
 
-<!-- ForcePrivacyScreenDim-Editable-Begin -->
+<!-- ForceOnlookerDetectionAction-Editable-Begin -->
 <!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-<!-- ForcePrivacyScreenDim-Editable-End -->
+<!-- ForceOnlookerDetectionAction-Editable-End -->
 
-<!-- ForcePrivacyScreenDim-DFProperties-Begin -->
+<!-- ForceOnlookerDetectionAction-DFProperties-Begin -->
 **Description framework properties**:
 
 | Property name | Property value |
@@ -620,91 +620,32 @@ Determines whether dim the screen when other people are looking at my screen che
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
 | Default Value  | 0 |
-<!-- ForcePrivacyScreenDim-DFProperties-End -->
+<!-- ForceOnlookerDetectionAction-DFProperties-End -->
 
-<!-- ForcePrivacyScreenDim-AllowedValues-Begin -->
+<!-- ForceOnlookerDetectionAction-AllowedValues-Begin -->
 **Allowed values**:
 
 | Value | Description |
 |:--|:--|
-| 2 | ForcedUnchecked. |
-| 1 | ForcedChecked. |
+| 3 | ForcedDimAndNotify. |
+| 2 | ForcedNotify. |
 | 0 (Default) | DefaultToUserChoice. |
-<!-- ForcePrivacyScreenDim-AllowedValues-End -->
+<!-- ForceOnlookerDetectionAction-AllowedValues-End -->
 
-<!-- ForcePrivacyScreenDim-GpMapping-Begin -->
+<!-- ForceOnlookerDetectionAction-GpMapping-Begin -->
 **Group policy mapping**:
 
 | Name | Value |
 |:--|:--|
-| Name | ForcePrivacyScreenDim |
+| Name | ForceOnlookerDetectionAction |
 | Path | Sensors > AT > WindowsComponents > HumanPresence |
-<!-- ForcePrivacyScreenDim-GpMapping-End -->
+<!-- ForceOnlookerDetectionAction-GpMapping-End -->
 
-<!-- ForcePrivacyScreenDim-Examples-Begin -->
+<!-- ForceOnlookerDetectionAction-Examples-Begin -->
 <!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
-<!-- ForcePrivacyScreenDim-Examples-End -->
+<!-- ForceOnlookerDetectionAction-Examples-End -->
 
-<!-- ForcePrivacyScreenDim-End -->
-
-<!-- ForcePrivacyScreenNotification-Begin -->
-## ForcePrivacyScreenNotification
-
-<!-- ForcePrivacyScreenNotification-Applicability-Begin -->
-| Scope | Editions | Applicable OS |
-|:--|:--|:--|
-| ✅ Device <br> ❌ User | ✅ Pro <br> ✅ Enterprise <br> ✅ Education <br> ❌ Windows SE <br> ✅ IoT Enterprise / IoT Enterprise LTSC | ✅ Windows Insider Preview |
-<!-- ForcePrivacyScreenNotification-Applicability-End -->
-
-<!-- ForcePrivacyScreenNotification-OmaUri-Begin -->
-```Device
-./Device/Vendor/MSFT/Policy/Config/HumanPresence/ForcePrivacyScreenNotification
-```
-<!-- ForcePrivacyScreenNotification-OmaUri-End -->
-
-<!-- ForcePrivacyScreenNotification-Description-Begin -->
-<!-- Description-Source-DDF -->
-Determines whether providing alert when people are looking at my screen checkbox is forced checked/unchecked by the MDM policy. The user won't be able to change this setting and the checkbox in the UI will be greyed out.
-<!-- ForcePrivacyScreenNotification-Description-End -->
-
-<!-- ForcePrivacyScreenNotification-Editable-Begin -->
-<!-- Add any additional information about this policy here. Anything outside this section will get overwritten. -->
-<!-- ForcePrivacyScreenNotification-Editable-End -->
-
-<!-- ForcePrivacyScreenNotification-DFProperties-Begin -->
-**Description framework properties**:
-
-| Property name | Property value |
-|:--|:--|
-| Format | `int` |
-| Access Type | Add, Delete, Get, Replace |
-| Default Value  | 0 |
-<!-- ForcePrivacyScreenNotification-DFProperties-End -->
-
-<!-- ForcePrivacyScreenNotification-AllowedValues-Begin -->
-**Allowed values**:
-
-| Value | Description |
-|:--|:--|
-| 2 | ForcedUnchecked. |
-| 1 | ForcedChecked. |
-| 0 (Default) | DefaultToUserChoice. |
-<!-- ForcePrivacyScreenNotification-AllowedValues-End -->
-
-<!-- ForcePrivacyScreenNotification-GpMapping-Begin -->
-**Group policy mapping**:
-
-| Name | Value |
-|:--|:--|
-| Name | ForcePrivacyScreenNotification |
-| Path | Sensors > AT > WindowsComponents > HumanPresence |
-<!-- ForcePrivacyScreenNotification-GpMapping-End -->
-
-<!-- ForcePrivacyScreenNotification-Examples-Begin -->
-<!-- Add any examples for this policy here. Examples outside this section will get overwritten. -->
-<!-- ForcePrivacyScreenNotification-Examples-End -->
-
-<!-- ForcePrivacyScreenNotification-End -->
+<!-- ForceOnlookerDetectionAction-End -->
 
 <!-- HumanPresence-CspMoreInfo-Begin -->
 <!-- Add any additional information about this CSP here. Anything outside this section will get overwritten. -->

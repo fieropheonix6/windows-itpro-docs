@@ -2,7 +2,7 @@
 title: Choose a Migration Store Type
 description: Learn how to choose a migration store type and estimate the amount of disk space needed for computers in the organization.
 ms.reviewer: kevinmi,warrenw
-manager: aaroncz
+manager: bpardi
 ms.author: frankroj
 ms.service: windows-client
 author: frankroj
