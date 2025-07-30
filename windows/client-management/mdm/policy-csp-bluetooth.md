@@ -441,7 +441,6 @@ Disabling file transfer shall have the following effects:
 - Fsquirt shall not allow sending of files
 - Fsquirt shall not allow receiving of files
 - Fsquirt shall display error message informing user of policy preventing file transfer
-- 3rd-party apps shall not be permitted to send or receive files using MSFT Bluetooth API
 <!-- Bluetooth-CspMoreInfo-End -->
 
 <!-- Bluetooth-End -->
