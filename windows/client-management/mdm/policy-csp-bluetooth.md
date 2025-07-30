@@ -352,22 +352,23 @@ Here are some examples:
 
 BASE_UUID = 0x00000000-0000-1000-8000-00805F9B34FB
 
-| UUID name               | Protocol specification     | UUID   |
-|-------------------------|----------------------------|--------|
-| HFP(Hands Free Profile) | Hands-Free Profile (HFP) * | 0x111E |
+| UUID name               | Protocol specification   | UUID   |
+|-------------------------|--------------------------|--------|
+| HFP(Hands Free Profile) | Hands-Free Profile (HFP) | 0x111E |
 
-Footnote: * Used as both Service Class Identifier and Profile Identifier.
+Profile UUID = base UUID + 0x111E to the beginning = 0000**111E**-0000-1000-8000-00805F9B34FB
 
-Hands Free Profile UUID = base UUID + 0x111E to the beginning = 0000**111E**-0000-1000-8000-00805F9B34FB
+> [!NOTE]
+> Hands-Free Profile (HFP) is used as both Service Class Identifier and Profile Identifier.
 
 **Allow Audio Headsets (Voice)**:
 
-| Profile                  | Reasoning                             | UUID   |
-|--------------------------|---------------------------------------|--------|
-| HFP (Hands Free Profile) | For voice-enabled headsets            | 0x111E |
-| Generic Audio Service    | Generic audio service                 | 0x1203 |
-| Headset Service Class    | For older voice-enabled headsets      | 0x1108 |
-| PnP Information          | Used to identify devices occasionally | 0x1200 |
+| Profile                  | Reasoning                             | UUID   | Full UUID |
+|--------------------------|---------------------------------------|--------|----------------------------------------------|
+| HFP (Hands Free Profile) | For voice-enabled headsets            | 0x111E | 0000111E-0000-1000-8000-00805F9B34FB         |
+| Generic Audio Service    | Generic audio service                 | 0x1203 | 00001203-0000-1000-8000-00805F9B34FB         |
+| Headset Service Class    | For older voice-enabled headsets      | 0x1108 | 00001108-0000-1000-8000-00805F9B34FB         |
+| PnP Information          | Used to identify devices occasionally | 0x1200 | 00001200-0000-1000-8000-00805F9B34FB         |
 
 If you only want Bluetooth headsets, the UUIDs to include are: `{0000111E-0000-1000-8000-00805F9B34FB};{00001203-0000-1000-8000-00805F9B34FB};{00001108-0000-1000-8000-00805F9B34FB};{00001200-0000-1000-8000-00805F9B34FB}`.
 
@@ -390,51 +391,44 @@ This means that if you only want Bluetooth headsets, the UUIDs are:
 
 **Allow Audio Headsets and Speakers (Voice & Music)**:
 
-|Profile  |Reasoning  |UUID  |
-|---------|---------|---------|
-|HFP (Hands Free Profile)     |For voice enabled headsets         |0x111E         |
-|A2DP Source (Advance Audio Distribution)|For streaming to Bluetooth speakers         |0x110B|
-|Generic Audio Service|Generic service used by Bluetooth|0x1203|
-|Headset Service Class|For older voice-enabled headsets|0x1108|
-|AV Remote Control Target Service|For controlling audio remotely|0x110C|
-|AV Remote Control Service|For controlling audio remotely|0x110E|
-|AV Remote Control Controller Service|For controlling audio remotely|0x110F|
-|PnP Information|Used to identify devices occasionally|0x1200|
-
-{0000111E-0000-1000-8000-00805F9B34FB};{0000110B-0000-1000-8000-00805F9B34FB};{00001203-0000-1000-8000-00805F9B34FB};{00001108-0000-1000-8000-00805F9B34FB};{0000110C-0000-1000-8000-00805F9B34FB};{0000110E-0000-1000-8000-00805F9B34FB};{0000110F-0000-1000-8000-00805F9B34FB};{00001200-0000-1000-8000-00805F9B34FB};
+| Profile                                  | Reasoning                             | UUID   | Full UUID                            |
+|------------------------------------------|---------------------------------------|--------|--------------------------------------|
+| HFP (Hands Free Profile)                 | For voice enabled headsets            | 0x111E | 0000111E-0000-1000-8000-00805F9B34FB |
+| A2DP Source (Advance Audio Distribution) | For streaming to Bluetooth speakers   | 0x110B | 0000110B-0000-1000-8000-00805F9B34FB |
+| Generic Audio Service                    | Generic service used by Bluetooth     | 0x1203 | 00001203-0000-1000-8000-00805F9B34FB |
+| Headset Service Class                    | For older voice-enabled headsets      | 0x1108 | 00001108-0000-1000-8000-00805F9B34FB |
+| AV Remote Control Target Service         | For controlling audio remotely        | 0x110C | 0000110C-0000-1000-8000-00805F9B34FB |
+| AV Remote Control Service                | For controlling audio remotely        | 0x110E | 0000110E-0000-1000-8000-00805F9B34FB |
+| AV Remote Control Controller Service     | For controlling audio remotely        | 0x110F | 0000110F-0000-1000-8000-00805F9B34FB |
+| PnP Information                          | Used to identify devices occasionally | 0x1200 | 00001200-0000-1000-8000-00805F9B34FB |
 
 **Classic Keyboards and Mice**:
 
-|Profile  |Reasoning  |UUID  |
-|---------|---------|---------|
-|HID (Human Interface Device)     |For classic BR/EDR keyboards and mice         |0x1124         |
-|PnP Information|Used to identify devices occasionally|0x1200|
-
-{00001124-0000-1000-8000-00805F9B34FB};{00001200-0000-1000-8000-00805F9B34FB};
+| Profile                      | Reasoning                             | UUID   | Full UUID                            |
+|------------------------------|---------------------------------------|--------|--------------------------------------|
+| HID (Human Interface Device) | For classic BR/EDR keyboards and mice | 0x1124 | 00001124-0000-1000-8000-00805F9B34FB |
+| PnP Information              | Used to identify devices occasionally | 0x1200 | 00001200-0000-1000-8000-00805F9B34FB |
 
 **LE Keyboards and Mice**:
 
-|Profile  |Reasoning  |UUID  |
-|---------|---------|---------|
-|Generic Access Attribute     |For the LE Protocol         |0x1801         |
-|HID Over GATT *     |For LE keyboards and mice         |0x1812         |
-|GAP (Generic Access Profile)     |Generic service used by Bluetooth         |0x1800         |
-|DID (Device ID)     |Generic service used by Bluetooth         |0x180A         |
-|Scan Parameters     |Generic service used by Bluetooth         |0x1813         |
+| Profile                      | Reasoning                         | UUID   | Full UUID                            |
+|------------------------------|-----------------------------------|--------|--------------------------------------|
+| Generic Access Attribute     | For the LE Protocol               | 0x1801 | 00001801-0000-1000-8000-00805F9B34FB |
+| HID Over GATT *              | For LE keyboards and mice         | 0x1812 | 00001812-0000-1000-8000-00805F9B34FB |
+| GAP (Generic Access Profile) | Generic service used by Bluetooth | 0x1800 | 00001800-0000-1000-8000-00805F9B34FB |
+| DID (Device ID)              | Generic service used by Bluetooth | 0x180A | 0000180A-0000-1000-8000-00805F9B34FB |
+| Scan Parameters              | Generic service used by Bluetooth | 0x1813 | 00001813-0000-1000-8000-00805F9B34FB |
 
-Footnote: * The Surface pen uses the HID over GATT profile
-
-{00001801-0000-1000-8000-00805F9B34FB};{00001812-0000-1000-8000-00805F9B34FB};{00001800-0000-1000-8000-00805F9B34FB};{0000180A-0000-1000-8000-00805F9B34FB};{00001813-0000-1000-8000-00805F9B34FB}
+> [!NOTE]
+> The Surface pen uses the HID over GATT profile
 
 **Allow File Transfer**:
 
-|Profile  |Reasoning  |UUID  |
-|---------|---------|---------|
-|OBEX Object Push (OPP)     |For file transfer         |0x1105         |
-|Object Exchange (OBEX)     |Protocol for file transfer         |0x0008         |
-|PnP Information|Used to identify devices occasionally|0x1200|
-
-{00001105-0000-1000-8000-00805F9B34FB};{00000008-0000-1000-8000-00805F9B34FB};{00001200-0000-1000-8000-00805F9B34FB}
+| Profile                | Reasoning                             | UUID   | Full UUID                            |
+|------------------------|---------------------------------------|--------|--------------------------------------|
+| OBEX Object Push (OPP) | For file transfer                     | 0x1105 | 00001105-0000-1000-8000-00805F9B34FB |
+| Object Exchange (OBEX) | Protocol for file transfer            | 0x0008 | 00000008-0000-1000-8000-00805F9B34FB |
+| PnP Information        | Used to identify devices occasionally | 0x1200 | 00001200-0000-1000-8000-00805F9B34FB |
 
 Disabling file transfer shall have the following effects:
 
