@@ -1,7 +1,7 @@
 ---
 title: Defender DDF file
 description: View the XML file containing the device description framework (DDF) for the Defender configuration service provider.
-ms.date: 06/30/2025
+ms.date: 07/31/2025
 ms.topic: generated-reference
 ---
 
@@ -2375,7 +2375,7 @@ The following XML file contains the device description framework (DDF) for the D
             <Replace />
           </AccessType>
           <DefaultValue>30</DefaultValue>
-          <Description>Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 30 days when enabled.</Description>
+          <Description>Configure how many days can pass before an aggressive catchup quick scan is triggered. Valid values are 0 and [7-60]. Configuring this setting to 0 will disable aggressive catchup quick scans. By default, these scans will run every 30 days when enabled. These scans are only enabled if catchup scans (quick and full) are disabled, and Microsoft Defender Antivirus is not in Passive mode.</Description>
           <DFFormat>
             <int />
           </DFFormat>
@@ -2393,7 +2393,7 @@ The following XML file contains the device description framework (DDF) for the D
             <MSFT:CspVersion>1.3</MSFT:CspVersion>
           </MSFT:Applicability>
           <MSFT:AllowedValues ValueType="Range">
-            <MSFT:Value>[7-60]</MSFT:Value>
+            <MSFT:Value>[0-60]</MSFT:Value>
           </MSFT:AllowedValues>
         </DFProperties>
       </Node>
@@ -3745,7 +3745,8 @@ The following XML file contains the device description framework (DDF) for the D
             <Dynamic />
           </Scope>
           <DFType>
-            <DDFName />
+            <DDFName>
+            </DDFName>
           </DFType>
           <MSFT:Applicability>
             <MSFT:OsBuildVersion>10.0.14393</MSFT:OsBuildVersion>

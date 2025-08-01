@@ -1,7 +1,7 @@
 ---
 title: Defender CSP
 description: Learn more about the Defender CSP.
-ms.date: 06/30/2025
+ms.date: 07/31/2025
 ms.topic: generated-reference
 ---
 
@@ -1292,7 +1292,7 @@ Define data duplication remote location for Device Control. When configuring thi
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Description-Begin -->
 <!-- Description-Source-DDF -->
-Configure how many days can pass before an aggressive quick scan is triggered. The valid interval is [7-60] days. If not configured, aggressive quick scans will be disabled. By default, the value is set to 30 days when enabled.
+Configure how many days can pass before an aggressive catchup quick scan is triggered. Valid values are 0 and [7-60]. Configuring this setting to 0 will disable aggressive catchup quick scans. By default, these scans will run every 30 days when enabled. These scans are only enabled if catchup scans (quick and full) are disabled, and Microsoft Defender Antivirus isn't in Passive mode.
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Description-End -->
 
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-Editable-Begin -->
@@ -1306,7 +1306,7 @@ Configure how many days can pass before an aggressive quick scan is triggered. T
 |:--|:--|
 | Format | `int` |
 | Access Type | Add, Delete, Get, Replace |
-| Allowed Values | Range: `[7-60]` |
+| Allowed Values | Range: `[0-60]` |
 | Default Value  | 30 |
 <!-- Device-Configuration-DaysUntilAggressiveCatchupQuickScan-DFProperties-End -->
 
