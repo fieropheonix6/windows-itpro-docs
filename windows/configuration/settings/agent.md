@@ -25,7 +25,7 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 ### System requirements
 
 > [!div class="checklist"]
-> - Windows 11, version 24H2 with [KBXYZ][KB-1] and later
+> - Windows 11, version 24H2 with [KB5062660][KB-1] and later
 > - A [Copilot+ PC](https://aka.ms/copilotpluspcs)
 > - Qualcomm Snapdragon. Intel and AMD support will be available at a later time
 > - The device must have enabled the [temporary enterprise feature control](/windows/whats-new/temporary-enterprise-feature-control) policy setting
@@ -33,7 +33,7 @@ The agent in Settings is currently available only on Windows 11 devices that mee
 ### Language and geography requirements
 
 > [!div class="checklist"]
-> - Language: English (US, CA, AU, GB), French (FR, CA), German (DE), Spanish (ES, MX), Japanese (JP) & Chinese (Simplified)
+> - Language: English only
 > - Geography: All countries, except Canada and China
 
 ## How it works
@@ -101,5 +101,5 @@ Microsoft has been working to advance AI responsibly since 2017, when we first d
 [CSP-1]: /windows/client-management/mdm/policy-csp-windowsai
 [M365-1]: /microsoft-365/admin/misc/organizational-messages-microsoft-365?view=o365-worldwide
 [INT-1]: /mem/intune/configuration/settings-catalog
-[KB-1]: https://blogs.windows.com/windows-insider/2025/04/25/announcing-windows-11-insider-preview-build-22635-5305-beta-channel/
+[KB-1]: https://support.microsoft.com/topic/9c5bc200-52b6-4c1a-be70-80df6bbfe9c3
 [RAI]: https://www.microsoft.com/ai/responsible-ai
