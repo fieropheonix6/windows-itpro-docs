@@ -11,7 +11,7 @@ appliesto:
 
 # Configure the agent in Windows Settings
 
-Starting in Windows 11, version 24H2 with [KBXYZ][KB-1], the agent in Windows Settings is a feature that uses on-device AI to help you find and change settings on your PC. It can also help you troubleshoot issues by providing recommendations and automating tasks based on your input.
+Starting in Windows 11, version 24H2 with [KB5062660][KB-1], the agent in Windows Settings is a feature that uses on-device AI to help you find and change settings on your PC. It can also help you troubleshoot issues by providing recommendations and automating tasks based on your input.
 
 The agent guides users through finding and changing settings, offering relevant information and recommendations. With user permission, it can automate the process of changing settings. This feature enhances search within Windows Settings by enabling natural language queries and utilizing an AI model for intelligent search suggestions.
 
