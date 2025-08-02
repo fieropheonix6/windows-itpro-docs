@@ -2,7 +2,7 @@
 title: Configure the Windows Taskbar Pinned Apps with Policy Settings
 description: Learn how to configure the applications pinned to the Windows taskbar.
 ms.topic: how-to
-ms.date: 04/03/2025
+ms.date: 07/10/2025
 appliesto:
 zone_pivot_groups: windows-versions-11-10
 ---
@@ -27,7 +27,7 @@ Here are some considerations before you start configuring the taskbar pinned app
 - If you specify an app to be pinned that isn't provisioned for the user on the device, the pinned icon doesn't appear on the taskbar
 - The order of applications in the XML file dictates the order of pinned apps on the taskbar, from left to right. If the OS is configured to use a right-to-left language, then the taskbar order is reversed
 - By default, any pins provisioned via policy settings are restored upon the next policy update cycle, even when users unpin them
-  - Starting with [Windows Insider (Beta Channel)][KB-1], users can unpin apps pinned via policy settings, if allowed by the policy. The pins won't be repinned during the next policy update cycle
+  - Starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with [KB5060826][KB-2], users can unpin apps pinned via policy settings, if allowed by the policy. The pins won't be repinned during the next policy update cycle
 - Applications can be pinned using the following methods:
   - Default Windows apps, pinned during the OS installation. For example: Microsoft Edge, File Explorer, and Store. These applications are pinned first (blue square)
   - Pinned manually by the user. These applications are pinned next to the default pinned apps (red circle)
@@ -110,9 +110,7 @@ You can change the apps pinned to the taskbar by modifying the `<TaskbarLayout>`
 
 #### PinGeneration
 
-[!INCLUDE [insider-setting](../includes/insider-setting.md)]
-
-Starting with [Windows Insider 22635.5305 (Beta Channel)][KB-1], you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
+Starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with [KB5060826][KB-2], you can allow certain pinned apps to be unpinned by users. This is useful when you want to allow users to unpin apps that are pinned via policy settings, but you don't want the pins to be pinned again during the next policy update cycle.
 
 To use this option, add `PinGeneration="1"` to the pins you want to allow users to unpin. The value of `PinGeneration` can be any number, and it's used to identify the pin version. If the value changes, the app is pinned again during the next policy update cycle. This allows IT admins to repin an app, if needed.
 
@@ -130,7 +128,7 @@ Some tips for using `PinGeneration`:
 - For simple management, always increment the `PinGeneration` number and don't reuse numbers
 
 > [!CAUTION]
-> The `PinGeneration` option is only available starting with [Windows Insider 22635.5305 (Beta Channel)][KB-1]. Only assign this policy to such devices, otherwise the taskbar pins don't apply.
+> The `PinGeneration` option is only available starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with KB [KB5060826][KB-2]. Only assign this policy to such devices, otherwise the taskbar pins don't apply.
 >
 >- With Microsoft Intune you can use [filters](/intune/intune-service/fundamentals/filters) to target only devices with the required patch
 >- With GPO you can use [WMI filters](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732796(v=ws.11)) to target only devices with the required patch
@@ -213,7 +211,7 @@ To replace all default pins and add your own pins, add `PinListPlacement="Replac
 #### Example: allow unpinning of specific apps
 
 > [!NOTE]
-> The option to allow users to unpin apps is only available starting with [Windows Insider 22635.5305 (Beta Channel)][KB-1].
+> The option to allow users to unpin apps is only available starting with Windows 11, version 24H2 with [KB5060829][KB-1] and 23H2 with KB [KB5060826][KB-2].
 
 In the following XML example, three apps are pinned to the taskbar. Two apps are pinned with the `PinGeneration` attribute, allowing users to unpin them and preventing repinning during the next policy update cycle.
 
@@ -302,6 +300,15 @@ After the taskbar layout is applied, users must sign out and sign in again to ge
 - By default, any pins provisioned via policy settings are restored upon the next policy update cycle, even when users unpin them
 - Pins defined with the `PinGeneration` attribute can be unpinned from the taskbar, and aren't repinned during the next policy update cycle
 
+:::row:::
+:::column span="1":::
+:::image type="icon" source="../images/insider.png" border="false":::
+:::column-end:::
+:::column span="3":::
+> [!NOTE]
+> Starting with Windows 11 Insider Preview Build [26200.5722 (Dev Channel)][INS-1] and [26120.5722 (Beta Channel)][INS-2], taskbar pin configurations deployed via policy are applied instantly, without requiring the user to sign out and sign back in.
+:::column-end:::
+:::row-end:::
 ::: zone-end
 
 ### OS install and upgrade experience
@@ -340,4 +347,7 @@ To provide feedback, open [**Feedback Hub**][FHUB] and use the category **Deskto
 [OEM-1]: /windows-hardware/customize/desktop/customize-the-windows-11-taskbar
 [WIN-1]: /windows/client-management/mdm/policy-csp-start
 [MEM-1]: /mem/intune/configuration/custom-settings-windows-10
-[KB-1]: https://blogs.windows.com/windows-insider/2025/04/25/announcing-windows-11-insider-preview-build-22635-5305-beta-channel/
+[KB-1]: https://support.microsoft.com/topic/e31ba7c2-ff65-4863-a462-a66e30840b1a
+[KB-2]: https://support.microsoft.com/topic/65d38dd2-e149-4462-9699-e2482f60b16b
+[INS-1]: https://blogs.windows.com/windows-insider/2025/07/28/announcing-windows-11-insider-preview-build-26200-5722-dev-channel/
+[INS-2]: https://blogs.windows.com/windows-insider/2025/07/28/announcing-windows-11-insider-preview-build-26120-5722-beta-channel/

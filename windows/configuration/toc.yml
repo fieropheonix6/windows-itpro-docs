@@ -19,13 +19,18 @@ items:
 - name: Settings
   href: settings/toc.yml
 
+- name: Storage
+  items:
+  - name: Storage Sense
+    href: storage/storage-sense.md
+
 - name: Backup, restore, and recovery options
   items:
   - name: Windows Backup for Organizations
     href: windows-backup/toc.yml
   - name: Quick machine recovery
     href: quick-machine-recovery/index.md
-    
+
 - name: Microsoft Store
   href: store/toc.yml
 - name: Cellular settings

@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 03/19/2025
+ms.date: 07/23/2025
 ---
 
 # Monitor cache node usage
@@ -78,8 +78,27 @@ The **Cache Nodes** section under the **Cache Node Management** tab displays cac
 | OS | The host machine OS that this cache node is compatible with. |
 | Software version | The version number of the cache node's Connected Cache container. |
 | Cache node ID | The unique identifier of the cache node. |
+| Migrated | Indicates whether the cache node has been migrated from the public preview to the generally available version of Microsoft Connected Cache. |
+
+#### GA migration status
+
+If you created cache nodes during public preview, the **Migrated** column helps you determine whether the cache nodes have been migrated to the generally available release of Connected Cache.
+
+| Value | Description |
+| --- | --- |
+| Yes | The cache node was created and deployed _before_ GA launch, and you have completed the required steps to migrate it to the GA release. |
+| No | The cache node was created and deployed _before_ GA launch, and you must follow the required steps to migrate it to the GA release. |
+| N/A | The cache node was created and deployed _after_ GA launch and is already using the GA release. |
+
+To migrate your cache nodes to the GA release, you must redeploy them using the [latest Linux-hosted deployment package](https://aka.ms/mcc-ent-linux-deploy-scripts) or the [latest Connected Cache Windows application](https://aka.ms/do-mcc-ent-windows-x64).
+
+>[!NOTE]
+> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run `chmod 777 -R /cachedrivepath` and then restart the Connected Cache container `sudo iotedge restart MCC`.
+> Otherwise the redeployed node will be up and running, but requests for content will fail.
 
 ## Advanced Monitoring
+
+### Customizable Azure portal charts
 
 To expand upon the metrics shown in the Overview tab, navigate to the **Metrics** tab in the left side toolbar of Azure portal.
 
@@ -91,8 +110,6 @@ Listed below are the metrics you can access in this section:
 | Hits | The number of times your Connected Cache node fulfills a content request by pulling from its cache. |
 | Misses | The number of times your Connected Cache node isn't able to fulfill a content request by pulling from its cache |
 
-### Customizable Dashboards
-
 Once you select the charts you would like to track, you can save them to a personalized dashboard. You can configure the chart title, filters, range, legend, and more. You can also use this personalized dashboard to set up alerts that notify you if your Connected Cache node dips in performance.
 
 Some example scenarios where you would want to set up a custom alert:
@@ -100,6 +117,18 @@ Some example scenarios where you would want to set up a custom alert:
 - My Connected Cache node is being shown as unhealthy and I want to know exactly when it stopped egressing last
 - A new Microsoft Word update was released last night and I want to know if my Connected Cache node is helping deliver this content to my Windows devices
 
-## Client-Side Metrics
+### Terse summary page
+
+When your cache node is up and running, you can access a web-based summary page that provides a terse overview of the cache node's status and performance. This page is accessible at the following URL.
+
+```HTML
+https://localhost:5000/details?apiKey=[YourConnectedCacheCustomerId]__D0508632-1B4D-431C-9EF3-49285AF4DC1F
+```
+
+You'll need to replace `[YourConnectedCacheCustomerId]` with your Connected Cache customer ID, which can be found in the Azure portal under the **Cache Node Management** tab. By default, this page is only accessible from the host machine where the Connected Cache node is deployed.
+
+To remotely access the terse summary page, you need to create a firewall rule to allow inbound traffic on port 5000. If the cache node is deployed to a Windows host machine, you also need to port forward the host machine's port 5000 to the Windows Subsystem for Linux (WSL) distribution. For more information, see [Missing WSL port forwarding rules (443, 5000)](mcc-ent-troubleshooting.md#missing-wsl-port-forwarding-rules-443-5000).
+
+## Client device metrics
 
 Your Connected Cache node can keep track of how much content has been sent to requesting Windows devices, but the node can't track whether the content was successfully received by the device. For more information on accessing client-side data from your Windows devices, see [Monitor Delivery Optimization](waas-delivery-optimization-monitor.md).

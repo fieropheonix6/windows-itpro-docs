@@ -13,6 +13,7 @@ hideEdit: true
 ms.collection: 
 - privacy-windows
 - must-keep
+- trust-pod
 ---
 
 # Essential services and connected experiences for Windows

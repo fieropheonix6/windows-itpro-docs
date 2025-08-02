@@ -14,6 +14,7 @@ hideEdit: true
 ms.collection: 
 - privacy-windows
 - must-keep
+- trust-pod
 ---
 
 # Required diagnostic events and fields for Windows 11, versions 23H2 and 22H2
