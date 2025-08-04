@@ -194,7 +194,7 @@ Regardless of P2P, consider setting the following policies to avoid network disr
 :::image type="content" source="images/do-setup-connected-cache.png" alt-text="Screenshot of Delivery Optimization options when using Connected Cache." lightbox="images/do-setup-connected-cache.png":::
 
 > [!NOTE]
-> When multiple Connected Cache servers are configured, the Delivery Optimization (DO) client attempts to connect to them in the order they are listed. If you’ve enabled delay settings for cache server fallback, the delay applies **only to the first cache server in the list**. All subsequent cache servers are contacted immediately without any additional delay.
+> When multiple Connected Cache servers are configured, the Delivery Optimization client connects to them in the order they appear in the list. If you’ve enabled delay settings for cache server fallback, the fallback-to-HTTP source delay applies to each new file download. This delay is not tied to any specific cache server.
 
 - [DOCacheHost](waas-delivery-optimization-reference.md#cache-server-hostname) is the list of cache host server names, separated with commas.
 - [DOCacheHostSource](waas-delivery-optimization-reference.md#cache-server-hostname-source) can be used to dynamically discover cache host servers on the network, using DHCP.

@@ -46,7 +46,7 @@ In MDM, the same settings are under **.Vendor/MSFT/Policy/Config/DeliveryOptimiz
 | [Modify cache drive](#modify-cache-drive) | DOModifyCacheDrive | 1607 | Default to the operating system drive through the %SYSTEMDRIVE% environment variable. |
 | [Minimum peer caching content file size](#minimum-peer-caching-content-file-size) | DOMinFileSizeToCache | 1703 | Default file size is 50 MB. |
 | [Monthly upload data cap](#monthly-upload-data-cap) | DOMonthlyUploadDataCap | 1607 | Default value is 20 GB. |
-| [Minimum background QoS](#minimum-background-qos) | DOMinBackgroundQoS | 1607 | Recommend setting this to 500 KB/s. Default value is 2500 KB/s. |
+| [Minimum background QoS](#minimum-background-qos) | DOMinBackgroundQoS | 1607 | Default value is 20 MB/s. |
 | [Enable peer caching while the device connects via VPN](#enable-peer-caching-while-the-device-connects-via-vpn) | DOAllowVPNPeerCaching | 1709 | Default is to not allow peering while on VPN. |
 | [VPN keywords](#vpn-keywords) | DOVpnKeywords | Windows 11, version 22H2 with the September 2023 or later update installed | Allows you to set one or more keywords used to recognize VPN connections. |
 | [Disallow cache server downloads from VPN](#disallow-cache-server-downloads-on-vpn) | DODisallowCacheServerDownloadsOnVPN | Windows 11, version 22H2 with the September 2023 or later update installed | Disallow downloads from Microsoft Connected Cache servers when the device connects via VPN. By default, the device is allowed to download from Microsoft Connected Cache when connected via VPN. |
@@ -271,7 +271,7 @@ MDM Setting: **DOMinBackgroundQoS**
 
 This policy controls background downloads and measures bandwidth between peers. When the measured speed falls below the configured threshold, content is downloaded from both peers and the HTTP source. Once the threshold is reached, HTTP connections are closed, and downloads continue only from peers.
 
-Setting a lower threshold makes it easier to meet the limit, which means more content will come from peers and HTTP connections will not be used. **The default value is 2500 KB/s.**
+Setting a lower threshold makes it easier to meet the limit, which means more content will come from peers and HTTP connections will not be used. **The default value is 20 MB/s.**
 
 ### Modify cache drive
 
