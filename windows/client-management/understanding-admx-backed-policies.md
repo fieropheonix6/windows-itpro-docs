@@ -2,7 +2,7 @@
 title: Understanding ADMX policies
 description: You can use ADMX policies for Windows mobile device management (MDM) across Windows devices.
 ms.topic: concept-article
-ms.date: 07/08/2024
+ms.date: 08/04/2025
 ---
 
 # Understanding ADMX policies

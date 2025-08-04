@@ -1,7 +1,7 @@
 ---
 title: Windows declared configuration resource access
 description: Learn more about configuring resource access using Windows declared Configuration.
-ms.date: 09/12/2024
+ms.date: 08/04/2025
 ms.topic: how-to
 ---
 

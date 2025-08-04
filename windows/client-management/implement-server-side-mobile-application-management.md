@@ -2,7 +2,7 @@
 title: Support for Windows Information Protection (WIP) on Windows
 description: Learn about implementing the Windows version of Windows Information Protection (WIP), which is a lightweight solution for managing company data access and security on personal devices.
 ms.topic: how-to
-ms.date: 07/08/2024
+ms.date: 08/04/2025
 ---
 
 # Support for Windows Information Protection (WIP) on Windows
@@ -46,7 +46,7 @@ MAM enrollment requires integration with Microsoft Entra ID. The MAM service pro
 MAM and MDM services in an organization could be provided by different vendors. Depending on the company configuration, IT admin typically needs to add one or two Microsoft Entra Management apps to configure MAM and MDM policies. For example, if both MAM and MDM are provided by the same vendor, then an IT Admin needs to add one Management app from this vendor that contains both MAM and MDM policies for the organization. Alternatively, if the MAM and MDM services in an organization are provided by two different vendors, then two Management apps from the two vendors need to be configured for the company in Microsoft Entra ID: one for MAM and one for MDM.
 
 > [!NOTE]
-> If the MDM service in an organization isn't integrated with Microsoft Entra ID and uses auto-discovery, only one Management app for MAM needs to be configured.
+> If the MDM service in an organization isn't integrated with Microsoft Entra ID and uses autodiscovery, only one Management app for MAM needs to be configured.
 
 ## MAM enrollment
 
