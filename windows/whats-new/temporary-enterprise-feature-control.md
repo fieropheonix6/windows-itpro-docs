@@ -8,7 +8,7 @@ author: mestew
 manager: bpardi
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 04/25/2025
+ms.date: 08/04/2025
 ms.collection:
   - highpri
   - tier2
@@ -55,6 +55,7 @@ The following features are behind temporary enterprise control in Windows 11:
 
 | Feature | KB article where the feature was introduced | Feature update that ends temporary control | Notes |
 |---|---|---|---|
+| Agent in Windows Settings <!--10408076--> | [July 22, 2025 - KB5062660](https://support.microsoft.com/kb/5062660) | | This feature also has a permanent control. For more information, see [Configure agent in Windows Settings](/windows/configuration/settings/agent). |
 | Improved Windows search <!--9887454-->|[April 25, 2025 - KB5055627](https://support.microsoft.com/kb/5055627) |  |  Improved Windows search will continue to respect your existing [search policies](/windows/client-management/mdm/policy-csp-search). |
 | Click to Do <!--9887454-->| [April 25, 2025 - KB5055627](https://support.microsoft.com/kb/5055627)| | This feature also has a permanent control. For more information, see [Manage Click to Do](/windows/client-management/manage-click-to-do). |
 | Touch-optimized taskbar for 2-in-1 devices <!--8092554, WIP.25197--> | [February 28, 2023 - KB5022913](https://support.microsoft.com/kb/5022913) | [Feature Update to Windows 11, version 23H2](https://support.microsoft.com/kb/5027397) | |
