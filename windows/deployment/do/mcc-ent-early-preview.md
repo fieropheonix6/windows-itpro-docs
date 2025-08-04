@@ -21,7 +21,6 @@ To continue using supported version of Microsoft Connected Cache, we strongly re
 
 We strongly recommend you [recreate your existing cache nodes in Azure](mcc-ent-create-resource-and-cache.md) and then [redeploy the caching software to your host machines](mcc-ent-deploy-to-windows.md) using the latest OS-specific installer.
 
-
 ## Next step
 
 > [!div class="nextstepaction"]

@@ -1,7 +1,7 @@
 ---
 title: Defender Policy CSP
 description: Learn more about the Defender Area in Policy CSP.
-ms.date: 06/30/2025
+ms.date: 07/22/2025
 ms.topic: generated-reference
 ---
 
@@ -1549,7 +1549,7 @@ This policy setting defines the number of days items should be kept in the Quara
 <!-- Description-Source-DDF -->
 This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that's initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
-- If you disable or don't configure this setting, catch-up scans for scheduled full scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time the computer powers on or resumes from sleep or hibernation. If there is no scheduled scan configured, there will be no catch-up scan run.
+- If you disable or don't configure this setting, catch-up scans for scheduled full scans will be turned on. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer. If there is no scheduled scan configured, there will be no catch-up scan run.
 
 - If you enable this setting, catch-up scans for scheduled full scans will be disabled.
 <!-- DisableCatchupFullScan-Description-End -->

@@ -6,15 +6,12 @@ ms.date: 06/02/2025
 ms.author: paoloma
 author: paolomatarazzo
 appliesto:
-  - "✅ <a href=\"https://learn.microsoft.com/windows-insider/flight-hub\" target=\"_blank\">Windows Insider (Beta Channel)</a>"
-  - "✅ <a href=\"https://learn.microsoft.com/windows-insider/flight-hub\" target=\"_blank\">Windows Insider (Dev Channel)</a>"
+  - "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>"
 ---
 
 # Quick machine recovery
 
-[!INCLUDE [insider-feature](../includes/insider-feature.md)]
-
-Quick machine recovery is a feature that enables the recovery of Windows devices when they encounter critical errors that prevent them from booting. This feature can automatically search for remediations in the cloud and recover from widespread boot failures, significantly reducing the burden on IT administrators when multiple devices are affected.
+Starting with Windows 11, version 24H2 with [KB5062660][KB-1], quick machine recovery is a feature that enables the recovery of Windows devices when they encounter critical errors that prevent them from booting. This feature can automatically search for remediations in the cloud and recover from widespread boot failures, significantly reducing the burden on IT administrators when multiple devices are affected.
 
 Building on the foundation of [Startup Repair][SMC-1], quick machine recovery uses a secure and connected [Windows Recovery Environment][SMC-2] to scan Windows Update for remediation options. This allows devices to be recovered without requiring manual intervention.
 
@@ -260,9 +257,11 @@ To simulate the quick machine recovery experience, use the following commands fr
     >
     >   1. Retry the quick machine recovery simulation starting from step 1
 
-1. To verify the quick machine recovery remediation, go to **Settings** > **Windows Update** > **[Update history](ms-settings:windowsupdate-history)**. The remediation should be listed under **Quality updates**
+## Verify remediation
 
-    :::image type="content" source="images/update-history.png" border="false" lightbox="images/update-history.png" alt-text="Screenshot of the Setting app - Windows Update - showing the installation of a quick machine recovery update.":::
+If a relevant remediation is applied to the device, it appears under **Settings** > **Windows Update** > **[Update history](ms-settings:windowsupdate-history)**, listed within the **Quality updates** section.
+
+:::image type="content" source="images/update-history.png" border="false" lightbox="images/update-history.png" alt-text="Screenshot of the Setting app - Windows Update - showing the installation of a quick machine recovery update.":::
 
 ### :::image type="icon" source="../images/icons/feedback.svg" border="false"::: Provide feedback
 
@@ -275,3 +274,4 @@ To provide feedback for quick machine recovery, open [**Feedback Hub**][FHUB] an
 [FHUB]: feedback-hub://?tabid=2&newFeedback=true&feedbackType=1
 [CSP-1]: /windows/client-management/mdm/remoteremediation-csp
 [INT-1]: /mem/intune/configuration/settings-catalog
+[KB-1]: https://support.microsoft.com/help/5062660

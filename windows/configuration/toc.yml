@@ -17,9 +17,7 @@ items:
     href: windows-spotlight/index.md
 
 - name: Settings
-  items:
-  - name: Page visibility
-    href: settings/page-visibility.md
+  href: settings/toc.yml
 
 - name: Storage
   items:

@@ -7,12 +7,13 @@ ms.localizationpriority: high
 author: DHB-MSFT
 ms.author: danbrown
 manager: dansimp
-ms.date: 05/30/2025
+ms.date: 07/29/2025
 ms.topic: how-to
 hideEdit: true
 ms.collection: 
 - privacy-windows
 - must-keep
+- trust-pod
 ---
 
 # Diagnostic Data Viewer for PowerShell overview
@@ -155,7 +156,7 @@ PS C:\> Disable-DiagnosticDataViewing
 
 ## Modifying the size of your data history
 
-By default, the tool shows you up to 1 GB or 30 days of data (whichever comes first). Once either the time or space limit is reached, the data is incrementally dropped with the oldest data points dropped first.
+By default, the tool shows you up to 1 GB or 30 days of data (whichever comes first). While the exact volume varies by user, the average device generates approximately 6 MB of Windows diagnostic data per day. Once either the time or space limit is reached, the data is incrementally dropped with the oldest data points dropped first.
 
 ### Modify the size of your data history
 

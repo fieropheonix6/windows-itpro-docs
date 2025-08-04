@@ -28,17 +28,17 @@ Unlike BitLocker, which encrypts entire volumes and disks, Personal Data Encrypt
 
 To use Personal Data Encryption, the following prerequisites must be met:
 
-- Windows 11, version 22H2 and later
-  - Personal Data Encryption for known folders is only available on Windows 11, version 24H2 and later
-- The devices must be [Microsoft Entra joined][ENTRA-1] or [Microsoft Entra hybrid joined][ENTRA-2]. Domain-joined devices aren't supported
-- Users must sign in using [Windows Hello](../../../identity-protection/hello-for-business/index.md)
-- [Automatic Restart Sign On (ARSO)](/windows-server/identity/ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-) must be disabled
+- Windows 11, version 22H2 and later.
+  - Personal Data Encryption for known folders is only available on Windows 11, version 24H2 and later.
+- The devices must be [Microsoft Entra joined][ENTRA-1] or [Microsoft Entra hybrid joined][ENTRA-2]. Domain-joined devices aren't supported.
+- Users must sign in using [Windows Hello](../../../identity-protection/hello-for-business/index.md).
+- [Automatic Restart Sign On (ARSO)](/windows-server/identity/ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-) must be disabled.
 
 > [!IMPORTANT]
 > If you sign in with a password or a [FIDO2 security key][ENTRA-3], you can't access Personal Data Encryption protected content.
 
 > [!NOTE]
-> When prerequisites aren't satisfied, the system falls back to [Data Protection API (DPAPI)](/dotnet/standard/security/how-to-use-data-protection)
+> When prerequisites aren't satisfied, the system falls back to [Data Protection API (DPAPI)](/dotnet/standard/security/how-to-use-data-protection).
 
 [!INCLUDE [personal-data-encryption-pde](../../../../../includes/licensing/personal-data-encryption-pde.md)]
 

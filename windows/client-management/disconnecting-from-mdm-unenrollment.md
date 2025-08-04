@@ -2,7 +2,7 @@
 title: Disconnecting from the management infrastructure (unenrollment)
 description: Disconnecting is initiated either locally by the user using a phone or remotely by the IT admin using management server.
 ms.topic: article
-ms.date: 07/08/2024
+ms.date: 08/04/2025
 ---
 
 # Disconnecting from the management infrastructure (unenrollment)
