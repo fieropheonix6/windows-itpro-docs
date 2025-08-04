@@ -2,7 +2,7 @@
 title: Manage apps
 description: This article covers one of the key mobile device management (MDM) features for managing the lifecycle of apps across Windows devices.
 ms.topic: article
-ms.date: 07/08/2024
+ms.date: 08/04/2025
 ---
 
 # Manage apps
@@ -272,7 +272,7 @@ Here are the requirements for this scenario:
 - The user must be logged in, but association with Microsoft Entra identity isn't required.
 
 > [!NOTE]
-> You must unlock the device to deploy nonStore apps or you must deploy the app license before deploying the offline apps. For details, see [Deploy an offline license to a user](#deploy-an-offline-license-to-a-user).
+> You must unlock the device to deploy non-Store apps or you must deploy the app license before deploying the offline apps. For details, see [Deploy an offline license to a user](#deploy-an-offline-license-to-a-user).
 
 The Add command for the package family name is required to ensure proper removal of the app at unenrollment.
 
@@ -387,7 +387,7 @@ Here are the requirements for this scenario:
 - The user must have permission to access the content location. For HTTPs, you can use server authentication or certificate authentication using a certificate associated with the enrollment. HTTP locations are supported, but not recommended because of lack of authentication requirements.
 - The device doesn't need to have connectivity to the Microsoft Store, or store services enabled.
 - The device doesn't need any Microsoft Entra identity or domain membership.
-- For nonStore app, your device must be unlocked.
+- For non-Store app, your device must be unlocked.
 - For Store offline apps, the required licenses must be deployed before deploying the apps.
 
 To provision app for all users of a device from a hosted location, the management server runs an Add and Exec command on the AppInstallation node in the device context. The Add command for the package family name is required to ensure proper removal of the app at unenrollment.
@@ -541,7 +541,7 @@ The Data field value of 0 (zero) indicates success. Otherwise it's an error code
 You can uninstall apps from users from Windows devices. To uninstall an app, you delete it from the AppManagement node of the CSP. Within the AppManagement node, packages are organized based on their origin according to the following nodes:
 
 - AppStore - These apps are for the Microsoft Store. Apps can be directly installed from the store or delivered to the enterprise from the Store for Business.
-- nonStore - These apps that weren't acquired from the Microsoft Store.
+- non-Store - These apps that weren't acquired from the Microsoft Store.
 - System - These apps are part of the OS. You can't uninstall these apps.
 
 To uninstall an app, you delete it under the origin node, package family name, and package full name. To uninstall a XAP, use the product ID in place of the package family name and package full name.

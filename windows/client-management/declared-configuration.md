@@ -1,7 +1,7 @@
 ---
 title: Windows declared configuration protocol
 description: Learn more about using Windows declared configuration (WinDC) protocol for desired state management of Windows devices.
-ms.date: 09/12/2024
+ms.date: 08/04/2025
 ms.topic: overview
 ---
 
