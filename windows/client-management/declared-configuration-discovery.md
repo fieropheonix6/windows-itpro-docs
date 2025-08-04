@@ -1,7 +1,7 @@
 ---
 title: Windows declared configuration discovery
 description: Learn more about configuring discovery for Windows declared configuration enrollment.
-ms.date: 09/12/2024
+ms.date: 08/04/2025
 ms.topic: how-to
 ---
 
@@ -29,7 +29,7 @@ This article outlines the schema structure for the HTTP request and response bod
 | `upn` | No | User Principal Name (UPN) of the enrolled account |
 | `tenantId` | No | Tenant ID of the enrolled account |
 | `emmDeviceId` | No | Enterprise mobility management (EMM) device ID of the enrolled account |
-| `enrollmentType` | Entra joined: No <br>Entra registered: Yes | Enrollment type of the enrolled account. <br><br>Supported Values: <br>- `Device`: Indicates the parent enrollment type is Entra joined (DS response should specify "AuthPolicy": "Federated"). <br>- `User`: Indicates parent enrollment type is Entra registered (DS response should specify "AuthPolicy": "Certificate"). <br>- Legacy case (Entra joined only): If the `enrollmentType` parameter isn't included in the request body, the device should be treated as Entra joined. |
+| `enrollmentType` | Microsoft Entra joined: No <br>Microsoft Entra registered: Yes | Enrollment type of the enrolled account. <br><br>Supported Values: <br>- `Device`: Indicates the parent enrollment type is Microsoft Entra joined (DS response should specify "AuthPolicy": "Federated"). <br>- `User`: Indicates parent enrollment type is Microsoft Entra registered (DS response should specify "AuthPolicy": "Certificate"). <br>- Legacy case (Microsoft Entra joined only): If the `enrollmentType` parameter isn't included in the request body, the device should be treated as Microsoft Entra joined. |
 | `osVersion` | Yes | OS version on the device. The DS can use the `osVersion` to determine if the client platform supports WinDC enrollment. Review [supported platforms](declared-configuration.md#supported-platforms) for details. |
 
 ### HTTP DS response body (JSON)
@@ -42,7 +42,7 @@ This article outlines the schema structure for the HTTP request and response bod
 | `AuthenticationServiceUrl`   | Yes      | Authentication Service URL                                                                                                                 |
 | `ManagementResource`         | No       | Management Resource                                                                                                                        |
 | `TouUrl`                     | No       | Terms of use URL                                                                                                                           |
-| `AuthPolicy`                 | Yes      | Authentication policy. Supported values: <br>- `Federated` (required for Entra joined) <br>- `Certificate` (required for Entra registered) |
+| `AuthPolicy`                 | Yes      | Authentication policy. Supported values: <br>- `Federated` (required for Microsoft Entra joined) <br>- `Certificate` (required for Microsoft Entra registered) |
 | `errorCode`                  | No       | Error code                                                                                                                                 |
 | `message`                    | No       | Status message                                                                                                                             |
 
@@ -171,7 +171,7 @@ This article outlines the schema structure for the HTTP request and response bod
 
 WinDC enrollment requires different authentication mechanisms for Microsoft Entra joined and registered devices. The WinDC DS must integrate with the authentication model by specifying the appropriate `AuthPolicy` value in the discovery response, based on the `enrollmentType` property of the request.
 
-- **Microsoft Entra joined devices** use **Federated** authentication (Entra device token).
+- **Microsoft Entra joined devices** use **Federated** authentication (Microsoft Entra device token).
 - **Microsoft Entra registered devices** use **Certificate** authentication (MDM certificate provisioned for the parent enrollment).
 
 #### Rules
@@ -179,12 +179,12 @@ WinDC enrollment requires different authentication mechanisms for Microsoft Entr
 - **For Microsoft Entra joined devices**:
     - **Discovery request**: `"enrollmentType": "Device"`
     - **Discovery response**: `"AuthPolicy": "Federated"`
-    - **Authentication**: The client uses the Entra device token to authenticate with the WinDC enrollment server.
+    - **Authentication**: The client uses the Microsoft Entra device token to authenticate with the WinDC enrollment server.
 
 - **For legacy cases (where `enrollmentType` value is empty)**:
     - **Discovery request**: `"enrollmentType": ""`
     - **Discovery response**: `"AuthPolicy": "Federated"`
-    - **Authentication**: The client uses the Entra device token to authenticate with the WinDC enrollment server.
+    - **Authentication**: The client uses the Microsoft Entra device token to authenticate with the WinDC enrollment server.
 
 - **For Microsoft Entra registered devices**:
     - **Discovery request**: `"enrollmentType": "User"`

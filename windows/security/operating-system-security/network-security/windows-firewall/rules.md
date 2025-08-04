@@ -47,8 +47,15 @@ To disable the notification prompt, you can use the [command line](/windows/secu
 
 In either of these scenarios, once the rules are added, they must be deleted to generate the prompt again. If not, the traffic continues to be blocked.
 
+
+
+
+
 > [!NOTE]
 > The firewall's default settings are designed for security. Allowing all inbound connections by default introduces the network to various threats. Therefore, creating exceptions for inbound connections from non-Microsoft software should be determined by trusted app developers, the user, or the admin on behalf of the user.
+
+> [!NOTE]
+> The use of wildcard patterns, such as `C:\*\teams.exe` isn't supported in application rules. You can only create rules using the full path to the application(s).
 
 ### App Control tagging policies
 
@@ -80,7 +87,8 @@ It's important to create and maintain a list of such apps, including the network
 In general, to maintain maximum security, admins should only deploy firewall exceptions for apps and services determined to serve legitimate purposes.
 
 > [!NOTE]
-> The use of wildcard patterns, such as `C:\*\teams.exe` isn't supported in application rules. You can only create rules using the full path to the application(s).
+> Local Group Policy firewall rules and settings are applied even when rule merging is disabled through MDM or Group Policy.
+> Local Group Policies are configured using either **secpol.msc** (Local Security Policy) or **gpedit.msc** (Group Policy Editor), which must be run locally on the client device. Only users with local administrator privileges can access these tools. The settings configured through Local Group Policy are stored in the same location as those managed centrally through Group Policy.
 
 ## Firewall rules recommendations
 

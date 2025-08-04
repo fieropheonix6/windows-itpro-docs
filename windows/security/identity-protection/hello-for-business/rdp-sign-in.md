@@ -38,7 +38,7 @@ Windows Hello for Business emulates a smart card for application compatibility, 
 > [!NOTE]
 > Remote Desktop with biometric doesn't work with [Dual Enrollment](hello-feature-dual-enrollment.md) or scenarios where the user provides alternative credentials.
 
-## Requirements
+## System requirements
 
 Here's a list of requirements to enable RDP sign-in with Windows Hello for Business:
 
