@@ -153,7 +153,7 @@ DeviceCount = count_distinct(GlobalDeviceId) by GroupID | top 10 by DeviceCount 
 There are many Microsoft [content types](waas-delivery-optimization.md#types-of-download-content-supported-by-delivery-optimization) that are supported by Delivery Optimization. All of these content types show up in the 'Content Distribution' section in the Delivery Optimization report. See the [complete table](waas-delivery-optimization.md#windows-client) for P2P/Connected Cache support types.
 
   > [!NOTE]
-  > As of July 30, 2025 Software Updates which are non-Windows and non-Store updates will move from the 'Other' category to 'Feature Updates'. Examples include: Visual Studio, Exchange, SQL Server
+  > As of July 22, 2025 Software Updates which are non-Windows and non-Store updates will move from the 'Other' category to 'Feature Updates'. Examples include: Visual Studio, Exchange, SQL Server.
 
 | Content Category | Content Types Included |
 | --- | --- |
@@ -161,9 +161,8 @@ There are many Microsoft [content types](waas-delivery-optimization.md#types-of-
 | Driver Updates | Windows Update [Driver updates](get-started-updates-channels-tools.md#types-of-updates) |
 | Feature Updates | Windows Update [Feature updates](get-started-updates-channels-tools.md#types-of-updates) |
 | Office | Microsoft 365 Apps and updates |
-| Other | Windows Language Packs, Windows Defender definition updates, Intune Win32 apps, Edge Browser updates, Configuration Manager Express updates, Dynamic updates, MDM Agent, Xbox Game Pass (PC), Windows Package Manager, MSIX Installer (includes Windows 11 Store Win32 apps |
+| Other | Windows Language Packs, Windows Defender definition updates, Intune Win32 apps, Edge Browser updates, Configuration Manager Express updates, Dynamic updates, MDM Agent, Xbox Game Pass (PC), Windows Package Manager, MSIX Installer (includes Windows 11 Store Win32 apps, Teams Updates (Win11) |
 | Quality Updates | Windows Updates [Quality updates](get-started-updates-channels-tools.md#types-of-updates)) |
-| Teams Updates | Windows 11 updates |
 
 ## Frequency Asked Questions
 
