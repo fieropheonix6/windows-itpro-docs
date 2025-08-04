@@ -269,8 +269,9 @@ Starting in Windows 10, version 1903, configure this policy to delay the fallbac
 
 MDM Setting: **DOMinBackgroundQoS**
 
-The policy is for background downloads and its used to measure the bandwidth between peers. When the speed is lower than the set limit the downloads will be source by both peers and the HTTP source. Once the set limit is achieved, the HTTP connections will be closed. So the lower limit allows more content to come from peers since that value is easier to achieve and no HTTP connections would be used. 
-**The default value is 2500 KB/s.**
+This policy controls background downloads and measures bandwidth between peers. When the measured speed falls below the configured threshold, content is downloaded from both peers and the HTTP source. Once the threshold is reached, HTTP connections are closed, and downloads continue only from peers.
+
+Setting a lower threshold makes it easier to meet the limit, which means more content will come from peers and HTTP connections will not be used. **The default value is 2500 KB/s.**
 
 ### Modify cache drive
 

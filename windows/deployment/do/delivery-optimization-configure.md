@@ -16,7 +16,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-delivery-optimization target=_blank>Delivery Optimization</a>
-ms.date: 02/27/2025
+ms.date: 08/04/2025
 ---
 
 # Configure Delivery Optimization (DO) for Windows
@@ -194,7 +194,7 @@ Regardless of P2P, consider setting the following policies to avoid network disr
 :::image type="content" source="images/do-setup-connected-cache.png" alt-text="Screenshot of Delivery Optimization options when using Connected Cache." lightbox="images/do-setup-connected-cache.png":::
 
 > [!NOTE]
-> When multiple Microsoft Connected Cache (MCC) servers are configured, the Delivery Optimization (DO) client attempts to connect to them in the order they are listed. If you’ve enabled delay settings for cache server fallback, the delay applies **only to the first cache server in the list**. All subsequent cache servers are contacted immediately without any additional delay.
+> When multiple Connected Cache servers are configured, the Delivery Optimization (DO) client attempts to connect to them in the order they are listed. If you’ve enabled delay settings for cache server fallback, the delay applies **only to the first cache server in the list**. All subsequent cache servers are contacted immediately without any additional delay.
 
 - [DOCacheHost](waas-delivery-optimization-reference.md#cache-server-hostname) is the list of cache host server names, separated with commas.
 - [DOCacheHostSource](waas-delivery-optimization-reference.md#cache-server-hostname-source) can be used to dynamically discover cache host servers on the network, using DHCP.

@@ -87,19 +87,22 @@ Machine 1 will download zero bytes from peers and Machine 2 will download 50-99%
 
 The following set of instructions will be used for each machine:
 
-1. Open PowerShell console as 'Administrator'.
+1. Open PowerShell console as 'Administrator'
+
    * Clear the Delivery Optimization cache:
 
-    Delete-DeliveryOptimizationCache -Force -IncludePinnedFiles
+      ```Delete-DeliveryOptimizationCache -Force -IncludePinnedFiles```
 
    * Stop the Delivery Optimization service and clear old logs:
 
-    Stop-Service -Name DoSvc -Force
-    Remove-Item -Force "$env:WINDIR\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs\*.etl"
+      ```Stop-Service -Name DoSvc -Force```
+      ```Remove-Item -Force "$env:WINDIR\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs\*.etl"```
 
-   * Run 'Get-DeliveryOptimizationStatus'.
+   * Run:
+  
+      ```Get-DeliveryOptimizationStatus```
 
-1. Open MS Store and search for 'Asphalt Legends 9'. Select *Get* to initiate the download of the content (content size: ~3.4 GB).
+2. Open MS Store and search for 'Asphalt Legends 9'. Select *Get* to initiate the download of the content (content size: ~3.4 GB).
 
 **On machine #1**
 
