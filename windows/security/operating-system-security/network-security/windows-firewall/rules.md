@@ -52,6 +52,9 @@ In either of these scenarios, once the rules are added, they must be deleted to 
 
 
 > [!NOTE]
+> The firewall's default settings are designed for security. Allowing all inbound connections by default introduces the network to various threats. Therefore, creating exceptions for inbound connections from non-Microsoft software should be determined by trusted app developers, the user, or the admin on behalf of the user.
+
+> [!NOTE]
 > The use of wildcard patterns, such as `C:\*\teams.exe` isn't supported in application rules. You can only create rules using the full path to the application(s).
 
 ### App Control tagging policies
