@@ -51,6 +51,9 @@ In either of these scenarios, once the rules are added, they must be deleted to 
 
 
 
+> [!NOTE]
+> The use of wildcard patterns, such as `C:\*\teams.exe` isn't supported in application rules. You can only create rules using the full path to the application(s).
+
 ### App Control tagging policies
 
 Windows Firewall supports the use of App Control for Business Application ID (AppID) tags in firewall rules. With this capability, Windows Firewall rules can be scoped to an application or a group of applications by referencing process tags, without using absolute path or sacrificing security. There are two steps for this configuration:
