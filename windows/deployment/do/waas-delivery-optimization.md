@@ -54,7 +54,7 @@ The following table lists the minimum Windows 10 version that supports Delivery 
 | Windows 11 Win32 Store apps | Windows 11 | :heavy_check_mark: | |
 | Windows Defender definition updates | Windows 10 1511, Windows 11 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Intune Win32 apps| Windows 10 1709, Windows 11 | :heavy_check_mark: (excluding Government cloud environments) | :heavy_check_mark:  | :heavy_check_mark: (excluding Government cloud environments) |
-| Microsoft 365 Apps and updates | Windows 10 1709, Windows 11 | :heavy_check_mark: | :heavy_check_mark: ((excluding SAC Extended branch) | :heavy_check_mark: |
+| Microsoft 365 Apps and updates | Windows 10 1709, Windows 11 | :heavy_check_mark: | :heavy_check_mark: ((excluding SAC Extended channel) | :heavy_check_mark: |
 | Edge Browser Updates | Windows 10 1809, Windows 11 | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
 | Configuration Manager Express updates| Windows 10 1709 + Configuration Manager version 1711, Windows 11 | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
 | Dynamic updates| Windows 10 1903, Windows 11 | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |
