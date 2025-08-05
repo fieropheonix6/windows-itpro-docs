@@ -2,7 +2,7 @@
 title: Windows 11 Security Book - Application And Driver Control
 description: Application and driver control.
 ms.topic: overview
-ms.date: 12/11/2024
+ms.date: 08/04/2025
 ---
 
 # Application and driver control

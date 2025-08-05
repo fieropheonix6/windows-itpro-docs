@@ -1,7 +1,7 @@
 ---
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 12/11/2024
+ms.date: 08/04/2025
 ms.topic: include
 ---
 
@@ -13,7 +13,7 @@ Smart App Control builds on top of the same cloud-based AI used in *App Control 
 
 We've been making significant improvements to Smart App Control to increase the security, usability, and cloud intelligence response for apps in the Windows ecosystem. Users can get the latest and best experience with Smart App Control by keeping their devices up to date via Windows Update every month.
 
-To ensure that users have a seamless experience with Smart App Control enabled, we ask developers to sign their applications with a code signing certificate from the Microsoft Trusted Root Program. Developers should include all binaries, such as exe, dll, temp installer files, and uninstallers. Trusted Signing makes the process of obtaining, maintaining, and signing with a trusted certificate simple and secure.
+To ensure that users have a seamless experience with Smart App Control enabled, developers should sign all their application code with a code signing certificate from any certificate authority in the Microsoft Trusted Root Program. Developers should include all binaries, such as exe, dll, temp installer files, scripts, and uninstallers. You can also sign using Microsoft's Trusted Signing which makes the process of obtaining, maintaining, and signing with a trusted certificate simple and secure.
 
 Smart App Control is disabled on devices enrolled in enterprise management. We suggest enterprises running line-of-business applications continue to use *App Control for Business*.
 
