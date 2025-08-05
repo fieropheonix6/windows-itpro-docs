@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-ms.date: 09/03/2024
+ms.date: 08/04/2025
 ---
 
 # Delivery Optimization data in Windows Update for Business reports
@@ -151,6 +151,9 @@ DeviceCount = count_distinct(GlobalDeviceId) by GroupID | top 10 by DeviceCount 
 ### Delivery Optimization Supported Content Types
 
 There are many Microsoft [content types](waas-delivery-optimization.md#types-of-download-content-supported-by-delivery-optimization) that are supported by Delivery Optimization. All of these content types show up in the 'Content Distribution' section in the Delivery Optimization report. See the [complete table](waas-delivery-optimization.md#windows-client) for P2P/Connected Cache support types.
+
+  > [!NOTE]
+  > As of July 22, 2025 Software Updates which are non-Windows and non-Store updates will move from the 'Other' category to 'Feature Updates'. Examples include: Visual Studio, Exchange, SQL Server.
 
 | Content Category | Content Types Included |
 | --- | --- |

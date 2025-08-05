@@ -12,7 +12,7 @@ ms.reviewer: carmenf
 appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
-ms.date: 12/06/2023
+ms.date: 08/04/2025
 ---
 
 # UCDOStatus
@@ -31,7 +31,7 @@ UCDOStatus provides information, for a single device, on its bandwidth utilizati
 | **BytesFromCDN** |  [long](/azure/kusto/query/scalar-data-types/long) | `11463008693388` | Total number of bytes that were delivered from a Content Delivery Network (CDN). |
 | **BytesFromGroupPeers** |  [long](/azure/kusto/query/scalar-data-types/long) | `30830657175` | Total number of bytes that were delivered from Group peers, sharing the same GroupId. |
 | **BytesFromIntPeers** |  [long](/azure/kusto/query/scalar-data-types/long) | `285212672` | Total number of bytes that were delivered from Internet peers. |
-| **BytesFromPeers** |  [long](/azure/kusto/query/scalar-data-types/long) | `285212672` | Total number of bytes delivered via all peers. |
+| **BytesFromPeers** |  [long](/azure/kusto/query/scalar-data-types/long) | `285212672` | Total number of bytes delivered via LAN peers. |
 | **City** |  [string](/azure/kusto/query/scalar-data-types/string) | `Redmond` | Approximate city where device was located while downloading content, based on IP address. |
 | **ContentDownloadMode** |  [int](/azure/kusto/query/scalar-data-types/int) | `1` | Device's Delivery Optimization Download Mode used to download content. |
 | **ContentType** |  [string](/azure/kusto/query/scalar-data-types/string) | `Driver Updates` | One of the supported types of content. |

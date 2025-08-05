@@ -16,7 +16,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 10</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-delivery-optimization target=_blank>Delivery Optimization</a>
-ms.date: 02/27/2025
+ms.date: 08/04/2025
 ---
 
 # Configure Delivery Optimization (DO) for Windows
@@ -193,7 +193,10 @@ Regardless of P2P, consider setting the following policies to avoid network disr
 
 :::image type="content" source="images/do-setup-connected-cache.png" alt-text="Screenshot of Delivery Optimization options when using Connected Cache." lightbox="images/do-setup-connected-cache.png":::
 
-- [DOCacheHost](waas-delivery-optimization-reference.md#cache-server-hostname) is the list of cache host server names, separated with commas. *Delivery Optimization client connects to the listed Microsoft Connected Cache servers in the order as they're listed.*
+> [!NOTE]
+> When multiple Connected Cache servers are configured, the Delivery Optimization client connects to them in the order they appear in the list. If you’ve enabled delay settings for cache server fallback, the fallback-to-HTTP source delay applies to each new file download. This delay is not tied to any specific cache server.
+
+- [DOCacheHost](waas-delivery-optimization-reference.md#cache-server-hostname) is the list of cache host server names, separated with commas.
 - [DOCacheHostSource](waas-delivery-optimization-reference.md#cache-server-hostname-source) can be used to dynamically discover cache host servers on the network, using DHCP.
 - [DelayCacheServerFallbackBackground](waas-delivery-optimization-reference.md#delay-background-download-cache-server-fallback-in-secs) and [DelayCacheServerFallbackForeground](waas-delivery-optimization-reference.md#delay-foreground-download-cache-server-fallback-in-secs) are the delay policies to help improve chances of pulling content from the network cache host servers. (See recommended values in [Improve P2P efficiency](#2d-improve-p2p-efficiency) section above).
 - [DODisallowCacheServerDownloadsOnVPN](waas-delivery-optimization-reference.md#disallow-cache-server-downloads-on-vpn) allows control of the cache host server to supply content, when device is on a VPN connection.
@@ -228,7 +231,11 @@ Delivery Optimization is integrated with both Microsoft Endpoint Manager and Con
 | Number of devices in the organization | MinFileSizeToCache | 1 MB for peer group > 100 devices |
 | Idle system resources | MaxCacheAge | 7 days (604800 seconds) |
 | Improve P2P efficiency | MinBackgroundQoS and DelayBackgroundDownloadFromHttp / DelayForegroundDownloadFromHttp  | 500 KB/s and 60/30 seconds |
-| Using Connected Cache? | DelayCacheServerFallbackBackground / DelayCacheServerFallbackForeground | 60/30 seconds |
+| Using Connected Cache | DelayCacheServerFallbackBackground / DelayCacheServerFallbackForeground | 60/30 seconds |
+
+### Enterprise using Intune
+
+For a straightforward overview of configuring Delivery Optimization in Intune, check out this [enterprise-focused guide](https://regale.cloud/Microsoft/play/3944/delivery-optimization?cid=intune-home#/0/0) with helpful recommendations.
 
 ## Monitor Delivery Optimization
 
