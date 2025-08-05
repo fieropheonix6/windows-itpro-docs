@@ -1,7 +1,7 @@
 ---
 title: Manage Windows Autopatch groups
 description: This article explains how to manage Autopatch groups
-ms.date: 05/27/2025
+ms.date: 08/05/2025
 ms.service: windows-client
 ms.subservice: autopatch
 ms.topic: how-to
@@ -41,7 +41,7 @@ Before you start managing Autopatch groups, ensure you meet the [Windows Autopat
 1. Under the **Windows Autopatch** section, select **Autopatch groups**.
 1. In the **Autopatch groups** blade, select **Create**.
 1. In the **Basics** page, enter a **name** and a **description** then select **Next: Deployment rings**.
-    1. Enter up to 64 characters for the Autopatch group name and 150 characters maximum for the description. The Autopatch group name is appended to both the update rings and the DSS policy names that get created once the Autopatch group is created.
+    1. Enter up to 255 characters for the Autopatch group name and 150 characters maximum for the description. The Autopatch group name is appended to both the update rings and the DSS policy names that get created once the Autopatch group is created.
 1. In the **Deployment rings** page, select **Add deployment ring** to add the number of deployment rings to the Autopatch group. Autopatch assigns a default rollout schedule to ensure gradual deployment with deferral and deadline periods ranging from one to 20 days. When a new ring is added, its default deferral and deadline are spaced with existing rings to maintain deferral and deadline period compliance. Therefore, the deferral and deadline period of the new ring might be before or after the previous ring. Adding a new ring doesn’t modify the deferral or deadline of already existing rings. Autopatch doesn’t set deadlines on Sundays. The deadline is scheduled for the following Monday.
 1. Each new deployment ring added must have either a Microsoft Entra device group assigned to it, or a Microsoft Entra group that is dynamically distributed across your deployments rings using defined percentages.
     1. In the **Dynamic groups** area, select **Add groups** to select one or more existing device-based Microsoft Entra groups to be used for Dynamic group distribution.
@@ -110,7 +110,7 @@ Before you start managing Autopatch groups, ensure you meet the [Windows Autopat
 1. In the **New Autopatch group name**, enter the new Autopatch group name of your choice, then select **Rename group**.
 
 > [!IMPORTANT]
-> Autopatch supports up to 64 characters for the Autopatch group name. Additionally, when you rename an Autopatch group all [update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings) and [feature updates for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-feature-updates) associated with the Autopatch group are renamed to include the new Autopatch group name you define in its name string. Also, when renaming an Autopatch group all Microsoft Entra groups representing the Autopatch group's deployment rings are renamed to include the new Autopatch group name you define in its name string.
+> Autopatch supports up to 255 characters for the Autopatch group name. Additionally, when you rename an Autopatch group all [update rings for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-update-rings) and [feature updates for Windows 10 and later policy in Intune](/mem/intune/protect/windows-10-feature-updates) associated with the Autopatch group are renamed to include the new Autopatch group name you define in its name string. Also, when renaming an Autopatch group all Microsoft Entra groups representing the Autopatch group's deployment rings are renamed to include the new Autopatch group name you define in its name string.
 
 ## Delete an Autopatch group
 
