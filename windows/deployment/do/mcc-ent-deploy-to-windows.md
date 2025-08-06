@@ -51,7 +51,7 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
 
    This command should return a path to the Connected Cache **scripts directory**, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts won't be updateable if they're moved to a different path.
 
-1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
+1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run. The administrator account used to proceed through this cache node deployment process **cannot be the same as the Connected Cache runtime account**.
 
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
