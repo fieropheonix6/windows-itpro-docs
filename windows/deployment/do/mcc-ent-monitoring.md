@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 07/23/2025
+ms.date: 08/06/2025
 ---
 
 # Monitor cache node usage
@@ -93,7 +93,7 @@ If you created cache nodes during public preview, the **Migrated** column helps 
 To migrate your cache nodes to the GA release, you must redeploy them using the [latest Linux-hosted deployment package](https://aka.ms/mcc-ent-linux-deploy-scripts) or the [latest Connected Cache Windows application](https://aka.ms/do-mcc-ent-windows-x64).
 
 >[!NOTE]
-> After redeploying a Linux cache node so that it's migrated to the GA release container, the user must run `chmod 777 -R /cachedrivepath` and then restart the Connected Cache container `sudo iotedge restart MCC`.
+> After redeploying a Linux cache node so that it's migrated to the GA release container, you must run `sudo chmod 777 -R [cache drive path]` (replacing "cache drive path" with your own) and then restart the Connected Cache container `sudo iotedge restart MCC`.
 > Otherwise the redeployed node will be up and running, but requests for content will fail.
 
 ## Advanced Monitoring
@@ -122,7 +122,7 @@ Some example scenarios where you would want to set up a custom alert:
 When your cache node is up and running, you can access a web-based summary page that provides a terse overview of the cache node's status and performance. This page is accessible at the following URL.
 
 ```HTML
-https://localhost:5000/details?apiKey=[YourConnectedCacheCustomerId]__D0508632-1B4D-431C-9EF3-49285AF4DC1F
+http://localhost:5000/details?apiKey=[YourConnectedCacheCustomerId]__D0508632-1B4D-431C-9EF3-49285AF4DC1F
 ```
 
 You'll need to replace `[YourConnectedCacheCustomerId]` with your Connected Cache customer ID, which can be found in the Azure portal under the **Cache Node Management** tab. By default, this page is only accessible from the host machine where the Connected Cache node is deployed.

@@ -11,7 +11,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ Supported Linux distributions
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise</a>	
-ms.date: 07/28/2025
+ms.date: 08/06/2025
 ---
 
 
@@ -240,11 +240,11 @@ netsh interface portproxy add v4tov4 listenport=5000 listenaddress=0.0.0.0 conne
 You'll also need to ensure that the host machine's firewall allows inbound traffic on ports 443 and 5000. You can do this by running the following commands in an elevated PowerShell window:
 
 ```powershell
-[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "443"
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "443")
 
-[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Outbound -Action Allow -Protocol TCP -LocalPort "443"
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (HTTPS)" -Direction Outbound -Action Allow -Protocol TCP -LocalPort "443")
 
-[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (MCC SUMMARY)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "5000"
+[void](New-NetFirewallRule -DisplayName "WSL2 Port Bridge (MCC SUMMARY)" -Direction Inbound -Action Allow -Protocol TCP -LocalPort "5000")
 ```
 
 ### Cache node deployment to Windows fails with "ERROR: cannot verify certificate"
