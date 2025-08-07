@@ -7,7 +7,7 @@ manager: naengler
 ms.service: windows-client
 ms.subservice: itpro-updates
 ms.topic: how-to
-ms.date: 07/23/2025
+ms.date: 08/06/2025
 appliesto: 
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Windows 11</a>
 - ✅ <a href=https://learn.microsoft.com/windows/deployment/do/waas-microsoft-connected-cache target=_blank>Microsoft Connected Cache for Enterprise and Education</a>	
@@ -51,7 +51,7 @@ For Connected Cache deployment to succeed, you must allow direct calls to the De
 
    This command should return a path to the Connected Cache **scripts directory**, such as `C:\Program Files\...\deliveryoptimization-cli`. **Do not** move the Connected Cache scripts directory to a different location, as the deployment scripts won't be updateable if they're moved to a different path.
 
-1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run.
+1. Open a PowerShell window *as administrator* on the host machine and set the Execution Policy to *Unrestricted* to allow the deployment scripts to run. The administrator account used to proceed through this cache node deployment process **cannot be the same as the Connected Cache runtime account**.
 
 1. Create a `$User` PowerShell variable containing the username of the account you intend to designate as the Connected Cache runtime account.
 
