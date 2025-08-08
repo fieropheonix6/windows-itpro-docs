@@ -20,7 +20,7 @@ ms.date: 05/23/2024
 
 This article contains information about what's new in Delivery Optimization, a peer-to-peer distribution method in Windows 10 and Windows 11.
 
-## Microsoft Connected Cache (early preview)
+## Microsoft Connected Cache
 
 Microsoft Connected Cache is a software-only caching solution that delivers Microsoft content within Enterprise networks. Connected Cache can be deployed to as many bare-metal servers or VMs as needed, and is managed from a cloud portal. Cache nodes are created in the cloud portal and are configured by applying the client policy using management tools such as Intune.
 
